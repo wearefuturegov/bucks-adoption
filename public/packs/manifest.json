@@ -1,0 +1,41 @@
+{
+  "application.js": "/packs/js/application-da8e9a1fe3ddd1cf86d5.js",
+  "application.js.map": "/packs/js/application-da8e9a1fe3ddd1cf86d5.js.map",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/packs/js/application-da8e9a1fe3ddd1cf86d5.js"
+      ],
+      "js.map": [
+        "/packs/js/application-da8e9a1fe3ddd1cf86d5.js.map"
+      ]
+    },
+    "hello_react": {
+      "js": [
+        "/packs/js/hello_react-bbf200217d46b4c3ebb2.js"
+      ],
+      "js.map": [
+        "/packs/js/hello_react-bbf200217d46b4c3ebb2.js.map"
+      ]
+    },
+    "server_rendering": {
+      "js": [
+        "/packs/js/server_rendering-48cb6c27498fd702323d.js"
+      ],
+      "js.map": [
+        "/packs/js/server_rendering-48cb6c27498fd702323d.js.map"
+      ]
+    }
+  },
+  "hello_react.js": "/packs/js/hello_react-bbf200217d46b4c3ebb2.js",
+  "hello_react.js.map": "/packs/js/hello_react-bbf200217d46b4c3ebb2.js.map",
+  "media/components/Header/logo-inverted.svg": "/packs/media/components/Header/logo-inverted-e8768850e60a6ebfff9277cf22a13e3a.svg",
+  "media/components/Header/logo.svg": "/packs/media/components/Header/logo-9f53095fe634eb9c3ff1ac4d409f3ca7.svg",
+  "media/components/Hero/down-arrow.svg": "/packs/media/components/Hero/down-arrow-3b82944a14f630327fb4d4e90c470930.svg",
+  "media/components/Hero/hero.jpg": "/packs/media/components/Hero/hero-9297a205c4c91a42bcfa4e1491d06b29.jpg",
+  "media/components/Hero/needs-hero.jpg": "/packs/media/components/Hero/needs-hero-63132272a91b027e8f7554055a553a46.jpg",
+  "media/components/Hero/triangle.svg": "/packs/media/components/Hero/triangle-34774af1a4678075b50b1bd3a20037f0.svg",
+  "media/components/SearchForm/icon.svg": "/packs/media/components/SearchForm/icon-581d55e7db470d462f6d0ea386d1d41e.svg",
+  "server_rendering.js": "/packs/js/server_rendering-48cb6c27498fd702323d.js",
+  "server_rendering.js.map": "/packs/js/server_rendering-48cb6c27498fd702323d.js.map"
+}
