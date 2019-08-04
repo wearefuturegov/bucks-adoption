@@ -3,3 +3,5 @@ log/
 log/development.log
 log/development.log
 *.cache
+public/
+tmp/pids/server.pid

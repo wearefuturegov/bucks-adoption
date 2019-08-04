@@ -64,3 +64,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'webpacker'
 gem 'react-rails'
 gem 'fae-rails'
+
+gem 'jquery-rails'
