@@ -9,7 +9,7 @@ import Cookies from "../Cookies"
 import "./style.scss"
 
 const Layout = ({children, withHeader, withUseful, withFooter, fullHeight})=>
-    <div className={fullHeight ? "layout--full-height" : undefined}>s
+    <div className={fullHeight ? "layout--full-height" : undefined}>
         <PhaseBanner href="#"/>
         <Cookies/>
         {withHeader && <Header /> }

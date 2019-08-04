@@ -25,7 +25,9 @@ module Fae
 
     def structure
       [
-        # scaffold inject marker
+        item('Pages', subitems: [
+          item('Adoption Home', path: fae.edit_content_block_path('adoption_home'))
+        ])
       ]
     end
 
