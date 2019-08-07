@@ -15,10 +15,10 @@ const EveningCard = ({
     <div className="evening-card">
       <a className="evening-card__link" target="_blank" href={url}>
       <h3 className="evening-card__title">
-        <Moment format="ddd, DD MMMM YYYY HH:mm - ">
+        <Moment format="ddd, DD MMMM YYYY (HH:mm - ">
           {start.local}
         </Moment>
-        <Moment format="HH:mm">
+        <Moment format="HH:mm)">
           {start.local}
         </Moment>
       </h3>

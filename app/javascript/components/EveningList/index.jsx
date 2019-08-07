@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import "./style.scss"
 import EveningCard from "../EveningCard"
+import loadingIcon from "./loading.svg"
 
 class EveningList extends Component {
   constructor() {
@@ -34,18 +35,18 @@ class EveningList extends Component {
       <section className="evening-list">
         {error ? <p>{error.message}</p> : null}
 
-        <ol className="evening__grid" aria-live="polite">
-          {!isLoading ? (
-            evenings.map(evening => {
+        {!isLoading ? (
+          <ol className="evening__grid" aria-live="polite">
+            {evenings.map(evening => {
               const { id, name, url, start, end, venue } = evening;
               return (
                 <EveningCard key={id} title={name.text} url={url} start={start} end={end} venue={venue} />
               );
-            })
+            })}
+          </ol>
           ) : (
-            <p>Loading...</p>
+            <img className="evening-grid__loader" src={loadingIcon} alt="Loading..."/>
           )}
-        </ol>
       </section>
       )
   }
