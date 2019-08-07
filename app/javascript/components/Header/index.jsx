@@ -11,19 +11,15 @@ const Header = ({inverted}) => {
     let menuItems = [
         {
             href: "#",
-            text: "Information and advice"
-        },
-        {
-            href: "/explore-your-needs",
-            text: "Things to do"
+            text: "Enquire about adoption"
         },
         {
             href: "#",
-            text: "Log in"
+            text: "Who can adopt?"
         },
         {
             href: "#",
-            text: "Sign up"
+            text: "Support for adoptive parents"
         },
     ]
     return(
