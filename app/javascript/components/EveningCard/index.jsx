@@ -8,7 +8,8 @@ const EveningCard = ({
     title,
     url,
     start,
-    end
+    end,
+    venue
 }) => {
   return(
     <div className="evening-card">
@@ -22,7 +23,11 @@ const EveningCard = ({
         </Moment>
       </h3>
       </a>
-      <p className="evening-card__type">{title}</p>
+      <p className="evening-card__type">
+        {title}
+        <br/>
+        {venue.name}, {venue.address.city} {venue.address.postal_code}
+      </p>
       <a className="evening-card__text-link" target="_blank" href={url}>Book evening on Eventbrite</a>
     </div>
   )
