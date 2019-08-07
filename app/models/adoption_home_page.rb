@@ -9,8 +9,8 @@ class AdoptionHomePage < Fae::StaticPage
       strapline: { type: Fae::TextArea },
       hero_image: { type: Fae::Image },
       body: { type: Fae::TextArea },
-      profile_link: { type: Fae::TextField },
-      profile_image: { type: Fae::Image }
+      cta_title: { type: Fae::TextField },
+      cta_text: { type: Fae::TextField }
     }
   end
 
