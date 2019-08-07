@@ -12,7 +12,7 @@
 }
 
 .page-header__lede{
-    color: $lightText;
+    // color: $lightText;
     font-size: 1.1em;
     margin-bottom: 15px;
     @media screen and (min-width: $desktop){
@@ -33,7 +33,7 @@
 .breadcrumbs__item{
     display: inline;
     font-size: 0.95em;
-    color: $lightText;
+    // color: $lightText;
     position: relative;
     margin-right: 25px;
     @media screen and (min-width: 600px) {
@@ -77,7 +77,7 @@
 }
 
 .breadcrumbs__link{
-    color: $lightText;
+    // color: $lightText;
     &:hover{
         text-decoration: none;
     }
