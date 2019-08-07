@@ -10,7 +10,8 @@ class AdoptionHomePage < Fae::StaticPage
       hero_image: { type: Fae::Image },
       body: { type: Fae::TextArea },
       cta_title: { type: Fae::TextField },
-      cta_text: { type: Fae::TextField }
+      cta_text: { type: Fae::TextField },
+      cta_button: { type: Fae::TextField }
     }
   end
 
