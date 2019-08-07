@@ -21,7 +21,7 @@
                 width: 100%;
             }
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             grid-column-gap: 20px;
         }
     }
@@ -36,6 +36,7 @@
             .evening-card{
                 width: 100%;
             }
+            grid-template-columns: 1fr 1fr;
             grid-column-gap: 30px;
         }
     }

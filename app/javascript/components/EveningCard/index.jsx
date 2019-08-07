@@ -1,6 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import "./style.scss"
+import Moment from 'react-moment'
+import Button from '../Button/'
 
 const EveningCard = ({
     title,
@@ -10,10 +12,18 @@ const EveningCard = ({
 }) => {
   return(
     <div className="evening-card">
-      <h3 className="evening-card__title">{title}</h3>
-      <a target="_blank" href={url} >Book event</a>
-      <p>{start.local}</p>
-      <p>{end.local}</p>
+      <a className="evening-card__link" target="_blank" href={url}>
+      <h3 className="evening-card__title">
+        <Moment format="ddd, DD MMMM YYYY HH:mm - ">
+          {start.local}
+        </Moment>
+        <Moment format="HH:mm">
+          {start.local}
+        </Moment>
+      </h3>
+      </a>
+      <p className="evening-card__type">{title}</p>
+      <a className="evening-card__text-link" target="_blank" href={url}>Book evening on Eventbrite</a>
     </div>
   )
 }

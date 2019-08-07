@@ -40,11 +40,10 @@
         content: "";
         display: block;
         position: absolute;
-        // border: 1px solid red;
-        top: -7px;
+        top: 0;
         left: 0;
         width: 100%;
-        height: calc(100% + 7px);
+        height: 100%;
     }
     &:focus{
         outline: none;
@@ -62,22 +61,13 @@
     margin-bottom: 10px;
 }
 
-.evening-card__description{
+.evening-card__type{
     font-size: 0.95em;
     color: $lightText;
 }
 
-.evening-card__footer{
-    display: flex;
-    margin-top: 10px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.evening-card__features{
-    font-size: 0.9em;
-    color: $lightText;
-    // font-style: italic;
-    margin-right: 20px;
+.evening-card__text-link {
+    font-size: 0.95em;
+    margin-top: 15px;
+    display: block;
 }
