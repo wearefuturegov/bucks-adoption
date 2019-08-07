@@ -5,6 +5,7 @@ class StaticPagesController < ApplicationController
     @item = page_name.constantize.instance rescue nil
     # shared elements on all pages
     @sitehome = AdoptionHomePage.instance
+    @adopteve = BookAdoptionEvePage.instance
 
     render "static_pages/#{params[:page]}"
   end

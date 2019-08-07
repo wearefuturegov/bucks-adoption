@@ -4,7 +4,7 @@ module Admin
     private
 
     def fae_pages
-      [AdoptionHomePage]
+      [AdoptionHomePage, BookAdoptionEvePage]
     end
   end
 end
