@@ -1,0 +1,16 @@
+@import '../../vars';
+
+.book-an-evening {
+  background: $background;
+  padding: 40px 0px;
+  @media screen and (min-width: $tablet){
+      padding: 60px 0px;
+  }
+}
+
+.lead-p {
+  @media screen and (min-width: $tablet){
+    font-size: 1.1em;
+    margin-bottom: 15px;
+  }
+}

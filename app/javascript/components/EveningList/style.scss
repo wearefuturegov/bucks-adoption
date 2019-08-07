@@ -1,0 +1,42 @@
+@import '../vars';
+
+.evening__grid{
+    padding-top: 15px;
+    list-style: none;
+    @media screen and (min-width: 500px){
+        // IE
+        .evening-card{
+            display: inline-block;
+            width: calc(50% - 10px);
+            margin-right: 20px;
+            vertical-align: top;
+            &:nth-of-type(even){
+                margin-right: 0px
+            }
+        }
+        // Rest of world
+        @supports (display: grid){
+            .evening-card{
+                display: block;
+                width: 100%;
+            }
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 20px;
+        }
+    }
+    @media screen and (min-width: $tablet){
+        // IE
+        .evening-card{
+            width: calc(50% - 15px);
+            margin-right: 30px;
+        }
+        // Rest of world
+        @supports (display: grid){
+            .evening-card{
+                width: 100%;
+            }
+            grid-column-gap: 30px;
+        }
+    }
+}
