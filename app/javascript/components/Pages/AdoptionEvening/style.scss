@@ -8,9 +8,13 @@
   }
 }
 
-.lead-p {
+.book-an-evening__body p {
   margin-bottom: 15px;
+  color: $lightText;
   @media screen and (min-width: $tablet){
     font-size: 1.1em;
+  }
+  @media screen and (min-width: $desktop){
+    max-width: 66.67%
   }
 }
