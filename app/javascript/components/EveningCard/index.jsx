@@ -19,7 +19,7 @@ const EveningCard = ({
           {start.local}
         </Moment>
         <Moment format="HH:mm)">
-          {start.local}
+          {end.local}
         </Moment>
       </h3>
       </a>
