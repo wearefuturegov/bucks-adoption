@@ -4,9 +4,12 @@ module Fae
 
     def structure
       [
-        item('Pages', subitems: [
+        item('Pages', path: fae.pages_path, subitems: [
           item('Adoption Home', path: fae.edit_content_block_path('adoption_home')),
           item('Book Adoption Evening', path: fae.edit_content_block_path('book_adoption_eve'))
+        ]),
+        item('Adoption Tool content', subitems: [
+          item('Lifestyle & Wellbeing', path: admin_lifestyle_sections_path)
         ])
       ]
     end

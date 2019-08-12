@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_02_150224) do
+ActiveRecord::Schema.define(version: 2019_08_12_155809) do
 
   create_table "fae_changes", force: :cascade do |t|
     t.integer "changeable_id"
@@ -158,6 +158,15 @@ ActiveRecord::Schema.define(version: 2019_08_02_150224) do
     t.index ["reset_password_token"], name: "index_fae_users_on_reset_password_token", unique: true
     t.index ["role_id"], name: "index_fae_users_on_role_id"
     t.index ["unlock_token"], name: "index_fae_users_on_unlock_token", unique: true
+  end
+
+  create_table "lifestyle_sections", force: :cascade do |t|
+    t.string "title"
+    t.text "body"
+    t.string "action"
+    t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

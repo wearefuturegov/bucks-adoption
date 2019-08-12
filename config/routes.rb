@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   get 'static_pages/home'
   namespace :admin do
+    resources :lifestyle_sections
   end
   # mount Fae below your admin namespec
   mount Fae::Engine => '/admin'
