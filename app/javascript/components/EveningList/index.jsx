@@ -18,7 +18,7 @@ class EveningList extends Component {
   }
 
   fetchEvenings() {
-    fetch("https://www.eventbriteapi.com/v3/users/me/events/?status=live&expand=venue&token=XQ2RUFERRGZ6ZTYCP6LK")
+    fetch("https://www.eventbriteapi.com/v3/users/me/events/?status=live&expand=venue&token=" + process.env.eventbrite_secret)
     .then(results => results.json())
     .then(data =>
       this.setState({
