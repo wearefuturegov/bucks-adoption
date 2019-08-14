@@ -23,7 +23,6 @@ export default ({title, intro, body, questions})=>
           }
         </div>
         <div className="tool_content__questions">
-          {console.log(questions)}
           {questions.map(question => {
             const { id, title, body, action } = question;
             return (
