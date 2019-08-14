@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'lifestyle_sections/index'
+  get 'lifestyle/index'
   get 'static_pages/home'
   root "static_pages#show", page: 'home'
 
