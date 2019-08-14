@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'lifestyle_sections/index'
   get 'static_pages/home'
+  root "static_pages#show", page: 'home'
+
   namespace :admin do
     resources :lifestyle_sections
     get '/', to: redirect('/admin/pages')
@@ -8,6 +11,5 @@ Rails.application.routes.draw do
   # mount Fae below your admin namespec
   mount Fae::Engine => '/admin'
 
-  root "static_pages#show", page: 'home'
   get "/pages/:page" => "static_pages#show"
 end

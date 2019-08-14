@@ -6,7 +6,6 @@ class StaticPagesController < ApplicationController
     # shared elements on all pages
     @sitehome = AdoptionHomePage.instance
     @adopteve = BookAdoptionEvePage.instance
-    @lifestylecontent = LifestyleContentPage.instance
 
     render "static_pages/#{params[:page]}"
   end
