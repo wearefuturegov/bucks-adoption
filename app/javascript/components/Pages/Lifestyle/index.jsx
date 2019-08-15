@@ -1,11 +1,11 @@
 import React from "react"
 import Layout from "../../Layout"
 import PageHeader from "../../PageHeader"
-import ToolContent from "../../ToolContent"
+import TopicQuestion from "../../TopicQuestion"
 
 export default ({title, intro, body, questions})=>
   <Layout withHeader withFooter>
-    <section className="tool_content">
+    <section className="topic_content">
       <div className="container">
         <PageHeader title={title} lede={intro} breadcrumbs={[
                 {
@@ -15,18 +15,18 @@ export default ({title, intro, body, questions})=>
                 {
                     title: title
                 }]} />
-        <div className="tool_content__body">
+        <div className="topic_content__body">
           {
             body.split("\n").map((i,key) => {
               return (<p key={key}>{i}</p>);
             })
           }
         </div>
-        <div className="tool_content__questions">
+        <div className="topic_content__questions">
           {questions.map(question => {
             const { id, title, body, action } = question;
             return (
-              <ToolContent key={id} title={title} body={body} action={action} />
+              <TopicQuestion key={id} title={title} body={body} action={action} />
             );
           })}
         </div>

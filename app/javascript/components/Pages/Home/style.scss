@@ -1,0 +1,9 @@
+@import '../../vars';
+
+.topic-sections {
+  background: $background;
+  padding: 20px 0px;
+  @media screen and (min-width: $tablet){
+      padding: 40px 0px;
+  }
+}

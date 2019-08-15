@@ -29,14 +29,3 @@ export default ({title, strapline, cta_title, cta_text, cta_button, body})=>
       </div>
     </section>
   </Layout>
-
-
-
-// <Hero
-//   title={title}
-//   description={strapline}
-//   ctaTitle={cta_title}
-//   ctaDescription={cta_text}
-//   ctaHref="#"
-//   ctaLinkText={cta_button}
-// />
