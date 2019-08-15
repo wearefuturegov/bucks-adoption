@@ -1,10 +1,13 @@
 import React from "react"
 import "./style.scss"
+import Card from "../Card"
+import Button from '../Button'
 
 export default ({title, intro })=>
   <section className="topic-page-content">
-    <a href="lifestyle/index">
-      <h3 className="topic-page-content__title">{title}</h3>
-      <p className="topic-page-content__intro">{intro}</p>
-    </a>
+    <Card key="1" intro={intro} title={title}>
+      <div className="button-right">
+        <Button href="lifestyle/index">Start</Button>
+      </div>
+    </Card>
   </section>
