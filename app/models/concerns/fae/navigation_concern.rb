@@ -10,7 +10,7 @@ module Fae
           item('Lifestyle Content', path: fae.edit_content_block_path('lifestyle_content'))
         ]),
         item('Adoption Tool content', subitems: [
-          item('Lifestyle & Wellbeing', path: admin_lifestyle_sections_path)
+          item('Lifestyle & Wellbeing', path: admin_lifestyle_topic_questions_path)
         ])
       ]
     end

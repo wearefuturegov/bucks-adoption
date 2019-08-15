@@ -1,6 +1,6 @@
 class LifestyleController < ApplicationController
   def index
-    @lifestylesectionscontent = LifestyleSection.all
+    @lifestylesectionscontent = LifestyleTopicQuestion.all
     @lifestylecontent = LifestyleContentPage.instance
   end
 end

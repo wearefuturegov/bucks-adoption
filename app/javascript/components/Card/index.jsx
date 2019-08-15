@@ -22,7 +22,6 @@ const Card = ({
 
 Card.propTypes = {
   title: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired
 }
 
 export default Card

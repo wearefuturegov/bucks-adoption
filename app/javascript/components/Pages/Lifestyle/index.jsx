@@ -24,9 +24,9 @@ export default ({title, intro, body, questions})=>
         </div>
         <div className="topic_content__questions">
           {questions.map(question => {
-            const { id, title, body, action } = question;
+            const { id, title, answer_1, action_title } = question;
             return (
-              <TopicQuestion key={id} title={title} body={body} action={action} />
+              <TopicQuestion key={id} title={title} answer_1={answer_1} action_title={action_title} />
             );
           })}
         </div>

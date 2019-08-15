@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root "static_pages#show", page: 'home'
 
   namespace :admin do
-    resources :lifestyle_sections
+    resources :lifestyle_topic_questions
     get '/', to: redirect('/admin/pages')
   end
   # mount Fae below your admin namespec
