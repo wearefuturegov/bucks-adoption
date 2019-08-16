@@ -13,7 +13,7 @@ const Footer = () =>
                     <a href="https://www.buckscc.gov.uk/services/contact-and-complaints/contact-us/" className="site-footer__menu-link">Contact us</a>
                 </li>
                 <li className="site-footer__menu-item">
-                    <a href="/cookies" className="site-footer__menu-link">Cookies</a>
+                    <a href="/pages/cookies" className="site-footer__menu-link">Cookies</a>
                 </li>
 
             </ul>

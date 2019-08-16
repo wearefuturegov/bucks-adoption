@@ -15,7 +15,7 @@ const Cookies = () => {
                         setInvisiblity(true)
                         setSeenCookie()
                     }}>Accept</button>
-                    <a href="/cookies" className="cookies__action">Find out more</a>
+                    <a href="/pages/cookies" className="cookies__action">Find out more</a>
                 </div>
             </footer>
         )
