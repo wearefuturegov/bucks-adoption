@@ -1,6 +1,6 @@
 @import '../../vars';
 
-.topic-questions-section {
+.topic-questionnaire {
   background: $background;
   padding: 20px 0px;
   margin-top: 20px;
@@ -8,4 +8,29 @@
       padding: 40px 0px;
       margin-top: 40px;
   }
+}
+
+.topic-questionnaire_start {
+    max-width: 710px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px 20px;
+    @media screen and (min-width: $tablet){
+        padding-left: 30px;
+        padding-right: 50px;
+    }
+    text-align: center;
+
+    p {
+      margin-bottom: 25px;
+    }
+}
+
+.topic-questionnaire_questions {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.fade-animate {
+  animation: fadeIn 0.3s ease-out;
 }

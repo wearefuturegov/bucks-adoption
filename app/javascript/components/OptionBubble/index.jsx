@@ -10,6 +10,8 @@ const OptionBubble = ({name, value, label, onChange, selectionState}) =>
             value={value}
             autoComplete="off"
             id={`${name}-${value}`}
+            checked={selectionState.includes(value)}
+            onChange={onChange}
         />
         <label className={"option-bubble__label"} htmlFor={`${name}-${value}`}>
             {label}
