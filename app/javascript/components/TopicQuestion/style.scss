@@ -8,12 +8,22 @@
         opacity: 1;
     }
 }
+html {
+    scroll-behavior: smooth;
+}
 .fade-animate {
   animation: fadeIn 0.3s ease-out;
 }
 
 .questions{
     background: $background;
+}
+
+.answer_explanation {
+    max-width: 710px;
+    padding: 40px 0;
+    font-size: 1.3em;
+    margin-top: 15px;
 }
 
 .questions__inner{
@@ -55,7 +65,7 @@
     }
 }
 
-.question__help-text{
+.question__help-text {
     color: $lightText;
     margin-bottom: 15px;
     font-size: 0.95em;

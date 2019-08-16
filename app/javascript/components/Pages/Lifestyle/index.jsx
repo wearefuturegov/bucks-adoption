@@ -51,11 +51,7 @@ const Lifestyle = ({title, intro, body, questions}) => {
                 const { id, title, answer_1, answer_2, answer_3, action_title } = question;
                 return (
                   <div key={id}>
-                    {
-                      (id <= currentQuestion) ?
-                      <TopicQuestion key={id} content={question} id={id} total={questions.length} currentQuestion={currentQuestion} setCurrentQuestion={setCurrentQuestion} />
-                      :null
-                    }
+                    <TopicQuestion key={id} content={question} id={id} total={questions.length} currentQuestion={currentQuestion} setCurrentQuestion={setCurrentQuestion} />
                   </div>
                 );
               })}

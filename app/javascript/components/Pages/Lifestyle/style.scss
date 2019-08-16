@@ -10,6 +10,15 @@
   }
 }
 
+.topic-content__body {
+  p {
+    margin-bottom: 15px;
+  }
+  @media screen and (min-width: $desktop){
+      max-width: 75%
+  }
+}
+
 .topic-questionnaire_start {
     max-width: 710px;
     width: 100%;
@@ -26,6 +35,7 @@
       margin-bottom: 25px;
     }
 }
+
 
 .topic-questionnaire_questions {
   animation: fadeIn 0.3s ease-out;
