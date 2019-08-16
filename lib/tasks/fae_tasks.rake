@@ -10,7 +10,7 @@ namespace :fae do
       option = Fae::Option.new({
         title: 'Bucks Adoption',
         singleton_guard: 0,
-        time_zone: 'British Summer Time',
+        time_zone: 'GMT',
         live_url: 'https://www.buckscc.gov.uk/services/care-for-children-and-families/adoption/adopting-a-child/'
         })
       option.save!

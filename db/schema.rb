@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2019_08_15_161937) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "fae_changes", force: :cascade do |t|
     t.integer "changeable_id"
     t.string "changeable_type"
