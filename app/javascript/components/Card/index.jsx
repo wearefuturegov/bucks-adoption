@@ -12,9 +12,11 @@ const Card = ({
   return(
     <div className={`card ${clickable ? "clickable" : "notclickable"}`}>
       <h3 className="card__title">{title}</h3>
-      <p className="card__intro">
-        {intro}
-      </p>
+      <div className="card__intro">
+        {intro.split("\n").map((i,key) => {
+            return (<p key={key}>{i}</p>);
+          })}
+      </div>
       {children}
     </div>
   )

@@ -27,13 +27,14 @@ $tablet: 750px;
 $desktop: 1000px;
 $largeDesktop: 1500px;
 
+$maxWidth: 710px;
 
 // base font sizes
 $title: 2em;
 $subtitle: 1.5em;
 $lede: 1.3em;
-$paragraph: 1em;
-$small: 0.95em;
+$paragraph: 1.1em;
+$small: 0.8em;
 
 // desktop font sizes
 $title-d: 2.813em;
@@ -41,6 +42,10 @@ $subtitle-d: 1.875em;
 $lede-d: 1.5em;
 $paragraph-d: 1.188em;
 $small-d: 1.125em;
+
+body p {
+    font-size: $paragraph;
+}
 
 // font-size mixins
 @mixin smallText {

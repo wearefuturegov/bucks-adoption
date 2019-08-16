@@ -1,7 +1,7 @@
 import React, {useState, useRef} from "react"
 import PropTypes from "prop-types"
 import OptionBubble from "../OptionBubble"
-import TopicQuestionAction from "../TopicQuestionAction"
+import Card from "../Card"
 import "./style.scss"
 
 const TopicQuestion = ({
@@ -19,7 +19,6 @@ const TopicQuestion = ({
     const [selection, changeSelection] = useState([])
     const handleChange = (e) => {
         changeSelection([e.target.value])
-        console.log("currentQuestion = " + currentQuestion + " id = " + id)
         if(currentQuestion < (id+1)) {
             setCurrentQuestion(id+1)
         }
@@ -40,22 +39,34 @@ const TopicQuestion = ({
             {
                 selection == "1"?
                 <div className="answer_explanation answer_explanation_1 fade-animate">
-                    <p>{content.answer_1_explanation}</p>
+                    {content.answer_1_explanation.split("\n").map((i,key) => {
+                      return (<p key={key}>{i}</p>);
+                    })}
                 </div>
                 :selection == "2"?
                 <div className="answer_explanation answer_explanation_2 fade-animate">
-                    <p>{content.answer_2_explanation}</p>
+                    {content.answer_2_explanation.split("\n").map((i,key) => {
+                      return (<p key={key}>{i}</p>);
+                    })}
                 </div>
                 :selection == "3"?
                 <div className="answer_explanation answer_explanation_3 fade-animate">
-                    <p>{content.answer_3_explanation}</p>
+                    {content.answer_3_explanation.split("\n").map((i,key) => {
+                      return (<p key={key}>{i}</p>);
+                    })}
                 </div>
                 :null
             }{
-                (content.action_number == "0" && selection != "") || (selection == content.action_number && selection != "") && content.action_number ?
-                    <TopicQuestionAction title={content.action_title} text={content.action_text} />
-                :null
+                (content.action_number == "0" && selection != "") || (selection == content.action_number && selection != "") && content.action_number ? (
+                    <>
+                    <Card title={content.action_title} intro={content.action_text} />
+                    <hr/>
+                    </>
+                ) : selection != ""? (
+                    <hr/>
+                ):null
             }
+
         </div>
         :null}
         </>
