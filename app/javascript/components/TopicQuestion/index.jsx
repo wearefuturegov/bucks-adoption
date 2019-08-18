@@ -4,13 +4,36 @@ import OptionBubble from "../OptionBubble"
 import Card from "../Card"
 import "./style.scss"
 
+function replaceAt(string, index, replace) {
+  return string.substring(0, index) + replace + string.substring(index + 1);
+}
+
+const useStateWithLocalStorage = localStorageKey => {
+  const [resultsStored, setResultsStored] = React.useState(
+    localStorage.getItem(localStorageKey) || ''
+  );
+
+  React.useEffect(() => {
+    localStorage.setItem(localStorageKey, resultsStored);
+  }, [resultsStored]);
+
+  return [resultsStored, setResultsStored];
+};
+
 const TopicQuestion = ({
     id,
     content,
     total,
     currentQuestion,
-    setCurrentQuestion
+    setCurrentQuestion,
+    questionsLength,
+    topicID,
+    results,
+    setResults,
+    resultsStored,
+    setResultsStored
     }) => {
+
 
     const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
     const myRef = useRef(null)
@@ -19,17 +42,27 @@ const TopicQuestion = ({
     const [selection, changeSelection] = useState([])
     const handleChange = (e) => {
         changeSelection([e.target.value])
-        if(currentQuestion < (id+1)) {
+
+        if (currentQuestion < (id+1)) {
             setCurrentQuestion(id+1)
+            setResults(results + [e.target.value].toString())
+        } else {
+            setResults(replaceAt(results, (id-1), [e.target.value].toString()))
         }
         executeScroll()
+        if ((questionsLength+1) <= currentQuestion) {
+            handleEnd()
+        }
+    }
+    const handleEnd = (e) => {
+        // setResultsStored(results)
     }
 
     return(
         <>
         { (id <= currentQuestion) ?
-        <div ref={myRef} className={"question fade-animate question_" + id}>
-            <h2 className="question__title"><legend>{content.title}</legend></h2>
+        <div className={"question fade-animate question_" + id}>
+            <h2 ref={myRef} className="question__title"><legend>{content.title}</legend></h2>
             <p className="question__help-text">{id} of {total} questions</p>
             <div className="question__options">
                 <OptionBubble type="radio" name={id} label={content.answer_1} selectionState={selection} onChange={handleChange} value="1" />
@@ -72,8 +105,5 @@ const TopicQuestion = ({
         </>
     )}
 
-TopicQuestion.propTypes = {
-
-}
 
 export default TopicQuestion
