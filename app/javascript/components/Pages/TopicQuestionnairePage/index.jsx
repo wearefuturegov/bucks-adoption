@@ -6,7 +6,7 @@ import Button from "../../Button"
 import "./style.scss"
 
 
-const Lifestyle = ({title, intro, body, questions}) => {
+const TopicQuestionnairePage = ({title, intro, body, questions}) => {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [startQuestions, setStartQuestions] = useState(false)
   const handleClick = () => {
@@ -51,7 +51,7 @@ const Lifestyle = ({title, intro, body, questions}) => {
                 const { id, title, answer_1, answer_2, answer_3, action_title } = question;
                 return (
                   <div key={id}>
-                    <TopicQuestion key={id} content={question} id={id} total={questions.length} currentQuestion={currentQuestion} setCurrentQuestion={setCurrentQuestion} />
+                    <TopicQuestion key={id} content={question} id={id} total={questions.length} currentQuestion={currentQuestion} setCurrentQuestion={setCurrentQuestion} questionsLength={questions.length} />
                   </div>
                 );
               })}
@@ -60,7 +60,10 @@ const Lifestyle = ({title, intro, body, questions}) => {
           {
             ((questions.length+1) <= currentQuestion) ?
             <div className="final-results">
-              <p>end</p>
+              <h2>Your readiness list for {title}</h2>
+              <p>Some context for what this is...</p>
+              <p>include any basic checklist for healt and wellbeing?</p>
+              {console.log("trying to get the chosen questions - " + "")}
             </div>
             :null
           }
@@ -71,4 +74,4 @@ const Lifestyle = ({title, intro, body, questions}) => {
 }
 
 
-export default Lifestyle
+export default TopicQuestionnairePage

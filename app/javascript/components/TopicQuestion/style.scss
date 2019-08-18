@@ -26,6 +26,10 @@ html {
     margin-top: 15px;
 }
 
+.question .card {
+    max-width: $maxWidth;
+}
+
 .questions__inner{
     max-width: $maxWidth;
     width: 100%;
