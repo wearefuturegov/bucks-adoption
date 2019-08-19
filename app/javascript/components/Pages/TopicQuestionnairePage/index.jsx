@@ -20,7 +20,6 @@ const useStateWithLocalStorage = localStorageKey => {
 };
 
 
-
 const TopicQuestionnairePage = ({title, intro, body, questions, topicID}) => {
   const [results, setResults] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0)
@@ -47,6 +46,11 @@ const TopicQuestionnairePage = ({title, intro, body, questions, topicID}) => {
     scrollToRef(topRef)
   }
 
+  // TODO - io order for this URL params to work, need to be able to remove params from url on handleRestartClick
+  // if (resultsStored == '' && window.location.search) {
+  //   setResultsStored(window.location.search.split('?results=')[1].toString())
+  // }
+
   return(
     <Layout withHeader withFooter>
       <section className="topic-content">
@@ -69,10 +73,9 @@ const TopicQuestionnairePage = ({title, intro, body, questions, topicID}) => {
         </div>
       </section>
 
-
-
+      <div ref={topRef}>
       { !resultsStored ?
-        <section ref={topRef} className="topic-questionnaire">
+        <section className="topic-questionnaire">
           <div className="container">
             {
               !startQuestions &&
@@ -118,7 +121,8 @@ const TopicQuestionnairePage = ({title, intro, body, questions, topicID}) => {
           </div>
         </section>
         :null
-      }
+        }
+      </div>
 
 
 
