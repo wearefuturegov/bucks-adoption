@@ -20,7 +20,7 @@ const useStateWithLocalStorage = localStorageKey => {
   return [resultsStored, setResultsStored];
 };
 
-const TopicQuestion = ({
+const TopicQuestions = ({
     id,
     content,
     total,
@@ -106,4 +106,4 @@ const TopicQuestion = ({
     )}
 
 
-export default TopicQuestion
+export default TopicQuestions

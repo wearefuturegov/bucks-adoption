@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import Layout from "../../Layout"
 import PageHeader from "../../PageHeader"
-import TopicQuestion from "../../TopicQuestion"
+import TopicQuestions from "../../TopicQuestions"
 import TopicResults from "../../TopicResults"
 import Button from "../../Button"
 import "./style.scss"
@@ -80,7 +80,7 @@ const TopicQuestionnairePage = ({title, intro, body, questions, topicID}) => {
                 {questions.map(question => {
                   const { id, title, answer_1, answer_2, answer_3, action_title } = question;
                   return (
-                    <TopicQuestion key={id} content={question} id={id} total={questions.length} currentQuestion={currentQuestion} setCurrentQuestion={setCurrentQuestion} questionsLength={questions.length} topicID={topicID} results={results} setResults={setResults} resultsStored={resultsStored} setResultsStored={setResultsStored} />
+                    <TopicQuestions key={id} content={question} id={id} total={questions.length} currentQuestion={currentQuestion} setCurrentQuestion={setCurrentQuestion} questionsLength={questions.length} topicID={topicID} results={results} setResults={setResults} resultsStored={resultsStored} setResultsStored={setResultsStored} />
                   );
                 })}
                 {
