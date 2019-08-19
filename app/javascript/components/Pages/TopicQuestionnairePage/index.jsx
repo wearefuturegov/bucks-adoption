@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useState, useRef} from "react"
 import Layout from "../../Layout"
 import PageHeader from "../../PageHeader"
 import TopicQuestions from "../../TopicQuestions"
@@ -20,25 +20,32 @@ const useStateWithLocalStorage = localStorageKey => {
 };
 
 
+
 const TopicQuestionnairePage = ({title, intro, body, questions, topicID}) => {
   const [results, setResults] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [startQuestions, setStartQuestions] = useState(false)
+  const [resultsStored, setResultsStored] = useStateWithLocalStorage(topicID);
+
+  const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
+  const topRef = useRef(null)
+
   const handleStartClick = () => {
     setStartQuestions(true)
     setCurrentQuestion(1)
+    scrollToRef(topRef)
   }
   const handleRestartClick = () => {
     setResultsStored('')
     setResults('')
     setStartQuestions(true)
     setCurrentQuestion(1)
+    scrollToRef(topRef)
   }
   const handleSaveClick = () => {
     setResultsStored(results)
+    scrollToRef(topRef)
   }
-
-  const [resultsStored, setResultsStored] = useStateWithLocalStorage(topicID);
 
   return(
     <Layout withHeader withFooter>
@@ -65,7 +72,7 @@ const TopicQuestionnairePage = ({title, intro, body, questions, topicID}) => {
 
 
       { !resultsStored ?
-        <section className="topic-questionnaire">
+        <section ref={topRef} className="topic-questionnaire">
           <div className="container">
             {
               !startQuestions &&
@@ -80,7 +87,20 @@ const TopicQuestionnairePage = ({title, intro, body, questions, topicID}) => {
                 {questions.map(question => {
                   const { id, title, answer_1, answer_2, answer_3, action_title } = question;
                   return (
-                    <TopicQuestions key={id} content={question} id={id} total={questions.length} currentQuestion={currentQuestion} setCurrentQuestion={setCurrentQuestion} questionsLength={questions.length} topicID={topicID} results={results} setResults={setResults} resultsStored={resultsStored} setResultsStored={setResultsStored} />
+                    <TopicQuestions
+                      key={id}
+                      content={question}
+                      id={id}
+                      total={questions.length}
+                      currentQuestion={currentQuestion}
+                      setCurrentQuestion={setCurrentQuestion}
+                      questionsLength={questions.length}
+                      topicID={topicID}
+                      results={results}
+                      setResults={setResults}
+                      resultsStored={resultsStored}
+                      setResultsStored={setResultsStored}
+                      scrollToRef={scrollToRef} />
                   );
                 })}
                 {
@@ -106,7 +126,7 @@ const TopicQuestionnairePage = ({title, intro, body, questions, topicID}) => {
       {
         // ((questions.length+1) <= currentQuestion)
         resultsStored.length ?
-          <TopicResults topicSection={title} handleRestartClick={handleRestartClick} resultsStored={resultsStored} />
+          <TopicResults topicSection={title} handleRestartClick={handleRestartClick} resultsArray={resultsStored.split('')} questions={questions} />
         :null
       }
     </Layout>

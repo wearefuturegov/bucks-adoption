@@ -31,15 +31,14 @@ const TopicQuestions = ({
     results,
     setResults,
     resultsStored,
-    setResultsStored
+    setResultsStored,
+    scrollToRef
     }) => {
 
-
-    const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
-    const myRef = useRef(null)
-    const executeScroll = () => scrollToRef(myRef)
+    const questionRef = useRef(null)
 
     const [selection, changeSelection] = useState([])
+
     const handleChange = (e) => {
         changeSelection([e.target.value])
 
@@ -49,20 +48,14 @@ const TopicQuestions = ({
         } else {
             setResults(replaceAt(results, (id-1), [e.target.value].toString()))
         }
-        executeScroll()
-        if ((questionsLength+1) <= currentQuestion) {
-            handleEnd()
-        }
-    }
-    const handleEnd = (e) => {
-        // setResultsStored(results)
+        scrollToRef(questionRef)
     }
 
     return(
         <>
         { (id <= currentQuestion) ?
         <div className={"question fade-animate question_" + id}>
-            <h2 ref={myRef} className="question__title"><legend>{content.title}</legend></h2>
+            <h2 ref={questionRef} className="question__title"><legend>{content.title}</legend></h2>
             <p className="question__help-text">{id} of {total} questions</p>
             <div className="question__options">
                 <OptionBubble type="radio" name={id} label={content.answer_1} selectionState={selection} onChange={handleChange} value="1" />
@@ -70,6 +63,7 @@ const TopicQuestions = ({
                 {(content.answer_3)? <OptionBubble type="radio" name={id} label={content.answer_3} selectionState={selection} onChange={handleChange} value="3" /> : ""}
             </div>
             {
+                // TODO - this could be refactored better
                 selection == "1"?
                 <div className="answer_explanation answer_explanation_1 fade-animate">
                     {content.answer_1_explanation.split("\n").map((i,key) => {
