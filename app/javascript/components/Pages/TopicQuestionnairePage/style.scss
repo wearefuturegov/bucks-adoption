@@ -1,6 +1,6 @@
 @import '../../vars';
 
-.topic-questionnaire, .final-results {
+.topic-questionnaire, .final-results, .topic-questionnaire_end {
   background: $background;
   padding: 20px 0px;
   @media screen and (min-width: $tablet){
@@ -44,6 +44,22 @@
 
 .topic-questionnaire_questions {
   animation: fadeIn 0.3s ease-out;
+}
+
+.topic-questionnaire_end {
+  margin: 0 auto;
+  @media screen and (min-width: $desktop){
+      max-width: $maxWidth;
+  }
+
+  p {
+    margin-bottom: 15px;
+  }
+}
+
+.centered-button {
+  text-align: center;
+  margin-top: 20px;
 }
 
 .fade-animate {

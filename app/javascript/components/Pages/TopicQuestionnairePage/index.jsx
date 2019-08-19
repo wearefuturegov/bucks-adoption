@@ -2,6 +2,7 @@ import React, {useState} from "react"
 import Layout from "../../Layout"
 import PageHeader from "../../PageHeader"
 import TopicQuestion from "../../TopicQuestion"
+import TopicResults from "../../TopicResults"
 import Button from "../../Button"
 import "./style.scss"
 
@@ -79,14 +80,17 @@ const TopicQuestionnairePage = ({title, intro, body, questions, topicID}) => {
                 {questions.map(question => {
                   const { id, title, answer_1, answer_2, answer_3, action_title } = question;
                   return (
-                    <div key={id}>
-                      <TopicQuestion key={id} content={question} id={id} total={questions.length} currentQuestion={currentQuestion} setCurrentQuestion={setCurrentQuestion} questionsLength={questions.length} topicID={topicID} results={results} setResults={setResults} resultsStored={resultsStored} setResultsStored={setResultsStored} />
-                    </div>
+                    <TopicQuestion key={id} content={question} id={id} total={questions.length} currentQuestion={currentQuestion} setCurrentQuestion={setCurrentQuestion} questionsLength={questions.length} topicID={topicID} results={results} setResults={setResults} resultsStored={resultsStored} setResultsStored={setResultsStored} />
                   );
                 })}
                 {
                   ((questions.length+1) <= currentQuestion) ?
-                    <Button onClick={handleSaveClick}>Save</Button>
+                    <div className="topic-questionnaire_end">
+                      <p>Great, you have completed the {title} section. Click save to store these answers, they will be saved for when you come back, as long as you come back on the same browser.</p>
+                      <div className="centered-button">
+                        <Button onClick={handleSaveClick}>Save</Button>
+                      </div>
+                    </div>
                   :null
                 }
               </div>
@@ -102,15 +106,7 @@ const TopicQuestionnairePage = ({title, intro, body, questions, topicID}) => {
       {
         // ((questions.length+1) <= currentQuestion)
         resultsStored.length ?
-        <section className="final-results">
-          <div className="container">
-            <h2>Your readiness list for {title}</h2>
-            <p>Some context for what this is...</p>
-            <p>include any basic checklist for healt and wellbeing?</p>
-            {resultsStored}
-            <Button onClick={handleRestartClick}>Redo questions</Button>
-          </div>
-        </section>
+          <TopicResults topicSection={title} handleRestartClick={handleRestartClick} resultsStored={resultsStored} />
         :null
       }
     </Layout>
