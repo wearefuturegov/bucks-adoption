@@ -34,10 +34,10 @@ const TopicCard = ({
 
       { clickable ?
         <div className="reveal-results">
-          <p className="reveal-results_link">Click to { isRevealed ? 'less' : 'more'} details</p>
+          <p className="reveal-results_link">Click to see { isRevealed ? 'less' : 'more'} details</p>
           { isRevealed &&
             <div className="reveal-results_content fade-animate">
-              <h3>You chose {answer} to the question: {question_title} </h3>
+              <h3>You chose '{answer}' for the question: '{question_title}'</h3>
               <Markdown>{question_content}</Markdown>
             </div>
           }

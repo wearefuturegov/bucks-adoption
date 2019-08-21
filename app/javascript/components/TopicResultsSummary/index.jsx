@@ -3,12 +3,15 @@ import Button from "../Button"
 import TopicCard from "../TopicCard"
 import "./style.scss"
 
-const TopicResultsSummary = ({ topicSection, resultsArray, questions, type }) => {
+const TopicResultsSummary = ({ topicSection, resultsArray, questions, type, withTitle }) => {
 
     return(
         <section className="summary-results">
             <div className="container">
-                <h2>{topicSection} actions:</h2>
+                { withTitle ?
+                    <h2>{topicSection} actions:</h2>
+                  :null
+                }
                 {
                     resultsArray.map((result, index) => {
                     return(

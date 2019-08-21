@@ -1,6 +1,6 @@
 import React from "react"
 import Button from "../Button"
-import TopicCard from "../TopicCard"
+import TopicResultsSummary from "../TopicResultsSummary"
 import "./style.scss"
 
 const TopicResults = ({ topicSection, handleRestartClick, resultsArray, questions, type }) => {
@@ -13,38 +13,8 @@ const TopicResults = ({ topicSection, handleRestartClick, resultsArray, question
                     <p>Some context for what this is...</p>
                 }
                 <p>(include core checklist for each section e.g. book an evening)</p>
-                {
-                    resultsArray.map((result, index) => {
-                    return(
-                        <div className="final-results_single" key={index}>
-                            {
-                                // TODO - this could probably be refactored better
-                                result == "1" ? (
-                                    <>
-                                    { questions[index].action_1_title ?
-                                        <TopicCard title={questions[index].action_1_title} intro={questions[index].action_1_text} type={type} />
-                                      :null
-                                    }
-                                    </>
-                                ) : result == "2" ? (
-                                    <>
-                                    { questions[index].action_2_title ?
-                                        <TopicCard title={questions[index].action_2_title} intro={questions[index].action_2_text} type={type} />
-                                      :null
-                                    }
-                                    </>
-                                ) : result == "3" ? (
-                                    <>
-                                    { questions[index].action_3_title ?
-                                        <TopicCard title={questions[index].action_3_title} intro={questions[index].action_3_text} type={type} />
-                                      :null
-                                    }
-                                    </>
-                                ) : null
-                            }
-                        </div>
-                    )
-                }) }
+
+                <TopicResultsSummary topicSection={topicSection} resultsArray={resultsArray} questions={questions} type={type} />
 
                 { handleRestartClick &&
                 <div className="centered-button">

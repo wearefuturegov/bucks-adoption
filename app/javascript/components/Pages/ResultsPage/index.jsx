@@ -59,35 +59,35 @@ const ResultsPage = ({
         <div className="health-results-summary">
           {
             healthResultsStored.length ?
-              <TopicResultsSummary topicSection={health_title} resultsArray={healthResultsStored.split('')} questions={health_questions} type="results_topic_lifestyle" />
+              <TopicResultsSummary withTitle topicSection={health_title} resultsArray={healthResultsStored.split('')} questions={health_questions} type="results_topic_lifestyle" />
             :null
           }
         </div>
         <div className="time-results-summary">
           {
             timeResultsStored.length ?
-              <TopicResultsSummary topicSection={time_title} resultsArray={timeResultsStored.split('')} questions={time_questions} type="results_topic_time" />
+              <TopicResultsSummary withTitle topicSection={time_title} resultsArray={timeResultsStored.split('')} questions={time_questions} type="results_topic_time" />
             :null
           }
         </div>
         <div className="family-results-summary">
           {
             familyResultsStored.length ?
-              <TopicResultsSummary topicSection={family_title} resultsArray={familyResultsStored.split('')} questions={family_questions} type="results_topic_family" />
+              <TopicResultsSummary withTitle topicSection={family_title} resultsArray={familyResultsStored.split('')} questions={family_questions} type="results_topic_family" />
             :null
           }
         </div>
         <div className="skills-results-summary">
           {
             skillsResultsStored.length ?
-              <TopicResultsSummary topicSection={skills_title} resultsArray={skillsResultsStored.split('')} questions={skills_questions} type="results_topic_skills" />
+              <TopicResultsSummary withTitle topicSection={skills_title} resultsArray={skillsResultsStored.split('')} questions={skills_questions} type="results_topic_skills" />
             :null
           }
         </div>
         <div className="home-results-summary">
           {
             homeResultsStored.length ?
-              <TopicResultsSummary topicSection={home_title} resultsArray={homeResultsStored.split('')} questions={home_questions} type="results_topic_home" />
+              <TopicResultsSummary withTitle topicSection={home_title} resultsArray={homeResultsStored.split('')} questions={home_questions} type="results_topic_home" />
             :null
           }
         </div>
