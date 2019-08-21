@@ -1,6 +1,5 @@
 import React from "react"
 import Markdown from 'markdown-to-jsx';
-import { render } from 'react-dom';
 import Layout from "../../Layout"
 import Hero from "../../Hero"
 import TopicPageContent from "../../TopicPageContent"
@@ -19,9 +18,7 @@ export default ({title, strapline, body, cta_title, cta_text, cta_button, lifest
 
     <div className="topic-sections">
       <div className="container">
-        {
-          <Markdown>{body}</Markdown>
-        }
+        <Markdown>{body}</Markdown>
         { // navigation section for the 5 topics here
         }
         <br/>

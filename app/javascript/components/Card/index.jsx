@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import Markdown from 'markdown-to-jsx';
 import "./style.scss"
 
 const Card = ({
@@ -13,9 +14,7 @@ const Card = ({
     <div className={`card ${clickable ? "clickable" : "notclickable"}`}>
       <h3 className="card__title">{title}</h3>
       <div className="card__intro">
-        {intro.split("\n").map((i,key) => {
-            return (<p key={key}>{i}</p>);
-          })}
+        <Markdown>{intro}</Markdown>
       </div>
       {children}
     </div>

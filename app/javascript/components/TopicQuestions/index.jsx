@@ -1,4 +1,5 @@
 import React, {useState, useRef} from "react"
+import Markdown from 'markdown-to-jsx';
 import PropTypes from "prop-types"
 import OptionBubble from "../OptionBubble"
 import Card from "../Card"
@@ -67,9 +68,7 @@ const TopicQuestions = ({
                 selection == "1" ? (
                 <>
                 <div className="answer_explanation answer_explanation_1 fade-animate">
-                    {content.answer_1_explanation.split("\n").map((i,key) => {
-                      return (<p key={key}>{i}</p>);
-                    })}
+                    <Markdown>{content.answer_1_explanation}</Markdown>
                 </div>
                 { content.action_1_title ?
                     <Card title={content.action_1_title} intro={content.action_1_text} />
@@ -81,9 +80,7 @@ const TopicQuestions = ({
                 ) : selection == "2" ? (
                 <>
                 <div className="answer_explanation answer_explanation_2 fade-animate">
-                    {content.answer_2_explanation.split("\n").map((i,key) => {
-                      return (<p key={key}>{i}</p>);
-                    })}
+                    <Markdown>{content.answer_2_explanation}</Markdown>
                 </div>
                 { content.action_2_title ?
                     <Card title={content.action_2_title} intro={content.action_2_text} />
@@ -95,9 +92,7 @@ const TopicQuestions = ({
                 ) : selection == "3" ? (
                 <>
                 <div className="answer_explanation answer_explanation_3 fade-animate">
-                    {content.answer_3_explanation.split("\n").map((i,key) => {
-                      return (<p key={key}>{i}</p>);
-                    })}
+                    <Markdown>{content.answer_3_explanation}</Markdown>
                 </div>
                 { content.action_3_title ?
                     <Card title={content.action_3_title} intro={content.action_3_text} />

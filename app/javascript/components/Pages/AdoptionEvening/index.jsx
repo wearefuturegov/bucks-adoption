@@ -1,4 +1,5 @@
 import React from "react"
+import Markdown from 'markdown-to-jsx';
 import "./style.scss"
 import Layout from "../../Layout"
 import Hero from "../../Hero"
@@ -19,11 +20,7 @@ export default ({title, strapline, cta_title, cta_text, cta_button, body})=>
                     title: "Book an adoption evening"
                 }]} />
         <div className="book-an-evening__body">
-          {
-          body.split("\n").map((i,key) => {
-            return (<p key={key}>{i}</p>);
-          })
-          }
+          <Markdown>{body}</Markdown>
         </div>
         <EveningList />
       </div>

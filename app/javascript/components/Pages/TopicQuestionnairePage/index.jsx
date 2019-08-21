@@ -1,4 +1,5 @@
 import React, {useState, useRef} from "react"
+import Markdown from 'markdown-to-jsx';
 import Layout from "../../Layout"
 import PageHeader from "../../PageHeader"
 import TopicQuestions from "../../TopicQuestions"
@@ -64,11 +65,7 @@ const TopicQuestionnairePage = ({title, intro, body, questions, topicID}) => {
                       title: title
                   }]} />
           <div className="topic-content__body">
-            {
-              body.split("\n").map((i,key) => {
-                return (<p key={key}>{i}</p>);
-              })
-            }
+            <Markdown>{body}</Markdown>
           </div>
         </div>
       </section>
