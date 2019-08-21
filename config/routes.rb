@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get 'skills/index'
   get 'home/index'
 
+  get 'results/index'
+
   get 'static_pages/home'
   root "static_pages#show", page: 'home'
 

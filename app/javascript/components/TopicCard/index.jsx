@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import Markdown from 'markdown-to-jsx';
 import "./style.scss"
 
-const TopicHomeCard = ({
+const TopicCard = ({
     title,
     url,
     intro,
@@ -22,8 +22,8 @@ const TopicHomeCard = ({
   )
 }
 
-TopicHomeCard.propTypes = {
+TopicCard.propTypes = {
   title: PropTypes.string.isRequired,
 }
 
-export default TopicHomeCard
+export default TopicCard

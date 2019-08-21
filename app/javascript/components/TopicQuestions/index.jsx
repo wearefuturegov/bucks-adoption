@@ -2,7 +2,7 @@ import React, {useState, useRef} from "react"
 import Markdown from 'markdown-to-jsx';
 import PropTypes from "prop-types"
 import OptionBubble from "../OptionBubble"
-import TopicHomeCard from "../TopicHomeCard"
+import TopicCard from "../TopicCard"
 import "./style.scss"
 
 function replaceAt(string, index, replace) {
@@ -72,7 +72,7 @@ const TopicQuestions = ({
                     <Markdown>{content.answer_1_explanation}</Markdown>
                 </div>
                 { content.action_1_title ?
-                    <TopicHomeCard title={content.action_1_title} intro={content.action_1_text} type={type} />
+                    <TopicCard title={content.action_1_title} intro={content.action_1_text} type={type} />
                   :null
                 }
                 <hr/>
@@ -84,7 +84,7 @@ const TopicQuestions = ({
                     <Markdown>{content.answer_2_explanation}</Markdown>
                 </div>
                 { content.action_2_title ?
-                    <TopicHomeCard title={content.action_2_title} intro={content.action_2_text} type={type} />
+                    <TopicCard title={content.action_2_title} intro={content.action_2_text} type={type} />
                   :null
                 }
                 <hr/>
@@ -96,7 +96,7 @@ const TopicQuestions = ({
                     <Markdown>{content.answer_3_explanation}</Markdown>
                 </div>
                 { content.action_3_title ?
-                    <TopicHomeCard title={content.action_3_title} intro={content.action_3_text} type={type} />
+                    <TopicCard title={content.action_3_title} intro={content.action_3_text} type={type} />
                   :null
                 }
                 <hr/>
