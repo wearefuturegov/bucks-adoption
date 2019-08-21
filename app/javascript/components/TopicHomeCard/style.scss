@@ -1,0 +1,26 @@
+@import '../vars';
+
+.topic-card {
+    border-top: 7px solid #ffffff;
+    margin-top: 50px;
+
+    &.health-card, &.results_topic_lifestyle-card {
+        border-color: $health;
+    }
+    &.family-card, &.results_topic_family-card {
+        border-color: $family;
+    }
+    &.home-card, &.results_topic_home-card {
+        border-color: $home;
+    }
+    &.skills-card, &.results_topic_skills-card {
+        border-color: $skills;
+    }
+    &.time-card, &.results_topic_time-card {
+        border-color: $time;
+    }
+
+    .card__title, .card__intro {
+        max-width: $maxWidth
+    }
+}

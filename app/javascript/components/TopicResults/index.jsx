@@ -1,9 +1,9 @@
 import React from "react"
 import Button from "../Button"
-import Card from "../Card"
+import TopicHomeCard from "../TopicHomeCard"
 import "./style.scss"
 
-const TopicResults = ({ topicSection, handleRestartClick, resultsArray, questions }) => {
+const TopicResults = ({ topicSection, handleRestartClick, resultsArray, questions, type }) => {
 
     return(
         <section className="final-results">
@@ -22,21 +22,21 @@ const TopicResults = ({ topicSection, handleRestartClick, resultsArray, question
                                 result == "1" ? (
                                     <>
                                     { questions[index].action_1_title ?
-                                        <Card title={questions[index].action_1_title} intro={questions[index].action_1_text} />
+                                        <TopicHomeCard title={questions[index].action_1_title} intro={questions[index].action_1_text} type={type} />
                                       :null
                                     }
                                     </>
                                 ) : result == "2" ? (
                                     <>
                                     { questions[index].action_2_title ?
-                                        <Card title={questions[index].action_2_title} intro={questions[index].action_2_text} />
+                                        <TopicHomeCard title={questions[index].action_2_title} intro={questions[index].action_2_text} type={type} />
                                       :null
                                     }
                                     </>
                                 ) : result == "3" ? (
                                     <>
                                     { questions[index].action_3_title ?
-                                        <Card title={questions[index].action_3_title} intro={questions[index].action_3_text} />
+                                        <TopicHomeCard title={questions[index].action_3_title} intro={questions[index].action_3_text} type={type} />
                                       :null
                                     }
                                     </>

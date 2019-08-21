@@ -100,7 +100,8 @@ const TopicQuestionnairePage = ({title, intro, body, questions, topicID}) => {
                       setResults={setResults}
                       resultsStored={resultsStored}
                       setResultsStored={setResultsStored}
-                      scrollToRef={scrollToRef} />
+                      scrollToRef={scrollToRef}
+                      type={topicID} />
                   );
                 })}
                 {
@@ -127,7 +128,7 @@ const TopicQuestionnairePage = ({title, intro, body, questions, topicID}) => {
       {
         // ((questions.length+1) <= currentQuestion)
         resultsStored.length ?
-          <TopicResults topicSection={title} handleRestartClick={handleRestartClick} resultsArray={resultsStored.split('')} questions={questions} />
+          <TopicResults topicSection={title} handleRestartClick={handleRestartClick} resultsArray={resultsStored.split('')} questions={questions} type={topicID} />
         :null
       }
     </Layout>

@@ -22,20 +22,20 @@
         color: $white;
     }
 
-    &.option-bubble__label--active{
-        background-color: darken($active, 30)
+    &.option-bubble__label--health{
+        background-color: darken($health, 30)
     }
-    &.option-bubble__label--support{
-        background-color: darken($support, 30)
+    &.option-bubble__label--family{
+        background-color: darken($family, 30)
     }
-    &.option-bubble__label--cultural{
-        background-color: darken($cultural, 30)
+    &.option-bubble__label--skills{
+        background-color: darken($skills, 30)
     }
-    &.option-bubble__label--social{
-        background-color: darken($social, 30)
+    &.option-bubble__label--home{
+        background-color: darken($home, 30)
     }
-    &.option-bubble__label--learning{
-        background-color: darken($learning, 30)
+    &.option-bubble__label--time{
+        background-color: darken($time, 30)
     }
 
 
@@ -71,18 +71,18 @@
     color: $lightText;
 }
 
-.option-bubble__label--support{
-    background-color: transparentize($support, 0.7);
+.option-bubble__label--health{
+    background-color: transparentize($health, 0.7);
 }
-.option-bubble__label--social{
-    background-color: transparentize($social, 0.7);
+.option-bubble__label--family{
+    background-color: transparentize($family, 0.7);
 }
-.option-bubble__label--cultural{
-    background-color: transparentize($cultural, 0.7);
+.option-bubble__label--skills{
+    background-color: transparentize($skills, 0.7);
 }
-.option-bubble__label--learning{
-    background-color: transparentize($learning, 0.7);
+.option-bubble__label--home{
+    background-color: transparentize($home, 0.7);
 }
-.option-bubble__label--active{
-    background-color: transparentize($active, 0.7);
+.option-bubble__label--time{
+    background-color: transparentize($time, 0.7);
 }

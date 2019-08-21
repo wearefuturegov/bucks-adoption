@@ -41,11 +41,11 @@ export default ({
         <br/>
         <br/>
 
-        <TopicPageContent title={lifestyletitle} intro={lifestyleintro} link="health/index" />
-        <TopicPageContent title={timetitle} intro={timeintro} link="time/index" />
-        <TopicPageContent title={familytitle} intro={familyintro} link="family/index" />
-        <TopicPageContent title={skillstitle} intro={skillsintro} link="skills/index" />
-        <TopicPageContent title={hometitle} intro={homeintro} link="home/index" />
+        <TopicPageContent title={lifestyletitle} intro={lifestyleintro} link="health" />
+        <TopicPageContent title={timetitle} intro={timeintro} link="time" />
+        <TopicPageContent title={familytitle} intro={familyintro} link="family" />
+        <TopicPageContent title={skillstitle} intro={skillsintro} link="skills" />
+        <TopicPageContent title={hometitle} intro={homeintro} link="home" />
       </div>
     </div>
   </Layout>

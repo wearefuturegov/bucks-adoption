@@ -2,7 +2,7 @@ import React, {useState, useRef} from "react"
 import Markdown from 'markdown-to-jsx';
 import PropTypes from "prop-types"
 import OptionBubble from "../OptionBubble"
-import Card from "../Card"
+import TopicHomeCard from "../TopicHomeCard"
 import "./style.scss"
 
 function replaceAt(string, index, replace) {
@@ -33,7 +33,8 @@ const TopicQuestions = ({
     setResults,
     resultsStored,
     setResultsStored,
-    scrollToRef
+    scrollToRef,
+    type
     }) => {
 
     const questionRef = useRef(null)
@@ -71,7 +72,7 @@ const TopicQuestions = ({
                     <Markdown>{content.answer_1_explanation}</Markdown>
                 </div>
                 { content.action_1_title ?
-                    <Card title={content.action_1_title} intro={content.action_1_text} />
+                    <TopicHomeCard title={content.action_1_title} intro={content.action_1_text} type={type} />
                   :null
                 }
                 <hr/>
@@ -83,7 +84,7 @@ const TopicQuestions = ({
                     <Markdown>{content.answer_2_explanation}</Markdown>
                 </div>
                 { content.action_2_title ?
-                    <Card title={content.action_2_title} intro={content.action_2_text} />
+                    <TopicHomeCard title={content.action_2_title} intro={content.action_2_text} type={type} />
                   :null
                 }
                 <hr/>
@@ -95,7 +96,7 @@ const TopicQuestions = ({
                     <Markdown>{content.answer_3_explanation}</Markdown>
                 </div>
                 { content.action_3_title ?
-                    <Card title={content.action_3_title} intro={content.action_3_text} />
+                    <TopicHomeCard title={content.action_3_title} intro={content.action_3_text} type={type} />
                   :null
                 }
                 <hr/>
