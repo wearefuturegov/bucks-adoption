@@ -1,1 +1,6 @@
-<%= react_component("Pages/TopicQuestionnairePage", { title: @healthContent.title, intro: @healthContent.introduction.content, body: @healthContent.body.content, questions: @healthTopicContent, topicID: "results_topic_lifestyle" } ) %>
+<%= react_component("Pages/TopicQuestionnairePage", {
+  title: @healthContent.title,
+  intro: @healthContent.introduction.content,
+  body: @healthContent.body.content,
+  questions: @healthTopicContent,
+  topicID: "results_topic_lifestyle" } ) %>

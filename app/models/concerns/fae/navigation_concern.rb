@@ -13,8 +13,12 @@ module Fae
           item('Skills - Top Section Content', path: fae.edit_content_block_path('skills_content')),
           item('Home Topic - Top Section Content', path: fae.edit_content_block_path('home_content'))
         ]),
-        item('Adoption Tool content', subitems: [
-          item('Health & Wellbeing', path: admin_health_topic_questions_path)
+        item('Tool topic questions', subitems: [
+          item('Health & Wellbeing', path: admin_health_topic_questions_path),
+          item('Time & Money', path: admin_time_topic_questions_path),
+          item('Family & Background', path: admin_family_topic_questions_path),
+          item('Skills & Support', path: admin_skills_topic_questions_path),
+          item('Home & Location', path: admin_home_topic_questions_path)
         ])
       ]
     end

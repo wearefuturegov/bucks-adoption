@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_21_080254) do
+ActiveRecord::Schema.define(version: 2019_08_21_124007) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -163,7 +163,45 @@ ActiveRecord::Schema.define(version: 2019_08_21_080254) do
     t.index ["unlock_token"], name: "index_fae_users_on_unlock_token", unique: true
   end
 
+  create_table "family_topic_questions", force: :cascade do |t|
+    t.string "title"
+    t.string "answer_1"
+    t.text "answer_1_explanation"
+    t.string "action_1_title"
+    t.text "action_1_text"
+    t.string "answer_2"
+    t.text "answer_2_explanation"
+    t.string "action_2_title"
+    t.text "action_2_text"
+    t.string "answer_3"
+    t.text "answer_3_explanation"
+    t.string "action_3_title"
+    t.text "action_3_text"
+    t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "health_topic_questions", force: :cascade do |t|
+    t.string "title"
+    t.string "answer_1"
+    t.text "answer_1_explanation"
+    t.string "action_1_title"
+    t.text "action_1_text"
+    t.string "answer_2"
+    t.text "answer_2_explanation"
+    t.string "action_2_title"
+    t.text "action_2_text"
+    t.string "answer_3"
+    t.text "answer_3_explanation"
+    t.string "action_3_title"
+    t.text "action_3_text"
+    t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "home_topic_questions", force: :cascade do |t|
     t.string "title"
     t.string "answer_1"
     t.text "answer_1_explanation"
@@ -193,6 +231,44 @@ ActiveRecord::Schema.define(version: 2019_08_21_080254) do
     t.string "action_title"
     t.text "action_text"
     t.integer "action_number"
+    t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "skills_topic_questions", force: :cascade do |t|
+    t.string "title"
+    t.string "answer_1"
+    t.text "answer_1_explanation"
+    t.string "action_1_title"
+    t.text "action_1_text"
+    t.string "answer_2"
+    t.text "answer_2_explanation"
+    t.string "action_2_title"
+    t.text "action_2_text"
+    t.string "answer_3"
+    t.text "answer_3_explanation"
+    t.string "action_3_title"
+    t.text "action_3_text"
+    t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "time_topic_questions", force: :cascade do |t|
+    t.string "title"
+    t.string "answer_1"
+    t.text "answer_1_explanation"
+    t.string "action_1_title"
+    t.text "action_1_text"
+    t.string "answer_2"
+    t.text "answer_2_explanation"
+    t.string "action_2_title"
+    t.text "action_2_text"
+    t.string "answer_3"
+    t.text "answer_3_explanation"
+    t.string "action_3_title"
+    t.text "action_3_text"
     t.integer "position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

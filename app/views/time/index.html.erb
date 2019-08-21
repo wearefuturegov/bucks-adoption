@@ -1,0 +1,6 @@
+<%= react_component("Pages/TopicQuestionnairePage", {
+  title: @timeContent.title,
+  intro: @timeContent.introduction.content,
+  body: @timeContent.body.content,
+  questions: @timeTopicContent,
+  topicID: "results_topic_time" } ) %>
