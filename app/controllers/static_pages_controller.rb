@@ -8,7 +8,7 @@ class StaticPagesController < ApplicationController
     @adopteve = BookAdoptionEvePage.instance
 
     # tool content sections
-    @lifestylecontent = LifestyleContentPage.instance
+    @healthContent = LifestyleContentPage.instance
 
     render "static_pages/#{params[:page]}"
   end

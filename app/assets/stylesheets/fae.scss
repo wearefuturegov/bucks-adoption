@@ -1,2 +1,20 @@
 // Do Not Delete this page! FAE depends on it in order to set its highlight color.
-// $c-custom-highlight: #9aa142;
+$c-custom-highlight: #20825F;
+
+.main-header {
+  background-color: #1E2428;
+}
+
+.simple_form {
+  .input.text {
+    max-width: 800px;
+  }
+  hr {
+    margin: 50px 0;
+    border-color: rgba(#1E2428, 0.1);
+  }
+
+  .health_topic_question_title {
+    margin-bottom: 50px;
+  }
+}

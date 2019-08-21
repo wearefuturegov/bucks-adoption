@@ -63,37 +63,50 @@ const TopicQuestions = ({
                 {(content.answer_3)? <OptionBubble type="radio" name={id} label={content.answer_3} selectionState={selection} onChange={handleChange} value="3" /> : ""}
             </div>
             {
-                // TODO - this could be refactored better
-                selection == "1"?
+                // TODO - this could probably be refactored better
+                selection == "1" ? (
+                <>
                 <div className="answer_explanation answer_explanation_1 fade-animate">
                     {content.answer_1_explanation.split("\n").map((i,key) => {
                       return (<p key={key}>{i}</p>);
                     })}
                 </div>
-                :selection == "2"?
+                { content.action_1_title ?
+                    <Card title={content.action_1_title} intro={content.action_1_text} />
+                  :null
+                }
+                <hr/>
+                </>
+
+                ) : selection == "2" ? (
+                <>
                 <div className="answer_explanation answer_explanation_2 fade-animate">
                     {content.answer_2_explanation.split("\n").map((i,key) => {
                       return (<p key={key}>{i}</p>);
                     })}
                 </div>
-                :selection == "3"?
+                { content.action_2_title ?
+                    <Card title={content.action_2_title} intro={content.action_2_text} />
+                  :null
+                }
+                <hr/>
+                </>
+
+                ) : selection == "3" ? (
+                <>
                 <div className="answer_explanation answer_explanation_3 fade-animate">
                     {content.answer_3_explanation.split("\n").map((i,key) => {
                       return (<p key={key}>{i}</p>);
                     })}
                 </div>
-                :null
-            }{
-                (content.action_number == "0" && selection != "") || (selection == content.action_number && selection != "") && content.action_number ? (
-                    <>
-                    <Card title={content.action_title} intro={content.action_text} />
-                    <hr/>
-                    </>
-                ) : selection != ""? (
-                    <hr/>
-                ):null
+                { content.action_3_title ?
+                    <Card title={content.action_3_title} intro={content.action_3_text} />
+                  :null
+                }
+                <hr/>
+                </>
+                ) :null
             }
-
         </div>
         :null}
         </>

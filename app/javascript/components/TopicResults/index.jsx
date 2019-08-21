@@ -18,11 +18,29 @@ const TopicResults = ({ topicSection, handleRestartClick, resultsArray, question
                     return(
                         <div className="final-results_single" key={index}>
                             {
-                            (questions[index].action_number == "0" && result != "") || (result == questions[index].action_number && result != "") && questions[index].action_number ?
-                                <>
-                                <Card key={index} title={questions[index].action_title} intro={questions[index].action_text} />
-                                </>
-                            :null
+                                // TODO - this could probably be refactored better
+                                result == "1" ? (
+                                    <>
+                                    { questions[index].action_1_title ?
+                                        <Card title={questions[index].action_1_title} intro={questions[index].action_1_text} />
+                                      :null
+                                    }
+                                    </>
+                                ) : result == "2" ? (
+                                    <>
+                                    { questions[index].action_2_title ?
+                                        <Card title={questions[index].action_2_title} intro={questions[index].action_2_text} />
+                                      :null
+                                    }
+                                    </>
+                                ) : result == "3" ? (
+                                    <>
+                                    { questions[index].action_3_title ?
+                                        <Card title={questions[index].action_3_title} intro={questions[index].action_3_text} />
+                                      :null
+                                    }
+                                    </>
+                                ) : null
                             }
                         </div>
                     )
