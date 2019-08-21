@@ -3,10 +3,10 @@ import Button from "../Button"
 import TopicCard from "../TopicCard"
 import "./style.scss"
 
-const TopicResultsSummary = ({ topicSection, handleRestartClick, resultsArray, questions, type }) => {
+const TopicResultsSummary = ({ topicSection, resultsArray, questions, type }) => {
 
     return(
-        <section className="final-results">
+        <section className="summary-results">
             <div className="container">
                 <h2>{topicSection} actions:</h2>
                 {
@@ -18,21 +18,21 @@ const TopicResultsSummary = ({ topicSection, handleRestartClick, resultsArray, q
                                 result == "1" ? (
                                     <>
                                     { questions[index].action_1_title ?
-                                        <TopicCard title={questions[index].action_1_title} intro={questions[index].action_1_text} type={type} />
+                                        <TopicCard title={questions[index].action_1_title} answer={questions[index].answer_1} clickable="true" question_title={questions[index].title} question_content={questions[index].answer_1_explanation} intro={questions[index].action_1_text} type={type} />
                                       :null
                                     }
                                     </>
                                 ) : result == "2" ? (
                                     <>
                                     { questions[index].action_2_title ?
-                                        <TopicCard title={questions[index].action_2_title} intro={questions[index].action_2_text} type={type} />
+                                        <TopicCard title={questions[index].action_2_title} answer={questions[index].answer_2} clickable="true" question_title={questions[index].title} question_content={questions[index].answer_2_explanation} intro={questions[index].action_2_text} type={type} />
                                       :null
                                     }
                                     </>
                                 ) : result == "3" ? (
                                     <>
                                     { questions[index].action_3_title ?
-                                        <TopicCard title={questions[index].action_3_title} intro={questions[index].action_3_text} type={type} />
+                                        <TopicCard title={questions[index].action_3_title} answer={questions[index].answer_3} clickable="true" question_title={questions[index].title} question_content={questions[index].answer_3_explanation} intro={questions[index].action_3_text} type={type} />
                                       :null
                                     }
                                     </>
@@ -41,12 +41,6 @@ const TopicResultsSummary = ({ topicSection, handleRestartClick, resultsArray, q
                         </div>
                     )
                 }) }
-
-                { handleRestartClick &&
-                <div className="centered-button">
-                    <Button onClick={handleRestartClick}>Restart questionnaire</Button>
-                </div>
-                }
             </div>
         </section>
     )}

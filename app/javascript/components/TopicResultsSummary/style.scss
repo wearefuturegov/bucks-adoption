@@ -1,10 +1,21 @@
 @import '../vars';
 
-.final-results {
-    p {
-        margin-bottom: 10px;
-    }
-    h2 {
-        margin-bottom: 15px;
-    }
+.summary-results {
+  p {
+      margin-bottom: 10px;
+  }
+  h2 {
+      margin-bottom: 20px;
+  }
+  padding: 10px 0px;
+  @media screen and (min-width: $tablet){
+    padding: 20px 0px;
+  }
+}
+.results-summary-section {
+  background: $background;
+  padding: 20px 0px;
+  @media screen and (min-width: $tablet){
+    padding: 40px 0px;
+  }
 }
