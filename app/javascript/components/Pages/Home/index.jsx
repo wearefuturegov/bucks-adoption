@@ -5,7 +5,24 @@ import Hero from "../../Hero"
 import TopicPageContent from "../../TopicPageContent"
 import "./style.scss"
 
-export default ({title, strapline, body, cta_title, cta_text, cta_button, lifestyletitle, lifestyleintro})=>
+export default ({
+   title,
+   strapline,
+   body,
+   cta_title,
+   cta_text,
+   cta_button,
+   lifestyletitle,
+   lifestyleintro,
+   timetitle,
+   timeintro,
+   familytitle,
+   familyintro,
+   skillstitle,
+   skillsintro,
+   hometitle,
+   homeintro
+ })=>
   <Layout withFooter>
     <Hero
       title={title}
@@ -24,7 +41,11 @@ export default ({title, strapline, body, cta_title, cta_text, cta_button, lifest
         <br/>
         <br/>
 
-        <TopicPageContent title={lifestyletitle} intro={lifestyleintro} />
+        <TopicPageContent title={lifestyletitle} intro={lifestyleintro} link="health/index" />
+        <TopicPageContent title={timetitle} intro={timeintro} link="time/index" />
+        <TopicPageContent title={familytitle} intro={familyintro} link="family/index" />
+        <TopicPageContent title={skillstitle} intro={skillsintro} link="skills/index" />
+        <TopicPageContent title={hometitle} intro={homeintro} link="home/index" />
       </div>
     </div>
   </Layout>

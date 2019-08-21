@@ -9,6 +9,10 @@ class StaticPagesController < ApplicationController
 
     # tool content sections
     @healthContent = LifestyleContentPage.instance
+    @timeContent = TimeContentPage.instance
+    @familyContent = FamilyContentPage.instance
+    @skillsContent = SkillsContentPage.instance
+    @homeContent = HomeContentPage.instance
 
     render "static_pages/#{params[:page]}"
   end
