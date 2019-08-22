@@ -65,7 +65,7 @@ const TopicQuestionnairePage = ({title, intro, body, questions, topicID}) => {
                       title: title
                   }]} />
           <div className="topic-content__body">
-            <Markdown>{body}</Markdown>
+            <p><Markdown>{body}</Markdown></p>
           </div>
         </div>
       </section>

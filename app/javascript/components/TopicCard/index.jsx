@@ -32,7 +32,7 @@ const TopicCard = ({
         :null
       }
       <div className="card__intro">
-        <Markdown>{intro}</Markdown>
+        <p><Markdown>{intro}</Markdown></p>
       </div>
       {children}
 
@@ -42,7 +42,7 @@ const TopicCard = ({
           { isRevealed &&
             <div className="reveal-results_content fade-animate">
               <h3>You chose '{answer}' for the question '{question_title}'</h3>
-              <Markdown>{question_content}</Markdown>
+              <p><Markdown>{question_content}</Markdown></p>
             </div>
           }
         </div>

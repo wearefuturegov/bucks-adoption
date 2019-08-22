@@ -18,7 +18,7 @@ const TopicResults = ({ topicSection, handleRestartClick, resultsArray, question
 
                 { handleRestartClick &&
                 <div className="centered-button">
-                    <Button onClick={handleRestartClick}>Restart questionnaire</Button>
+                    <Button centredSecondary onClick={handleRestartClick}>Restart questionnaire</Button>
                 </div>
                 }
             </div>

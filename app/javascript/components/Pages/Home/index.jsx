@@ -58,8 +58,9 @@ const Home = ({
 
       <div className="topic-sections">
         <div className="container">
-          <Markdown>{body}</Markdown>
-
+          <div className="home-body">
+            <p><Markdown>{body}</Markdown></p>
+          </div>
           <div className="topic-sections_navigation">
             <div className="topic-sections_navigation_inner">
               <Link to="health-card" className="option-bubble" offset={-70}>
