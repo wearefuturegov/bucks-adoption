@@ -19,39 +19,21 @@ const TopicResultsSummary = ({ topicSection, resultsArray, questions, type, with
                             {
                                 // TODO - this could probably be refactored better
                                 result == "1" ? (
-                                    <>
-                                    { questions[index].action_1_title ? (
-                                        <TopicCard title={questions[index].action_1_title} answer={questions[index].answer_1} clickable="true" question_title={questions[index].title} question_content={questions[index].answer_1_explanation} intro={questions[index].action_1_text} type={type} />
-                                      ) : (
-                                           <div className="summary-results_single_no-actions">
-                                                <p>Thanks for completing this section, there is nothing specific we recommend you doing for {topicSection} right now.</p>
-                                           </div>
-                                       )
-                                    }
-                                    </>
+                                    questions[index].action_1_title &&
+                                      <TopicCard title={questions[index].action_1_title} answer={questions[index].answer_1} clickable="true" question_title={questions[index].title} question_content={questions[index].answer_1_explanation} intro={questions[index].action_1_text} type={type} />
                                 ) : result == "2" ? (
-                                    <>
-                                    { questions[index].action_2_title ? (
-                                        <TopicCard title={questions[index].action_2_title} answer={questions[index].answer_2} clickable="true" question_title={questions[index].title} question_content={questions[index].answer_2_explanation} intro={questions[index].action_2_text} type={type} />
-                                      ) : (
-                                           <div className="summary-results_single_no-actions">
-                                                <p>Thanks for completing this section, there is nothing specific we recommend you doing for {topicSection} right now.</p>
-                                           </div>
-                                       )
-                                    }
-                                    </>
+                                    questions[index].action_2_title &&
+                                       <TopicCard title={questions[index].action_2_title} answer={questions[index].answer_2} clickable="true" question_title={questions[index].title} question_content={questions[index].answer_2_explanation} intro={questions[index].action_2_text} type={type} />
                                 ) : result == "3" ? (
-                                    <>
-                                    { questions[index].action_3_title ? (
-                                        <TopicCard title={questions[index].action_3_title} answer={questions[index].answer_3} clickable="true" question_title={questions[index].title} question_content={questions[index].answer_3_explanation} intro={questions[index].action_3_text} type={type} />
-                                       ) : (
-                                           <div className="summary-results_single_no-actions">
-                                                <p>Thanks for completing this section, there is nothing specific we recommend you doing for {topicSection} right now.</p>
-                                           </div>
-                                       )
-                                    }
-                                    </>
+                                    questions[index].action_3_title &&
+                                      <TopicCard title={questions[index].action_3_title} answer={questions[index].answer_3} clickable="true" question_title={questions[index].title} question_content={questions[index].answer_3_explanation} intro={questions[index].action_3_text} type={type} />
                                 ) :null
+                            }
+                            {  !questions[index].action_1_title && !questions[index].action_2_title && !questions[index].action_3_title ? (
+                                  <div className="summary-results_single_no-actions">
+                                    <p>Thanks for completing this section, there is nothing specific we recommend you doing for {topicSection} right now.</p>
+                                  </div>
+                                ):null
                             }
                         </div>
                     )

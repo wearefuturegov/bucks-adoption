@@ -3,12 +3,12 @@ import "./style.scss"
 import TopicCard from "../TopicCard"
 import Button from '../Button'
 
-const TopicPageContent = ({title, intro, link }) => {
+const TopicPageContent = ({title, intro, link, buttonText }) => {
   return(
     <section className="topic-page-content">
       <TopicCard key="1" intro={intro} title={title} type={link}>
         <div className="button-right">
-          <Button href={link + "/index"}>Start</Button>
+          <Button href={link}>{buttonText}</Button>
         </div>
       </TopicCard>
     </section>

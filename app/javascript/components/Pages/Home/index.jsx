@@ -82,33 +82,33 @@ const Home = ({
           </div>
 
           { healthResultsStored ? (
-            <TopicPageComplete link="health" title={lifestyletitle} intro={lifestyleintro} resultsStored={healthResultsStored} />
+            <TopicPageComplete buttonText="Start" link="/health/index" title={lifestyletitle} intro={lifestyleintro} resultsStored={healthResultsStored} />
             ) : (
-              <TopicPageContent link="health" title={lifestyletitle} intro={lifestyleintro} />
+              <TopicPageContent buttonText="Start" link="/health/index" title={lifestyletitle} intro={lifestyleintro} />
             )
           }
           { timeResultsStored ? (
-            <TopicPageComplete link="time" title={timetitle} intro={timeintro} resultsStored={timeResultsStored} />
+            <TopicPageComplete buttonText="Start" link="/time/index" title={timetitle} intro={timeintro} resultsStored={timeResultsStored} />
             ) : (
-              <TopicPageContent link="time" title={timetitle} intro={timeintro} />
+              <TopicPageContent buttonText="Start" link="/time/index" title={timetitle} intro={timeintro} />
             )
           }
           { familyResultsStored ? (
-            <TopicPageComplete link="family" title={familytitle} intro={familyintro} resultsStored={familyResultsStored} />
+            <TopicPageComplete buttonText="Start" link="/family/index" title={familytitle} intro={familyintro} resultsStored={familyResultsStored} />
             ) : (
-              <TopicPageContent link="family" title={familytitle} intro={familyintro} />
+              <TopicPageContent buttonText="Start" link="/family/index" title={familytitle} intro={familyintro} />
             )
           }
           { skillsResultsStored ? (
-            <TopicPageComplete link="skills" title={skillstitle} intro={skillsintro} resultsStored={skillsResultsStored} />
+            <TopicPageComplete buttonText="Start" link="/skills/index" title={skillstitle} intro={skillsintro} resultsStored={skillsResultsStored} />
             ) : (
-              <TopicPageContent link="skills" title={skillstitle} intro={skillsintro} />
+              <TopicPageContent buttonText="Start" link="/skills/index" title={skillstitle} intro={skillsintro} />
             )
           }
           { homeResultsStored ? (
-            <TopicPageComplete link="home" title={hometitle} intro={homeintro} resultsStored={homeResultsStored} />
+            <TopicPageComplete buttonText="Start" link="/home/index" title={hometitle} intro={homeintro} resultsStored={homeResultsStored} />
             ) : (
-              <TopicPageContent link="home" title={hometitle} intro={homeintro} />
+              <TopicPageContent buttonText="Start" link="/home/index" title={hometitle} intro={homeintro} />
             )
           }
         </div>
