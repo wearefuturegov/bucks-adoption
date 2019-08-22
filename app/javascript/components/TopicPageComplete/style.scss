@@ -1,0 +1,16 @@
+@import '../vars';
+
+.topic-questions-compete .topic-card {
+  box-shadow: none;
+  padding-bottom: 23px;
+  opacity: 0.9;
+}
+
+.float-right-text {
+  margin-top: 15px;
+  display: block;
+  @media screen and (min-width: $desktop){
+    float: right;
+    margin-top: -20px;
+  }
+}

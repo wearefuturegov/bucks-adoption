@@ -27,6 +27,10 @@ const TopicCard = ({
   return(
     <div className={type + `-card topic-card card ${clickable ? "clickable" : "notclickable"}`} onClick={handleCardClick}>
       <h3 className="card__title">{title}</h3>
+      { clickable ?
+            <div className={"card__reveal-indicator " + (isRevealed ? "open" : "closed")}></div>
+        :null
+      }
       <div className="card__intro">
         <Markdown>{intro}</Markdown>
       </div>

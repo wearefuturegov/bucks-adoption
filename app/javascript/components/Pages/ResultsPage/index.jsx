@@ -1,4 +1,4 @@
-import React, {useState, useRef} from "react"
+import React, {useState} from "react"
 import Markdown from 'markdown-to-jsx';
 import Layout from "../../Layout"
 import PageHeader from "../../PageHeader"
@@ -58,37 +58,47 @@ const ResultsPage = ({
       <section className="results-summary-section">
         <div className="health-results-summary">
           {
-            healthResultsStored.length ?
+            healthResultsStored.length ? (
               <TopicResultsSummary withTitle topicSection={health_title} resultsArray={healthResultsStored.split('')} questions={health_questions} type="results_topic_lifestyle" />
-            :null
+            ) : (
+              <TopicResultsSummary withTitle topicSection={health_title} questions={health_questions} type="results_topic_lifestyle" link="health" />
+            )
           }
         </div>
         <div className="time-results-summary">
           {
-            timeResultsStored.length ?
+            timeResultsStored.length ? (
               <TopicResultsSummary withTitle topicSection={time_title} resultsArray={timeResultsStored.split('')} questions={time_questions} type="results_topic_time" />
-            :null
+            ) : (
+              <TopicResultsSummary withTitle topicSection={time_title} questions={time_questions} type="results_topic_time" link="time" />
+            )
           }
         </div>
         <div className="family-results-summary">
           {
-            familyResultsStored.length ?
+            familyResultsStored.length ? (
               <TopicResultsSummary withTitle topicSection={family_title} resultsArray={familyResultsStored.split('')} questions={family_questions} type="results_topic_family" />
-            :null
+            ) : (
+              <TopicResultsSummary withTitle topicSection={family_title} questions={family_questions} type="results_topic_family" link="family" />
+            )
           }
         </div>
         <div className="skills-results-summary">
           {
-            skillsResultsStored.length ?
+            skillsResultsStored.length ? (
               <TopicResultsSummary withTitle topicSection={skills_title} resultsArray={skillsResultsStored.split('')} questions={skills_questions} type="results_topic_skills" />
-            :null
+            ) : (
+              <TopicResultsSummary withTitle topicSection={skills_title} questions={skills_questions} type="results_topic_skills" link="skills" />
+            )
           }
         </div>
         <div className="home-results-summary">
           {
-            homeResultsStored.length ?
+            homeResultsStored.length ? (
               <TopicResultsSummary withTitle topicSection={home_title} resultsArray={homeResultsStored.split('')} questions={home_questions} type="results_topic_home" />
-            :null
+            ) : (
+              <TopicResultsSummary withTitle topicSection={home_title} questions={home_questions} type="results_topic_home" link="home" />
+            )
           }
         </div>
       </section>

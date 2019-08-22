@@ -14,13 +14,9 @@ const Header = ({inverted}) => {
             text: "Enquire about adoption"
         },
         {
-            href: "#",
-            text: "Who can adopt?"
-        },
-        {
-            href: "#",
-            text: "Support for adoptive parents"
-        },
+            href: "/results/index",
+            text: "Your adoption ready plan"
+        }
     ]
     return(
         <header className={(inverted)? "site-header site-header--inverted": "site-header"}>
