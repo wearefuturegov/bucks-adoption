@@ -4,7 +4,7 @@ import Layout from "../../Layout"
 import PageHeader from "../../PageHeader"
 import TopicQuestions from "../../TopicQuestions"
 import TopicResultsSummary from "../../TopicResultsSummary"
-import TopicPageContent from "../../TopicPageContent"
+import TopicCard from "../../TopicCard"
 import Button from "../../Button"
 import "./style.scss"
 
@@ -106,7 +106,9 @@ const ResultsPage = ({
         <div className="other-results">
           <div className="container">
             <h2>Other things to do:</h2>
-            <TopicPageContent title="Come to an adoption evening" intro="We recommend the next step you take is to come to one of our regularly run information evenings. At the event, you will be able to ask our team questions and will hear from our team and previous adopters." buttonText="Book an evening" link="/pages/bookadoptionevening" />
+            <TopicCard title="Come to an adoption evening" intro="We recommend the next step you take is to come to one of our regularly run information evenings. At the event, you will be able to ask our team questions and will hear from our team and previous adopters.">
+              <p><a className="float-right-text" href="/pages/bookadoptionevening">Book an evening</a></p>
+            </TopicCard>
           </div>
         </div>
 

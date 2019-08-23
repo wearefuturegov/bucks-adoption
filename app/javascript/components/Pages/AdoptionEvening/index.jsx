@@ -20,7 +20,7 @@ export default ({title, strapline, cta_title, cta_text, cta_button, body})=>
                     title: "Book an adoption evening"
                 }]} />
         <div className="book-an-evening__body">
-          <p><Markdown>{body}</Markdown></p>
+          <Markdown>{body}</Markdown>
         </div>
         <EveningList />
       </div>

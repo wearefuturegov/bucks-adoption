@@ -21,7 +21,22 @@ const useStateWithLocalStorage = localStorageKey => {
 };
 
 
-const TopicQuestionnairePage = ({title, intro, body, questions, topicID}) => {
+const TopicQuestionnairePage = ({
+  healthtitle,
+  healthintro,
+  familytitle,
+  familyintro,
+  hometitle,
+  homeintro,
+  timetitle,
+  timeintro,
+  skillstitle,
+  skillsintro,
+  title,
+  intro,
+  body,
+  questions,
+  topicID}) => {
   const [results, setResults] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [startQuestions, setStartQuestions] = useState(false)
@@ -65,7 +80,7 @@ const TopicQuestionnairePage = ({title, intro, body, questions, topicID}) => {
                       title: title
                   }]} />
           <div className="topic-content__body">
-            <p><Markdown>{body}</Markdown></p>
+            <Markdown>{body}</Markdown>
           </div>
         </div>
       </section>
@@ -128,7 +143,27 @@ const TopicQuestionnairePage = ({title, intro, body, questions, topicID}) => {
       {
         // ((questions.length+1) <= currentQuestion)
         resultsStored.length ?
-          <TopicResults topicSection={title} handleRestartClick={handleRestartClick} resultsArray={resultsStored.split('')} questions={questions} type={topicID} />
+          <TopicResults
+              topicSection={title}
+              handleRestartClick={handleRestartClick}
+              resultsArray={resultsStored.split('')}
+              questions={questions}
+              type={topicID}
+
+              healthtitle={healthtitle}
+              healthintro={healthintro}
+
+              timetitle={timetitle}
+              timeintro={timeintro}
+
+              familytitle={familytitle}
+              familyintro={familyintro}
+
+              skillstitle={skillstitle}
+              skillsintro={skillsintro}
+
+              hometitle={hometitle}
+              homeintro={homeintro} />
         :null
       }
     </Layout>

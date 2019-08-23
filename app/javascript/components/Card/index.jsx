@@ -14,7 +14,7 @@ const Card = ({
     <div className={`card ${clickable ? "clickable" : "notclickable"}`}>
       <h3 className="card__title">{title}</h3>
       <div className="card__intro">
-        <p><Markdown>{intro}</Markdown></p>
+        <Markdown>{intro}</Markdown>
       </div>
       {children}
     </div>

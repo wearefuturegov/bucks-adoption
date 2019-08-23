@@ -1,10 +1,26 @@
 import React from "react"
 import Button from "../Button"
 import TopicResultsSummary from "../TopicResultsSummary"
-import TopicPageContent from "../TopicPageContent"
+import TopicCard from "../TopicCard"
+import TopicSectionSuggestion from "../TopicSectionSuggestion"
 import "./style.scss"
 
-const TopicResults = ({ topicSection, handleRestartClick, resultsArray, questions, type }) => {
+const TopicResults = ({
+    healthtitle,
+    healthintro,
+    familytitle,
+    familyintro,
+    hometitle,
+    homeintro,
+    timetitle,
+    timeintro,
+    skillstitle,
+    skillsintro,
+    topicSection,
+    handleRestartClick,
+    resultsArray,
+    questions,
+    type }) => {
 
     return(
         <section className="final-results">
@@ -13,8 +29,9 @@ const TopicResults = ({ topicSection, handleRestartClick, resultsArray, question
 
                 <TopicResultsSummary topicSection={topicSection} resultsArray={resultsArray} questions={questions} type={type} />
 
-
-                <TopicPageContent title="Come to an adoption evening" intro="We recommend the next step you take is to come to one of our regularly run information evenings. At the event, you will be able to ask our team questions and will hear from our team and previous adopters." buttonText="Book an evening" link="/pages/bookadoptionevening" />
+                <TopicCard title="Come to an adoption evening" intro="We recommend the next step you take is to come to one of our regularly run information evenings. At the event, you will be able to ask our team questions and will hear from our team and previous adopters.">
+                    <p><a className="float-right-text" href="/pages/bookadoptionevening">Book an evening</a></p>
+                </TopicCard>
 
 
                 { handleRestartClick &&
@@ -23,7 +40,22 @@ const TopicResults = ({ topicSection, handleRestartClick, resultsArray, question
                 </div>
                 }
 
-                (TODO include next suggested section)
+                <TopicSectionSuggestion
+                    currentSection={type}
+                    healthtitle={healthtitle}
+                    healthintro={healthintro}
+
+                    timetitle={timetitle}
+                    timeintro={timeintro}
+
+                    familytitle={familytitle}
+                    familyintro={familyintro}
+
+                    skillstitle={skillstitle}
+                    skillsintro={skillsintro}
+
+                    hometitle={hometitle}
+                    homeintro={homeintro} />
             </div>
         </section>
     )}

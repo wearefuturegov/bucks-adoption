@@ -1,21 +1,19 @@
 @import '../vars';
 
 .topic-card {
-
-
-    &.health-card, &.results_topic_lifestyle-card {
+    &.healthindex-card, &.results_topic_lifestyle-card {
         border-top: 7px solid $health;
     }
-    &.family-card, &.results_topic_family-card {
+    &.familyindex-card, &.results_topic_family-card {
         border-top: 7px solid $family;
     }
-    &.home-card, &.results_topic_home-card {
+    &.homeindex-card, &.results_topic_home-card {
         border-top: 7px solid $home;
     }
-    &.skills-card, &.results_topic_skills-card {
+    &.skillsindex-card, &.results_topic_skills-card {
         border-top: 7px solid $skills;
     }
-    &.time-card, &.results_topic_time-card {
+    &.timeindex-card, &.results_topic_time-card {
         border-top: 7px solid $time;
     }
 

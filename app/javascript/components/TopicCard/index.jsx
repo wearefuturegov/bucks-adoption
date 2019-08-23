@@ -1,6 +1,5 @@
 import React, {useState} from "react"
-import PropTypes from "prop-types"
-import Markdown from 'markdown-to-jsx';
+import Markdown from 'markdown-to-jsx'
 import "./style.scss"
 
 const TopicCard = ({
@@ -32,7 +31,7 @@ const TopicCard = ({
         :null
       }
       <div className="card__intro">
-        <p><Markdown>{intro}</Markdown></p>
+        <Markdown>{intro}</Markdown>
       </div>
       {children}
 
@@ -42,7 +41,7 @@ const TopicCard = ({
           { isRevealed &&
             <div className="reveal-results_content fade-animate">
               <h3>You chose '{answer}' for the question '{question_title}'</h3>
-              <p><Markdown>{question_content}</Markdown></p>
+              <Markdown>{question_content}</Markdown>
             </div>
           }
         </div>
@@ -50,10 +49,6 @@ const TopicCard = ({
       }
     </div>
   )
-}
-
-TopicCard.propTypes = {
-  title: PropTypes.string.isRequired,
 }
 
 export default TopicCard

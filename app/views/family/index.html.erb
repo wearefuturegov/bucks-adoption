@@ -1,6 +1,21 @@
 <%= react_component("Pages/TopicQuestionnairePage", {
-  title: @familyContent.title,
-  intro: @familyContent.introduction.content,
   body: @familyContent.body.content,
   questions: @familyTopicContent,
-  topicID: "results_topic_family" } ) %>
+  topicID: "results_topic_family",
+
+  healthtitle: @healthContent.title,
+  healthintro: @healthContent.introduction.content,
+
+  timetitle: @timeContent.title,
+  timeintro: @timeContent.introduction.content,
+
+  title: @familyContent.title,
+  intro: @familyContent.introduction.content,
+  familytitle: @familyContent.title,
+  familyintro: @familyContent.introduction.content,
+
+  skillstitle: @skillsContent.title,
+  skillsintro: @skillsContent.introduction.content,
+
+  hometitle: @homeContent.title,
+  homeintro: @homeContent.introduction.content } ) %>

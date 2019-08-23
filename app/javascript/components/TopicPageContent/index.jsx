@@ -6,7 +6,7 @@ import Button from '../Button'
 const TopicPageContent = ({title, intro, link, buttonText }) => {
   return(
     <section className="topic-page-content">
-      <TopicCard key="1" intro={intro} title={title} type={link}>
+      <TopicCard key="1" intro={intro} title={title} type={link.replace(/\//g, '')}>
         <div className="button-right">
           <Button href={link}>{buttonText}</Button>
         </div>

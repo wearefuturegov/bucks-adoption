@@ -59,7 +59,7 @@ const Home = ({
       <div className="topic-sections">
         <div className="container">
           <div className="home-body">
-            <p><Markdown>{body}</Markdown></p>
+            <Markdown>{body}</Markdown>
           </div>
           <div className="topic-sections_navigation">
             <div className="topic-sections_navigation_inner">
