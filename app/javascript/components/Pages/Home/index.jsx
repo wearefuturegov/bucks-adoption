@@ -61,6 +61,17 @@ const Home = ({
           <div className="home-body">
             <Markdown>{body}</Markdown>
           </div>
+
+
+          { healthResultsStored.length && timeResultsStored.length && familyResultsStored.length && skillsResultsStored.length && homeResultsStored.length ? (
+              <div className="homepage_complete_message">
+                <h2>You have completed all the sections</h2>
+                <p>Well done on completing all of the sections of AdoptionReady, all of the actions we recommend you taking forward have been saved in <a href="/results/index">your adoption ready plan</a>.</p>
+              </div>
+            ):null
+          }
+
+
           <div className="topic-sections_navigation">
             <div className="topic-sections_navigation_inner">
               <Link to="healthindex-card" className={ (healthResultsStored ? "option-bubble_completed " : "") + "option-bubble"} offset={-70}>

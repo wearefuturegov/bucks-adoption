@@ -6,6 +6,7 @@ import TopicQuestions from "../../TopicQuestions"
 import TopicResultsSummary from "../../TopicResultsSummary"
 import TopicCard from "../../TopicCard"
 import Button from "../../Button"
+import Hero from "../../Hero"
 import "./style.scss"
 
 
@@ -22,6 +23,11 @@ const useStateWithLocalStorage = localStorageKey => {
 };
 
 const ResultsPage = ({
+   title,
+   strapline,
+   cta_title,
+   cta_text,
+   cta_button,
    health_questions,
    health_title,
    family_questions,
@@ -40,22 +46,16 @@ const ResultsPage = ({
   const [skillsResultsStored, setSkillsResultsStored] = useStateWithLocalStorage("results_topic_skills");
 
   return(
-    <Layout withHeader withFooter>
-      <section className="topic-content">
-        <div className="container">
-          <PageHeader title="Your Adoption Ready Plan" lede="Here's all the practical things you can do to get ready." breadcrumbs={[
-                  {
-                      title: "Bucks Adoption",
-                      href: "/"
-                  },
-                  {
-                      title: "Your Adoption Ready Plan"
-                  }]} />
-          <div className="topic-content__body">
-            results content
-          </div>
-        </div>
-      </section>
+    <Layout withFooter>
+      <Hero
+        title={title}
+        description={strapline}
+        ctaTitle={cta_title}
+        ctaDescription={cta_text}
+        ctaHref="/pages/bookadoptionevening"
+        ctaLinkText={cta_button}
+      />
+
       <section className="results-summary-section">
         <div className="health-results-summary">
           {

@@ -1,5 +1,7 @@
 class ResultsController < ApplicationController
   def index
+    @sitehome = AdoptionHomePage.instance
+
     @homeTopicContent = HomeTopicQuestion.all
     @homeContent = HomeContentPage.instance
 
