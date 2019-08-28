@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import SearchForm from "../SearchForm"
+import ProgressBar from "../ProgressBar"
 import MobileMenu from "../MobileMenu"
 import MenuItem from "./MenuItem"
 import "./style.scss"
@@ -28,7 +29,9 @@ const Header = ({inverted}) => {
                 <MobileMenu menuItems={menuItems} inverted={inverted}/>
 
                 <nav className="site-header__navigation" role="navigation">
-                    <SearchForm/>
+                    <ProgressBar />
+                    { // <SearchForm/>
+                    }
                     <ul className="site-header__menu site-menu" >
                         {(menuItems.map((menuItem, i)=>
                             <MenuItem href={menuItem.href} text={menuItem.text} key={i}/>

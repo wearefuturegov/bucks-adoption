@@ -1,0 +1,92 @@
+@import '../vars';
+
+.progressbar_inner {
+    background: $white;
+    border-radius: 100px;
+    font-size: 0.95em;
+    padding: 10px 25px;
+    border: none;
+    width: 100%;
+    color: $darkText;
+    border: 1px solid $shadow;
+    -webkit-appearance: none;
+
+    .progress_text {
+        z-index: 1;
+        position: relative;
+    }
+
+    .progress_indicator {
+        display: block;
+        height: 100%;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
+        background-color: rgba($link, 0.3);
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        width: 0;
+        z-index: 0;
+    }
+}
+
+.progressbar {
+    position: relative;
+    text-decoration: none;
+
+    &.completed_1 {
+        .progress_indicator {
+            width: 20%;
+        }
+    }
+    &.completed_2 {
+        .progress_indicator {
+            width: 40%;
+        }
+    }
+    &.completed_3 {
+        .progress_indicator {
+            width: 60%;
+        }
+    }
+    &.completed_4 {
+        .progress_indicator {
+            width: 80%;
+        }
+    }
+    &.completed_5 {
+        .progress_indicator {
+            width: 100%;
+            border-radius: 100px;
+        }
+    }
+    // &.next_health {
+    //     .progress_indicator {
+    //         background-color: $health;
+    //     }
+    // }
+    // &.next_time {
+    //     .progress_indicator {
+    //         background-color: $time;
+    //     }
+    // }
+    // &.next_family {
+    //     .progress_indicator {
+    //         background-color: $family;
+    //     }
+    // }
+    // &.next_skills {
+    //     .progress_indicator {
+    //         background-color: $skills;
+    //     }
+    // }
+    // &.next_home {
+    //     .progress_indicator {
+    //         background-color: $home;
+    //     }
+    // }
+
+}
