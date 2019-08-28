@@ -8,6 +8,7 @@ import TopicCard from "../../TopicCard"
 import Button from "../../Button"
 import Hero from "../../Hero"
 import "./style.scss"
+import ShareDialog from "../../ShareDialog"
 
 
 const useStateWithLocalStorage = localStorageKey => {
@@ -45,6 +46,8 @@ const ResultsPage = ({
   const [timeResultsStored, setTimeResultsStored] = useStateWithLocalStorage("results_topic_time");
   const [skillsResultsStored, setSkillsResultsStored] = useStateWithLocalStorage("results_topic_skills");
 
+  const [shareDialogOpen, toggleShareDialog] = useState(false)
+
   return(
     <Layout withFooter>
       <Hero
@@ -57,6 +60,17 @@ const ResultsPage = ({
       />
 
       <section className="results-summary-section">
+        { healthResultsStored.length && timeResultsStored.length && familyResultsStored.length && skillsResultsStored.length && homeResultsStored.length ? (
+          <>
+          <div className="share-button--container container">
+            <button className="share-button--for-list" onClick={()=>{
+                toggleShareDialog(true)
+            }}>Share your adoption ready plan</button>
+          </div>
+          <ShareDialog dialogIsOpen={shareDialogOpen} toggleDialog={toggleShareDialog}/>
+          </>
+        ):null
+        }
         <div className="health-results-summary">
           {
             healthResultsStored.length ? (
