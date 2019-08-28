@@ -63,20 +63,35 @@ const Home = ({
           </div>
           <div className="topic-sections_navigation">
             <div className="topic-sections_navigation_inner">
-              <Link to="healthindex-card" className="option-bubble" offset={-70}>
+              <Link to="healthindex-card" className={ (healthResultsStored ? "option-bubble_completed " : "") + "option-bubble"} offset={-70}>
                 <label className="option-bubble__label option-bubble__label--health">{lifestyletitle}</label>
+                { healthResultsStored &&
+                  <div className="checkmark_container"><div className="checkmark"></div></div>
+                }
               </Link>
-              <Link to="timeindex-card" className="option-bubble" offset={-70}>
+              <Link to="timeindex-card" className={ (timeResultsStored ? "option-bubble_completed " : "") + "option-bubble" } offset={-70}>
                 <label className="option-bubble__label option-bubble__label--time">{timetitle}</label>
+                { timeResultsStored &&
+                  <div className="checkmark_container"><div className="checkmark"></div></div>
+                }
               </Link>
-              <Link to="familyindex-card" className="option-bubble" offset={-70}>
+              <Link to="familyindex-card" className={ (familyResultsStored ? "option-bubble_completed " : "") + "option-bubble" } offset={-70}>
                 <label className="option-bubble__label option-bubble__label--family">{familytitle}</label>
+                { familyResultsStored &&
+                  <div className="checkmark_container"><div className="checkmark"></div></div>
+                }
               </Link>
-              <Link to="skillsindex-card" className="option-bubble" offset={-70}>
+              <Link to="skillsindex-card" className={ (skillsResultsStored ? "option-bubble_completed " : "") + "option-bubble" } offset={-70}>
                 <label className="option-bubble__label option-bubble__label--skills">{skillstitle}</label>
+                { skillsResultsStored &&
+                  <div className="checkmark_container"><div className="checkmark"></div></div>
+                }
               </Link>
-              <Link to="homeindex-card" className="option-bubble" offset={-70}>
+              <Link to="homeindex-card" className={ (homeResultsStored ? "option-bubble_completed " : "") + "option-bubble" } offset={-70}>
                 <label className="option-bubble__label option-bubble__label--home">{hometitle}</label>
+                { homeResultsStored &&
+                  <div className="checkmark_container"><div className="checkmark"></div></div>
+                }
               </Link>
             </div>
           </div>

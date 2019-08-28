@@ -42,6 +42,38 @@
 
 }
 
+.option-bubble {
+    position: relative;
+    &.option-bubble_completed {
+        .option-bubble__label {
+            opacity: 0.7;
+        }
+    }
+
+    .checkmark_container {
+        top: 17px;
+        right: 21px;
+        border-color: #fff;
+        width: 25px;
+        height: 25px;
+        border-width: 3px;
+        cursor: pointer;
+        line-height: 17px;
+        &:hover {
+            opacity: 0.7;
+        }
+
+        .checkmark {
+            &:after {
+                width: 4px;
+                height: 8px;
+                border-width: 0 3px 3px 0;
+                border-color: #fff;
+            }
+        }
+    }
+}
+
 .option-bubble__label{
     display: flex;
     flex-direction: column;
@@ -52,7 +84,7 @@
     border-radius: 30px;
     font-size: 1em;
     color: $darkText;
-    padding: 0px 25px;
+    padding: 0px 41px;
     height: 100%;
     font-weight: bold;
     text-decoration: none;
