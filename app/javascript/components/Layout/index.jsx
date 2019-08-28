@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import Header from "../Header"
 import PhaseBanner from "../PhaseBanner"
 import IsPageUseful from "../IsPageUseful"
-import FullWidthSearch from "../FullWidthSearchPanel"
+import FooterUpperSection from "../FooterUpperSection"
 import Footer from "../Footer"
 import Cookies from "../Cookies"
 import "./style.scss"
@@ -17,19 +17,27 @@ const Layout = ({children, withHeader, withUseful, withFooter, fullHeight})=>
         {withUseful && <IsPageUseful />}
         {withFooter &&
         <>
-            <FullWidthSearch
+            <FooterUpperSection
                 popularPages={[
                     {
-                        title: "Getting equipment",
-                        href: "#"
+                        title: "Book an information evening",
+                        target: "_self",
+                        href: "/pages/bookadoptionevening"
                     },
                     {
-                        title: "Keeping yourself safe",
-                        href: "#"
+                        title: "Support for adoptive parents",
+                        target: "_blank",
+                        href: "https://www.buckscc.gov.uk/services/care-for-children-and-families/adoption/adoption-support/"
                     },
                     {
-                        title: "Getting help at home",
-                        href: "#"
+                        title: "Adopting a child you know",
+                        target: "_blank",
+                        href: "https://www.buckscc.gov.uk/services/care-for-children-and-families/adoption/adopting-a-child-you-know/"
+                    },
+                    {
+                        title: "Placing your baby for adoption",
+                        target: "_blank",
+                        href: "https://www.buckscc.gov.uk/services/care-for-children-and-families/adoption/placing-your-baby-for-adoption/"
                     },
                 ]}
             />

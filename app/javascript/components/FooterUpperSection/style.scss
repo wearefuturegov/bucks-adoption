@@ -1,6 +1,6 @@
 @import '../vars';
 
-.full-width-search{
+.footer-upper-section{
     padding: 40px 0px;
     background: $darkText;
     color: $white;
@@ -10,9 +10,12 @@
     @media screen and (min-width: $desktop){
         padding: 80px 0px;
     }
+    p {
+        max-width: 550px;
+    }
 }
 
-.full-width-search__title{
+.footer-upper-section__title{
     font-size: 1.8em;
     margin-bottom: 5px;
     @media screen and (min-width: $tablet){
@@ -20,7 +23,7 @@
     }
 }
 
-.full-width-search__description{
+.footer-upper-section__description{
     font-size: 1.1em;
     margin-bottom: 15px;
     @media screen and (min-width: $tablet){
@@ -29,7 +32,7 @@
     }
 }
 
-.full-width-search__inner{
+.footer-upper-section__inner{
     aside:first-of-type{
         margin-bottom: 35px;
     }
@@ -53,6 +56,12 @@
         }
         aside:last-of-type{
             width: calc(33.33% - 40px);
+        }
+    }
+    a {
+        color: $white;
+        &:hover{
+            text-decoration: none;
         }
     }
 }
