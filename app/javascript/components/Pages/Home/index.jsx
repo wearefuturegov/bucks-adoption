@@ -63,19 +63,19 @@ const Home = ({
           </div>
           <div className="topic-sections_navigation">
             <div className="topic-sections_navigation_inner">
-              <Link to="health-card" className="option-bubble" offset={-70}>
+              <Link to="healthindex-card" className="option-bubble" offset={-70}>
                 <label className="option-bubble__label option-bubble__label--health">{lifestyletitle}</label>
               </Link>
-              <Link to="time-card" className="option-bubble" offset={-70}>
+              <Link to="timeindex-card" className="option-bubble" offset={-70}>
                 <label className="option-bubble__label option-bubble__label--time">{timetitle}</label>
               </Link>
-              <Link to="family-card" className="option-bubble" offset={-70}>
+              <Link to="familyindex-card" className="option-bubble" offset={-70}>
                 <label className="option-bubble__label option-bubble__label--family">{familytitle}</label>
               </Link>
-              <Link to="skills-card" className="option-bubble" offset={-70}>
+              <Link to="skillsindex-card" className="option-bubble" offset={-70}>
                 <label className="option-bubble__label option-bubble__label--skills">{skillstitle}</label>
               </Link>
-              <Link to="home-card" className="option-bubble" offset={-70}>
+              <Link to="homeindex-card" className="option-bubble" offset={-70}>
                 <label className="option-bubble__label option-bubble__label--home">{hometitle}</label>
               </Link>
             </div>
