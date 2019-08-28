@@ -34,27 +34,39 @@
 
 .card__reveal-indicator {
     background: $link;
-    height: 6px;
-    width: 20px;
+    height: 4px;
+    width: 17px;
     position: absolute;
-    right: 25px;
-    top: 25px;
+    right: 12px;
+    top: 21px;
     -webkit-transition: 0.1s ease-in-out;
     -moz-transition: 0.1s ease-in-out;
     -o-transition: 0.1s ease-in-out;
     transition: 0.1s ease-in-out;
     transform: rotate(0deg);
+
+    @media screen and (min-width: $tablet){
+        right: 25px;
+        top: 25px;
+        height: 6px;
+        width: 20px;
+    }
+
     &:after {
         content: "";
         background: $link;
-        height: 6px;
-        width: 20px;
+        height: 4px;
+        width: 17px;
         transform: rotate(0deg);
         position: absolute;
         -webkit-transition: 0.1s ease-in-out;
         -moz-transition: 0.1s ease-in-out;
         -o-transition: 0.1s ease-in-out;
         transition: 0.1s ease-in-out;
+        @media screen and (min-width: $tablet){
+            height: 6px;
+            width: 20px;
+        }
     }
     &.closed {
         transform: rotate(-90deg);

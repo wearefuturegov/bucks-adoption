@@ -70,15 +70,15 @@ const TopicQuestionnairePage = ({
   return(
     <Layout withHeader withFooter>
       <section className="topic-content">
+        <PageHeader title={title} lede={intro} breadcrumbs={[
+                {
+                    title: "Bucks Adoption",
+                    href: "/"
+                },
+                {
+                    title: title
+                }]} />
         <div className="container">
-          <PageHeader title={title} lede={intro} breadcrumbs={[
-                  {
-                      title: "Bucks Adoption",
-                      href: "/"
-                  },
-                  {
-                      title: title
-                  }]} />
           <div className="topic-content__body">
             <Markdown>{body}</Markdown>
           </div>

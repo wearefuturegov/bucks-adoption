@@ -20,6 +20,13 @@
     p {
         font-size: $small-d;
     }
+    .phase-banner__inner-text {
+        font-size: 0.7em;
+
+        @media screen and (min-width: $tablet){
+            font-size: 1em;
+        }
+    }
 }
 
 .phase-banner__tag{

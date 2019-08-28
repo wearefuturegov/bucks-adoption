@@ -3,18 +3,29 @@
 .topic-sections {
   background: $background;
   padding: 20px 0px;
-  .topic-card {
-    margin-top: 50px;
-  }
+
   @media screen and (min-width: $tablet){
       padding: 40px 0px;
+  }
+
+  .home-body {
+    margin-top: 50px;
+    @media screen and (min-width: $tablet){
+      margin-top: 0;
+    }
+  }
+  .topic-card {
+    margin-top: 50px;
   }
 
   .topic-sections_navigation {
     max-width: $maxWidth;
     margin: 0 auto;
-    padding-top: 40px;
-    padding-bottom: 20px;
+    padding: 20px 0;
+    @media screen and (min-width: $tablet){
+      padding-top: 40px;
+    }
+
     .topic-sections_navigation_inner {
       display: flex;
       flex-direction: row;
