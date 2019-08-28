@@ -2,7 +2,20 @@
 
 .next-section-suggestion {
   margin-top: 60px;
+  margin-bottom: 25px;
   h2 {
-      margin-bottom: 25px !important;
+    margin-bottom: 25px !important;
+  }
+  &.complete {
+    text-align: center;
+    h2 {
+      margin-bottom: 10px !important;
+      text-align: left;
+    }
+    p {
+      margin-bottom: 20px;
+      max-width: $maxWidth;
+      text-align: left;
+    }
   }
 }

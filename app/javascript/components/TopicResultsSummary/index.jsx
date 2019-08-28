@@ -4,7 +4,7 @@ import TopicCard from "../TopicCard"
 import "./style.scss"
 
 const TopicResultsSummary = ({ topicSection, resultsArray, questions, type, withTitle, link }) => {
-
+    console.log(questions)
     return(
         <section className="summary-results">
             <div className="container">
@@ -15,6 +15,7 @@ const TopicResultsSummary = ({ topicSection, resultsArray, questions, type, with
                 { resultsArray ? (
                     resultsArray.map((result, index) => {
                     return(
+                        <>
                         <div className="summary-results_single" key={index}>
                             {
                                 // TODO - this could probably be refactored better
@@ -29,13 +30,25 @@ const TopicResultsSummary = ({ topicSection, resultsArray, questions, type, with
                                       <TopicCard title={questions[index].action_3_title} answer={questions[index].answer_3} clickable="true" question_title={questions[index].title} question_content={questions[index].answer_3_explanation} intro={questions[index].action_3_text} type={type} />
                                 ) :null
                             }
-                            {  !questions[index].action_1_title && !questions[index].action_2_title && !questions[index].action_3_title ? (
-                                  <div className="summary-results_single_no-actions">
-                                    <p>Thanks for completing this section, there is nothing specific we recommend you doing for {topicSection} right now.</p>
-                                  </div>
-                                ):null
-                            }
                         </div>
+                        <>
+                            {
+                                result == "1" && !questions[index].action_1_title ? (
+                                    <div className="summary-results_single_no-actions">
+                                        <p>Thanks for completing this section, there is nothing specific we recommend you doing for {topicSection} right now.</p>
+                                    </div>
+                                ) : result == "2" && !questions[index].action_2_title ? (
+                                    <div className="summary-results_single_no-actions">
+                                        <p>Thanks for completing this section, there is nothing specific we recommend you doing for {topicSection} right now.</p>
+                                    </div>
+                                ) : result == "3" && !questions[index].action_3_title ? (
+                                    <div className="summary-results_single_no-actions">
+                                        <p>Thanks for completing this section, there is nothing specific we recommend you doing for {topicSection} right now.</p>
+                                    </div>
+                                ) :null
+                            }
+                        </>
+                        </>
                     )
                 })) : (
                     <div className="summary-results_incomplete">
