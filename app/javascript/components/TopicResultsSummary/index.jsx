@@ -32,15 +32,7 @@ const TopicResultsSummary = ({ topicSection, resultsArray, questions, type, with
                     </div>
                     <>
                         {
-                            result == "1" && !questions[index].action_1_title ? (
-                                <div className="summary-results_single_no-actions">
-                                    <p>Thanks for completing this section, there is nothing specific we recommend you doing for {topicSection} right now.</p>
-                                </div>
-                            ) : result == "2" && !questions[index].action_2_title ? (
-                                <div className="summary-results_single_no-actions">
-                                    <p>Thanks for completing this section, there is nothing specific we recommend you doing for {topicSection} right now.</p>
-                                </div>
-                            ) : result == "3" && !questions[index].action_3_title ? (
+                            !questions[index].action_1_title && !questions[index].action_2_title && !questions[index].action_3_title ? (
                                 <div className="summary-results_single_no-actions">
                                     <p>Thanks for completing this section, there is nothing specific we recommend you doing for {topicSection} right now.</p>
                                 </div>
