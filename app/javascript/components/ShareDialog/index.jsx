@@ -3,7 +3,6 @@ import { Dialog } from "@reach/dialog"
 import "@reach/dialog/styles.css"
 import "./style.scss"
 import cross from "./cross.svg"
-import fetch from "isomorphic-unfetch"
 import RadioItem from "./RadioItem"
 import Alert from "../Alert"
 
@@ -22,20 +21,7 @@ const ShareDialog = ({dialogIsOpen, toggleDialog, shareableUrl, singleService}) 
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        try{
-            const res = await fetch(`/api/share/${medium}`, {
-                method: "post",
-                headers: {"Content-Type": "application/json"},
-                body: JSON.stringify({
-                    url: (shareableUrl)? window.location.host + shareableUrl : window.location.href,
-                    email: recipient,
-                    phoneNumber: recipient
-                })
-            })
-            setResponse(res.status)
-        } catch(e){
-            setResponse("fail")
-        }
+
     }
 
     return (

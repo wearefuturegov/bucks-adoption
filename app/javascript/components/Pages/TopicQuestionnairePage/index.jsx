@@ -62,9 +62,11 @@ const TopicQuestionnairePage = ({
     scrollToRef(topRef)
   }
 
-  // TODO - io order for this URL params to work, need to be able to remove params from url on handleRestartClick
-  // if (resultsStored == '' && window.location.search) {
-  //   setResultsStored(window.location.search.split('?results=')[1].toString())
+  // TODO - URL param to send as email? currently for storing results from parameter but probably dont want to do this
+  // const resultsParam = window.location.search.split('?results=')[1];
+
+  // if (resultsStored == '' && resultsParam) {
+  //   setResultsStored(resultsParam.toString())
   // }
 
   return(
