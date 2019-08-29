@@ -8,7 +8,7 @@ import TopicCard from "../../TopicCard"
 import Button from "../../Button"
 import Hero from "../../Hero"
 import "./style.scss"
-import ShareDialog from "../../ShareDialog"
+// import ShareDialog from "../../ShareDialog"
 
 
 const useStateWithLocalStorage = localStorageKey => {
@@ -67,7 +67,8 @@ const ResultsPage = ({
                   toggleShareDialog(true)
               }}>Share your adoption ready plan</button>
             </div>
-            <ShareDialog dialogIsOpen={shareDialogOpen} toggleDialog={toggleShareDialog}/>
+            { // <ShareDialog dialogIsOpen={shareDialogOpen} toggleDialog={toggleShareDialog}/>
+            }
             </>
           ):null
           }
