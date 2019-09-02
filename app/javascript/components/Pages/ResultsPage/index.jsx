@@ -8,8 +8,8 @@ import TopicCard from "../../TopicCard"
 import Button from "../../Button"
 import Hero from "../../Hero"
 import "./style.scss"
+import send from "../../../lib/emailer"
 // import ShareDialog from "../../ShareDialog"
-
 
 const useStateWithLocalStorage = localStorageKey => {
   const [resultsStored, setResultsStored] = React.useState(
@@ -23,7 +23,10 @@ const useStateWithLocalStorage = localStorageKey => {
   return [resultsStored, setResultsStored];
 };
 
+
+
 const ResultsPage = ({
+    token,
    title,
    strapline,
    cta_title,
@@ -48,6 +51,27 @@ const ResultsPage = ({
 
   const [shareDialogOpen, toggleShareDialog] = useState(false)
 
+  const sendEmail = () =>{
+    send(
+      {
+        health_questions,
+        family_questions,
+        home_questions,
+        time_questions,
+        skills_questions
+      }, {
+        familyResultsStored,
+        homeResultsStored,
+        healthResultsStored,
+        timeResultsStored,
+        skillsResultsStored
+      },
+      token,
+      // TODO: Replace with user input
+      "hello@example.com"
+    )
+  }
+
   return(
     <Layout withFooter>
       <Hero
@@ -58,17 +82,19 @@ const ResultsPage = ({
         ctaHref="/pages/bookadoptionevening"
         ctaLinkText={cta_button}
       />
+
+      <button onClick={sendEmail}>Send email</button>
+
       <section className="results-summary-section">
         <div className="container">
           { healthResultsStored.length && timeResultsStored.length && familyResultsStored.length && skillsResultsStored.length && homeResultsStored.length ? (
             <>
-            <div className="share-button--container container">
-              <button className="share-button--for-list" onClick={()=>{
-                  toggleShareDialog(true)
-              }}>Share your adoption ready plan</button>
-            </div>
-            { // <ShareDialog dialogIsOpen={shareDialogOpen} toggleDialog={toggleShareDialog}/>
-            }
+              <div className="share-button--container container">
+                <button className="share-button--for-list" onClick={()=>{
+                    toggleShareDialog(true)
+                }}>Share your adoption ready plan</button>
+              </div>
+              {/* <ShareDialog dialogIsOpen={shareDialogOpen} toggleDialog={toggleShareDialog}/> */}
             </>
           ):null
           }
