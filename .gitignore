@@ -8,6 +8,7 @@ tmp/pids/server.pid
 
 node_modules
 
+
 # ignore next build dir
 .next
 

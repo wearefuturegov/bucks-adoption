@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import "./style.scss"
 import EveningCard from "../EveningCard"
 import loadingIcon from "./loading.svg"
+import fetch from "isomorphic-unfetch"
 
 class EveningList extends Component {
   constructor() {
