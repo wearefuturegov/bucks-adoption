@@ -1,21 +1,21 @@
 {
   "application.css": "/packs/css/application-ee28afc1.css",
   "application.css.map": "/packs/css/application-ee28afc1.css.map",
-  "application.js": "/packs/js/application-3671f32f1e61b2575ef2.js",
-  "application.js.map": "/packs/js/application-3671f32f1e61b2575ef2.js.map",
+  "application.js": "/packs/js/application-014950683a2354553dcf.js",
+  "application.js.map": "/packs/js/application-014950683a2354553dcf.js.map",
   "entrypoints": {
     "application": {
       "css": [
         "/packs/css/application-ee28afc1.css"
       ],
       "js": [
-        "/packs/js/application-3671f32f1e61b2575ef2.js"
+        "/packs/js/application-014950683a2354553dcf.js"
       ],
       "css.map": [
         "/packs/css/application-ee28afc1.css.map"
       ],
       "js.map": [
-        "/packs/js/application-3671f32f1e61b2575ef2.js.map"
+        "/packs/js/application-014950683a2354553dcf.js.map"
       ]
     },
     "hello_react": {
@@ -31,13 +31,13 @@
         "/packs/css/server_rendering-ee28afc1.css"
       ],
       "js": [
-        "/packs/js/server_rendering-fc9a05a10d8a1f41888d.js"
+        "/packs/js/server_rendering-6402c5476da84e4431c2.js"
       ],
       "css.map": [
         "/packs/css/server_rendering-ee28afc1.css.map"
       ],
       "js.map": [
-        "/packs/js/server_rendering-fc9a05a10d8a1f41888d.js.map"
+        "/packs/js/server_rendering-6402c5476da84e4431c2.js.map"
       ]
     }
   },
@@ -55,6 +55,6 @@
   "media/components/SearchForm/icon.svg": "/packs/media/components/SearchForm/icon-581d55e7db470d462f6d0ea386d1d41e.svg",
   "server_rendering.css": "/packs/css/server_rendering-ee28afc1.css",
   "server_rendering.css.map": "/packs/css/server_rendering-ee28afc1.css.map",
-  "server_rendering.js": "/packs/js/server_rendering-fc9a05a10d8a1f41888d.js",
-  "server_rendering.js.map": "/packs/js/server_rendering-fc9a05a10d8a1f41888d.js.map"
+  "server_rendering.js": "/packs/js/server_rendering-6402c5476da84e4431c2.js",
+  "server_rendering.js.map": "/packs/js/server_rendering-6402c5476da84e4431c2.js.map"
 }

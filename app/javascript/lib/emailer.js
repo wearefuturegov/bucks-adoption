@@ -1,23 +1,25 @@
 import fetch from "isomorphic-unfetch"
 
-export default (questions, answers, recipient, token) => {
+export default (questions, answers, token, recipient) => {
 
-    toDoList = []
+    const toDoList = []
 
     // 1. Organise and prepare data
-    questions.map(()=>{
-        // TODO
-    })
+    // questions.map(()=>{
+    //     // TODO
+    // })
 
     // 2. Post data to server
     fetch("/share-plan", {
         method: "post",
-        body: JSON.stringify({
-            recipient: recipient,
-            content: toDoList
-        })
+        headers: {
+            'Content-type': 'application/json',
+            'X-CSRF-TOKEN': token
+        },
+        body: JSON.stringify({questions, answers})
     })
         .then(res => res.json())
         .then(data => console.log(data))
+        .catch(err => console.log(err))
 
 }
