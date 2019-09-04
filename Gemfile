@@ -70,3 +70,4 @@ gem 'fae-rails'
 
 gem 'jquery-rails'
 
+gem "httparty"

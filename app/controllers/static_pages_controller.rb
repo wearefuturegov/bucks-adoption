@@ -1,4 +1,5 @@
 class StaticPagesController < ApplicationController
+
   def show
     page_name = (params[:page] + "_page").classify
 
@@ -16,4 +17,13 @@ class StaticPagesController < ApplicationController
 
     render "static_pages/#{params[:page]}"
   end
+
+  def bookadoptionevening
+    @sitehome = AdoptionHomePage.instance
+    @adopteve = BookAdoptionEvePage.instance
+
+    response = HTTParty.get("https://www.eventbriteapi.com/v3/users/me/events/?status=live&expand=venue&token=" + ENV['EVENTBRITE_SECRET'])
+    @events = response.body
+  end
+
 end
