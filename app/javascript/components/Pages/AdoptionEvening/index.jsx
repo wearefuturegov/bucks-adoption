@@ -7,7 +7,14 @@ import EveningList from "../../EveningList"
 import PageHeader from "../../PageHeader"
 
 
-export default ({title, strapline, cta_title, cta_text, cta_button, body})=>
+export default ({title, 
+  strapline, 
+  cta_title, 
+  cta_text, 
+  cta_button, 
+  body,
+  events
+})=>
   <Layout withHeader withFooter>
     <section className="book-an-evening">
       <PageHeader title={title} lede={strapline} breadcrumbs={[
@@ -21,6 +28,6 @@ export default ({title, strapline, cta_title, cta_text, cta_button, body})=>
       <div className="book-an-evening__body container">
         <Markdown>{body}</Markdown>
       </div>
-      <EveningList />
+      <EveningList events={events.events} />
     </section>
   </Layout>

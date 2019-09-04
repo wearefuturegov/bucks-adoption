@@ -4,55 +4,20 @@ import EveningCard from "../EveningCard"
 import loadingIcon from "./loading.svg"
 import fetch from "isomorphic-unfetch"
 
-class EveningList extends Component {
-  constructor() {
-    super();
-    this.state = {
-      evenings: [],
-      isLoading: true,
-      error: null
-    }
-  }
+const EveningList = ({
+  events
+}) =>
+  <section className="evening-list">
+    <div className="container">
+      <ol className="evening__grid" aria-live="polite">
+        {events.map(evening => {
+          const { id, name, url, start, end, venue } = evening;
+          return (
+            <EveningCard key={id} title={name.text} url={url} start={start} end={end} venue={venue} />
+          );
+        })}
+      </ol>
+    </div>
+  </section>
 
-  componentDidMount() {
-    this.fetchEvenings();
-  }
-
-  fetchEvenings() {
-    fetch("https://www.eventbriteapi.com/v3/users/me/events/?status=live&expand=venue&token=" + process.env.EVENTBRITE_SECRET)
-    .then(results => results.json())
-    .then(data =>
-      this.setState({
-        evenings: data.events,
-        isLoading: false,
-      })
-    )
-    .catch(error => this.setState({ error, isLoading: false }));
-  }
-
-  render() {
-    const { isLoading, evenings, error } = this.state;
-    return(
-      <section className="evening-list">
-        <div className="container">
-          {error ? <p>{error.message}</p> : null}
-
-          {!isLoading ? (
-            <ol className="evening__grid" aria-live="polite">
-              {evenings.map(evening => {
-                const { id, name, url, start, end, venue } = evening;
-                return (
-                  <EveningCard key={id} title={name.text} url={url} start={start} end={end} venue={venue} />
-                );
-              })}
-            </ol>
-            ) : (
-              <img className="evening-grid__loader" src={loadingIcon} alt="Loading..."/>
-            )}
-          </div>
-        </section>
-      )
-  }
-}
-
-export default EveningList;
+export default EveningList
