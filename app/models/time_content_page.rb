@@ -6,6 +6,7 @@ class TimeContentPage < Fae::StaticPage
   def self.fae_fields
     {
       introduction: { type: Fae::TextArea },
+      kicker: {type: Fae::TextArea},
       body: { type: Fae::TextArea }
     }
   end
