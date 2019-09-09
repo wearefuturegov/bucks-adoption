@@ -39,7 +39,7 @@ const Sidebar = ({
         <SidebarList>
             {items.map(item =>
                 <SidebarItem key={item.label}>
-                    {item.href ? <SidebarLink href={item.href}>{item.label}</SidebarLink> : item.label}
+                    {item.href ? <SidebarLink target="_blank" href={item.href}>{item.label}</SidebarLink> : item.label}
                 </SidebarItem>
             )}
         </SidebarList>
