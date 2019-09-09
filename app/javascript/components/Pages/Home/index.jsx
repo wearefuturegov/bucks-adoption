@@ -1,10 +1,11 @@
 import React, {uesState} from "react"
 import Markdown from 'markdown-to-jsx';
 import Layout from "../../Layout"
-import Hero from "../../Hero"
+import heroimage from "./hero.jpg"
 import TopicPageContent from "../../TopicPageContent"
 import TopicPageComplete from "../../TopicPageComplete"
 import OptionBubble from "../../OptionBubble"
+import HeroWithImage from "../../HeroWithImage"
 import { Link, animateScroll as scroll } from "react-scroll";
 import "./style.scss"
 
@@ -46,16 +47,8 @@ const Home = ({
 
 
   return(
-    <Layout withFooter>
-      <Hero
-        title={title}
-        description={strapline}
-        ctaTitle={cta_title}
-        ctaDescription={cta_text}
-        ctaHref="/pages/bookadoptionevening"
-        ctaLinkText={cta_button}
-      />
-
+    <Layout>
+      <HeroWithImage headline={title} image={heroimage} />
       <div className="topic-sections">
         <div className="container">
           <div className="home-body">
