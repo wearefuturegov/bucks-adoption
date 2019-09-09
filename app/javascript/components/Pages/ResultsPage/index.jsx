@@ -61,20 +61,20 @@ const ResultsPage = ({
                                                                       { label: "Your readiness plan" }
                                                                     ]}/>
       <div className="body-with-background">
+        { healthResultsStored.length && timeResultsStored.length && familyResultsStored.length && skillsResultsStored.length && homeResultsStored.length ? (
+          <>
+          <div className="share-button--container container">
+            <button className="share-button--for-list" onClick={()=>{
+                toggleShareDialog(true)
+            }}>Share your adoption ready plan</button>
+          </div>
+          { // <ShareDialog dialogIsOpen={shareDialogOpen} toggleDialog={toggleShareDialog}/>
+          }
+          </>
+        ):null
+        }
         <PageBodyContent>
           <div className="container">
-            { healthResultsStored.length && timeResultsStored.length && familyResultsStored.length && skillsResultsStored.length && homeResultsStored.length ? (
-              <>
-              <div className="share-button--container container">
-                <button className="share-button--for-list" onClick={()=>{
-                    toggleShareDialog(true)
-                }}>Share your adoption ready plan</button>
-              </div>
-              { // <ShareDialog dialogIsOpen={shareDialogOpen} toggleDialog={toggleShareDialog}/>
-              }
-              </>
-            ):null
-            }
             <div className="health-results-summary">
               {
                 healthResultsStored.length ? (
@@ -124,7 +124,7 @@ const ResultsPage = ({
             <div className="other-results">
               <h2>Other things to do</h2>
               <TopicCard title="Come to an adoption evening" intro="We recommend the next step you take is to come to one of our regularly run information evenings. At the event, you will be able to ask our team questions and will hear from our team and previous adopters.">
-                <p><a className="float-right-text" href="/pages/bookadoptionevening">Book an evening</a></p>
+                <a href="/pages/bookadoptionevening">Attend an evening</a>
               </TopicCard>
             </div>
           </div>

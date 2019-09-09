@@ -3,6 +3,7 @@ import styled from "styled-components"
 import logo from "./logo.svg"
 import eyeglass from "./eyeglass.svg"
 import theme from "../_theme"
+import ProgressBar from "../ProgressBar"
 
 const Outer = styled.header`
     background: ${theme.darkText};
@@ -136,6 +137,7 @@ const SiteHeader = () =>
             </MastheadLink>
 
             <Nav>
+                <ProgressBar/>
                 { /*
                  <SearchForm>
                     <SearchInput type="text" placeholder="Search"></SearchInput>
