@@ -2,10 +2,6 @@
 
 .topic-questionnaire, .final-results, .topic-questionnaire_end {
   background: $background;
-  padding: 20px 0px;
-  @media screen and (min-width: $tablet){
-    padding: 40px 0px;
-  }
 }
 
 .topic-content {

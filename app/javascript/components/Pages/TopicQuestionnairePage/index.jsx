@@ -43,7 +43,7 @@ const TopicQuestionnairePage = ({
   backgroundcolor}) => {
 
   const [results, setResults] = useState([]);
-  const [currentQuestion, setCurrentQuestion] = useState(0)
+  const [currentQuestion, setCurrentQuestion] = useState(1)
   const [resultsStored, setResultsStored] = useStateWithLocalStorage(topicID);
 
   const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
@@ -52,7 +52,6 @@ const TopicQuestionnairePage = ({
   const handleRestartClick = () => {
     setResultsStored('')
     setResults('')
-    setStartQuestions(true)
     setCurrentQuestion(1)
     scrollToRef(topRef)
   }
