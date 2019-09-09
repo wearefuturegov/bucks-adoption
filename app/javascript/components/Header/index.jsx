@@ -130,21 +130,21 @@ const SiteHeader = () =>
     <Outer>
         <Inner>
 
-            <MastheadLink href="https://www.buckscc.gov.uk/services/care-for-children-and-families/adoption/adopting-a-child/">
+            <MastheadLink href="/">
                 <Logo src={logo} alt="Buckinghamshire County Council"/>
-                <ServiceName>Care for adults</ServiceName>
+                <ServiceName>Adoption</ServiceName>
             </MastheadLink>
 
             <Nav>
-                <SearchForm>
+                { /*
+                 <SearchForm>
                     <SearchInput type="text" placeholder="Search"></SearchInput>
                     <SearchButton><SearchIcon src={eyeglass} alt="search"/></SearchButton>
-                </SearchForm>
+                 </SearchForm>
+                */ }
                 <Menu>
-                    <MenuItem href="/">Find support</MenuItem>
-                    <MenuItem href="https://www.careadvicebuckinghamshire.org/s4s/WhereILive/Council?pageId=2239">Information and advice</MenuItem>
-                    <MenuItem href="https://www.careadvicebuckinghamshire.org/s4s/Auth">Log in</MenuItem>
-                    <MenuItem href="https://www.careadvicebuckinghamshire.org/s4s/SignUp/PersonalDetails">Sign up</MenuItem>
+                    <MenuItem href="/results/index">Your readiness plan</MenuItem>
+                    <MenuItem href="/pages/bookadoptionevening">Attend an event</MenuItem>
                 </Menu>
             </Nav>
 
