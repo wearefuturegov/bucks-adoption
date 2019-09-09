@@ -15,7 +15,7 @@ function isMobileDevice() {
 export default ({title, strapline, cta_title, cta_text, cta_button, body})=>
   <Layout withHeader withFooter>
     <HeroWithImage headline={title} deck={strapline} image={heroimage} breadcrumbs={[
-                                                                      { href: "/", label: "Adoption" },
+                                                                      { href: "/", label: "Get ready to adopt" },
                                                                       { label: "test" }
                                                                     ]} />
     <EveningList />

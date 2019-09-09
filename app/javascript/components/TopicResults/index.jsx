@@ -35,13 +35,12 @@ const TopicResults = ({
                 </TopicCard>
 
 
-                { handleRestartClick &&
-                <div className="centered-button">
-                    <Button centredSecondary onClick={handleRestartClick}>Restart questionnaire</Button>
-                </div>
-                }
 
-                <TopicSectionSuggestion
+                <div className="centered-button">
+                    { handleRestartClick &&
+                        <Button centredSecondary onClick={handleRestartClick}>Restart questionnaire</Button>
+                    }
+                    <TopicSectionSuggestion
                     currentSection={type}
                     healthtitle={healthtitle}
                     healthintro={healthintro}
@@ -57,6 +56,7 @@ const TopicResults = ({
 
                     hometitle={hometitle}
                     homeintro={homeintro} />
+                </div>
             </div>
         </section>
     )}

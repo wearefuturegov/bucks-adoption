@@ -63,7 +63,7 @@ const TopicQuestionnairePage = ({
   return(
     <Layout withHeader withFooter>
       <HeroWithColor backgroundColor={backgroundcolor} headline={title} deck={intro} breadcrumbs={[
-                                                                    { href: "/", label: "Adoption" },
+                                                                    { href: "/", label: "Get ready to adopt" },
                                                                     { label: title }
                                                                     ]}/>
       <PageBodyContent>
@@ -74,40 +74,40 @@ const TopicQuestionnairePage = ({
       { !resultsStored ?
         <section className="topic-questionnaire">
           <div className="container">
-            {
-              <div className="topic-questionnaire_questions">
-                {questions.map(question => {
-                  const { id, title, answer_1, answer_2, answer_3, action_title } = question;
-                  return (
-                    <TopicQuestions
-                      key={id}
-                      content={question}
-                      id={id}
-                      total={questions.length}
-                      currentQuestion={currentQuestion}
-                      setCurrentQuestion={setCurrentQuestion}
-                      questionsLength={questions.length}
-                      topicID={topicID}
-                      results={results}
-                      setResults={setResults}
-                      resultsStored={resultsStored}
-                      setResultsStored={setResultsStored}
-                      scrollToRef={scrollToRef}
-                      type={topicID} />
-                  );
-                })}
-                {
-                  ((questions.length+1) <= currentQuestion) ?
-                    <div className="topic-questionnaire_end">
-                      <p>Great, you have completed the {title} section. Click save to store these answers, they will be saved for when you come back, as long as you come back on the same browser.</p>
-                      <div className="centered-button">
-                        <Button onClick={handleSaveClick}>Save</Button>
-                      </div>
+          {
+            <div className="topic-questionnaire_questions">
+              {questions.map(question => {
+                const { id, title, answer_1, answer_2, answer_3, action_title } = question;
+                return (
+                  <TopicQuestions
+                    key={id}
+                    content={question}
+                    id={id}
+                    total={questions.length}
+                    currentQuestion={currentQuestion}
+                    setCurrentQuestion={setCurrentQuestion}
+                    questionsLength={questions.length}
+                    topicID={topicID}
+                    results={results}
+                    setResults={setResults}
+                    resultsStored={resultsStored}
+                    setResultsStored={setResultsStored}
+                    scrollToRef={scrollToRef}
+                    type={topicID} />
+                );
+              })}
+              {
+                ((questions.length+1) <= currentQuestion) ?
+                  <div className="topic-questionnaire_end">
+                    <p>Great, you have completed the {title} section. Click save to store these answers, they will be saved for when you come back, as long as you come back on the same browser.</p>
+                    <div className="centered-button">
+                      <Button onClick={handleSaveClick}>Save</Button>
                     </div>
-                  :null
-                }
-              </div>
-            }
+                  </div>
+                :null
+              }
+            </div>
+          }
           </div>
         </section>
         :null
