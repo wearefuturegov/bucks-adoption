@@ -43,6 +43,16 @@ const GlobalStyle = createGlobalStyle`
         margin-left: auto;
         margin-right: auto;
     }
+    a {
+        color: ${theme.link};
+        &:hover {
+            text-decoration: none;
+        }
+        &:focus {
+            outline: 3px solid ${theme.focus};
+            background: ${theme.focus};
+        }
+    }
 `
 const Layout = ({ children }) =>
     <>
