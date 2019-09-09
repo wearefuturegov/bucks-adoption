@@ -48,7 +48,10 @@ const Home = ({
 
   return(
     <Layout>
-      <HeroWithImage headline={title} image={heroimage} />
+      <HeroWithImage headline={title} deck={strapline} image={heroimage} breadcrumbs={[
+                                                                      { href: "https://www.buckscc.gov.uk/services/care-for-children-and-families/adoption/adopting-a-child/", label: "Adoption" },
+                                                                      { label: "Get ready to adopt" }
+                                                                    ]} />
       <div className="topic-sections">
         <div className="container">
           <div className="home-body">
