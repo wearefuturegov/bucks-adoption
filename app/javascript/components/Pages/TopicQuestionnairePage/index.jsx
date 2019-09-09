@@ -5,6 +5,9 @@ import PageHeader from "../../PageHeader"
 import TopicQuestions from "../../TopicQuestions"
 import TopicResults from "../../TopicResults"
 import Button from "../../Button"
+import HeroWithColor from "../../HeroWithColor"
+import PageBodyContent from "../../PageBodyContent"
+import CallToAction from "../../CallToAction"
 import "./style.scss"
 
 
@@ -36,7 +39,9 @@ const TopicQuestionnairePage = ({
   intro,
   body,
   questions,
-  topicID}) => {
+  topicID,
+  backgroundcolor}) => {
+
   const [results, setResults] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [startQuestions, setStartQuestions] = useState(false)
@@ -62,30 +67,15 @@ const TopicQuestionnairePage = ({
     scrollToRef(topRef)
   }
 
-  // TODO - URL param to send as email? currently for storing results from parameter but probably dont want to do this
-  // const resultsParam = window.location.search.split('?results=')[1];
-
-  // if (resultsStored == '' && resultsParam) {
-  //   setResultsStored(resultsParam.toString())
-  // }
-
   return(
     <Layout withHeader withFooter>
-      <section className="topic-content">
-        <PageHeader title={title} lede={intro} breadcrumbs={[
-                {
-                    title: "Bucks Adoption",
-                    href: "/"
-                },
-                {
-                    title: title
-                }]} />
-        <div className="container">
-          <div className="topic-content__body">
-            <Markdown>{body}</Markdown>
-          </div>
-        </div>
-      </section>
+      <HeroWithColor backgroundColor={backgroundcolor} headline={title} deck={intro} breadcrumbs={[
+                                                                    { href: "/", label: "Adoption" },
+                                                                    { label: title }
+                                                                    ]}/>
+      <PageBodyContent>
+        <Markdown>{body}</Markdown>
+      </PageBodyContent>
 
       <div ref={topRef}>
       { !resultsStored ?

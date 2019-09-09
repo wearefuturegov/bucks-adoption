@@ -42,9 +42,10 @@
     &.option-bubble__label--time{
         background-color: darken($time, 30)
     }
+}
 
-
-
+.option-bubble__input.visually-hidden {
+    display: none;
 }
 
 a.option-bubble {

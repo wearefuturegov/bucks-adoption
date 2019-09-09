@@ -32,6 +32,9 @@ const ContentArea = styled.article`
             margin-bottom: 0px;
         }
     }
+    p {
+        margin-bottom: 20px;
+    }
 `
 
 const PageBodyContent = ({
@@ -70,7 +73,7 @@ export const UserContent = styled.div`
         }
         &:focus{
             outline: 3px solid ${theme.focus};
-            background: ${theme.focus};               
+            background: ${theme.focus};
         }
     }
     &:first-child{
