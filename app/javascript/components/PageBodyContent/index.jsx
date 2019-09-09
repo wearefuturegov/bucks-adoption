@@ -25,7 +25,6 @@ const Columns = styled.div`
 `
 
 const ContentArea = styled.article`
-    margin-bottom: 30px;
     @media screen and (min-width: ${theme.tablet}){
         margin-bottom: 50px;
         @supports (display: grid){

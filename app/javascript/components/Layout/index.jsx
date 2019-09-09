@@ -42,6 +42,13 @@ const GlobalStyle = createGlobalStyle`
         max-width: ${theme.maxWidth};
         margin-left: auto;
         margin-right: auto;
+        padding: 40px 20px;
+        @media screen and (min-width: ${theme.tablet}){
+            padding: 60px 20px;
+        }
+        @media screen and (min-width: ${theme.desktop}){
+            padding: 70px 20px;
+        }
     }
     a {
         color: ${theme.link};

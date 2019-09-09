@@ -44,17 +44,11 @@ const TopicQuestionnairePage = ({
 
   const [results, setResults] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0)
-  const [startQuestions, setStartQuestions] = useState(false)
   const [resultsStored, setResultsStored] = useStateWithLocalStorage(topicID);
 
   const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
   const topRef = useRef(null)
 
-  const handleStartClick = () => {
-    setStartQuestions(true)
-    setCurrentQuestion(1)
-    scrollToRef(topRef)
-  }
   const handleRestartClick = () => {
     setResultsStored('')
     setResults('')
@@ -82,14 +76,6 @@ const TopicQuestionnairePage = ({
         <section className="topic-questionnaire">
           <div className="container">
             {
-              !startQuestions &&
-              <div className="topic-questionnaire_start">
-                <p>This is a set of 5 questions ... etc</p>
-                <Button onClick={handleStartClick}>Start questions</Button>
-              </div>
-            }
-            {
-              startQuestions &&
               <div className="topic-questionnaire_questions">
                 {questions.map(question => {
                   const { id, title, answer_1, answer_2, answer_3, action_title } = question;

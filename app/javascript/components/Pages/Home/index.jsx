@@ -140,10 +140,8 @@ const Home = ({
         </div>
       </div>
       <CallToAction headline="Get in touch">
-        <p>
-          If you have any questions about adoption, you can email us at:
-          <a href="mail-to:adoption@buckscc.gov.uk">adoption@buckscc.gov.uk</a>
-        </p>
+        <p>If you have any questions about adoption, you can email us at: <a href="mail-to:adoption@buckscc.gov.uk">adoption@buckscc.gov.uk</a></p>
+
         <p>
         or call:
         { isMobileDevice() ? (
