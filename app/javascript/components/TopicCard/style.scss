@@ -83,6 +83,10 @@
         @media screen and (min-width: $desktop){
             margin-bottom: 10px;
         }
+        ul {
+            padding-left: 25px;
+            margin-top: 10px;
+        }
     }
     &.clickable {
         &:hover {
