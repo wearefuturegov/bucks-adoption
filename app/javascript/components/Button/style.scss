@@ -60,16 +60,18 @@
         }
     }
     &.button--centred{
-        &:after{
-            display: none;
-        }
+        margin-bottom: 15px;
         background-color: transparent;
         border: 2px solid $link;
         color: $link;
-        font-size: 1em;
-        padding: 10px 35px;
         &:hover {
             background-color: rgba($link, 0.1);
+        }
+        &:after{
+            display: none;
+        }
+        @media screen and(min-width: $desktop){
+            margin-bottom: 0;
         }
     }
 }

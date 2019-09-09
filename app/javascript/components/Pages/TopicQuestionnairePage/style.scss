@@ -2,10 +2,6 @@
 
 .topic-questionnaire, .final-results, .topic-questionnaire_end {
   background: $background;
-  padding: 20px 0px;
-  @media screen and (min-width: $tablet){
-    padding: 40px 0px;
-  }
 }
 
 .topic-content {
@@ -61,6 +57,10 @@
 .centered-button {
   text-align: center;
   margin-top: 60px;
+  .button {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 }
 
 .fade-animate {

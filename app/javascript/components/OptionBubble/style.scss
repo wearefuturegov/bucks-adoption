@@ -5,6 +5,9 @@
     width: 100%;
     height: 60px;
     margin-bottom: 10px;
+    &:focus {
+        outline: none;
+    }
     &:focus-within{
         .option-bubble__label{
             outline: none;
@@ -39,9 +42,10 @@
     &.option-bubble__label--time{
         background-color: darken($time, 30)
     }
+}
 
-
-
+.option-bubble__input.visually-hidden {
+    display: none;
 }
 
 a.option-bubble {

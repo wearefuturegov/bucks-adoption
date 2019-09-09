@@ -42,37 +42,18 @@ const TopicSectionSuggestion = ({
         <>
         { !healthResultsStored.length || !timeResultsStored.length || !familyResultsStored.length || !skillsResultsStored.length || !homeResultsStored.length ? (
             health != currentSection && !healthResultsStored.length ? (
-                <div className="next-section-suggestion">
-                    <h2>Continue with the next section of questions</h2>
-                    <TopicPageContent buttonText="Continue" link="/health/index" title={healthtitle} intro={healthintro} />
-                </div>
+              <Button href="/health/index">Next section</Button>
             ) : time != currentSection && !timeResultsStored.length ? (
-                <div className="next-section-suggestion">
-                    <h2>Continue with the next section of questions</h2>
-                    <TopicPageContent buttonText="Continue" link="/time/index" title={timetitle} intro={timeintro} />
-                </div>
+              <Button href="/time/index">Next section</Button>
             ) : family != currentSection && !familyResultsStored.length ? (
-                <div className="next-section-suggestion">
-                    <h2>Continue with the next section of questions</h2>
-                    <TopicPageContent buttonText="Continue" link="/family/index" title={familytitle} intro={familyintro} />
-                </div>
+              <Button href="/family/index">Next section</Button>
             ) : skills != currentSection && !skillsResultsStored.length ? (
-                <div className="next-section-suggestion">
-                    <h2>Continue with the next section of questions</h2>
-                    <TopicPageContent buttonText="Continue" link="/skills/index" title={skillstitle} intro={skillsintro} />
-                </div>
+              <Button href="/skills/index">Next section</Button>
             ) : home != currentSection && !homeResultsStored.length ? (
-                <div className="next-section-suggestion">
-                    <h2>Continue with the next section of questions</h2>
-                    <TopicPageContent buttonText="Continue" link="/home/index" title={hometitle} intro={homeintro} />
-                </div>
+              <Button href="/home/index">Next section</Button>
             ):null
           ) : (
-              <div className="next-section-suggestion complete">
-                  <h2>You have completed all the sections</h2>
-                  <p>Well done on completing all of the sections of AdoptionReady, all of the actions we recommend you taking forward have been saved in <a href="/results/index">your adoption ready plan</a>.</p>
-                  <Button href="/results/index">View your results</Button>
-              </div>
+            <Button href="/results/index">View your results</Button>
           )
         }
         </>

@@ -30,18 +30,11 @@ const TopicResults = ({
 
                 <TopicResultsSummary topicSection={topicSection} resultsArray={resultsArray} questions={questions} type={type} />
 
-                <TopicCard title="Come to an adoption evening" intro="We recommend the next step you take is to come to one of our regularly run information evenings. At the event, you will be able to ask our team questions and will hear from our team and previous adopters.">
-                    <p><a className="float-right-text" href="/pages/bookadoptionevening">Book an evening</a></p>
-                </TopicCard>
-
-
-                { handleRestartClick &&
                 <div className="centered-button">
-                    <Button centredSecondary onClick={handleRestartClick}>Restart questionnaire</Button>
-                </div>
-                }
-
-                <TopicSectionSuggestion
+                    { handleRestartClick &&
+                        <Button centredSecondary onClick={handleRestartClick}>Restart questionnaire</Button>
+                    }
+                    <TopicSectionSuggestion
                     currentSection={type}
                     healthtitle={healthtitle}
                     healthintro={healthintro}
@@ -57,6 +50,7 @@ const TopicResults = ({
 
                     hometitle={hometitle}
                     homeintro={homeintro} />
+                </div>
             </div>
         </section>
     )}

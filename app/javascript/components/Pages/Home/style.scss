@@ -2,11 +2,6 @@
 
 .topic-sections {
   background: $background;
-  padding: 20px 0px;
-
-  @media screen and (min-width: $tablet){
-      padding: 40px 0px;
-  }
 
   .home-body {
     margin-top: 50px;
@@ -21,10 +16,6 @@
   .topic-sections_navigation {
     max-width: $maxWidth;
     margin: 0 auto;
-    padding: 20px 0;
-    @media screen and (min-width: $tablet){
-      padding-top: 40px;
-    }
 
     .topic-sections_navigation_inner {
       display: flex;
@@ -36,15 +27,10 @@
 }
 
 .homepage_complete_message {
-  padding: 20px 0;
   h2 {
     margin-bottom: 10px;
   }
   p {
     font-weight: 600;
-  }
-  @media screen and (min-width: $tablet){
-      padding: 40px 0px;
-      padding-bottom: 20px;
   }
 }

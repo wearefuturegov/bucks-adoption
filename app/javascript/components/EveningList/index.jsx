@@ -35,6 +35,7 @@ class EveningList extends Component {
     return(
       <section className="evening-list">
         <div className="container">
+          <h2>Upcoming Events</h2>
           {error ? <p>{error.message}</p> : null}
 
           {!isLoading ? (

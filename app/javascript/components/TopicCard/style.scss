@@ -1,37 +1,5 @@
 @import '../vars';
 
-.topic-card {
-    &.healthindex-card, &.results_topic_lifestyle-card {
-        border-top: 7px solid $health;
-    }
-    &.familyindex-card, &.results_topic_family-card {
-        border-top: 7px solid $family;
-    }
-    &.homeindex-card, &.results_topic_home-card {
-        border-top: 7px solid $home;
-    }
-    &.skillsindex-card, &.results_topic_skills-card {
-        border-top: 7px solid $skills;
-    }
-    &.timeindex-card, &.results_topic_time-card {
-        border-top: 7px solid $time;
-    }
-
-    .card__title, .card__intro {
-        max-width: $maxWidth;
-        margin-bottom: 15px;
-
-        @media screen and (min-width: $desktop){
-            margin-bottom: 10px;
-        }
-    }
-    &.clickable {
-        &:hover {
-            cursor: pointer;
-        }
-    }
-}
-
 .card__reveal-indicator {
     background: $link;
     height: 4px;
@@ -72,6 +40,57 @@
         transform: rotate(-90deg);
         &:after {
             transform: rotate(-90deg);
+        }
+    }
+}
+
+.topic-card {
+    &.healthindex-card, &.results_topic_lifestyle-card {
+        border-top: 7px solid $health;
+        .card__reveal-indicator, .card__reveal-indicator:after {
+            background: $health;
+        }
+    }
+    &.familyindex-card, &.results_topic_family-card {
+        border-top: 7px solid $family;
+        .card__reveal-indicator, .card__reveal-indicator:after {
+            background: $family;
+        }
+    }
+    &.homeindex-card, &.results_topic_home-card {
+        border-top: 7px solid $home;
+        .card__reveal-indicator, .card__reveal-indicator:after {
+            background: $home;
+        }
+    }
+    &.skillsindex-card, &.results_topic_skills-card {
+        border-top: 7px solid $skills;
+        .card__reveal-indicator, .card__reveal-indicator:after {
+            background: $skills;
+        }
+    }
+    &.timeindex-card, &.results_topic_time-card {
+        border-top: 7px solid $time;
+        .card__reveal-indicator, .card__reveal-indicator:after {
+            background: $time;
+        }
+    }
+
+    .card__title, .card__intro {
+        max-width: $maxWidth;
+        margin-bottom: 15px;
+
+        @media screen and (min-width: $desktop){
+            margin-bottom: 10px;
+        }
+        ul {
+            padding-left: 25px;
+            margin-top: 10px;
+        }
+    }
+    &.clickable {
+        &:hover {
+            cursor: pointer;
         }
     }
 }

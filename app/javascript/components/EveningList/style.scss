@@ -1,5 +1,13 @@
 @import '../vars';
 
+.evening-list {
+    background: $background;
+    padding: 20px 0px;
+    @media screen and (min-width: $tablet){
+      padding: 40px 0px;
+    }
+}
+
 .evening__grid{
     padding-top: 15px;
     list-style: none;

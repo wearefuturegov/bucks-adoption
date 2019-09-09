@@ -1,56 +1,73 @@
 import React from "react"
-import PropTypes from "prop-types"
-import Header from "../Header"
 import PhaseBanner from "../PhaseBanner"
-import IsPageUseful from "../IsPageUseful"
-import FooterUpperSection from "../FooterUpperSection"
+import Header from "../Header"
 import Footer from "../Footer"
-import Cookies from "../Cookies"
-import "./style.scss"
+import theme from "../_theme"
+import { createGlobalStyle } from "styled-components"
 
-const Layout = ({children, withHeader, withUseful, withFooter, fullHeight})=>
-    <div className={fullHeight ? "layout--full-height" : undefined}>
-        <PhaseBanner href="#"/>
-        <Cookies/>
-        {withHeader && <Header /> }
-        {children}
-        {withUseful && <IsPageUseful />}
-        {withFooter &&
-        <>
-            <FooterUpperSection
-                popularPages={[
-                    {
-                        title: "Book an information evening",
-                        target: "_self",
-                        href: "/pages/bookadoptionevening"
-                    },
-                    {
-                        title: "Support for adoptive parents",
-                        target: "_blank",
-                        href: "https://www.buckscc.gov.uk/services/care-for-children-and-families/adoption/adoption-support/"
-                    },
-                    {
-                        title: "Adopting a child you know",
-                        target: "_blank",
-                        href: "https://www.buckscc.gov.uk/services/care-for-children-and-families/adoption/adopting-a-child-you-know/"
-                    },
-                    {
-                        title: "Placing your baby for adoption",
-                        target: "_blank",
-                        href: "https://www.buckscc.gov.uk/services/care-for-children-and-families/adoption/placing-your-baby-for-adoption/"
-                    },
-                ]}
-            />
-            <Footer/>
-        </>
+const GlobalStyle = createGlobalStyle`
+    *{
+        font-family: "Open Sans", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Dialog styles */
+    :root {
+        --reach-dialog: 1;
+    }
+    [data-reach-dialog-overlay] {
+        background: hsla(0, 0%, 0%, 0.5);
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: auto;
+    }
+    [data-reach-dialog-content] {
+        width: 80vw;
+        margin: 10vh auto;
+        background: white;
+        outline: none;
+    }
+
+    /* Map styles */
+    .detail-map, .list-map{
+        height: 450px;
+        margin-top: 15px;
+    }
+    .container {
+        max-width: ${theme.maxWidth};
+        margin-left: auto;
+        margin-right: auto;
+        padding: 40px 20px;
+        @media screen and (min-width: ${theme.tablet}){
+            padding: 60px 20px;
         }
-    </div>
-
-Layout.propTypes = {
-    children: PropTypes.node,
-    withHeader: PropTypes.bool,
-    withUseful: PropTypes.bool,
-    withFooter: PropTypes.bool
-}
+        @media screen and (min-width: ${theme.desktop}){
+            padding: 70px 20px;
+        }
+    }
+    a {
+        color: ${theme.link};
+        &:hover {
+            text-decoration: none;
+        }
+        &:focus {
+            outline: 3px solid ${theme.focus};
+            background: ${theme.focus};
+        }
+    }
+`
+const Layout = ({ children }) =>
+    <>
+        <GlobalStyle/>
+        <PhaseBanner/>
+        <Header/>
+        {children}
+        <Footer/>
+    </>
 
 export default Layout

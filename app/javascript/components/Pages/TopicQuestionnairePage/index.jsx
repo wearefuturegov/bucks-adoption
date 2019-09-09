@@ -5,6 +5,9 @@ import PageHeader from "../../PageHeader"
 import TopicQuestions from "../../TopicQuestions"
 import TopicResults from "../../TopicResults"
 import Button from "../../Button"
+import HeroWithColor from "../../HeroWithColor"
+import PageBodyContent from "../../PageBodyContent"
+import CallToAction from "../../CallToAction"
 import "./style.scss"
 
 
@@ -36,24 +39,19 @@ const TopicQuestionnairePage = ({
   intro,
   body,
   questions,
-  topicID}) => {
+  topicID,
+  backgroundcolor}) => {
+
   const [results, setResults] = useState([]);
-  const [currentQuestion, setCurrentQuestion] = useState(0)
-  const [startQuestions, setStartQuestions] = useState(false)
+  const [currentQuestion, setCurrentQuestion] = useState(1)
   const [resultsStored, setResultsStored] = useStateWithLocalStorage(topicID);
 
   const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
   const topRef = useRef(null)
 
-  const handleStartClick = () => {
-    setStartQuestions(true)
-    setCurrentQuestion(1)
-    scrollToRef(topRef)
-  }
   const handleRestartClick = () => {
     setResultsStored('')
     setResults('')
-    setStartQuestions(true)
     setCurrentQuestion(1)
     scrollToRef(topRef)
   }
@@ -62,77 +60,54 @@ const TopicQuestionnairePage = ({
     scrollToRef(topRef)
   }
 
-  // TODO - URL param to send as email? currently for storing results from parameter but probably dont want to do this
-  // const resultsParam = window.location.search.split('?results=')[1];
-
-  // if (resultsStored == '' && resultsParam) {
-  //   setResultsStored(resultsParam.toString())
-  // }
-
   return(
     <Layout withHeader withFooter>
-      <section className="topic-content">
-        <PageHeader title={title} lede={intro} breadcrumbs={[
-                {
-                    title: "Bucks Adoption",
-                    href: "/"
-                },
-                {
-                    title: title
-                }]} />
-        <div className="container">
-          <div className="topic-content__body">
-            <Markdown>{body}</Markdown>
-          </div>
-        </div>
-      </section>
+      <HeroWithColor backgroundColor={backgroundcolor} headline={title} deck={intro} breadcrumbs={[
+                                                                    { href: "/", label: "Get ready to adopt" },
+                                                                    { label: title }
+                                                                    ]}/>
+      <PageBodyContent>
+        <Markdown>{body}</Markdown>
+      </PageBodyContent>
 
       <div ref={topRef}>
       { !resultsStored ?
         <section className="topic-questionnaire">
           <div className="container">
-            {
-              !startQuestions &&
-              <div className="topic-questionnaire_start">
-                <p>This is a set of 5 questions ... etc</p>
-                <Button onClick={handleStartClick}>Start questions</Button>
-              </div>
-            }
-            {
-              startQuestions &&
-              <div className="topic-questionnaire_questions">
-                {questions.map(question => {
-                  const { id, title, answer_1, answer_2, answer_3, action_title } = question;
-                  return (
-                    <TopicQuestions
-                      key={id}
-                      content={question}
-                      id={id}
-                      total={questions.length}
-                      currentQuestion={currentQuestion}
-                      setCurrentQuestion={setCurrentQuestion}
-                      questionsLength={questions.length}
-                      topicID={topicID}
-                      results={results}
-                      setResults={setResults}
-                      resultsStored={resultsStored}
-                      setResultsStored={setResultsStored}
-                      scrollToRef={scrollToRef}
-                      type={topicID} />
-                  );
-                })}
-                {
-                  ((questions.length+1) <= currentQuestion) ?
-                    <div className="topic-questionnaire_end">
-                      <p>Great, you have completed the {title} section. Click save to store these answers, they will be saved for when you come back, as long as you come back on the same browser.</p>
-                      <div className="centered-button">
-                        <Button onClick={handleSaveClick}>Save</Button>
-                      </div>
+          {
+            <div className="topic-questionnaire_questions">
+              {questions.map(question => {
+                const { id, title, answer_1, answer_2, answer_3, action_title } = question;
+                return (
+                  <TopicQuestions
+                    key={id}
+                    content={question}
+                    id={id}
+                    total={questions.length}
+                    currentQuestion={currentQuestion}
+                    setCurrentQuestion={setCurrentQuestion}
+                    questionsLength={questions.length}
+                    topicID={topicID}
+                    results={results}
+                    setResults={setResults}
+                    resultsStored={resultsStored}
+                    setResultsStored={setResultsStored}
+                    scrollToRef={scrollToRef}
+                    type={topicID} />
+                );
+              })}
+              {
+                ((questions.length+1) <= currentQuestion) ?
+                  <div className="topic-questionnaire_end">
+                    <p>Great, you have completed the {title} section. Click save to store these answers, they will be saved for when you come back, as long as you come back on the same browser.</p>
+                    <div className="centered-button">
+                      <Button onClick={handleSaveClick}>Save</Button>
                     </div>
-                  :null
-                }
-              </div>
-            }
+                  </div>
+                :null
+              }
+            </div>
+          }
           </div>
         </section>
         :null

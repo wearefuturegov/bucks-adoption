@@ -7,7 +7,7 @@ const TopicResultsSummary = ({ topicSection, resultsArray, questions, type, with
     return(
         <section className="summary-results">
             { withTitle ?
-                <h2>{topicSection}{resultsArray ? ' to dos:' : ''}</h2>
+                <h2>{topicSection}{resultsArray ? ' to-dos' : ''}</h2>
               :null
             }
             { resultsArray ? (
@@ -42,8 +42,7 @@ const TopicResultsSummary = ({ topicSection, resultsArray, questions, type, with
                 )
             })) : (
                 <div className="summary-results_incomplete">
-                    <p>You have not completed the {topicSection} questions yet, click the button below to complete this section.</p>
-                    <Button href={'/'+ link + "/index"}>Start</Button>
+                    <p>You have not completed the {topicSection} section yet. <a href={'/'+ link + "/index"}>Explore it now.</a></p>
                 </div>
             )
             }
