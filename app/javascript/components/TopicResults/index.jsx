@@ -30,12 +30,6 @@ const TopicResults = ({
 
                 <TopicResultsSummary topicSection={topicSection} resultsArray={resultsArray} questions={questions} type={type} />
 
-                <TopicCard title="Come to an adoption evening" intro="We recommend the next step you take is to come to one of our regularly run information evenings. At the event, you will be able to ask our team questions and will hear from our team and previous adopters.">
-                    <a href="/pages/bookadoptionevening">Attend an evening</a>
-                </TopicCard>
-
-
-
                 <div className="centered-button">
                     { handleRestartClick &&
                         <Button centredSecondary onClick={handleRestartClick}>Restart questionnaire</Button>

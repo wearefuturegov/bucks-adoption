@@ -16,10 +16,6 @@
   .topic-sections_navigation {
     max-width: $maxWidth;
     margin: 0 auto;
-    padding: 20px 0;
-    @media screen and (min-width: $tablet){
-      padding-top: 40px;
-    }
 
     .topic-sections_navigation_inner {
       display: flex;
