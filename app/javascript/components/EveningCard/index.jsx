@@ -27,7 +27,7 @@ const EveningCard = ({
         <br/>
         {venue.name}, {venue.address.city} {venue.address.postal_code}
       </p>
-      <a className="evening-card__text-link" target="_blank" href={url}>Book evening on Eventbrite</a>
+      <p className="evening-card__text-link">Register on Eventbrite &#8594;</p>
     </div>
   )
 }
