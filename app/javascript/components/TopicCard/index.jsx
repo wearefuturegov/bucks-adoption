@@ -68,6 +68,15 @@ const DetailsHolder = styled.div`
   p{
     margin-bottom: 15px
   }
+  ul, ol{
+    padding-left: 20px;
+    margin-bottom: 15px;
+    color: ${theme.darkText};
+  }
+  li p{
+    margin-bottom: 5px;
+    margin-left: 10px;
+  }
 `
 
 const DetailsHeadline = styled.h3`
