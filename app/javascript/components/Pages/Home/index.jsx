@@ -5,7 +5,7 @@ import heroimage from "./hero.jpg"
 import HeroWithImage from "../../HeroWithImage"
 import NarrowCallToAction from "../../NarrowCallToAction"
 import CallToAction from "../../CallToAction"
-import PageBodyContent from "../../PageBodyContent"
+import PageBodyContent, { UserContent } from "../../PageBodyContent"
 import CardGrid from "../../CardGrid"
 import theme from "../../_theme"
 
@@ -52,9 +52,11 @@ const Home = ({
       label={cta_button} 
     />
     <PageBodyContent>
-      <Markdown>
-        {body}
-      </Markdown>
+      <UserContent>
+        <Markdown>
+          {body}
+        </Markdown>
+      </UserContent>
     </PageBodyContent>
     <CardGrid
       cards={[
@@ -66,25 +68,25 @@ const Home = ({
         },
         {
           headline: timeTitle,
-          deck: timeContent.kicker || healthContent.introduction,
+          deck: timeContent.kicker || timeContent.introduction,
           href: "/time/index",
           borderColor: theme.social
         },
         {
           headline: familyTitle,
-          deck: familyContent.kicker || healthContent.introduction,
+          deck: familyContent.kicker || familyContent.introduction,
           href: "/family/index",
           borderColor: theme.support
         },
         {
           headline: skillsTitle,
-          deck: skillsContent.kicker || healthContent.introduction,
+          deck: skillsContent.kicker || skillsContent.introduction,
           href: "/skills/index",
           borderColor: theme.learning
         },
         {
           headline: homeTitle,
-          deck: homeContent.kicker || healthContent.introduction,
+          deck: homeContent.kicker || homeContent.introduction,
           href: "/home/index",
           borderColor: theme.cultural
         },

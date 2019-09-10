@@ -4,7 +4,7 @@ import Layout from "../../Layout"
 import heroimage from "./bookevening.jpg"
 import HeroWithImage from "../../HeroWithImage"
 import EveningList from "../../EveningList"
-import PageBodyContent from "../../PageBodyContent"
+import PageBodyContent, { UserContent } from "../../PageBodyContent"
 import CallToAction from "../../CallToAction"
 
 function isMobileDevice() {
@@ -50,6 +50,8 @@ export default ({
         }
       ]}
     >
-      <Markdown>{body}</Markdown>
+      <UserContent>
+        <Markdown>{body}</Markdown>
+      </UserContent>
     </PageBodyContent>
   </Layout>
