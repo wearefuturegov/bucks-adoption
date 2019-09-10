@@ -31,7 +31,6 @@ const Deck = styled.div`
     }
     a{
       color: ${theme.link};
-      font-weight: bold;
       &:hover{
           text-decoration: none;
       }
