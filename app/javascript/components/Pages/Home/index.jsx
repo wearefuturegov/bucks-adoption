@@ -11,6 +11,7 @@ import CallToAction from "../../CallToAction"
 import PageBodyContent from "../../PageBodyContent"
 import { Link, animateScroll as scroll } from "react-scroll";
 import "./style.scss"
+import Card
 
 function isMobileDevice() {
   return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
@@ -51,16 +52,31 @@ const Home = ({
   const [healthResultsStored, setHealthResultsStored] = useStateWithLocalStorage("results_topic_lifestyle");
   const [timeResultsStored, setTimeResultsStored] = useStateWithLocalStorage("results_topic_time");
   const [skillsResultsStored, setSkillsResultsStored] = useStateWithLocalStorage("results_topic_skills");
-
-
+  
   return(
     <Layout>
-      <HeroWithImage headline={title} deck={strapline} image={heroimage} breadcrumbs={[
-                                                                      { label: "Buckinghamshire Adoption", href: "https://www.buckscc.gov.uk/services/care-for-children-and-families/adoption/adopting-a-child/" },
-                                                                      { label: "Get ready to adopt" }
-                                                                    ]} />
+      <HeroWithImage 
+        headline={title} 
+        deck={strapline} 
+        image={heroimage} 
+        breadcrumbs={[
+          { 
+            label: "Buckinghamshire Adoption", 
+            href: "https://www.buckscc.gov.uk/services/care-for-children-and-families/adoption/adopting-a-child/" 
+          },{ 
+            label: "Get ready to adopt" 
+          }
+        ]}
+      />
       <NarrowCallToAction href="/results/index" headline={cta_title} message={cta_text} label={cta_button} />
-      <PageBodyContent><Markdown>{body}</Markdown></PageBodyContent>
+      <PageBodyContent>
+        <Markdown>{body}</Markdown>
+      </PageBodyContent>
+
+      
+
+
+{/* 
       <div className="topic-sections">
         <div className="container">
           { healthResultsStored.length && timeResultsStored.length && familyResultsStored.length && skillsResultsStored.length && homeResultsStored.length ? (
@@ -70,8 +86,6 @@ const Home = ({
               </div>
             ):null
           }
-
-
           <div className="topic-sections_navigation">
             <div className="topic-sections_navigation_inner">
               <Link href="#" to="healthindex-card" className={ (healthResultsStored ? "option-bubble_completed " : "") + "option-bubble"} offset={-70}>
@@ -138,19 +152,11 @@ const Home = ({
             )
           }
         </div>
-      </div>
+      </div> */}
+
       <CallToAction headline="Get in touch">
         <p>If you have any questions about adoption, you can email us at: <a href="mail-to:adoption@buckscc.gov.uk">adoption@buckscc.gov.uk</a></p>
-
-        <p>
-        or call:
-        { isMobileDevice() ? (
-            <a href="tel:01494 586 349">01494 586 349</a>
-         ) : (
-             <strong>01494 586 349</strong>
-         )
-        }
-        </p>
+        <p>or call: { isMobileDevice() ? <a href="tel:01494 586 349">01494 586 349</a> : <strong>01494 586 349</strong>}</p>
       </CallToAction>
     </Layout>
   )
