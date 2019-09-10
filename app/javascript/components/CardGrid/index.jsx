@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import theme from "../_theme"
-import Card from "../EveningCard"
+import Card from "../Card"
 
 const Outer = styled.section`
     background-color: ${theme.background};
@@ -26,24 +26,30 @@ const Grid = styled.ul`
     }
 `
 
-const EveningList = ({
-    events
+const Headline = styled.h2`
+    margin-bottom: 25px;
+    color: ${theme.darkText};
+`
+
+const CardGrid = ({
+    headline,
+    cards
 }) =>
     <Outer>
         <Inner>
+            {headline && <Headline>{headline}</Headline>}
             <Grid>
-                {events.map(event => 
+                {cards.map(card => 
                     <Card
-                      key
-                        headline={event.name.text}
-                        start={event.start}
-                        end={event.end}
-                        venue={event.venue}
-                        href={event.url}
+                        key={card.headline}
+                        headline={card.headline}
+                        deck={card.deck}
+                        href={card.href}
+                        borderColor={card.borderColor}
                     />
                 )}
             </Grid>
         </Inner>
     </Outer>
 
-export default EveningList
+export default CardGrid

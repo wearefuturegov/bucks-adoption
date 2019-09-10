@@ -80,10 +80,17 @@ const ResultsPage = ({
 
   return(
     <Layout withFooter>
-      <HeroWithColor headline={title} deck={strapline} breadcrumbs={[
-                                                                      { href: "/", label: "Get ready to adopt" },
-                                                                      { label: "Your readiness plan" }
-                                                                    ]}/>
+      <HeroWithColor 
+        backgroundColor="white"
+        headline={title} deck={strapline} breadcrumbs={[
+          { 
+            href: "/", 
+            label: "Get ready to adopt" 
+          },{ 
+            label: "Your readiness plan" 
+          }
+        ]}
+      />
       <div className="body-with-background">
         { healthResultsStored.length && timeResultsStored.length && familyResultsStored.length && skillsResultsStored.length && homeResultsStored.length ? (
           <>
@@ -153,18 +160,15 @@ const ResultsPage = ({
         </PageBodyContent>
       </div>
 
-      <NarrowCallToAction href="/results/index" headline={cta_title} message={cta_text} label={cta_button} />
+      <NarrowCallToAction 
+        href="/pages/bookadoptionevening" 
+        headline={cta_title} 
+        message={cta_text} 
+        label={cta_button} 
+      />
       <CallToAction headline="Get in touch">
-        <p>If you have any questions about adoption, you can email us at: <a href="mail-to:adoption@buckscc.gov.uk">adoption@buckscc.gov.uk</a></p>
-        <p>
-        or call:
-        { isMobileDevice() ? (
-            <a href="tel:01494 586 349">01494 586 349</a>
-         ) : (
-             <strong>01494 586 349</strong>
-         )
-        }
-        </p>
+        <p>If you have any questions about adoption, you can email us at <a href="mail-to:adoption@buckscc.gov.uk">adoption@buckscc.gov.uk</a></p>
+        <p>or call { isMobileDevice() ? <a href="tel:01494 586 349">01494 586 349</a> : <strong>01494 586 349</strong>}</p>
       </CallToAction>
     </Layout>
   )

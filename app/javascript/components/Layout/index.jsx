@@ -38,6 +38,7 @@ const GlobalStyle = createGlobalStyle`
         height: 450px;
         margin-top: 15px;
     }
+
     .container {
         max-width: ${theme.maxWidth};
         margin-left: auto;
@@ -50,16 +51,7 @@ const GlobalStyle = createGlobalStyle`
             padding: 70px 20px;
         }
     }
-    a {
-        color: ${theme.link};
-        &:hover {
-            text-decoration: none;
-        }
-        &:focus {
-            outline: 3px solid ${theme.focus};
-            background: ${theme.focus};
-        }
-    }
+
 `
 const Layout = ({ children }) =>
     <>

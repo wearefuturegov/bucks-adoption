@@ -1,4 +1,5 @@
 <%= react_component("Pages/Home", {
+
   title: @sitehome.headline.content,
   strapline: @sitehome.strapline.content,
   body: @sitehome.body.content,
@@ -7,18 +8,19 @@
   cta_text: @sitehome.cta_text.content,
   cta_button: @sitehome.cta_button.content,
 
-  lifestyletitle: @healthContent.title,
-  lifestyleintro: @healthContent.introduction.content,
+  healthContent: @healthContent,
+  healthTitle: @healthContent.title,
 
-  timetitle: @timeContent.title,
-  timeintro: @timeContent.introduction.content,
+  timeContent: @timeContent,
+  timeTitle: @timeContent.title,
 
-  familytitle: @familyContent.title,
-  familyintro: @familyContent.introduction.content,
+  familyContent: @familyContent,
+  familyTitle: @familyContent.title,
 
-  skillstitle: @skillsContent.title,
-  skillsintro: @skillsContent.introduction.content,
+  skillsContent: @skillsContent,
+  skillsTitle: @skillsContent.title,
 
-  hometitle: @homeContent.title,
-  homeintro: @homeContent.introduction.content }) %>
+  homeContent: @homeContent,
+  homeTitle: @homeContent.title
 
+}) %>

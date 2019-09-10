@@ -42,38 +42,38 @@ $lede-d: 1.5em;
 $paragraph-d: 1.188em;
 $small-d: 1.125em;
 
-body p {
-    font-size: $paragraph;
-}
+// // body p {
+// //     font-size: $paragraph;
+// // }
 
-// font-size mixins
-@mixin smallText {
-    font-size: $small;
-    @media screen and (min-width: $tablet){
-        font-size: $small-d;
-    }
-}
-@mixin paragraphText {
-    font-size: $paragraph;
-    @media screen and (min-width: $tablet){
-        font-size: $paragraph-d;
-    }
-}
-@mixin ledeText {
-    font-size: $lede;
-    @media screen and (min-width: $tablet){
-        font-size: $lede-d;
-    }
-}
-@mixin subtitleText {
-    font-size: $subtitle;
-    @media screen and (min-width: $tablet){
-        font-size: $subtitle-d;
-    }
-}
-@mixin titleText {
-    font-size: $title;
-    @media screen and (min-width: $tablet){
-        font-size: $title-d;
-    }
-}
+// // font-size mixins
+// @mixin smallText {
+//     font-size: $small;
+//     @media screen and (min-width: $tablet){
+//         font-size: $small-d;
+//     }
+// }
+// @mixin paragraphText {
+//     font-size: $paragraph;
+//     @media screen and (min-width: $tablet){
+//         font-size: $paragraph-d;
+//     }
+// }
+// @mixin ledeText {
+//     font-size: $lede;
+//     @media screen and (min-width: $tablet){
+//         font-size: $lede-d;
+//     }
+// }
+// @mixin subtitleText {
+//     font-size: $subtitle;
+//     @media screen and (min-width: $tablet){
+//         font-size: $subtitle-d;
+//     }
+// }
+// @mixin titleText {
+//     font-size: $title;
+//     @media screen and (min-width: $tablet){
+//         font-size: $title-d;
+//     }
+// }
