@@ -23,9 +23,12 @@ const Headline = styled.h3`
 
 const Deck = styled.div`
     color: ${theme.darkText};
+    font-size: 1.1em;
     line-height: 1.6;
     margin-bottom: 20px;
-    font-size: 1.1em;
+    p{
+      margin-bottom: 20px;
+    }
     a{
       color: ${theme.link};
       font-weight: bold;
@@ -56,12 +59,18 @@ const Summary = styled.summary`
 
 const DetailsHolder = styled.div`
   margin-top: 15px;
-  color: ${theme.lightText};
+  color: ${theme.darkText};
   font-size: 1em;
+  line-height: 1.6;
+  padding: 20px;
+  background: ${theme.background};
+  border-left: 1px solid ${theme.lightText}
+  p{
+    margin-bottom: 15px
+  }
 `
 
 const DetailsHeadline = styled.h3`
-  color: ${theme.lightText}
   margin-bottom: 20px;
   font-weight: bold;
   font-size: 1em;

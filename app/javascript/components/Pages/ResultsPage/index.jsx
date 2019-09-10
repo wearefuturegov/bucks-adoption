@@ -183,7 +183,7 @@ const ResultsPage = ({
 
         <Block>
           <Headline>Other things to do</Headline>
-          <TopicCard title="Come to an adoption evening" intro="We recommend the next step you take is to come to one of our regularly run information evenings. At the event, you will be able to ask our team questions and will hear from our team and previous adopters.">
+          <TopicCard title="Come to an adoption evening" intro="<p>We recommend the next step you take is to come to one of our regularly run information evenings. At the event, you will be able to ask our team questions and will hear from our team and previous adopters.</p>">
             <Button href="/pages/bookadoptionevening">Attend an evening</Button>
           </TopicCard>
         </Block>

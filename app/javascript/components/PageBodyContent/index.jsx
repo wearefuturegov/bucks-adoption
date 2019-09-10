@@ -32,9 +32,6 @@ const ContentArea = styled.article`
             margin-bottom: 0px;
         }
     }
-    p {
-        margin-bottom: 20px;
-    }
 `
 
 const PageBodyContent = ({

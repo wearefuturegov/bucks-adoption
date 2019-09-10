@@ -1,15 +1,14 @@
 import React, {useState, useRef} from "react"
-import Markdown from 'markdown-to-jsx';
+import Markdown from "markdown-to-jsx"
 import Layout from "../../Layout"
 import PageHeader from "../../PageHeader"
 import TopicQuestions from "../../TopicQuestions"
 import TopicResults from "../../TopicResults"
 import Button from "../../Button"
 import HeroWithColor from "../../HeroWithColor"
-import PageBodyContent from "../../PageBodyContent"
+import PageBodyContent, { UserContent } from "../../PageBodyContent"
 import CallToAction from "../../CallToAction"
 import "./style.scss"
-
 
 const useStateWithLocalStorage = localStorageKey => {
   const [resultsStored, setResultsStored] = React.useState(
@@ -61,13 +60,25 @@ const TopicQuestionnairePage = ({
   }
 
   return(
-    <Layout withHeader withFooter>
-      <HeroWithColor backgroundColor={backgroundcolor} headline={title} deck={intro} breadcrumbs={[
-                                                                    { href: "/", label: "Get ready to adopt" },
-                                                                    { label: title }
-                                                                    ]}/>
+    <Layout>
+      <HeroWithColor 
+        backgroundColor={backgroundcolor} 
+        headline={title} 
+        deck={intro} 
+        breadcrumbs={[
+          { 
+            href: "/", 
+            label: "Get ready to adopt" 
+          },{ 
+            label: title 
+          }
+        ]}
+      />
+
       <PageBodyContent>
-        <Markdown>{body}</Markdown>
+        <UserContent>
+          <Markdown>{body}</Markdown>
+        </UserContent>                                                      
       </PageBodyContent>
 
       <div ref={topRef}>
@@ -114,11 +125,7 @@ const TopicQuestionnairePage = ({
         }
       </div>
 
-
-
-
       {
-        // ((questions.length+1) <= currentQuestion)
         resultsStored.length ?
           <TopicResults
               topicSection={title}
@@ -146,6 +153,5 @@ const TopicQuestionnairePage = ({
     </Layout>
   )
 }
-
 
 export default TopicQuestionnairePage
