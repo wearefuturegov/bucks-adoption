@@ -15,6 +15,12 @@ export default {
     cultural: "#FAC9A3",
     social: "#A9BAE1",
 
+    health: "#98D9CA",
+    family: "#F7ADB6",
+    skills: "#BBEAFA",
+    home: "#FAC9A3",
+    time: "#A9BAE1",
+
     maxWidth: "1000px",
 
     // breakpoints

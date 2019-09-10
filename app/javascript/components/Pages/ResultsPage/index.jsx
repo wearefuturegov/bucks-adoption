@@ -10,12 +10,25 @@ import NarrowCallToAction from "../../NarrowCallToAction"
 import CallToAction from "../../CallToAction"
 import send from "../../../lib/emailer"
 import PageBodyContent, { UserContent } from "../../PageBodyContent"
+import styled from "styled-components"
 import theme from "../../_theme"
 // import ShareDialog from "../../ShareDialog"
+
+const Headline = styled.h2`
+    color: ${theme.darkText};
+    margin-bottom: 15px;
+`
 
 function isMobileDevice() {
   return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 };
+
+const Block = styled.div`
+  margin-bottom: 45px;
+  @media screen and (min-width: ${theme.desktop}){
+    margin-bottom: 60px;
+  }
+`
 
 const useStateWithLocalStorage = localStorageKey => {
   const [resultsStored, setResultsStored] = React.useState(
@@ -45,6 +58,7 @@ const ResultsPage = ({
    skills_questions,
    skills_title
  }) => {
+
   const [familyResultsStored, setFamilyResultsStored] = useStateWithLocalStorage("results_topic_family");
   const [homeResultsStored, setHomeResultsStored] = useStateWithLocalStorage("results_topic_home");
   const [healthResultsStored, setHealthResultsStored] = useStateWithLocalStorage("results_topic_lifestyle");
@@ -103,76 +117,78 @@ const ResultsPage = ({
           }
         ]}
       >
-        <UserContent>
-          <div className="health-results-summary">
-            {
-              healthResultsStored.length ? (
-                <TopicResultsSummary withTitle topicSection={health_title} resultsArray={healthResultsStored.split('')} questions={health_questions} type="results_topic_lifestyle" />
-              ) : (
-                <TopicResultsSummary withTitle topicSection={health_title} questions={health_questions} type="results_topic_lifestyle" link="health" />
-              )
-            }
-          </div>
-          <div className="time-results-summary">
-            {
-              timeResultsStored.length ? (
-                <TopicResultsSummary withTitle topicSection={time_title} resultsArray={timeResultsStored.split('')} questions={time_questions} type="results_topic_time" />
-              ) : (
-                <TopicResultsSummary withTitle topicSection={time_title} questions={time_questions} type="results_topic_time" link="time" />
-              )
-            }
-          </div>
-          <div className="family-results-summary">
-            {
-              familyResultsStored.length ? (
-                <TopicResultsSummary withTitle topicSection={family_title} resultsArray={familyResultsStored.split('')} questions={family_questions} type="results_topic_family" />
-              ) : (
-                <TopicResultsSummary withTitle topicSection={family_title} questions={family_questions} type="results_topic_family" link="family" />
-              )
-            }
-          </div>
-          <div className="skills-results-summary">
-            {
-              skillsResultsStored.length ? (
-                <TopicResultsSummary withTitle topicSection={skills_title} resultsArray={skillsResultsStored.split('')} questions={skills_questions} type="results_topic_skills" />
-              ) : (
-                <TopicResultsSummary withTitle topicSection={skills_title} questions={skills_questions} type="results_topic_skills" link="skills" />
-              )
-            }
-          </div>
-          <div className="home-results-summary">
-            {
-              homeResultsStored.length ? (
-                <TopicResultsSummary withTitle topicSection={home_title} resultsArray={homeResultsStored.split('')} questions={home_questions} type="results_topic_home" />
-              ) : (
-                <TopicResultsSummary withTitle topicSection={home_title} questions={home_questions} type="results_topic_home" link="home" />
-              )
-            }
-          </div>
-          <div className="other-results">
-            <h2>Other things to do</h2>
-            <TopicCard title="Come to an adoption evening" intro="We recommend the next step you take is to come to one of our regularly run information evenings. At the event, you will be able to ask our team questions and will hear from our team and previous adopters.">
-              <a href="/pages/bookadoptionevening">Attend an evening</a>
-            </TopicCard>
-          </div>
-        </UserContent>
+
+        {(healthResultsStored.length && timeResultsStored.length && familyResultsStored.length && skillsResultsStored.length && homeResultsStored.length) ?
+          <>
+            <div>
+              <button className="share-button--for-list" onClick={()=>{
+                  toggleShareDialog(true)
+              }}>Share your adoption ready plan</button>
+            </div>
+            {/* <ShareDialog dialogIsOpen={shareDialogOpen} toggleDialog={toggleShareDialog}/> */}
+          
+          </>
+        : null }
+
+        <Block>
+            <TopicResultsSummary 
+              withTitle 
+              topicSection={health_title} 
+              resultsArray={healthResultsStored ? healthResultsStored.split('') : false} 
+              questions={health_questions} 
+              type="results_topic_lifestyle" 
+              link="health" 
+            />
+        </Block>
+        <Block>
+            <TopicResultsSummary 
+              withTitle 
+              topicSection={time_title} 
+              resultsArray={timeResultsStored ? timeResultsStored.split('') : false} 
+              questions={time_questions} 
+              type="results_topic_time" 
+              link="time" 
+            />
+        </Block>
+        <Block>
+            <TopicResultsSummary 
+              withTitle 
+              topicSection={family_title} 
+              resultsArray={familyResultsStored ? familyResultsStored.split('') : false} 
+              questions={family_questions} 
+              type="results_topic_family" 
+              link="family" 
+            />
+        </Block>
+        <Block>
+            <TopicResultsSummary 
+              withTitle 
+              topicSection={skills_title} 
+              resultsArray={skillsResultsStored ? skillsResultsStored.split('') : false} 
+              questions={skills_questions} 
+              type="results_topic_skills" 
+              link="skills" 
+            />
+        </Block>
+        <Block>
+            <TopicResultsSummary 
+              withTitle 
+              topicSection={home_title} 
+              resultsArray={homeResultsStored ? homeResultsStored.split('') : false} 
+              questions={home_questions} 
+              type="results_topic_home" 
+              link="home" 
+            />
+        </Block>
+
+        <Block>
+          <Headline>Other things to do</Headline>
+          <TopicCard title="Come to an adoption evening" intro="We recommend the next step you take is to come to one of our regularly run information evenings. At the event, you will be able to ask our team questions and will hear from our team and previous adopters.">
+            <Button href="/pages/bookadoptionevening">Attend an evening</Button>
+          </TopicCard>
+        </Block>
+
       </PageBodyContent>
-
- 
-      {/* { healthResultsStored.length && timeResultsStored.length && familyResultsStored.length && skillsResultsStored.length && homeResultsStored.length ? (
-        <>
-        <div className="share-button--container container">
-          <button className="share-button--for-list" onClick={()=>{
-              toggleShareDialog(true)
-          }}>Share your adoption ready plan</button>
-        </div>
-        { // <ShareDialog dialogIsOpen={shareDialogOpen} toggleDialog={toggleShareDialog}/>
-        }
-        </>
-      ):null
-      } */}
-
-
       <NarrowCallToAction 
         href="/pages/bookadoptionevening" 
         headline={cta_title} 

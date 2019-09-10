@@ -1,21 +1,21 @@
 {
   "application.css": "/packs/css/application-56fddb46.css",
   "application.css.map": "/packs/css/application-56fddb46.css.map",
-  "application.js": "/packs/js/application-63c7cd3f456607a8f3c9.js",
-  "application.js.map": "/packs/js/application-63c7cd3f456607a8f3c9.js.map",
+  "application.js": "/packs/js/application-f38fd57b4b9ea328a27b.js",
+  "application.js.map": "/packs/js/application-f38fd57b4b9ea328a27b.js.map",
   "entrypoints": {
     "application": {
       "css": [
         "/packs/css/application-56fddb46.css"
       ],
       "js": [
-        "/packs/js/application-63c7cd3f456607a8f3c9.js"
+        "/packs/js/application-f38fd57b4b9ea328a27b.js"
       ],
       "css.map": [
         "/packs/css/application-56fddb46.css.map"
       ],
       "js.map": [
-        "/packs/js/application-63c7cd3f456607a8f3c9.js.map"
+        "/packs/js/application-f38fd57b4b9ea328a27b.js.map"
       ]
     },
     "hello_react": {
@@ -31,13 +31,13 @@
         "/packs/css/server_rendering-56fddb46.css"
       ],
       "js": [
-        "/packs/js/server_rendering-e32bb8712bb88a4c4bf2.js"
+        "/packs/js/server_rendering-babcb4ad17218c26c2f4.js"
       ],
       "css.map": [
         "/packs/css/server_rendering-56fddb46.css.map"
       ],
       "js.map": [
-        "/packs/js/server_rendering-e32bb8712bb88a4c4bf2.js.map"
+        "/packs/js/server_rendering-babcb4ad17218c26c2f4.js.map"
       ]
     }
   },
@@ -57,6 +57,6 @@
   "media/components/SearchForm/icon.svg": "/packs/media/components/SearchForm/icon-581d55e7db470d462f6d0ea386d1d41e.svg",
   "server_rendering.css": "/packs/css/server_rendering-56fddb46.css",
   "server_rendering.css.map": "/packs/css/server_rendering-56fddb46.css.map",
-  "server_rendering.js": "/packs/js/server_rendering-e32bb8712bb88a4c4bf2.js",
-  "server_rendering.js.map": "/packs/js/server_rendering-e32bb8712bb88a4c4bf2.js.map"
+  "server_rendering.js": "/packs/js/server_rendering-babcb4ad17218c26c2f4.js",
+  "server_rendering.js.map": "/packs/js/server_rendering-babcb4ad17218c26c2f4.js.map"
 }

@@ -71,7 +71,7 @@ const EveningCard = ({
     href
 }) =>
     <Outer>
-        <StyledLink href={href}>
+        <StyledLink href={href} target="blank">
             <Headline>
               <Moment format="ddd, DD MMMM YYYY (HH:mm - ">
                 {start.local}
