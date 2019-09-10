@@ -1,21 +1,21 @@
 {
-  "application.css": "/packs/css/application-84896b1c.css",
-  "application.css.map": "/packs/css/application-84896b1c.css.map",
-  "application.js": "/packs/js/application-1048e5bb225829cd0aff.js",
-  "application.js.map": "/packs/js/application-1048e5bb225829cd0aff.js.map",
+  "application.css": "/packs/css/application-347db667.css",
+  "application.css.map": "/packs/css/application-347db667.css.map",
+  "application.js": "/packs/js/application-c2d43b3e927a6a52bce4.js",
+  "application.js.map": "/packs/js/application-c2d43b3e927a6a52bce4.js.map",
   "entrypoints": {
     "application": {
       "css": [
-        "/packs/css/application-84896b1c.css"
+        "/packs/css/application-347db667.css"
       ],
       "js": [
-        "/packs/js/application-1048e5bb225829cd0aff.js"
+        "/packs/js/application-c2d43b3e927a6a52bce4.js"
       ],
       "css.map": [
-        "/packs/css/application-84896b1c.css.map"
+        "/packs/css/application-347db667.css.map"
       ],
       "js.map": [
-        "/packs/js/application-1048e5bb225829cd0aff.js.map"
+        "/packs/js/application-c2d43b3e927a6a52bce4.js.map"
       ]
     },
     "hello_react": {
@@ -28,16 +28,16 @@
     },
     "server_rendering": {
       "css": [
-        "/packs/css/server_rendering-84896b1c.css"
+        "/packs/css/server_rendering-347db667.css"
       ],
       "js": [
-        "/packs/js/server_rendering-e983fbd0e40db35aef59.js"
+        "/packs/js/server_rendering-2837204ba156073b5e9c.js"
       ],
       "css.map": [
-        "/packs/css/server_rendering-84896b1c.css.map"
+        "/packs/css/server_rendering-347db667.css.map"
       ],
       "js.map": [
-        "/packs/js/server_rendering-e983fbd0e40db35aef59.js.map"
+        "/packs/js/server_rendering-2837204ba156073b5e9c.js.map"
       ]
     }
   },
@@ -56,8 +56,8 @@
   "media/components/Pages/Home/hero.jpg": "/packs/media/components/Pages/Home/hero-14533419108efcea5b6f27328449e690.jpg",
   "media/components/Pages/ResultsPage/send.svg": "/packs/media/components/Pages/ResultsPage/send-600d806437dd45b1c9af1e465287193f.svg",
   "media/components/SearchForm/icon.svg": "/packs/media/components/SearchForm/icon-581d55e7db470d462f6d0ea386d1d41e.svg",
-  "server_rendering.css": "/packs/css/server_rendering-84896b1c.css",
-  "server_rendering.css.map": "/packs/css/server_rendering-84896b1c.css.map",
-  "server_rendering.js": "/packs/js/server_rendering-e983fbd0e40db35aef59.js",
-  "server_rendering.js.map": "/packs/js/server_rendering-e983fbd0e40db35aef59.js.map"
+  "server_rendering.css": "/packs/css/server_rendering-347db667.css",
+  "server_rendering.css.map": "/packs/css/server_rendering-347db667.css.map",
+  "server_rendering.js": "/packs/js/server_rendering-2837204ba156073b5e9c.js",
+  "server_rendering.js.map": "/packs/js/server_rendering-2837204ba156073b5e9c.js.map"
 }
