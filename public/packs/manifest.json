@@ -1,21 +1,21 @@
 {
   "application.css": "/packs/css/application-56fddb46.css",
   "application.css.map": "/packs/css/application-56fddb46.css.map",
-  "application.js": "/packs/js/application-4ed8cc014c7abcf3a96b.js",
-  "application.js.map": "/packs/js/application-4ed8cc014c7abcf3a96b.js.map",
+  "application.js": "/packs/js/application-63c7cd3f456607a8f3c9.js",
+  "application.js.map": "/packs/js/application-63c7cd3f456607a8f3c9.js.map",
   "entrypoints": {
     "application": {
       "css": [
         "/packs/css/application-56fddb46.css"
       ],
       "js": [
-        "/packs/js/application-4ed8cc014c7abcf3a96b.js"
+        "/packs/js/application-63c7cd3f456607a8f3c9.js"
       ],
       "css.map": [
         "/packs/css/application-56fddb46.css.map"
       ],
       "js.map": [
-        "/packs/js/application-4ed8cc014c7abcf3a96b.js.map"
+        "/packs/js/application-63c7cd3f456607a8f3c9.js.map"
       ]
     },
     "hello_react": {
@@ -31,13 +31,13 @@
         "/packs/css/server_rendering-56fddb46.css"
       ],
       "js": [
-        "/packs/js/server_rendering-4128a4a144e209308d70.js"
+        "/packs/js/server_rendering-e32bb8712bb88a4c4bf2.js"
       ],
       "css.map": [
         "/packs/css/server_rendering-56fddb46.css.map"
       ],
       "js.map": [
-        "/packs/js/server_rendering-4128a4a144e209308d70.js.map"
+        "/packs/js/server_rendering-e32bb8712bb88a4c4bf2.js.map"
       ]
     }
   },
@@ -57,6 +57,6 @@
   "media/components/SearchForm/icon.svg": "/packs/media/components/SearchForm/icon-581d55e7db470d462f6d0ea386d1d41e.svg",
   "server_rendering.css": "/packs/css/server_rendering-56fddb46.css",
   "server_rendering.css.map": "/packs/css/server_rendering-56fddb46.css.map",
-  "server_rendering.js": "/packs/js/server_rendering-4128a4a144e209308d70.js",
-  "server_rendering.js.map": "/packs/js/server_rendering-4128a4a144e209308d70.js.map"
+  "server_rendering.js": "/packs/js/server_rendering-e32bb8712bb88a4c4bf2.js",
+  "server_rendering.js.map": "/packs/js/server_rendering-e32bb8712bb88a4c4bf2.js.map"
 }

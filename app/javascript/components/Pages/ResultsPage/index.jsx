@@ -1,17 +1,17 @@
 import React, {useState} from "react"
-import Markdown from 'markdown-to-jsx';
+import Markdown from 'markdown-to-jsx'
 import Layout from "../../Layout"
 import TopicQuestions from "../../TopicQuestions"
 import TopicResultsSummary from "../../TopicResultsSummary"
 import TopicCard from "../../TopicCard"
 import Button from "../../Button"
 import HeroWithColor from "../../HeroWithColor"
-import PageBodyContent from "../../PageBodyContent"
 import NarrowCallToAction from "../../NarrowCallToAction"
 import CallToAction from "../../CallToAction"
 import send from "../../../lib/emailer"
+import PageBodyContent, { UserContent } from "../../PageBodyContent"
+import theme from "../../_theme"
 // import ShareDialog from "../../ShareDialog"
-import "./style.scss"
 
 function isMobileDevice() {
   return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
@@ -21,15 +21,11 @@ const useStateWithLocalStorage = localStorageKey => {
   const [resultsStored, setResultsStored] = React.useState(
     localStorage.getItem(localStorageKey) || ''
   );
-
   React.useEffect(() => {
     localStorage.setItem(localStorageKey, resultsStored);
   }, [resultsStored]);
-
   return [resultsStored, setResultsStored];
 };
-
-
 
 const ResultsPage = ({
     token,
@@ -79,7 +75,7 @@ const ResultsPage = ({
   }
 
   return(
-    <Layout withFooter>
+    <Layout>
       <HeroWithColor 
         backgroundColor="white"
         headline={title} deck={strapline} breadcrumbs={[
@@ -91,20 +87,23 @@ const ResultsPage = ({
           }
         ]}
       />
-      <div className="body-with-background">
-        { healthResultsStored.length && timeResultsStored.length && familyResultsStored.length && skillsResultsStored.length && homeResultsStored.length ? (
-          <>
-          <div className="share-button--container container">
-            <button className="share-button--for-list" onClick={()=>{
-                toggleShareDialog(true)
-            }}>Share your adoption ready plan</button>
-          </div>
-          { // <ShareDialog dialogIsOpen={shareDialogOpen} toggleDialog={toggleShareDialog}/>
+
+      <PageBodyContent 
+        backgroundColor={theme.background}
+        sidebarItems={[
+          { 
+            label: "Support for adoptive parents", 
+            href: "https://www.buckscc.gov.uk/services/care-for-children-and-families/adoption/adoption-support/" 
+          },{ 
+            label: "Adopting a child you know", 
+            href: "https://www.buckscc.gov.uk/services/care-for-children-and-families/adoption/adopting-a-child-you-know/" 
+          },{ 
+            label: "Placing your baby for adoption", 
+            href: "https://www.buckscc.gov.uk/services/care-for-children-and-families/adoption/placing-your-baby-for-adoption/" 
           }
-          </>
-        ):null
-        }
-        <PageBodyContent>
+        ]}
+      >
+        <UserContent>
           <div className="health-results-summary">
             {
               healthResultsStored.length ? (
@@ -150,15 +149,29 @@ const ResultsPage = ({
               )
             }
           </div>
-
           <div className="other-results">
             <h2>Other things to do</h2>
             <TopicCard title="Come to an adoption evening" intro="We recommend the next step you take is to come to one of our regularly run information evenings. At the event, you will be able to ask our team questions and will hear from our team and previous adopters.">
               <a href="/pages/bookadoptionevening">Attend an evening</a>
             </TopicCard>
           </div>
-        </PageBodyContent>
-      </div>
+        </UserContent>
+      </PageBodyContent>
+
+ 
+      {/* { healthResultsStored.length && timeResultsStored.length && familyResultsStored.length && skillsResultsStored.length && homeResultsStored.length ? (
+        <>
+        <div className="share-button--container container">
+          <button className="share-button--for-list" onClick={()=>{
+              toggleShareDialog(true)
+          }}>Share your adoption ready plan</button>
+        </div>
+        { // <ShareDialog dialogIsOpen={shareDialogOpen} toggleDialog={toggleShareDialog}/>
+        }
+        </>
+      ):null
+      } */}
+
 
       <NarrowCallToAction 
         href="/pages/bookadoptionevening" 

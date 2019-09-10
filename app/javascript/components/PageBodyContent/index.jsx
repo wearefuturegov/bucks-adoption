@@ -5,6 +5,7 @@ import Sidebar from "../Sidebar"
 
 const Outer = styled.div`
     padding: 40px 20px;
+    background-color: ${props => props.backgroundColor ? props.backgroundColor : ""}
     @media screen and (min-width: ${theme.tablet}){
         padding: 60px 20px;
     }
@@ -39,9 +40,10 @@ const ContentArea = styled.article`
 const PageBodyContent = ({
     sidebarItems,
     sidebarContent,
-    children
+    children,
+    backgroundColor
 }) =>
-    <Outer>
+    <Outer backgroundColor={backgroundColor}>
         <Columns>
             <ContentArea>{children}</ContentArea>
             {sidebarItems && <Sidebar items={sidebarItems}/>}
