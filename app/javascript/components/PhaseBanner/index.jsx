@@ -42,7 +42,7 @@ const PhaseBanner = () =>
     <Outer>
         <Inner>
             <Tag>Beta</Tag>
-            <p>This is a new website - <StyledLink href="/feedback">your feedback</StyledLink> will help us improve it.</p>
+            <p>This is a new website - <StyledLink href="https://forms.gle/ty9AEZa8iirxBLGD8">your feedback</StyledLink> will help us improve it.</p>
         </Inner>
     </Outer>
 
