@@ -1,21 +1,21 @@
 {
   "application.css": "/packs/css/application-56fddb46.css",
   "application.css.map": "/packs/css/application-56fddb46.css.map",
-  "application.js": "/packs/js/application-87fda70ae18233e83002.js",
-  "application.js.map": "/packs/js/application-87fda70ae18233e83002.js.map",
+  "application.js": "/packs/js/application-4ed8cc014c7abcf3a96b.js",
+  "application.js.map": "/packs/js/application-4ed8cc014c7abcf3a96b.js.map",
   "entrypoints": {
     "application": {
       "css": [
         "/packs/css/application-56fddb46.css"
       ],
       "js": [
-        "/packs/js/application-87fda70ae18233e83002.js"
+        "/packs/js/application-4ed8cc014c7abcf3a96b.js"
       ],
       "css.map": [
         "/packs/css/application-56fddb46.css.map"
       ],
       "js.map": [
-        "/packs/js/application-87fda70ae18233e83002.js.map"
+        "/packs/js/application-4ed8cc014c7abcf3a96b.js.map"
       ]
     },
     "hello_react": {
@@ -31,13 +31,13 @@
         "/packs/css/server_rendering-56fddb46.css"
       ],
       "js": [
-        "/packs/js/server_rendering-c1d5fa20f26adc329874.js"
+        "/packs/js/server_rendering-4128a4a144e209308d70.js"
       ],
       "css.map": [
         "/packs/css/server_rendering-56fddb46.css.map"
       ],
       "js.map": [
-        "/packs/js/server_rendering-c1d5fa20f26adc329874.js.map"
+        "/packs/js/server_rendering-4128a4a144e209308d70.js.map"
       ]
     }
   },
@@ -57,6 +57,6 @@
   "media/components/SearchForm/icon.svg": "/packs/media/components/SearchForm/icon-581d55e7db470d462f6d0ea386d1d41e.svg",
   "server_rendering.css": "/packs/css/server_rendering-56fddb46.css",
   "server_rendering.css.map": "/packs/css/server_rendering-56fddb46.css.map",
-  "server_rendering.js": "/packs/js/server_rendering-c1d5fa20f26adc329874.js",
-  "server_rendering.js.map": "/packs/js/server_rendering-c1d5fa20f26adc329874.js.map"
+  "server_rendering.js": "/packs/js/server_rendering-4128a4a144e209308d70.js",
+  "server_rendering.js.map": "/packs/js/server_rendering-4128a4a144e209308d70.js.map"
 }

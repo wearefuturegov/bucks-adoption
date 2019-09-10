@@ -50,7 +50,7 @@ const PageBodyContent = ({
     </Outer>
 
 export const UserContent = styled.div`
-    p{
+    p, span{
         color: ${theme.darkText};
         margin-bottom: 20px;
         line-height: 1.6;
@@ -75,10 +75,10 @@ export const UserContent = styled.div`
             background: ${theme.focus};
         }
     }
-    &:first-child{
+    div:first-child{
         margin-top: 0px !important;
     }
-    &:last-child{
+    div:last-child{
         margin-bottom: 0px !important;
     }
 `
