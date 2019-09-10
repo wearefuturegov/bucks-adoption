@@ -9,9 +9,9 @@ import HeroWithColor from "../../HeroWithColor"
 import PageBodyContent from "../../PageBodyContent"
 import NarrowCallToAction from "../../NarrowCallToAction"
 import CallToAction from "../../CallToAction"
+import send from "../../../lib/emailer"
 // import ShareDialog from "../../ShareDialog"
 import "./style.scss"
-
 
 function isMobileDevice() {
   return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
@@ -29,7 +29,10 @@ const useStateWithLocalStorage = localStorageKey => {
   return [resultsStored, setResultsStored];
 };
 
+
+
 const ResultsPage = ({
+    token,
    title,
    strapline,
    cta_title,
@@ -53,6 +56,27 @@ const ResultsPage = ({
   const [skillsResultsStored, setSkillsResultsStored] = useStateWithLocalStorage("results_topic_skills");
 
   const [shareDialogOpen, toggleShareDialog] = useState(false)
+
+  const sendEmail = () =>{
+    send(
+      {
+        health_questions,
+        family_questions,
+        home_questions,
+        time_questions,
+        skills_questions
+      }, {
+        familyResultsStored,
+        homeResultsStored,
+        healthResultsStored,
+        timeResultsStored,
+        skillsResultsStored
+      },
+      token,
+      // TODO: Replace with user input
+      "hello@example.com"
+    )
+  }
 
   return(
     <Layout withFooter>

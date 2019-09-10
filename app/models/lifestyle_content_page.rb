@@ -7,6 +7,7 @@ class LifestyleContentPage < Fae::StaticPage
     {
       headline: { type: Fae::TextField },
       introduction: { type: Fae::TextArea },
+      kicker: {type: Fae::TextArea},
       body: { type: Fae::TextArea }
     }
   end

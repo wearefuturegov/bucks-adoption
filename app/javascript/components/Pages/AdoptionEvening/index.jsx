@@ -12,8 +12,16 @@ function isMobileDevice() {
   return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 };
 
-export default ({title, strapline, cta_title, cta_text, cta_button, body})=>
+export default ({title, 
+  strapline, 
+  cta_title, 
+  cta_text, 
+  cta_button, 
+  body,
+  events
+})=>
   <Layout withHeader withFooter>
+<<<<<<< HEAD
     <HeroWithImage headline={title} deck={strapline} image={heroimage} breadcrumbs={[
                                                                       { href: "/", label: "Get ready to adopt" },
                                                                       { label: "test" }
@@ -40,4 +48,20 @@ export default ({title, strapline, cta_title, cta_text, cta_button, body})=>
         }
       </p>
     </CallToAction>
+=======
+    <section className="book-an-evening">
+      <PageHeader title={title} lede={strapline} breadcrumbs={[
+              {
+                  title: "Bucks Adoption",
+                  href: "/"
+              },
+              {
+                  title: "Book an adoption evening"
+              }]} />
+      <div className="book-an-evening__body container">
+        <Markdown>{body}</Markdown>
+      </div>
+      <EveningList events={events.events} />
+    </section>
+>>>>>>> add-emails
   </Layout>

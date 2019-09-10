@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   get 'static_pages/cookies'
 
+  post 'share-plan' => 'share#index'
+
   namespace :admin do
     resources :home_topic_questions
     resources :skills_topic_questions
@@ -23,6 +25,8 @@ Rails.application.routes.draw do
   end
   # mount Fae below your admin namespec
   mount Fae::Engine => '/admin'
+
+  get "/pages/bookadoptionevening" => "static_pages#bookadoptionevening"
 
   get "/pages/:page" => "static_pages#show"
 end
