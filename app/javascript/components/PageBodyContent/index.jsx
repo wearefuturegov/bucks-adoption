@@ -77,10 +77,10 @@ export const UserContent = styled.div`
             background: ${theme.focus};
         }
     }
-    h2:first-child{
+    h2:first-child, p:first-child, span:first-child{
         margin-top: 0px !important;
     }
-    *:last-child{
+    h2:last-child, p:last-child, span:last-child{
         margin-bottom: 0px !important;
     }
 `
