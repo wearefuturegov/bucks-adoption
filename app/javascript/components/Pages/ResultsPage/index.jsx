@@ -90,30 +90,30 @@ const ResultsPage = ({
 
   return(
     <Layout>
-      <HeroWithColor 
+      <HeroWithColor
         backgroundColor="white"
         headline={title} deck={strapline} breadcrumbs={[
-          { 
-            href: "/", 
-            label: "Get ready to adopt" 
-          },{ 
-            label: "Your readiness plan" 
+          {
+            href: "/",
+            label: "Get ready to adopt"
+          },{
+            label: "Your readiness plan"
           }
         ]}
       />
 
-      <PageBodyContent 
+      <PageBodyContent
         backgroundColor={theme.background}
         sidebarItems={[
-          { 
-            label: "Support for adoptive parents", 
-            href: "https://www.buckscc.gov.uk/services/care-for-children-and-families/adoption/adoption-support/" 
-          },{ 
-            label: "Adopting a child you know", 
-            href: "https://www.buckscc.gov.uk/services/care-for-children-and-families/adoption/adopting-a-child-you-know/" 
-          },{ 
-            label: "Placing your baby for adoption", 
-            href: "https://www.buckscc.gov.uk/services/care-for-children-and-families/adoption/placing-your-baby-for-adoption/" 
+          {
+            label: "Support for adoptive parents",
+            href: "https://www.buckscc.gov.uk/services/care-for-children-and-families/adoption/adoption-support/"
+          },{
+            label: "Adopting a child you know",
+            href: "https://www.buckscc.gov.uk/services/care-for-children-and-families/adoption/adopting-a-child-you-know/"
+          },{
+            label: "Placing your baby for adoption",
+            href: "https://www.buckscc.gov.uk/services/care-for-children-and-families/adoption/placing-your-baby-for-adoption/"
           }
         ]}
       >
@@ -121,63 +121,64 @@ const ResultsPage = ({
         {(healthResultsStored.length && timeResultsStored.length && familyResultsStored.length && skillsResultsStored.length && homeResultsStored.length) ?
           <>
             <div>
-              <button className="share-button--for-list" onClick={()=>{
+              {/*<button className="share-button--for-list" onClick={()=>{
                   toggleShareDialog(true)
-              }}>Share your adoption ready plan</button>
+              }}>Share your adoption ready plan</button>*/}
             </div>
+
             {/* <ShareDialog dialogIsOpen={shareDialogOpen} toggleDialog={toggleShareDialog}/> */}
-          
+
           </>
         : null }
 
         <Block>
-            <TopicResultsSummary 
-              withTitle 
-              topicSection={health_title} 
-              resultsArray={healthResultsStored ? healthResultsStored.split('') : false} 
-              questions={health_questions} 
-              type="results_topic_lifestyle" 
-              link="health" 
+            <TopicResultsSummary
+              withTitle
+              topicSection={health_title}
+              resultsArray={healthResultsStored ? healthResultsStored.split('') : false}
+              questions={health_questions}
+              type="results_topic_lifestyle"
+              link="health"
             />
         </Block>
         <Block>
-            <TopicResultsSummary 
-              withTitle 
-              topicSection={time_title} 
-              resultsArray={timeResultsStored ? timeResultsStored.split('') : false} 
-              questions={time_questions} 
-              type="results_topic_time" 
-              link="time" 
+            <TopicResultsSummary
+              withTitle
+              topicSection={time_title}
+              resultsArray={timeResultsStored ? timeResultsStored.split('') : false}
+              questions={time_questions}
+              type="results_topic_time"
+              link="time"
             />
         </Block>
         <Block>
-            <TopicResultsSummary 
-              withTitle 
-              topicSection={family_title} 
-              resultsArray={familyResultsStored ? familyResultsStored.split('') : false} 
-              questions={family_questions} 
-              type="results_topic_family" 
-              link="family" 
+            <TopicResultsSummary
+              withTitle
+              topicSection={family_title}
+              resultsArray={familyResultsStored ? familyResultsStored.split('') : false}
+              questions={family_questions}
+              type="results_topic_family"
+              link="family"
             />
         </Block>
         <Block>
-            <TopicResultsSummary 
-              withTitle 
-              topicSection={skills_title} 
-              resultsArray={skillsResultsStored ? skillsResultsStored.split('') : false} 
-              questions={skills_questions} 
-              type="results_topic_skills" 
-              link="skills" 
+            <TopicResultsSummary
+              withTitle
+              topicSection={skills_title}
+              resultsArray={skillsResultsStored ? skillsResultsStored.split('') : false}
+              questions={skills_questions}
+              type="results_topic_skills"
+              link="skills"
             />
         </Block>
         <Block>
-            <TopicResultsSummary 
-              withTitle 
-              topicSection={home_title} 
-              resultsArray={homeResultsStored ? homeResultsStored.split('') : false} 
-              questions={home_questions} 
-              type="results_topic_home" 
-              link="home" 
+            <TopicResultsSummary
+              withTitle
+              topicSection={home_title}
+              resultsArray={homeResultsStored ? homeResultsStored.split('') : false}
+              questions={home_questions}
+              type="results_topic_home"
+              link="home"
             />
         </Block>
 
@@ -189,11 +190,11 @@ const ResultsPage = ({
         </Block>
 
       </PageBodyContent>
-      <NarrowCallToAction 
-        href="/pages/bookadoptionevening" 
-        headline={cta_title} 
-        message={cta_text} 
-        label={cta_button} 
+      <NarrowCallToAction
+        href="/pages/bookadoptionevening"
+        headline={cta_title}
+        message={cta_text}
+        label={cta_button}
       />
       <CallToAction headline="Get in touch">
         <p>If you have any questions about adoption, you can email us at <a href="mail-to:adoption@buckscc.gov.uk">adoption@buckscc.gov.uk</a></p>

@@ -10,6 +10,7 @@ const Outer = styled.div`
     display: block;
     margin-bottom: 25px;
     position: relative;
+    max-width: 710px;
     @media screen and (min-width: ${theme.tablet}){
         padding: 30px;
     }
@@ -98,7 +99,7 @@ const TopicCard = ({
 }) =>
   <Outer topic={topic}>
     <Headline>{title}</Headline>
-    {intro &&       
+    {intro &&
       <Deck>
         {<Markdown>{intro}</Markdown>}
       </Deck>
