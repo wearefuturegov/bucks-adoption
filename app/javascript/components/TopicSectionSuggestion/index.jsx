@@ -52,10 +52,11 @@ const TopicSectionSuggestion = ({
             ) : home != currentSection && !homeResultsStored.length ? (
               <Button href="/home/index">Next section</Button>
             ):null
-          ) : (
-            <Button href="/results/index">View your results</Button>
-          )
+          ) :null
         }
+        { healthResultsStored.length || timeResultsStored.length || familyResultsStored.length || skillsResultsStored.length || homeResultsStored.length ? (
+          <Button href="/results/index">View your results</Button>
+        ):null}
         </>
     )}
 
