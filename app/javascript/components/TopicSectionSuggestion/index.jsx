@@ -54,7 +54,7 @@ const TopicSectionSuggestion = ({
             ):null
           ) :null
         }
-        { healthResultsStored.length || timeResultsStored.length || familyResultsStored.length || skillsResultsStored.length || homeResultsStored.length ? (
+        { healthResultsStored.length && timeResultsStored.length && familyResultsStored.length && skillsResultsStored.length && homeResultsStored.length ? (
           <Button href="/results/index">View your results</Button>
         ):null}
         </>
