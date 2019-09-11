@@ -8,6 +8,10 @@ const SidebarHeadline = styled.h2`
     font-size: 1.2em;
     border-top: 2px solid ${theme.shadow};
     padding-top: 5px;
+    margin-top: 25px;
+    @media screen and (min-width: ${theme.tablet}){
+        margin-top: 0px;
+    }
 `
 
 const SidebarList = styled.ul`
