@@ -7,7 +7,7 @@ const Outer = styled.li`
     padding: 30px;
     display: block;
     margin-bottom: 25px;
-    border-top: ${props => props.borderColor ? `7px solid ${props.borderColor}` : ""}
+    border-top: ${props => props.borderColor ? `7px solid ${props.borderColor}` : ""};
     box-shadow: 0 4px 0 ${theme.shadow};
     position: relative;
     &:active{
@@ -19,6 +19,9 @@ const Outer = styled.li`
     }
     @media screen and (min-width: ${theme.desktop}){
         padding: 35px;
+    }
+    *{
+        
     }
 `
 
@@ -61,9 +64,10 @@ const Card = ({
     headline,
     deck,
     href,
-    borderColor
+    borderColor,
+    completed
 }) =>
-    <Outer borderColor={borderColor}>
+    <Outer borderColor={borderColor} completed={completed}>
         <StyledLink href={href}>
             <Headline>{headline}</Headline>
         </StyledLink>
