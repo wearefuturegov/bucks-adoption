@@ -1,5 +1,9 @@
 class ShareController < ApplicationController
-    def index
-        # Derp
-    end
+  require 'kramdown'
+
+  def index
+      ShareMailer.with(recipient: params[:recipient], todos: params[:toDoList]).share_plan.deliver_later
+
+      render json: { status: "sent" }
+  end
 end

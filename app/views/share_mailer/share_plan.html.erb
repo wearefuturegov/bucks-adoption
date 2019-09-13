@@ -1,0 +1,18 @@
+<p>Hi,</p>
+
+<p>Thanks for using Buckinghamshires Get Adoption Ready website. Please find a list of your recommended actions below:</p>
+
+<% @actions.each do |action|
+    action.each do |todo| %>
+      <%= Kramdown::Document.new(todo).to_html.html_safe %>
+<% end
+  end
+%>
+
+<h4>Come to an adoption evening</h4>
+<p>We recommend the next step you take is to come to one of our regularly run information evenings. At the event, you will be able to ask our team questions and will hear from our team and previous adopters.<a href="/pages/bookadoptionevening">Attend an evening</a></p>
+<!-- TODO needs a proper link -->
+
+<br>
+<p>Thanks,</p>
+<p>The Buckinghameshrie Adoption Team</p>
