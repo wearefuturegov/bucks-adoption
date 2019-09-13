@@ -118,7 +118,7 @@ const ShareBar = ({
                     </>
                     :
                     <>
-                        <Headline>Send to yourself</Headline>
+                        <Headline>Email your plan</Headline>
                         <Form onSubmit={handleSubmit}>
                             <Input
                                 type="email"
