@@ -1,21 +1,21 @@
 {
   "application.css": "/packs/css/application-6141891e.css",
   "application.css.map": "/packs/css/application-6141891e.css.map",
-  "application.js": "/packs/js/application-33bdca3aa3e679e8b7dc.js",
-  "application.js.map": "/packs/js/application-33bdca3aa3e679e8b7dc.js.map",
+  "application.js": "/packs/js/application-1094860168357763e056.js",
+  "application.js.map": "/packs/js/application-1094860168357763e056.js.map",
   "entrypoints": {
     "application": {
       "css": [
         "/packs/css/application-6141891e.css"
       ],
       "js": [
-        "/packs/js/application-33bdca3aa3e679e8b7dc.js"
+        "/packs/js/application-1094860168357763e056.js"
       ],
       "css.map": [
         "/packs/css/application-6141891e.css.map"
       ],
       "js.map": [
-        "/packs/js/application-33bdca3aa3e679e8b7dc.js.map"
+        "/packs/js/application-1094860168357763e056.js.map"
       ]
     },
     "hello_react": {
@@ -31,13 +31,13 @@
         "/packs/css/server_rendering-6141891e.css"
       ],
       "js": [
-        "/packs/js/server_rendering-2d251c75432ee289822f.js"
+        "/packs/js/server_rendering-5a4197f1605aa580a98c.js"
       ],
       "css.map": [
         "/packs/css/server_rendering-6141891e.css.map"
       ],
       "js.map": [
-        "/packs/js/server_rendering-2d251c75432ee289822f.js.map"
+        "/packs/js/server_rendering-5a4197f1605aa580a98c.js.map"
       ]
     }
   },
@@ -57,6 +57,6 @@
   "media/components/SearchForm/icon.svg": "/packs/media/components/SearchForm/icon-581d55e7db470d462f6d0ea386d1d41e.svg",
   "server_rendering.css": "/packs/css/server_rendering-6141891e.css",
   "server_rendering.css.map": "/packs/css/server_rendering-6141891e.css.map",
-  "server_rendering.js": "/packs/js/server_rendering-2d251c75432ee289822f.js",
-  "server_rendering.js.map": "/packs/js/server_rendering-2d251c75432ee289822f.js.map"
+  "server_rendering.js": "/packs/js/server_rendering-5a4197f1605aa580a98c.js",
+  "server_rendering.js.map": "/packs/js/server_rendering-5a4197f1605aa580a98c.js.map"
 }
