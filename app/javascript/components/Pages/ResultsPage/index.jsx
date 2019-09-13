@@ -13,6 +13,7 @@ import PageBodyContent, { UserContent } from "../../PageBodyContent"
 import styled from "styled-components"
 import theme from "../../_theme"
 // import ShareDialog from "../../ShareDialog"
+import ShareBar from "../../ShareBar"
 
 const Headline = styled.h2`
     color: ${theme.darkText};
@@ -102,6 +103,8 @@ const ResultsPage = ({
         ]}
       />
 
+      <ShareBar/>
+
       <PageBodyContent
         backgroundColor={theme.background}
         sidebarItems={[
@@ -183,20 +186,21 @@ const ResultsPage = ({
             />
         </Block>
 
-        <Block>
+        {/* <Block>
           <Headline>Other things to do</Headline>
           <TopicCard title="Come to an adoption evening" intro="<p>We recommend the next step you take is to come to one of our regularly run information evenings. At the event, you will be able to ask our team questions and will hear from our team and previous adopters.</p>">
             <Button href="/pages/bookadoptionevening">Attend an evening</Button>
           </TopicCard>
-        </Block>
+        </Block> */}
 
-      </PageBodyContent>
       <NarrowCallToAction
         href="/pages/bookadoptionevening"
         headline={cta_title}
         message={cta_text}
         label={cta_button}
       />
+
+      </PageBodyContent>
       <CallToAction headline="Get in touch">
         <p>If you have any questions about adoption, you can email us at <a href="mail-to:adoption@buckscc.gov.uk">adoption@buckscc.gov.uk</a></p>
         <p>or call { isMobileDevice() ? <a href="tel:01494 586 349">01494 586 349</a> : <strong>01494 586 349</strong>}</p>
