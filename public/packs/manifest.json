@@ -1,21 +1,21 @@
 {
   "application.css": "/packs/css/application-20262428.css",
   "application.css.map": "/packs/css/application-20262428.css.map",
-  "application.js": "/packs/js/application-95315f48f223a312f5d6.js",
-  "application.js.map": "/packs/js/application-95315f48f223a312f5d6.js.map",
+  "application.js": "/packs/js/application-8db0df758fec141a477b.js",
+  "application.js.map": "/packs/js/application-8db0df758fec141a477b.js.map",
   "entrypoints": {
     "application": {
       "css": [
         "/packs/css/application-20262428.css"
       ],
       "js": [
-        "/packs/js/application-95315f48f223a312f5d6.js"
+        "/packs/js/application-8db0df758fec141a477b.js"
       ],
       "css.map": [
         "/packs/css/application-20262428.css.map"
       ],
       "js.map": [
-        "/packs/js/application-95315f48f223a312f5d6.js.map"
+        "/packs/js/application-8db0df758fec141a477b.js.map"
       ]
     },
     "hello_react": {
@@ -31,13 +31,13 @@
         "/packs/css/server_rendering-20262428.css"
       ],
       "js": [
-        "/packs/js/server_rendering-f3a949e7add901b0ad7f.js"
+        "/packs/js/server_rendering-30afee39e9f29b721abc.js"
       ],
       "css.map": [
         "/packs/css/server_rendering-20262428.css.map"
       ],
       "js.map": [
-        "/packs/js/server_rendering-f3a949e7add901b0ad7f.js.map"
+        "/packs/js/server_rendering-30afee39e9f29b721abc.js.map"
       ]
     }
   },
@@ -57,6 +57,6 @@
   "media/components/SearchForm/icon.svg": "/packs/media/components/SearchForm/icon-581d55e7db470d462f6d0ea386d1d41e.svg",
   "server_rendering.css": "/packs/css/server_rendering-20262428.css",
   "server_rendering.css.map": "/packs/css/server_rendering-20262428.css.map",
-  "server_rendering.js": "/packs/js/server_rendering-f3a949e7add901b0ad7f.js",
-  "server_rendering.js.map": "/packs/js/server_rendering-f3a949e7add901b0ad7f.js.map"
+  "server_rendering.js": "/packs/js/server_rendering-30afee39e9f29b721abc.js",
+  "server_rendering.js.map": "/packs/js/server_rendering-30afee39e9f29b721abc.js.map"
 }
