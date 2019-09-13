@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import theme from "../_theme"
+import tick from "./tick.png"
 
 const Outer = styled.li`
     background: white;
@@ -19,9 +20,6 @@ const Outer = styled.li`
     }
     @media screen and (min-width: ${theme.desktop}){
         padding: 35px;
-    }
-    *{
-        
     }
 `
 
@@ -60,6 +58,20 @@ const Deck = styled.p`
     }
 `
 
+const Tick = styled.img`
+    width: 35px;
+    height: 35px;
+    background: ${theme.link};
+    border-radius: 100%;
+    position: absolute;
+    top: 30px;
+    right: -10px;
+    padding: 5px;
+    @media screen and (min-width: ${theme.desktop}){
+        top: 35px;
+    }
+`
+
 const Card = ({
     headline,
     deck,
@@ -72,6 +84,7 @@ const Card = ({
             <Headline>{headline}</Headline>
         </StyledLink>
         <Deck>{deck}</Deck>
+        {completed && <Tick src={tick}/>}
     </Outer>
 
 export default Card

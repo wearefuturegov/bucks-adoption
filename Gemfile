@@ -72,3 +72,4 @@ gem 'jquery-rails'
 
 gem "httparty"
 gem 'kramdown'
+gem 'sendgrid_actionmailer_adapter'

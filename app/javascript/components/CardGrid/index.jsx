@@ -46,6 +46,7 @@ const CardGrid = ({
                         deck={card.deck}
                         href={card.href}
                         borderColor={card.borderColor}
+                        completed={card.completed}
                     />
                 )}
             </Grid>
