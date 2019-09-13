@@ -28,15 +28,16 @@ export default (questions, answers, token, recipient) => {
             })
         }
     })
-
+    console.log(JSON.stringify(toDoList))
     // 2. Post data to server
     fetch("/share-plan", {
         method: "post",
         headers: {
             'Content-type': 'application/json',
-            'X-CSRF-TOKEN': token
+            'X-CSRF-TOKEN': token,
+            'recipient' : recipient
         },
-        body: JSON.stringify(toDoList.filter(Boolean))
+        body: JSON.stringify(toDoList)
     })
         .then(res => res.json())
         .then(data => console.log(data))

@@ -42,7 +42,7 @@ const useStateWithLocalStorage = localStorageKey => {
 };
 
 const ResultsPage = ({
-    token,
+   token,
    title,
    strapline,
    cta_title,
@@ -68,27 +68,6 @@ const ResultsPage = ({
 
   // const [shareDialogOpen, toggleShareDialog] = useState(false)
 
-  const sendEmail = () =>{
-    send(
-      [
-        health_questions,
-        time_questions,
-        family_questions,
-        skills_questions,
-        home_questions
-      ], [
-        healthResultsStored,
-        timeResultsStored,
-        familyResultsStored,
-        skillsResultsStored,
-        homeResultsStored
-      ],
-      token,
-      // TODO: Replace with user input
-      "hello@example.com"
-    )
-  }
-
   return(
     <Layout>
       <HeroWithColor
@@ -103,7 +82,19 @@ const ResultsPage = ({
         ]}
       />
 
-      <ShareBar/>
+      <ShareBar
+        health_questions={health_questions}
+        time_questions={time_questions}
+        family_questions={family_questions}
+        skills_questions={skills_questions}
+        home_questions={home_questions}
+        healthResultsStored={healthResultsStored}
+        timeResultsStored={timeResultsStored}
+        familyResultsStored={familyResultsStored}
+        skillsResultsStored={skillsResultsStored}
+        homeResultsStored={homeResultsStored}
+        token={token}
+      />
 
       <PageBodyContent
         backgroundColor={theme.background}
@@ -120,20 +111,6 @@ const ResultsPage = ({
           }
         ]}
       >
-
-        {(healthResultsStored.length && timeResultsStored.length && familyResultsStored.length && skillsResultsStored.length && homeResultsStored.length) ?
-          <>
-            <Button onClick={sendEmail}>Send email</Button>
-            <div>
-              {/*<button className="share-button--for-list" onClick={()=>{
-                  toggleShareDialog(true)
-              }}>Share your adoption ready plan</button>*/}
-            </div>
-
-            {/* <ShareDialog dialogIsOpen={shareDialogOpen} toggleDialog={toggleShareDialog}/> */}
-
-          </>
-        : null }
 
         <Block>
             <TopicResultsSummary

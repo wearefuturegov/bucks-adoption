@@ -63,10 +63,21 @@ const Button = styled.button`
     font-size: 1em;
     font-weight: bold;
     text-align: center;
-    
 `
 
-const ShareBar = () => {
+const ShareBar = ({
+            health_questions,
+            time_questions,
+            family_questions,
+            skills_questions,
+            home_questions,
+            healthResultsStored,
+            timeResultsStored,
+            familyResultsStored,
+            skillsResultsStored,
+            homeResultsStored,
+            token
+        }) => {
     const [sent, setSent] = useState(false)
     const [recipient, setRecipient] = useState("")
 
@@ -75,9 +86,24 @@ const ShareBar = () => {
         setRecipient("")
     }
 
-    const handleSubmit = async () => {
+    const handleSubmit = async e => {
+        e.preventDefault();
         const data = await send(
-            // Add arguments from props here
+          [
+            health_questions,
+            time_questions,
+            family_questions,
+            skills_questions,
+            home_questions
+          ], [
+            healthResultsStored,
+            timeResultsStored,
+            familyResultsStored,
+            skillsResultsStored,
+            homeResultsStored
+          ],
+          token,
+          recipient
         )
         if(data.responseCode === 200) setSent(true)
     }
@@ -85,7 +111,7 @@ const ShareBar = () => {
     return(
         <Bar>
             <Inner>
-                {sent ? 
+                {sent ?
                     <>
                         <p>We've sent you an email.</p>
                         <button onClick={reset}>Send another</button>
@@ -94,9 +120,9 @@ const ShareBar = () => {
                     <>
                         <Headline>Send to yourself</Headline>
                         <Form onSubmit={handleSubmit}>
-                            <Input 
-                                type="email" 
-                                placeholder="example@email.com" 
+                            <Input
+                                type="email"
+                                placeholder="example@email.com"
                                 required
                                 value={recipient}
                                 onChange={e => setRecipient(e.target.value)}
@@ -104,7 +130,7 @@ const ShareBar = () => {
                             <Button>Send</Button>
                         </Form>
                     </>
-    
+
                 }
             </Inner>
         </Bar>
