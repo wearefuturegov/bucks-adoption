@@ -65,23 +65,23 @@ const ResultsPage = ({
   const [timeResultsStored, setTimeResultsStored] = useStateWithLocalStorage("results_topic_time");
   const [skillsResultsStored, setSkillsResultsStored] = useStateWithLocalStorage("results_topic_skills");
 
-  const [shareDialogOpen, toggleShareDialog] = useState(false)
+  // const [shareDialogOpen, toggleShareDialog] = useState(false)
 
   const sendEmail = () =>{
     send(
-      {
+      [
         health_questions,
-        family_questions,
-        home_questions,
         time_questions,
-        skills_questions
-      }, {
-        familyResultsStored,
-        homeResultsStored,
+        family_questions,
+        skills_questions,
+        home_questions
+      ], [
         healthResultsStored,
         timeResultsStored,
-        skillsResultsStored
-      },
+        familyResultsStored,
+        skillsResultsStored,
+        homeResultsStored
+      ],
       token,
       // TODO: Replace with user input
       "hello@example.com"
@@ -120,6 +120,7 @@ const ResultsPage = ({
 
         {(healthResultsStored.length && timeResultsStored.length && familyResultsStored.length && skillsResultsStored.length && homeResultsStored.length) ?
           <>
+            <Button onClick={sendEmail}>Send email</Button>
             <div>
               {/*<button className="share-button--for-list" onClick={()=>{
                   toggleShareDialog(true)
