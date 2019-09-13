@@ -1,8 +1,8 @@
 class ShareMailer < ApplicationMailer
   def share_plan
     @recipient = params[:recipient]
-    @actions = params[:_json]
+    @toDoList = params[:toDoList]
 
-    mail(to: @recipient, subject: "Your Adoption Ready Plan", actions: @actions)
+    mail(to: @recipient, subject: "Your Adoption Ready Plan", toDoList: @toDoList)
   end
 end
