@@ -45,19 +45,6 @@ const Home = ({
         }
       ]}
     />
-    <NarrowCallToAction 
-      href="/pages/bookadoptionevening" 
-      headline={cta_title} 
-      message={cta_text} 
-      label={cta_button} 
-    />
-    <PageBodyContent>
-      <UserContent>
-        <Markdown>
-          {body}
-        </Markdown>
-      </UserContent>
-    </PageBodyContent>
     <CardGrid
       cards={[
         {
@@ -91,6 +78,12 @@ const Home = ({
           borderColor: theme.cultural
         },
       ]}
+    />
+    <NarrowCallToAction 
+      href="/pages/bookadoptionevening" 
+      headline={cta_title} 
+      message={cta_text} 
+      label={cta_button} 
     />
     <CallToAction headline="Get in touch">
       <p>If you have any questions about adoption, you can email us at <a href="mail-to:adoption@buckscc.gov.uk">adoption@buckscc.gov.uk</a></p>

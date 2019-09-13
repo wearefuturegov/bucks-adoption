@@ -5,7 +5,7 @@ import theme from "../_theme"
 
 const Outer = styled.div`
     background: white;
-    border-top: 7px solid ${props => theme[props.topic]}
+    border-left: 7px solid ${props => theme[props.topic]}
     padding: 25px;
     display: block;
     margin-bottom: 25px;

@@ -45,7 +45,7 @@ const TopicQuestionnairePage = ({
   const [currentQuestion, setCurrentQuestion] = useState(1)
   const [resultsStored, setResultsStored] = useStateWithLocalStorage(topicID);
 
-  const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
+  // const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
   const topRef = useRef(null)
 
   const handleRestartClick = () => {
