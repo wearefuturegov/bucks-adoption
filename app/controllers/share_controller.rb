@@ -1,5 +1,6 @@
 class ShareController < ApplicationController
     def index
-        # Derp
+      byebug
+        # ShareMailer.with(recipient: params[:recipient])
     end
 end
