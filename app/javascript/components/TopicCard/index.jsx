@@ -10,6 +10,7 @@ const Outer = styled.div`
     display: block;
     margin-bottom: 25px;
     position: relative;
+    width: 100%;
     max-width: 710px;
     @media screen and (min-width: ${theme.tablet}){
         padding: 30px;
