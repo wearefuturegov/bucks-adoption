@@ -27,13 +27,13 @@ const Headline = styled.h2`
     margin-bottom: 15px;
 `
 
-const TopicResultsSummary = ({ 
-    topicSection, 
-    resultsArray, 
-    questions, 
-    type, 
-    withTitle, 
-    link 
+const TopicResultsSummary = ({
+    topicSection,
+    resultsArray,
+    questions,
+    type,
+    withTitle,
+    link
 }) =>
     <section>
         {withTitle && <Headline>{topicSection}{resultsArray ? ' to-dos' : ''}</Headline>}
@@ -56,13 +56,6 @@ const TopicResultsSummary = ({
                             ) :null
                         }
                     </div>
-                    <>
-                        {
-                            !questions[index].action_1_title && !questions[index].action_2_title && !questions[index].action_3_title ? (
-                                <Note>Thanks for completing this section, there is nothing specific we recommend you doing for {topicSection} right now.</Note>
-                            ) :null
-                        }
-                    </>
                 </div>
             )
         })) : (
