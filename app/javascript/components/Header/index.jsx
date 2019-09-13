@@ -1,8 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import logo from "./logo.svg"
 import eyeglass from "./eyeglass.svg"
 import theme from "../_theme"
+import { Container, Button } from "./MobileMenu"
 import ProgressBar from "../ProgressBar"
 
 const Outer = styled.header`
@@ -16,12 +17,12 @@ const Inner = styled.div`
     max-width: ${theme.maxWidth};
     margin-left: auto;
     margin-right: auto;
-    @media screen and (min-width: ${theme.tablet}){
+
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-    }
+
 `
 
 const MastheadLink = styled.a`
@@ -106,7 +107,7 @@ const SearchForm = styled.form`
 const SearchButton = styled.button`
     position: absolute;
     right: 0px;
-    height: 39px;
+    height: 39px;                   
     padding: 8px 12px;
     background: none;
     border: none;
@@ -127,30 +128,35 @@ const SearchIcon = styled.img`
 const MenuItem = ({href, children}) =>
     <MenuListItem><MenuLink href={href}>{children}</MenuLink></MenuListItem>
 
-const SiteHeader = () =>
-    <Outer>
-        <Inner>
+const MenuItems = () =>
+    <>
+        <MenuItem href="/results/index">Your readiness plan</MenuItem>
+        <MenuItem href="/pages/bookadoptionevening">Attend an event</MenuItem>
+    </>
 
-            <MastheadLink href="/">
-                <Logo src={logo} alt="Buckinghamshire County Council"/>
-                <ServiceName>Adoption</ServiceName>
-            </MastheadLink>
+const SiteHeader = () => {
+    const [menuOpen, toggleMenu] = useState(false)
 
-            <Nav>
-                <ProgressBar/>
-                { /*
-                 <SearchForm>
-                    <SearchInput type="text" placeholder="Search"></SearchInput>
-                    <SearchButton><SearchIcon src={eyeglass} alt="search"/></SearchButton>
-                 </SearchForm>
-                */ }
-                <Menu>
-                    <MenuItem href="/results/index">Your readiness plan</MenuItem>
-                    <MenuItem href="/pages/bookadoptionevening">Attend an event</MenuItem>
-                </Menu>
-            </Nav>
-
-        </Inner>
-    </Outer>
-
+    return(
+        <Outer>
+            <Inner>
+                <MastheadLink href="https://www.careadvicebuckinghamshire.org/">
+                    <Logo src={logo} alt="Buckinghamshire County Council"/>
+                    <ServiceName>Care for adults</ServiceName>
+                </MastheadLink>
+                <Nav>
+                    <ProgressBar/>
+                    <Menu>
+                        <MenuItems/>
+                    </Menu>
+                </Nav>
+                <Button onClick={()=> toggleMenu(!menuOpen)}>{menuOpen ? "Close" : "Menu"}</Button>
+            </Inner>
+            <div aria-live="polite">
+                {menuOpen && <Container><MenuItems/></Container>}
+            </div>
+        </Outer>
+    )
+}
+ 
 export default SiteHeader
