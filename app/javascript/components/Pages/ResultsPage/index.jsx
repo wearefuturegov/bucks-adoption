@@ -169,6 +169,7 @@ const ResultsPage = ({
             <Button href="/pages/bookadoptionevening">Attend an evening</Button>
           </TopicCard>
         </Block> */}
+      </PageBodyContent>
 
       <NarrowCallToAction
         href="/pages/bookadoptionevening"
@@ -177,7 +178,6 @@ const ResultsPage = ({
         label={cta_button}
       />
 
-      </PageBodyContent>
       <CallToAction headline="Get in touch">
         <p>If you have any questions about adoption, you can email us at <a href="mail-to:adoption@buckscc.gov.uk">adoption@buckscc.gov.uk</a></p>
         <p>or call { isMobileDevice() ? <a href="tel:01494 586 349">01494 586 349</a> : <strong>01494 586 349</strong>}</p>
