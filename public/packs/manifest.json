@@ -1,21 +1,21 @@
 {
   "application.css": "/packs/css/application-babb8102.css",
   "application.css.map": "/packs/css/application-babb8102.css.map",
-  "application.js": "/packs/js/application-2e8922e6fa562c069f74.js",
-  "application.js.map": "/packs/js/application-2e8922e6fa562c069f74.js.map",
+  "application.js": "/packs/js/application-24e83ff5f19ea2c5272b.js",
+  "application.js.map": "/packs/js/application-24e83ff5f19ea2c5272b.js.map",
   "entrypoints": {
     "application": {
       "css": [
         "/packs/css/application-babb8102.css"
       ],
       "js": [
-        "/packs/js/application-2e8922e6fa562c069f74.js"
+        "/packs/js/application-24e83ff5f19ea2c5272b.js"
       ],
       "css.map": [
         "/packs/css/application-babb8102.css.map"
       ],
       "js.map": [
-        "/packs/js/application-2e8922e6fa562c069f74.js.map"
+        "/packs/js/application-24e83ff5f19ea2c5272b.js.map"
       ]
     },
     "hello_react": {
@@ -31,13 +31,13 @@
         "/packs/css/server_rendering-babb8102.css"
       ],
       "js": [
-        "/packs/js/server_rendering-b0bb52e2f2a7ec5c3ddf.js"
+        "/packs/js/server_rendering-b4b3c7493c0d04de31bf.js"
       ],
       "css.map": [
         "/packs/css/server_rendering-babb8102.css.map"
       ],
       "js.map": [
-        "/packs/js/server_rendering-b0bb52e2f2a7ec5c3ddf.js.map"
+        "/packs/js/server_rendering-b4b3c7493c0d04de31bf.js.map"
       ]
     }
   },
@@ -57,6 +57,6 @@
   "media/components/SearchForm/icon.svg": "/packs/media/components/SearchForm/icon-581d55e7db470d462f6d0ea386d1d41e.svg",
   "server_rendering.css": "/packs/css/server_rendering-babb8102.css",
   "server_rendering.css.map": "/packs/css/server_rendering-babb8102.css.map",
-  "server_rendering.js": "/packs/js/server_rendering-b0bb52e2f2a7ec5c3ddf.js",
-  "server_rendering.js.map": "/packs/js/server_rendering-b0bb52e2f2a7ec5c3ddf.js.map"
+  "server_rendering.js": "/packs/js/server_rendering-b4b3c7493c0d04de31bf.js",
+  "server_rendering.js.map": "/packs/js/server_rendering-b4b3c7493c0d04de31bf.js.map"
 }

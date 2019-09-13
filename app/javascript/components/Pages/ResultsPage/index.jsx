@@ -13,6 +13,7 @@ import PageBodyContent, { UserContent } from "../../PageBodyContent"
 import styled from "styled-components"
 import theme from "../../_theme"
 // import ShareDialog from "../../ShareDialog"
+import ShareBar from "../../ShareBar"
 
 const Headline = styled.h2`
     color: ${theme.darkText};
@@ -102,12 +103,7 @@ const ResultsPage = ({
         ]}
       />
 
-      <NarrowCallToAction
-        href="/pages/bookadoptionevening"
-        headline={cta_title}
-        message={cta_text}
-        label={cta_button}
-      />
+      <ShareBar/>
 
       <PageBodyContent
         backgroundColor={theme.background}
@@ -195,6 +191,13 @@ const ResultsPage = ({
             <Button href="/pages/bookadoptionevening">Attend an evening</Button>
           </TopicCard>
         </Block> */}
+
+      <NarrowCallToAction
+        href="/pages/bookadoptionevening"
+        headline={cta_title}
+        message={cta_text}
+        label={cta_button}
+      />
 
       </PageBodyContent>
       <CallToAction headline="Get in touch">
