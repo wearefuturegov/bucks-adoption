@@ -89,5 +89,7 @@
     //         background-color: $home;
     //     }
     // }
-
+    &:focus {
+        outline: 2px solid $focus;
+    }
 }
