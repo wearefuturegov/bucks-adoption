@@ -37,7 +37,12 @@ const TopicSectionSuggestion = ({
   const [healthResultsStored, setHealthResultsStored] = useStateWithLocalStorage(health);
   const [timeResultsStored, setTimeResultsStored] = useStateWithLocalStorage(time);
   const [skillsResultsStored, setSkillsResultsStored] = useStateWithLocalStorage(skills);
-
+  var amountComplete = 0;
+  if(healthResultsStored.length) { amountComplete++; }
+  if(timeResultsStored.length) { amountComplete++; }
+  if(familyResultsStored.length) { amountComplete++; }
+  if(skillsResultsStored.length) { amountComplete++; }
+  if(homeResultsStored.length) { amountComplete++; }
     return(
         <>
         { !healthResultsStored.length || !timeResultsStored.length || !familyResultsStored.length || !skillsResultsStored.length || !homeResultsStored.length ? (
@@ -54,7 +59,7 @@ const TopicSectionSuggestion = ({
             ):null
           ) :null
         }
-        { healthResultsStored.length && timeResultsStored.length && familyResultsStored.length && skillsResultsStored.length && homeResultsStored.length ? (
+        { (healthResultsStored.length && timeResultsStored.length && familyResultsStored.length && skillsResultsStored.length && homeResultsStored.length) || amountComplete == 4 ? (
           <Button href="/results/index">View your results</Button>
         ):null}
         </>
