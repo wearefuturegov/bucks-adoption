@@ -141,7 +141,7 @@ const SiteHeader = () => {
     return(
         <Outer>
             <Inner>
-                <MastheadLink href="https://www.buckscc.gov.uk/services/care-for-children-and-families/adoption/adopting-a-child/">
+                <MastheadLink href="/">
                     <Logo src={logo} alt="Buckinghamshire County Council"/>
                     <ServiceName>Adoption</ServiceName>
                 </MastheadLink>
