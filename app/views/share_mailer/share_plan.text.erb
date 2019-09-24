@@ -3,7 +3,7 @@ Hi,
 Thanks for using Buckinghamshires Get Adoption Ready website. Please find a list of your recommended actions below:
 
 <% @toDoList.each do |action| %>
-  <%= action %>
+  <%= Kramdown::Document.new(action).to_kramdown %>
 <% end %>
 
 #### Come to an adoption evening
