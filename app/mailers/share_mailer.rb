@@ -4,9 +4,10 @@ class ShareMailer < Mail::Notify::Mailer
     @toDoList = params[:toDoList]
 
     view_mail(
-      ENV['SHARE_PLAN_TEMPLATE_ID'],
+      ENV['GOVUK_NOTIFY_TEMPLATE_ID'],
       to: @recipient,
-      subject: 'Your Adoption Ready Plan'
+      subject: 'Your Adoption Ready Plan',
+      reply_to_id: ENV['GOVUK_NOTIFY_REPLY_TO_ID']
     )
   end
 end
