@@ -59,10 +59,13 @@ const Button = styled.button`
     border: none;
     color: white;
     border-radius: 0 100px 100px 0;
-    padding: 12px 30px;
+    padding: 12px 20px;
     font-size: 1em;
     font-weight: bold;
     text-align: center;
+    @media screen and (min-width: ${theme.tablet}){
+        padding: 12px 30px;
+    }
 `
 
 const ShareBar = ({
