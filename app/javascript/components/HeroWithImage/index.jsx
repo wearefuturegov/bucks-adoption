@@ -25,7 +25,7 @@ const Inner = styled.div`
 const TextBox = styled.div`
     background: rgba(255,255,255,0.9);
     padding: 20px;
-    max-width: 80%;
+    max-width: 100%;
     @media screen and (min-width: ${theme.tablet}){
         max-width: 55%;
     }
