@@ -47,15 +47,15 @@ const TopicSectionSuggestion = ({
         <>
         { !healthResultsStored.length || !timeResultsStored.length || !familyResultsStored.length || !skillsResultsStored.length || !homeResultsStored.length ? (
             health != currentSection && !healthResultsStored.length ? (
-              <Button href="/health/index">Next section</Button>
+              <Button href="/health/index">Next topic</Button>
             ) : time != currentSection && !timeResultsStored.length ? (
-              <Button href="/time/index">Next section</Button>
+              <Button href="/time/index">Next topic</Button>
             ) : family != currentSection && !familyResultsStored.length ? (
-              <Button href="/family/index">Next section</Button>
+              <Button href="/family/index">Next topic</Button>
             ) : skills != currentSection && !skillsResultsStored.length ? (
-              <Button href="/skills/index">Next section</Button>
+              <Button href="/skills/index">Next topic</Button>
             ) : home != currentSection && !homeResultsStored.length ? (
-              <Button href="/home/index">Next section</Button>
+              <Button href="/home/index">Next topic</Button>
             ):null
           ) :null
         }
