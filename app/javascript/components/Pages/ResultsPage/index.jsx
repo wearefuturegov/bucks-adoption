@@ -98,19 +98,10 @@ const ResultsPage = ({
 
       <PageBodyContent
         backgroundColor={theme.background}
-        sidebarItems={[
-          {
-            label: "Support for adoptive parents",
-            href: "https://www.buckscc.gov.uk/services/care-for-children-and-families/adoption/adoption-support/"
-          },{
-            label: "Adopting a child you know",
-            href: "https://www.buckscc.gov.uk/services/care-for-children-and-families/adoption/adopting-a-child-you-know/"
-          },{
-            label: "Placing your baby for adoption",
-            href: "https://www.buckscc.gov.uk/services/care-for-children-and-families/adoption/placing-your-baby-for-adoption/"
-          }
-        ]}
       >
+      <TopicCard title="Come to an adoption evening" intro="<p>We recommend the next step you take is to come to one of our regularly run information evenings. At the event, you will be able to ask our team questions and will hear from our team and previous adopters.</p>">
+        <Button href="/pages/bookadoptionevening">Attend an evening</Button>
+      </TopicCard>
         <Block>
             <TopicResultsSummary
               withTitle
@@ -161,14 +152,21 @@ const ResultsPage = ({
               link="time"
             />
         </Block>
-
-        {/* <Block>
-          <Headline>Other things to do</Headline>
-          <TopicCard title="Come to an adoption evening" intro="<p>We recommend the next step you take is to come to one of our regularly run information evenings. At the event, you will be able to ask our team questions and will hear from our team and previous adopters.</p>">
-            <Button href="/pages/bookadoptionevening">Attend an evening</Button>
-          </TopicCard>
-        </Block> */}
       </PageBodyContent>
+
+      <ShareBar
+        health_questions={health_questions}
+        time_questions={time_questions}
+        family_questions={family_questions}
+        skills_questions={skills_questions}
+        home_questions={home_questions}
+        healthResultsStored={healthResultsStored}
+        timeResultsStored={timeResultsStored}
+        familyResultsStored={familyResultsStored}
+        skillsResultsStored={skillsResultsStored}
+        homeResultsStored={homeResultsStored}
+        token={token}
+      />
 
       <NarrowCallToAction
         href="/pages/bookadoptionevening"

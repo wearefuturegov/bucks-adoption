@@ -60,7 +60,7 @@ const TopicSectionSuggestion = ({
           ) :null
         }
         { (healthResultsStored.length && timeResultsStored.length && familyResultsStored.length && skillsResultsStored.length && homeResultsStored.length) || amountComplete == 4 ? (
-          <Button href="/results/index">View your results</Button>
+          <Button href="/results/index">View your plan</Button>
         ):null}
         </>
     )}

@@ -12,46 +12,31 @@ function isMobileDevice() {
 };
 
 export default ({
-  title, 
-  strapline, 
-  cta_title, 
-  cta_text, 
-  cta_button, 
+  title,
+  strapline,
+  cta_title,
+  cta_text,
+  cta_button,
   body,
   events
 }) =>
   <Layout withHeader withFooter>
-    <HeroWithImage 
-      headline={title} 
-      deck={strapline} 
-      image={heroimage} 
+    <HeroWithImage
+      headline={title}
+      deck={strapline}
+      image={heroimage}
       breadcrumbs={[
-        { 
-          href: "https://www.buckscc.gov.uk/services/care-for-children-and-families/adoption/adopting-a-child/", 
-          label: "Home"
-        },{ 
-          href: "/", 
+        {
+          href: "/",
           label: "Get ready to adopt"
-        },{ 
+        },{
           label: "Attend an event"
-        }                                                       
-      ]} 
-    />
-    <EveningList events={events.events} />
-    <PageBodyContent 
-      headline="What should I expect?" 
-      sidebarItems={[
-        { 
-          label: "Support for adoptive parents", 
-          href: "https://www.buckscc.gov.uk/services/care-for-children-and-families/adoption/adoption-support/" 
-        },{ 
-          label: "Adopting a child you know", 
-          href: "https://www.buckscc.gov.uk/services/care-for-children-and-families/adoption/adopting-a-child-you-know/" 
-        },{ 
-          label: "Placing your baby for adoption", 
-          href: "https://www.buckscc.gov.uk/services/care-for-children-and-families/adoption/placing-your-baby-for-adoption/" 
         }
       ]}
+    />
+    <EveningList events={events.events} />
+    <PageBodyContent
+      headline="What should I expect?"
     >
       <UserContent>
         <Markdown>{body}</Markdown>

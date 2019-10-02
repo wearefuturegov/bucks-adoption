@@ -32,7 +32,7 @@ const TopicResults = ({
 
                 <div className="centered-button">
                     { handleRestartClick &&
-                        <Button centredSecondary onClick={handleRestartClick}>Restart topic</Button>
+                        <Button centredSecondary onClick={handleRestartClick}>Restart questions</Button>
                     }
                     <TopicSectionSuggestion
                     currentSection={type}
