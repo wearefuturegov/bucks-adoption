@@ -97,24 +97,27 @@ const TopicCard = ({
     answer,
     children,
     topic
-}) =>
-  <Outer topic={topic}>
-    <Headline>{title}</Headline>
-    {intro &&
-      <Deck>
-        {<Markdown>{intro}</Markdown>}
-      </Deck>
-    }
-    {children}
-    {question_content &&
-      <details>
-        <Summary>See details and next steps</Summary>
-        <DetailsHolder>
-          <DetailsHeadline>You chose '{answer}' for the question '{question_title}'</DetailsHeadline>
-          <Markdown>{question_content}</Markdown>
-        </DetailsHolder>
-      </details>
-    }
-  </Outer>
+}) => {
+    return(
+    <Outer topic={topic}>
+      <Headline>{title}</Headline>
+      {intro &&
+        <Deck>
+          {<Markdown>{intro}</Markdown>}
+        </Deck>
+      }
+      {children}
+      {question_content &&
+        <details>
+          <Summary>See details</Summary>
+          <DetailsHolder>
+            <DetailsHeadline>You chose '{answer}' for the question '{question_title}'</DetailsHeadline>
+            <Markdown>{question_content}</Markdown>
+          </DetailsHolder>
+        </details>
+      }
+    </Outer>
+  )
+}
 
 export default TopicCard
