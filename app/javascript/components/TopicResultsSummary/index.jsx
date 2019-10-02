@@ -36,7 +36,9 @@ const TopicResultsSummary = ({
     link
 }) =>
     <section>
-        {withTitle && <Headline>{topicSection}{resultsArray ? ' to-dos' : ''}</Headline>}
+        {withTitle &&
+            <Headline>{topicSection}{resultsArray ? ' to-dos' : ''}</Headline>
+        }
         {resultsArray ? (
             resultsArray.map((result, index) => {
             return(

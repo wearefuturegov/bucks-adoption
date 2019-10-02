@@ -111,25 +111,14 @@ const ResultsPage = ({
           }
         ]}
       >
-
         <Block>
             <TopicResultsSummary
               withTitle
-              topicSection={health_title}
-              resultsArray={healthResultsStored ? healthResultsStored.split('') : false}
-              questions={health_questions}
-              type="results_topic_lifestyle"
-              link="health"
-            />
-        </Block>
-        <Block>
-            <TopicResultsSummary
-              withTitle
-              topicSection={time_title}
-              resultsArray={timeResultsStored ? timeResultsStored.split('') : false}
-              questions={time_questions}
-              type="results_topic_time"
-              link="time"
+              topicSection={home_title}
+              resultsArray={homeResultsStored ? homeResultsStored.split('') : false}
+              questions={home_questions}
+              type="results_topic_home"
+              link="home"
             />
         </Block>
         <Block>
@@ -155,11 +144,21 @@ const ResultsPage = ({
         <Block>
             <TopicResultsSummary
               withTitle
-              topicSection={home_title}
-              resultsArray={homeResultsStored ? homeResultsStored.split('') : false}
-              questions={home_questions}
-              type="results_topic_home"
-              link="home"
+              topicSection={health_title}
+              resultsArray={healthResultsStored ? healthResultsStored.split('') : false}
+              questions={health_questions}
+              type="results_topic_lifestyle"
+              link="health"
+            />
+        </Block>
+        <Block>
+            <TopicResultsSummary
+              withTitle
+              topicSection={time_title}
+              resultsArray={timeResultsStored ? timeResultsStored.split('') : false}
+              questions={time_questions}
+              type="results_topic_time"
+              link="time"
             />
         </Block>
 
@@ -179,7 +178,7 @@ const ResultsPage = ({
       />
 
       <CallToAction headline="Get in touch">
-        <p>If you have any questions about adoption, you can email us at <a href="mail-to:adoption@buckscc.gov.uk">adoption@buckscc.gov.uk</a></p>
+        <p>If you have any questions about adoption, you can email us at <a href="mailto:adoption@buckscc.gov.uk">adoption@buckscc.gov.uk</a></p>
         <p>or call { isMobileDevice() ? <a href="tel:01494 586 349">01494 586 349</a> : <strong>01494 586 349</strong>}</p>
       </CallToAction>
     </Layout>

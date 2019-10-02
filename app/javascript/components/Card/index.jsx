@@ -65,7 +65,7 @@ const Tick = styled.img`
     border-radius: 100%;
     position: absolute;
     top: 30px;
-    right: -10px;
+    right: 30px;
     padding: 5px;
     @media screen and (min-width: ${theme.desktop}){
         top: 35px;
