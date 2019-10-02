@@ -109,9 +109,9 @@ const TopicQuestionnairePage = ({
               {
                 ((questions.length+1) <= currentQuestion) ?
                   <div className="topic-questionnaire_end">
-                    <p>Great, you have completed the {title} section. Click save to store these answers, they will be saved for when you come back, as long as you come back on the same browser.</p>
+                    <p>Great, you have completed the {title} topic.</p>
                     <div className="centered-button">
-                      <Button onClick={handleSave}>Add actions to your readiness plan</Button>
+                      <Button onClick={handleSave}>Save and continue</Button>
                     </div>
                   </div>
                 :null

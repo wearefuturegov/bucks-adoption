@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, createRef } from "react"
 import Markdown from 'markdown-to-jsx'
 import Layout from "../../Layout"
 import heroimage from "./hero.jpg"
@@ -41,6 +41,12 @@ const Home = ({
   skillsTitle,
   homeTitle
 }) => {
+  const ref = createRef();
+  const handleRefClick = () =>
+    ref.current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
 
   const [familyResultsStored, setFamilyResultsStored] = useStateWithLocalStorage("results_topic_family")
   const [homeResultsStored, setHomeResultsStored] = useStateWithLocalStorage("results_topic_home")
@@ -48,23 +54,18 @@ const Home = ({
   const [timeResultsStored, setTimeResultsStored] = useStateWithLocalStorage("results_topic_time")
   const [skillsResultsStored, setSkillsResultsStored] = useStateWithLocalStorage("results_topic_skills")
 
-  console.log(familyResultsStored)
-
   return(
     <Layout>
       <HeroWithImage
         headline={title}
         deck={strapline}
         image={heroimage}
-        breadcrumbs={[
-          {
-            label: "Buckinghamshire Adoption",
-            href: "https://www.buckscc.gov.uk/services/care-for-children-and-families/adoption/adopting-a-child/"
-          },{
-            label: "Get ready to adopt"
-          }
-        ]}
+        cta="Get started"
+        handleRefClick={handleRefClick}
       />
+      <div id="home-body-content" ref={ref}>
+        <div class="bold-body"><Markdown>{body}</Markdown></div>
+      </div>
       <CardGrid
         cards={[
           {

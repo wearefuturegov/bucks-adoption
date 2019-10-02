@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import theme from "../_theme"
 import Breadcrumbs from "../Breadcrumbs"
+import Button from "../Button"
 
 const Outer = styled.section`
     padding: 50px 20px;
@@ -61,9 +62,11 @@ const Deck = styled.p`
 
 const HeroWithImage = ({
     breadcrumbs,
+    cta,
     headline,
     deck,
-    image
+    image,
+    handleRefClick
 }) =>
     <Outer image={image}>
         <Inner>
@@ -74,6 +77,13 @@ const HeroWithImage = ({
                 }
                 <Headline>{headline}</Headline>
                 <Deck>{deck}</Deck>
+                { cta ?
+                    <>
+                    <br/>
+                    <Button onClick={handleRefClick}>{cta}</Button>
+                    </>
+                :null
+                }
             </TextBox>
         </Inner>
     </Outer>

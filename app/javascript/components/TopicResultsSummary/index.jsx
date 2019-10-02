@@ -61,7 +61,7 @@ const TopicResultsSummary = ({
                 </div>
             )
         })) : (
-            <Note>You have not completed the {topicSection} section yet. <a href={'/'+ link + "/index"}>Explore it now</a>.</Note>
+            <Note>You have not completed the {topicSection} topic yet. <a href={'/'+ link + "/index"}>Explore it now</a>.</Note>
         )
         }
     </section>

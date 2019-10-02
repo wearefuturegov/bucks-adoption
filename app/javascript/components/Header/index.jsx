@@ -130,7 +130,7 @@ const MenuItem = ({href, children}) =>
 
 const MenuItems = () =>
     <>
-        <MenuItem href="/">Explore sections</MenuItem>
+        <MenuItem href="/">Explore topics</MenuItem>
         <MenuItem href="/results/index">Your readiness plan</MenuItem>
         <MenuItem href="/pages/bookadoptionevening">Attend an event</MenuItem>
     </>

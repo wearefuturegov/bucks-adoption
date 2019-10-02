@@ -53,9 +53,9 @@ const ProgressBar = () => {
   }
 
   return(
-    <a title="Click to go to the next section" className={"completed_" + completedCount + " progressbar " + "next_"+nextSection} href={"/"+nextSection+"/index"}>
+    <a title="Click to go to the next topic" className={"completed_" + completedCount + " progressbar " + "next_"+nextSection} href={"/"+nextSection+"/index"}>
       <div className="progressbar_inner">
-        <span className="progress_text">{completedCount} of 5 sections completed</span>
+        <span className="progress_text">{completedCount} of 5 topics completed</span>
         <span className="progress_indicator"></span>
       </div>
 
