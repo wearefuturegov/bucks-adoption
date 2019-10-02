@@ -30,9 +30,14 @@ const Inner = styled.div`
 const Headline = styled.h2`
     color: ${theme.darkText};
     margin-bottom: 10px;
+    font-size: 1.2em;
     @media screen and (min-width: ${theme.tablet}){
+        font-size: 1.4em;
         margin-bottom: 0px;
         margin-right: 15px;
+    }
+    @media screen and (min-width: ${theme.desktop}){
+        font-size: 1.7em;
     }
 `
 

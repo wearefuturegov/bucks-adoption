@@ -99,7 +99,7 @@ const ResultsPage = ({
       <PageBodyContent
         backgroundColor={theme.background}
       >
-      <TopicCard title="Come to an adoption evening" intro="<p>We recommend the next step you take is to come to one of our regularly run information evenings. At the event, you will be able to ask our team questions and will hear from our team and previous adopters.</p>">
+      <TopicCard title="Book an information event" intro="<p>Use our readiness tool to begin to learn if adoption is for you and find out things you might want to consider</p>">
         <Button href="/pages/bookadoptionevening">Attend an evening</Button>
       </TopicCard>
         <Block>
@@ -176,7 +176,7 @@ const ResultsPage = ({
       />
 
       <CallToAction headline="Get in touch">
-        <p>If you have any questions about adoption, you can email us at <a href="mailto:adoption@buckscc.gov.uk">adoption@buckscc.gov.uk</a></p>
+        <p>If you have any questions about adoption, you can email us at <a href="mailto:adoption@buckscc.gov.uk" target="_blank">adoption@buckscc.gov.uk</a></p>
         <p>or call { isMobileDevice() ? <a href="tel:01494 586 349">01494 586 349</a> : <strong>01494 586 349</strong>}</p>
       </CallToAction>
     </Layout>

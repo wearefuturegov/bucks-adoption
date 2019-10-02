@@ -26,11 +26,14 @@ const Inner = styled.section`
     }
 `
 
-const Headline = styled.h1`
+const Headline = styled.h2`
     margin-bottom: 10px;
-    font-size: 1.5em;
+    font-size: 1.2em;
     @media screen and (min-width: ${theme.tablet}){
-        font-size: 1.9em;
+        font-size: 1.4em;
+    }
+    @media screen and (min-width: ${theme.desktop}){
+        font-size: 1.7em;
     }
 `
 
