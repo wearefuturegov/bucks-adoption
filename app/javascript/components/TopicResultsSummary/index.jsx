@@ -35,7 +35,7 @@ const TopicResultsSummary = ({
     withTitle,
     link
 }) => {
-
+    let displayedTitle = false;
     return(
         <section>
             { !resultsArray && withTitle ? (
@@ -46,9 +46,17 @@ const TopicResultsSummary = ({
                 resultsArray.map((result, index) => {
                 return(
                     <div key={index}>
-                        {(result == "1" && questions[index].action_1_title) || (result == "2" && questions[index].action_2_title) || (result == "3" && questions[index].action_3_title) && withTitle ? (
-                            <Headline>{topicSection}</Headline>
-                        ):null}
+                        {    withTitle ? (
+                                (result == "1" && questions[index].action_1_title) || (result == "2" && questions[index].action_2_title) || (result == "3" && questions[index].action_3_title) ? (
+                                    !displayedTitle ? (
+                                        <>
+                                        <Headline>{topicSection}</Headline>
+                                        {displayedTitle = true}
+                                        </>
+                                    ):null
+                                ):null
+                            ):null
+                        }
                         <div className="summary-results_single">
                             {
                                 result == "1" ? (
