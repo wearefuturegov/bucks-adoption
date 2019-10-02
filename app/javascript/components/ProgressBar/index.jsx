@@ -23,10 +23,16 @@ const ProgressBar = () => {
   var completedCount = 0;
   var nextSection = null;
 
-  if (homeResultsStored) {
+
+  if (timeResultsStored) {
     completedCount++;
   } else {
-    nextSection = "home";
+    nextSection = "time";
+  }
+  if (healthResultsStored) {
+    completedCount++;
+  } else {
+    nextSection = "health";
   }
   if (skillsResultsStored) {
     completedCount++;
@@ -38,15 +44,10 @@ const ProgressBar = () => {
   } else {
     nextSection = "family";
   }
-  if (timeResultsStored) {
+  if (homeResultsStored) {
     completedCount++;
   } else {
-    nextSection = "time";
-  }
-  if (healthResultsStored) {
-    completedCount++;
-  } else {
-    nextSection = "health";
+    nextSection = "home";
   }
   if (nextSection == null) {
     nextSection = "results";
