@@ -26,7 +26,8 @@ const TopicSectionSuggestion = ({
     timeintro,
     skillstitle,
     skillsintro,
-    currentSection }) => {
+    currentSection,
+    allComplete }) => {
   const family = "results_topic_family";
   const home = "results_topic_home";
   const health = "results_topic_lifestyle";
@@ -56,12 +57,15 @@ const TopicSectionSuggestion = ({
               <Button href="/health/index">Next topic</Button>
             ) : time != currentSection && !timeResultsStored.length ? (
               <Button href="/time/index">Next topic</Button>
-            ):null
+            ) : (
+                <Button href="/results/index">View your plan</Button>
+            )
           ) :null
         }
-        { (healthResultsStored.length && timeResultsStored.length && familyResultsStored.length && skillsResultsStored.length && homeResultsStored.length) || amountComplete == 4 ? (
+        { amountComplete == 5 ? (
           <Button href="/results/index">View your plan</Button>
         ):null}
+
         </>
     )}
 
