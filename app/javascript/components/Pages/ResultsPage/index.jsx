@@ -99,8 +99,8 @@ const ResultsPage = ({
       <PageBodyContent
         backgroundColor={theme.background}
       >
-      <TopicCard title="Book an information event" intro="<p>Use our readiness tool to begin to learn if adoption is for you and find out things you might want to consider</p>">
-        <Button href="/pages/bookadoptionevening">Attend an evening</Button>
+      <TopicCard title="Come to an information event" intro="<p>If you want to learn more about adoption, come along to hear from adopters and meet our team.</p>">
+        <Button href="/pages/bookadoptionevening">See upcoming events</Button>
       </TopicCard>
         <Block>
             <TopicResultsSummary
