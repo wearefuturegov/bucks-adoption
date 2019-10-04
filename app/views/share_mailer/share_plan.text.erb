@@ -1,16 +1,20 @@
 Hi,
 
-Thanks for using Buckinghamshires Get Adoption Ready website. Please find a list of your recommended actions below:
+Thanks for exploring our adoption checker. Please find below a copy of your personalised readiness plan.
+
+You don’t have to wait to complete these actions before taking the next step. Coming to our information evenings is a great way to learn more - [see upcoming events.](https://adoption.buckscc.gov.uk/pages/bookadoptionevening)
 
 <% @toDoList.each do |action| %>
   <%= Kramdown::Document.new(action, html_to_native: true).to_kramdown.gsub("{: target=\"_blank\"}", "").gsub("{:target=\"_blank\"}", "").gsub("{:
 target=\"_blank\"}", "") %>
 <% end %>
 
-Come to an adoption evening
+If you have any questions about adoption, you can email us at adoption@buckscc.gov.uk or call 01494 586 349.
 
-We recommend the next step you take is to come to one of our regularly run information evenings. At the event, you will be able to ask our team questions and will hear from our team and previous adopters. [Attend an evening.](https://adoption.buckscc.gov.uk/pages/bookadoptionevening)
+Thanks and good luck with your adoption journey,
 
+The Buckinghamshire Council Adoption Service
 
-Thanks,
-The Buckinghameshrie Adoption Team
+adoption@buckscc.gov.uk
+01494 586 349
+
