@@ -6,7 +6,7 @@ class ShareMailer < Mail::Notify::Mailer
     view_mail(
       ENV['GOVUK_NOTIFY_TEMPLATE_ID'],
       to: @recipient,
-      subject: 'Your Adoption Ready Plan'
+      subject: 'Your Adoption Readiness Plan'
     )
   end
 end
