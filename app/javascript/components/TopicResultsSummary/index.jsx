@@ -27,48 +27,58 @@ const Headline = styled.h2`
     margin-bottom: 15px;
 `
 
-const TopicResultsSummary = ({ 
-    topicSection, 
-    resultsArray, 
-    questions, 
-    type, 
-    withTitle, 
-    link 
-}) =>
-    <section>
-        {withTitle && <Headline>{topicSection}{resultsArray ? ' to-dos' : ''}</Headline>}
-        {resultsArray ? (
-            resultsArray.map((result, index) => {
-            return(
-                <div key={index}>
-                    <div className="summary-results_single">
-                        {
-                            // TODO - this could probably be refactored better
-                            result == "1" ? (
-                                questions[index].action_1_title &&
-                                <TopicCard topic={link} title={questions[index].action_1_title} answer={questions[index].answer_1} clickable="true" question_title={questions[index].title} question_content={questions[index].answer_1_explanation} intro={questions[index].action_1_text} type={type} />
-                            ) : result == "2" ? (
-                                questions[index].action_2_title &&
-                                <TopicCard topic={link} title={questions[index].action_2_title} answer={questions[index].answer_2} clickable="true" question_title={questions[index].title} question_content={questions[index].answer_2_explanation} intro={questions[index].action_2_text} type={type} />
-                            ) : result == "3" ? (
-                                questions[index].action_3_title &&
-                                <TopicCard topic={link} title={questions[index].action_3_title} answer={questions[index].answer_3} clickable="true" question_title={questions[index].title} question_content={questions[index].answer_3_explanation} intro={questions[index].action_3_text} type={type} />
-                            ) :null
+const TopicResultsSummary = ({
+    topicSection,
+    resultsArray,
+    questions,
+    type,
+    withTitle,
+    link
+}) => {
+    let displayedTitle = false;
+    return(
+        <section>
+            { !resultsArray && withTitle ? (
+                <Headline>{topicSection}</Headline>
+            ):null
+            }
+            {resultsArray ? (
+                resultsArray.map((result, index) => {
+                return(
+                    <div key={index}>
+                        {    withTitle ? (
+                                (result == "1" && questions[index].action_1_title) || (result == "2" && questions[index].action_2_title) || (result == "3" && questions[index].action_3_title) ? (
+                                    !displayedTitle ? (
+                                        <>
+                                        <Headline>{topicSection}</Headline>
+                                        {displayedTitle = true}
+                                        </>
+                                    ):null
+                                ):null
+                            ):null
                         }
+                        <div className="summary-results_single">
+                            {
+                                result == "1" ? (
+                                    questions[index].action_1_title &&
+                                        <TopicCard topic={link} title={questions[index].action_1_title} answer={questions[index].answer_1} clickable="true" question_title={questions[index].title} question_content={questions[index].answer_1_explanation} intro={questions[index].action_1_text} type={type} />
+                                ) : result == "2" ? (
+                                    questions[index].action_2_title &&
+                                        <TopicCard topic={link} title={questions[index].action_2_title} answer={questions[index].answer_2} clickable="true" question_title={questions[index].title} question_content={questions[index].answer_2_explanation} intro={questions[index].action_2_text} type={type} />
+                                ) : result == "3" ? (
+                                    questions[index].action_3_title &&
+                                        <TopicCard topic={link} title={questions[index].action_3_title} answer={questions[index].answer_3} clickable="true" question_title={questions[index].title} question_content={questions[index].answer_3_explanation} intro={questions[index].action_3_text} type={type} />
+                                ) :null
+                            }
+                        </div>
                     </div>
-                    <>
-                        {
-                            !questions[index].action_1_title && !questions[index].action_2_title && !questions[index].action_3_title ? (
-                                <Note>Thanks for completing this section, there is nothing specific we recommend you doing for {topicSection} right now.</Note>
-                            ) :null
-                        }
-                    </>
-                </div>
+                )
+            })) : (
+                <Note>You have not completed the {topicSection} topic yet. <a href={'/'+ link + "/index"}>Explore it now</a>.</Note>
             )
-        })) : (
-            <Note>You have not completed the {topicSection} section yet. <a href={'/'+ link + "/index"}>Explore it now</a>.</Note>
-        )
-        }
-    </section>
+            }
+        </section>
+    )
+}
 
 export default TopicResultsSummary

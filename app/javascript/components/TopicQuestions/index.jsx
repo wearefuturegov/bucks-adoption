@@ -73,7 +73,9 @@ const TopicQuestions = ({
                 </div>
                 { content.action_1_title ?
                     <>
-                        <div className="answer_explanation action_text"><p>Next step</p></div>
+                        <div className="answer_explanation action_text">
+                            <p>An action to consider to help you get more ready</p>
+                        </div>
                         <TopicCard title={content.action_1_title} intro={content.action_1_text} type={type} />
                     </>
                   :null
@@ -88,7 +90,9 @@ const TopicQuestions = ({
                 </div>
                 { content.action_2_title ?
                     <>
-                        <div className="answer_explanation action_text"><p>Next step</p></div>
+                        <div className="answer_explanation action_text">
+                            <p>An action to consider to help you get more ready</p>
+                        </div>
                         <TopicCard title={content.action_2_title} intro={content.action_2_text} type={type} />
                     </>
                   :null
@@ -103,7 +107,9 @@ const TopicQuestions = ({
                 </div>
                 { content.action_3_title ?
                     <>
-                        <div className="answer_explanation action_text"><p>Next step</p></div>
+                        <div className="answer_explanation action_text">
+                            <p>An action to consider to help you get more ready</p>
+                        </div>
                         <TopicCard title={content.action_3_title} intro={content.action_3_text} type={type} />
                     </>
                   :null

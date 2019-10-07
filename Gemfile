@@ -72,3 +72,4 @@ gem 'jquery-rails'
 
 gem "httparty"
 gem 'kramdown'
+gem 'mail-notify'

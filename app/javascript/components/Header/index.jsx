@@ -107,7 +107,7 @@ const SearchForm = styled.form`
 const SearchButton = styled.button`
     position: absolute;
     right: 0px;
-    height: 39px;                   
+    height: 39px;
     padding: 8px 12px;
     background: none;
     border: none;
@@ -130,6 +130,7 @@ const MenuItem = ({href, children}) =>
 
 const MenuItems = () =>
     <>
+        <MenuItem href="/">Explore topics</MenuItem>
         <MenuItem href="/results/index">Your readiness plan</MenuItem>
         <MenuItem href="/pages/bookadoptionevening">Attend an event</MenuItem>
     </>
@@ -140,9 +141,9 @@ const SiteHeader = () => {
     return(
         <Outer>
             <Inner>
-                <MastheadLink href="https://www.careadvicebuckinghamshire.org/">
+                <MastheadLink href="/">
                     <Logo src={logo} alt="Buckinghamshire County Council"/>
-                    <ServiceName>Care for adults</ServiceName>
+                    <ServiceName>Adoption</ServiceName>
                 </MastheadLink>
                 <Nav>
                     <ProgressBar/>
@@ -158,5 +159,5 @@ const SiteHeader = () => {
         </Outer>
     )
 }
- 
+
 export default SiteHeader

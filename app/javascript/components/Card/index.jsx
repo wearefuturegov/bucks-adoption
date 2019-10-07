@@ -59,16 +59,19 @@ const Deck = styled.p`
 `
 
 const Tick = styled.img`
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
     background: ${theme.link};
     border-radius: 100%;
     position: absolute;
     top: 30px;
-    right: -10px;
+    right: 20px;
     padding: 5px;
     @media screen and (min-width: ${theme.desktop}){
         top: 35px;
+        right: 30px;
+        width: 35px;
+        height: 35px;
     }
 `
 
@@ -80,10 +83,13 @@ const Card = ({
     completed
 }) =>
     <Outer borderColor={borderColor} completed={completed}>
-        <StyledLink href={href}>
-            <Headline>{headline}</Headline>
-        </StyledLink>
+        <Headline>{headline}</Headline>
         <Deck>{deck}</Deck>
+        <br/>
+        <StyledLink href={href}>
+            {completed ? "View " : "Start "}
+            this topic
+        </StyledLink>
         {completed && <Tick src={tick}/>}
     </Outer>
 

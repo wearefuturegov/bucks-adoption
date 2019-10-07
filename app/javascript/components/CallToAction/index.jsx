@@ -16,15 +16,15 @@ const Inner = styled.section`
     margin-right: auto;
 `
 
-const Headline = styled.h1`
+const Headline = styled.h2`
     margin-bottom: 10px;
     color: ${theme.darkText};
-    font-size: 1.3em;
+    font-size: 1.2em;
     @media screen and (min-width: ${theme.tablet}){
-        font-size: 1.6em;
+        font-size: 1.4em;
     }
     @media screen and (min-width: ${theme.desktop}){
-        font-size: 2em;
+        font-size: 1.7em;
         margin-bottom: 15px;
     }
 `

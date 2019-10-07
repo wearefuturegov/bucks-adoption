@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import theme from "../_theme"
 import Breadcrumbs from "../Breadcrumbs"
+import Button from "../Button"
 
 const Outer = styled.section`
     padding: 50px 20px;
@@ -25,7 +26,7 @@ const Inner = styled.div`
 const TextBox = styled.div`
     background: rgba(255,255,255,0.9);
     padding: 20px;
-    max-width: 80%;
+    max-width: 100%;
     @media screen and (min-width: ${theme.tablet}){
         max-width: 55%;
     }
@@ -61,9 +62,11 @@ const Deck = styled.p`
 
 const HeroWithImage = ({
     breadcrumbs,
+    cta,
     headline,
     deck,
-    image
+    image,
+    handleRefClick
 }) =>
     <Outer image={image}>
         <Inner>
@@ -74,6 +77,13 @@ const HeroWithImage = ({
                 }
                 <Headline>{headline}</Headline>
                 <Deck>{deck}</Deck>
+                { cta ?
+                    <>
+                    <br/>
+                    <Button onClick={handleRefClick}>{cta}</Button>
+                    </>
+                :null
+                }
             </TextBox>
         </Inner>
     </Outer>

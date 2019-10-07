@@ -26,13 +26,13 @@ const TopicResults = ({
         <section className="final-results">
             <div className="container">
                 <h2>Your readiness list for {topicSection}</h2>
-                <p className="link-to-results">All actions will be added to <a href="/results/index">your adoption ready plan</a>.</p>
+                <p className="link-to-results">All actions are saved in <a href="/results/index">your readiness plan</a>.</p>
 
                 <TopicResultsSummary topicSection={topicSection} resultsArray={resultsArray} questions={questions} type={type} />
 
                 <div className="centered-button">
                     { handleRestartClick &&
-                        <Button centredSecondary onClick={handleRestartClick}>Restart questionnaire</Button>
+                        <Button centredSecondary onClick={handleRestartClick}>Restart questions</Button>
                     }
                     <TopicSectionSuggestion
                     currentSection={type}

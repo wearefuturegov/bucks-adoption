@@ -54,23 +54,22 @@ const TopicQuestionnairePage = ({
     setCurrentQuestion(1)
     scrollToRef(topRef)
   }
-  const handleSaveClick = () => {
+  const handleSave = () => {
     setResultsStored(results)
-    scrollToRef(topRef)
   }
 
   return(
     <Layout>
-      <HeroWithColor 
-        backgroundColor={backgroundcolor} 
-        headline={title} 
-        deck={intro} 
+      <HeroWithColor
+        backgroundColor={backgroundcolor}
+        headline={title}
+        deck={intro}
         breadcrumbs={[
-          { 
-            href: "/", 
-            label: "Get ready to adopt" 
-          },{ 
-            label: title 
+          {
+            href: "/",
+            label: "Get ready to adopt"
+          },{
+            label: title
           }
         ]}
       />
@@ -78,7 +77,7 @@ const TopicQuestionnairePage = ({
       <PageBodyContent>
         <UserContent>
           <Markdown>{body}</Markdown>
-        </UserContent>                                                      
+        </UserContent>
       </PageBodyContent>
 
       <div ref={topRef}>
@@ -110,9 +109,9 @@ const TopicQuestionnairePage = ({
               {
                 ((questions.length+1) <= currentQuestion) ?
                   <div className="topic-questionnaire_end">
-                    <p>Great, you have completed the {title} section. Click save to store these answers, they will be saved for when you come back, as long as you come back on the same browser.</p>
+                    <p>Great, you have completed the {title} topic.</p>
                     <div className="centered-button">
-                      <Button onClick={handleSaveClick}>Save</Button>
+                      <Button onClick={handleSave}>Save and continue</Button>
                     </div>
                   </div>
                 :null

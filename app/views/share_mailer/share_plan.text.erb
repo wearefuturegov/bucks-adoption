@@ -1,0 +1,28 @@
+Hi,
+
+Thanks for exploring our adoption checker. Please find below a copy of your personalised readiness plan.
+
+You don’t have to wait to complete these actions before taking the next step. Coming to our information evenings is a great way to learn more - [see upcoming events.](https://adoption.buckscc.gov.uk/pages/bookadoptionevening)
+
+If you have any questions about adoption, you can email us at adoption@buckscc.gov.uk or call 01494 586 349.
+
+Thanks and good luck with your adoption journey,
+
+The Buckinghamshire Council Adoption Service
+
+---
+
+Your adoption readiness plan:
+
+<% @toDoList.each do |action| %>
+  <%= Kramdown::Document.new(action, html_to_native: true).to_kramdown.gsub("{: target=\"_blank\"}", "").gsub("{:target=\"_blank\"}", "").gsub("{:
+target=\"_blank\"}", "") %>
+<% end %>
+
+Thanks and good luck with your adoption journey,
+
+The Buckinghamshire Council Adoption Service
+
+adoption@buckscc.gov.uk
+01494 586 349
+

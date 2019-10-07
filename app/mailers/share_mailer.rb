@@ -1,8 +1,12 @@
-class ShareMailer < ApplicationMailer
+class ShareMailer < Mail::Notify::Mailer
   def share_plan
     @recipient = params[:recipient]
     @toDoList = params[:toDoList]
 
-    mail(to: @recipient, subject: "Your Adoption Ready Plan", toDoList: @toDoList)
+    view_mail(
+      ENV['GOVUK_NOTIFY_TEMPLATE_ID'],
+      to: @recipient,
+      subject: 'Your Adoption Readiness Plan'
+    )
   end
 end

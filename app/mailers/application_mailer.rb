@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'chris@wearefuturegov.com'
+  default from: 'adoption@buckscc.gov.uk'
   layout 'mailer'
 end

@@ -30,9 +30,14 @@ const Inner = styled.div`
 const Headline = styled.h2`
     color: ${theme.darkText};
     margin-bottom: 10px;
+    font-size: 1.2em;
     @media screen and (min-width: ${theme.tablet}){
+        font-size: 1.4em;
         margin-bottom: 0px;
         margin-right: 15px;
+    }
+    @media screen and (min-width: ${theme.desktop}){
+        font-size: 1.7em;
     }
 `
 
@@ -59,10 +64,28 @@ const Button = styled.button`
     border: none;
     color: white;
     border-radius: 0 100px 100px 0;
-    padding: 12px 30px;
+    padding: 12px 20px;
     font-size: 1em;
     font-weight: bold;
     text-align: center;
+    @media screen and (min-width: ${theme.tablet}){
+        padding: 12px 30px;
+    }
+`
+
+const ResetButton = styled.button`
+    background: ${theme.darkText};
+    border: none;
+    color: white;
+    border-radius: 100px;
+    margin-left: 25px;
+    padding: 12px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    @media screen and (min-width: ${theme.tablet}){
+        padding: 12px 30px;
+    }
 `
 
 const ShareBar = ({
@@ -88,6 +111,8 @@ const ShareBar = ({
 
     const handleSubmit = async e => {
         e.preventDefault();
+        // MISSING AN ERROR STATE CHECK
+        setSent(true)
         const data = await send(
           [
             health_questions,
@@ -105,7 +130,6 @@ const ShareBar = ({
           token,
           recipient
         )
-        if(data.responseCode === 200) setSent(true)
     }
 
     return(
@@ -113,8 +137,8 @@ const ShareBar = ({
             <Inner>
                 {sent ?
                     <>
-                        <p>We've sent you an email.</p>
-                        <button onClick={reset}>Send another</button>
+                        <p>We've sent you an email to {recipient}</p>
+                        <ResetButton onClick={reset}>Send another</ResetButton>
                     </>
                     :
                     <>

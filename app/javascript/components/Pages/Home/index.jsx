@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, createRef } from "react"
 import Markdown from 'markdown-to-jsx'
 import Layout from "../../Layout"
 import heroimage from "./hero.jpg"
@@ -41,6 +41,12 @@ const Home = ({
   skillsTitle,
   homeTitle
 }) => {
+  const ref = createRef();
+  const handleRefClick = () =>
+    ref.current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
 
   const [familyResultsStored, setFamilyResultsStored] = useStateWithLocalStorage("results_topic_family")
   const [homeResultsStored, setHomeResultsStored] = useStateWithLocalStorage("results_topic_home")
@@ -48,38 +54,26 @@ const Home = ({
   const [timeResultsStored, setTimeResultsStored] = useStateWithLocalStorage("results_topic_time")
   const [skillsResultsStored, setSkillsResultsStored] = useStateWithLocalStorage("results_topic_skills")
 
-  console.log(familyResultsStored)
-
   return(
     <Layout>
-      <HeroWithImage 
-        headline={title} 
-        deck={strapline} 
-        image={heroimage} 
-        breadcrumbs={[
-          { 
-            label: "Buckinghamshire Adoption", 
-            href: "https://www.buckscc.gov.uk/services/care-for-children-and-families/adoption/adopting-a-child/" 
-          },{ 
-            label: "Get ready to adopt" 
-          }
-        ]}
+      <HeroWithImage
+        headline={title}
+        deck={strapline}
+        image={heroimage}
+        cta="Get started"
+        handleRefClick={handleRefClick}
       />
+      <div id="home-body-content" ref={ref}>
+        <div className="bold-body"><Markdown>{body}</Markdown></div>
+      </div>
       <CardGrid
         cards={[
           {
-            headline: healthTitle,
-            deck: healthContent.kicker || healthContent.introduction,
-            href: "/health/index",
-            borderColor: theme.active,
-            completed: healthResultsStored
-          },
-          {
-            headline: timeTitle,
-            deck: timeContent.kicker || timeContent.introduction,
-            href: "/time/index",
-            borderColor: theme.social,
-            completed: timeResultsStored
+            headline: homeTitle,
+            deck: homeContent.kicker || homeContent.introduction,
+            href: "/home/index",
+            borderColor: theme.cultural,
+            completed: homeResultsStored
           },
           {
             headline: familyTitle,
@@ -96,22 +90,30 @@ const Home = ({
             completed: skillsResultsStored
           },
           {
-            headline: homeTitle,
-            deck: homeContent.kicker || homeContent.introduction,
-            href: "/home/index",
-            borderColor: theme.cultural,
-            completed: homeResultsStored
+            headline: healthTitle,
+            deck: healthContent.kicker || healthContent.introduction,
+            href: "/health/index",
+            borderColor: theme.active,
+            completed: healthResultsStored
           },
+          {
+            headline: timeTitle,
+            deck: timeContent.kicker || timeContent.introduction,
+            href: "/time/index",
+            borderColor: theme.social,
+            completed: timeResultsStored
+          },
+
         ]}
       />
-      <NarrowCallToAction 
-        href="/pages/bookadoptionevening" 
-        headline={cta_title} 
-        message={cta_text} 
-        label={cta_button} 
+      <NarrowCallToAction
+        href="/pages/bookadoptionevening"
+        headline={cta_title}
+        message={cta_text}
+        label={cta_button}
       />
       <CallToAction headline="Get in touch">
-        <p>If you have any questions about adoption, you can email us at <a href="mail-to:adoption@buckscc.gov.uk">adoption@buckscc.gov.uk</a></p>
+        <p>If you have any questions about adoption, you can email us at <a href="mailto:adoption@buckscc.gov.uk" target="_blank">adoption@buckscc.gov.uk</a></p>
         <p>or call { isMobileDevice() ? <a href="tel:01494 586 349">01494 586 349</a> : <strong>01494 586 349</strong>}</p>
       </CallToAction>
     </Layout>

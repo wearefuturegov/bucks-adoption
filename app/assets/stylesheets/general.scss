@@ -1,3 +1,29 @@
+
 body {
   margin: 0;
+}
+#home-body-content {
+  padding: 40px 20px;
+  @media screen and (min-width: 750px){
+      padding: 50px 20px;
+  }
+  @media screen and (min-width: 1000px){
+      padding: 60px 20px;
+  }
+}
+.bold-body {
+  text-align: center;
+  line-height: 1.6;
+  max-width: 710px;
+  margin: 0 auto;
+  @media screen and (min-width: 750px){
+    font-size: 1.15em;
+  }
+  @media screen and (min-width: 1000px){
+    font-size: 1.3em;
+  }
+}
+
+.start_button {
+  margin-top: 15px;
 }

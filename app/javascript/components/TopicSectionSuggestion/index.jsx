@@ -26,7 +26,8 @@ const TopicSectionSuggestion = ({
     timeintro,
     skillstitle,
     skillsintro,
-    currentSection }) => {
+    currentSection,
+    allComplete }) => {
   const family = "results_topic_family";
   const home = "results_topic_home";
   const health = "results_topic_lifestyle";
@@ -37,26 +38,34 @@ const TopicSectionSuggestion = ({
   const [healthResultsStored, setHealthResultsStored] = useStateWithLocalStorage(health);
   const [timeResultsStored, setTimeResultsStored] = useStateWithLocalStorage(time);
   const [skillsResultsStored, setSkillsResultsStored] = useStateWithLocalStorage(skills);
-
+  var amountComplete = 0;
+  if(healthResultsStored.length) { amountComplete++; }
+  if(timeResultsStored.length) { amountComplete++; }
+  if(familyResultsStored.length) { amountComplete++; }
+  if(skillsResultsStored.length) { amountComplete++; }
+  if(homeResultsStored.length) { amountComplete++; }
     return(
         <>
         { !healthResultsStored.length || !timeResultsStored.length || !familyResultsStored.length || !skillsResultsStored.length || !homeResultsStored.length ? (
-            health != currentSection && !healthResultsStored.length ? (
-              <Button href="/health/index">Next section</Button>
-            ) : time != currentSection && !timeResultsStored.length ? (
-              <Button href="/time/index">Next section</Button>
+            home != currentSection && !homeResultsStored.length ? (
+              <Button href="/home/index">Next topic</Button>
             ) : family != currentSection && !familyResultsStored.length ? (
-              <Button href="/family/index">Next section</Button>
+              <Button href="/family/index">Next topic</Button>
             ) : skills != currentSection && !skillsResultsStored.length ? (
-              <Button href="/skills/index">Next section</Button>
-            ) : home != currentSection && !homeResultsStored.length ? (
-              <Button href="/home/index">Next section</Button>
-            ):null
+              <Button href="/skills/index">Next topic</Button>
+            ) : health != currentSection && !healthResultsStored.length ? (
+              <Button href="/health/index">Next topic</Button>
+            ) : time != currentSection && !timeResultsStored.length ? (
+              <Button href="/time/index">Next topic</Button>
+            ) : (
+                <Button href="/results/index">View your plan</Button>
+            )
           ) :null
         }
-        { healthResultsStored.length && timeResultsStored.length && familyResultsStored.length && skillsResultsStored.length && homeResultsStored.length ? (
-          <Button href="/results/index">View your results</Button>
+        { amountComplete == 5 ? (
+          <Button href="/results/index">View your plan</Button>
         ):null}
+
         </>
     )}
 
