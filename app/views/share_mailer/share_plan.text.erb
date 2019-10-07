@@ -15,7 +15,7 @@ The Buckinghamshire Council Adoption Service
 Your adoption readiness plan:
 
 <% @toDoList.each do |action| %>
-  <%= Kramdown::Document.new(action, html_to_native: true).to_kramdown.gsub("{: target=\"_blank\"}", "").gsub("{:target=\"_blank\"}", "").gsub("{:
+  <%= Kramdown::Document.new(action, html_to_native: true, line_width: 100000).to_kramdown.gsub("{: target=\"_blank\"}", "").gsub("{:target=\"_blank\"}", "").gsub("{:
 target=\"_blank\"}", "") %>
 <% end %>
 
