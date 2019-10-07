@@ -71,7 +71,9 @@ const EveningCard = ({
     href
 }) =>
     <Outer>
-        <StyledLink href={href} target="blank">
+        <StyledLink href={href} target="blank" onClick={()=>{
+            window.ga('send', 'event', 'Adoption evening', 'Click event booking card')
+        }}>
             <Headline>
               <Moment format="ddd, DD MMMM YYYY (HH:mm - ">
                 {start.local}

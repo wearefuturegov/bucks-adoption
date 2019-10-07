@@ -113,6 +113,7 @@ const ShareBar = ({
         e.preventDefault();
         // MISSING AN ERROR STATE CHECK
         setSent(true)
+        window.ga('send', 'event', 'Readiness plan', 'Send email')
         const data = await send(
           [
             health_questions,
