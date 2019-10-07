@@ -22,6 +22,11 @@
 require("core-js/stable")
 require("regenerator-runtime/runtime")
 
+const Sentry = require("@sentry/browser")
+
+Sentry.init({dsn: "https://53b6427095df495a90b38dda07d36612@sentry.io/1772228"});
+
+
 var componentRequireContext = require.context("components", true);
 var ReactRailsUJS = require("react_ujs");
 ReactRailsUJS.useContext(componentRequireContext);
