@@ -2,17 +2,6 @@
 <html>
   <head>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=<%= ENV["GA_TRACKING_ID"] %>"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', '<%= ENV["GA_TRACKING_ID"] %>');
-    </script>
-
-
     <title><%= yield(:title) %> | Buckinghamshire Adoption Service</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -34,5 +23,17 @@
 
   <body>
     <%= yield %>
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<%= ENV["GA_TRACKING_ID"] %>"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', '<%= ENV["GA_TRACKING_ID"] %>');
+    </script>
+
   </body>
 </html>
