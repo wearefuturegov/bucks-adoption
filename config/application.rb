@@ -10,6 +10,11 @@ if ['development', 'test'].include? ENV['RAILS_ENV']
   Dotenv::Railtie.load
 end
 
+Raven.configure do |config|
+  config.dsn = ENV['SENTRY_DSN']
+end
+
+
 module BucksAdoption
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
