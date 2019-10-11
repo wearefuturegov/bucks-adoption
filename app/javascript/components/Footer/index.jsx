@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import theme from "../_theme"
+import Cookies from "../Cookies"
 
 const Outer = styled.footer`
     background: ${theme.shadow};
@@ -52,7 +53,7 @@ const Footer = () =>
             </Menu>
             <p>Built and maintained by <a href="http://buckscc.gov.uk">Buckinghamshire County Council</a></p>
         </Inner>
-
+        <Cookies/>
     </Outer>
 
 export default Footer
