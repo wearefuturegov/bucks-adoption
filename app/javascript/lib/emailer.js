@@ -14,17 +14,17 @@ export default (questions, answers, token, recipient) => {
                 if (result == "1") {
                     // 5. if the answer is 1 then get the specific answer
                     if(questions[i][j].action_1_title.length) {
-                        toDoList.push("^" + questions[i][j].action_1_title+"\r\n");
+                        toDoList.push("^ " + questions[i][j].action_1_title+"\r\n");
                         toDoList.push(questions[i][j].action_1_text+"\r\n")
                     }
                 } else if (result == "2") {
                     if(questions[i][j].action_2_title.length) {
-                        toDoList.push("^" + questions[i][j].action_2_title+"\r\n");
+                        toDoList.push("^ " + questions[i][j].action_2_title+"\r\n");
                         toDoList.push(questions[i][j].action_2_text+"\r\n")
                     }
                 } else if (result == "3") {
                     if(questions[i][j].action_3_title.length) {
-                        toDoList.push("^" + questions[i][j].action_3_title+"\r\n");
+                        toDoList.push("^ " + questions[i][j].action_3_title+"\r\n");
                         toDoList.push(questions[i][j].action_3_text+"\r\n")
                     }
                 }
