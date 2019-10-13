@@ -72,6 +72,7 @@ gem 'jquery-rails'
 
 gem "httparty"
 gem 'kramdown'
+gem 'reverse_markdown'
 gem 'mail-notify'
 
 gem "sentry-raven"
