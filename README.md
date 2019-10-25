@@ -1,5 +1,6 @@
 # Buckinghamshire Adoption Service
 
+A rails app with a react-powered frontend for the Buckinghamshire adoption service. Makes use of Fae CMS.
 
 ## Running it locally
 
