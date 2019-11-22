@@ -8,6 +8,7 @@ It:
 - uses those saved answers to build a personalised "readiness plan"
 - lets the user email that plan to themselves or someone else
 - pulls in a dynamic list of adoption information events from Eventbrite
+- an interface to manage all that content for users at `/admin`
 
 ## Prerequisites
 
@@ -34,3 +35,11 @@ The app will be available on port 3000.
 It's designed to work on Heroku, and should deploy there without any special steps.
 
 Make sure to run the `rails db:migrate` command to prepare the database.
+
+It might not do much until some sensible content has been set in the CMS.
+
+## See also
+
+- [GOV.UK Notify API docs](https://www.notifications.service.gov.uk/documentation)
+- [Eventbrite API docs](https://www.eventbrite.com/platform/api)
+- [Fae CMS docs](https://faecms.com/documentation)
