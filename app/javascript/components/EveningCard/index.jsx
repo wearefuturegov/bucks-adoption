@@ -72,7 +72,7 @@ const EveningCard = ({
 }) =>
     <Outer>
         <StyledLink href={href} target="blank" onClick={()=>{
-            window.ga('send', 'event', 'Adoption evening', 'Click event booking card')
+            gtag('event', 'Event booking card clicked')
         }}>
             <Headline>
               <Moment format="ddd, DD MMMM YYYY (HH:mm - ">
