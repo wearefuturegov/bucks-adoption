@@ -11,7 +11,7 @@ const CookiesPage = () =>{
             <PageHeader
                 breadcrumbs={[
                     {
-                        title: "Care for adults",
+                        title: "Adults",
                         href: "/"
                     },
                     {
