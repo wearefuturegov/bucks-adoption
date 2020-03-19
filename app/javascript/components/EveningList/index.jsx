@@ -5,9 +5,12 @@ import Card from "../EveningCard"
 
 const Outer = styled.section`
     background-color: ${theme.background};
+    margin-top: -130px;
     padding: 40px 20px;
+    padding-top: 60px;
     @media screen and (min-width: ${theme.tablet}){
         padding: 50px 20px;
+        padding-top: 80px;
     }
 `
 

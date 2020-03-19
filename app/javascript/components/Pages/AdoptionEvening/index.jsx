@@ -25,14 +25,7 @@ export default ({
       headline={title}
       deck={strapline}
       image={heroimage}
-      breadcrumbs={[
-        {
-          href: "/",
-          label: "Get ready to adopt"
-        },{
-          label: "Attend an event"
-        }
-      ]}
+      secondBreadcrumb="Attend an event"
     />
     <EveningList events={events.events} />
     <PageBodyContent

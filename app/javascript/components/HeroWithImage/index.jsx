@@ -21,6 +21,7 @@ const Inner = styled.div`
     max-width: ${theme.maxWidth};
     margin-left: auto;
     margin-right: auto;
+    position: relative;
 `
 
 const Panel = styled.div`
@@ -28,7 +29,8 @@ const Panel = styled.div`
     color: white;
     padding: 25px;
     max-width: calc(${theme.maxWidth} / 3 * 2);
-    margin-bottom: -130px;
+    position: absolute;
+    top: -130px;
     @media screen and (min-width: 600px){
         padding: 35px;
     }
@@ -86,14 +88,24 @@ const HeroWithImage = ({
     headline,
     deck,
     image,
-    handleRefClick
+    handleRefClick,
+    secondBreadcrumb
 }) =>
     <Outer hero={image}>
         <Inner>
             <Panel>
                 <Breadcrumbs>
                     <Breadcrumb><A href="https://www.buckscc.gov.uk">Home</A></Breadcrumb>
-                    <Breadcrumb>Adoption</Breadcrumb>
+                    <Breadcrumb>
+                        {secondBreadcrumb ? 
+                            <A href="/">Get ready to adopt</A>
+                        :
+                            <span>Get ready to adopt</span>
+                        }
+                    </Breadcrumb>
+                    {secondBreadcrumb &&
+                        <Breadcrumb>Attend an event</Breadcrumb>
+                    }
                 </Breadcrumbs>
                 <PageTitle>{headline}</PageTitle>
                 <Lede>{deck}</Lede>

@@ -18,7 +18,7 @@ const TextBox = styled.div`
     padding: 20px 0px;
     @media screen and (min-width: ${theme.tablet}){
         padding: 40px 0px;
-        max-width: 55%;
+        max-width: 60%;
     }
 `
 

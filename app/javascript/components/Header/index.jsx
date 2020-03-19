@@ -75,10 +75,9 @@ const MenuListItem = styled.li`
 
 const MenuLink = styled.a`
     color: white;
-    text-decoration: none;
-    transition: border-bottom 0.1s ease-out;
+    text-decoration: underline;
     &:hover{
-        border-bottom: 1px solid white;
+        text-decoration: none;
     }
     &:focus{
         outline: 3px solid ${theme.focus};
@@ -91,7 +90,7 @@ const MenuLink = styled.a`
 const SearchInput = styled.input`
     padding: 10px 15px;
     color: ${theme.darkText};
-    border-radius: 100px;
+    border-radius: 0;
     border: none;
     font-size: 0.9em;
     margin-bottom: 15px;
