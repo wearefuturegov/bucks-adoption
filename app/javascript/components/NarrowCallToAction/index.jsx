@@ -48,7 +48,7 @@ const Message = styled.p`
 
 const Button = styled.a`
     display: block;
-    border-radius: 100px;
+    border-radius: 0;
     padding: 12px 30px;
     font-size: 1em;
     font-weight: bold;

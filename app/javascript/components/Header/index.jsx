@@ -1,16 +1,14 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import logo from "./logo.svg"
-import eyeglass from "./eyeglass.svg"
 import theme from "../_theme"
 import { Container, Button } from "./MobileMenu"
 import ProgressBar from "../ProgressBar"
+import masthead from "./masthead.svg"
 
 const Outer = styled.header`
-    background: ${theme.darkText};
+    background: ${theme.blue};
     color: white;
-    width: 100%;
-    padding: 20px;
+    padding: 10px 15px;
 `
 
 const Inner = styled.div`
@@ -25,12 +23,15 @@ const Inner = styled.div`
 
 `
 
-const MastheadLink = styled.a`
+const Masthead = styled.a`
     display: flex;
     flex-direction: row;
     align-items: center;
     color: white;
     text-decoration: none;
+    img{
+        max-height: 45px;
+    }
     &:focus{
         outline: 3px solid ${theme.focus};
     }
@@ -141,10 +142,9 @@ const SiteHeader = () => {
     return(
         <Outer>
             <Inner>
-                <MastheadLink href="/">
-                    <Logo src={logo} alt="Buckinghamshire County Council"/>
-                    <ServiceName>Adoption</ServiceName>
-                </MastheadLink>
+                <Masthead href="https://buckinghamshire.gov.uk">
+                    <img src={masthead} alt="Buckinghamshire Council"/>
+                </Masthead>
                 <Nav>
                     <ProgressBar/>
                     <Menu>

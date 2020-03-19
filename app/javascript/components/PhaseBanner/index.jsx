@@ -3,23 +3,25 @@ import styled from "styled-components"
 import theme from "../_theme"
 
 const Outer = styled.section`
-    background: ${theme.focus};
-    color: ${theme.darkText};
-    padding: 10px 20px;
+    background: ${theme.grey5};
+    color: ${theme.grey1};
+    padding: 10px 15px;
+    line-height: 1.4;
 `
 
 const Inner = styled.div`
-    max-width: ${theme.maxWidth};
+    max-width: ${props => props.fullPage ? "none" : theme.maxWidth};
     margin-left: auto;
     margin-right: auto;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
+    font-size: 0.9rem;
 `
 
 const Tag = styled.strong`
-    background: ${theme.darkText};
-    color: ${theme.focus};
+    background: ${theme.blue};
+    color: white;
     padding: 2px 7px;
     display: inline-block;
     text-transform: uppercase;
@@ -27,16 +29,17 @@ const Tag = styled.strong`
 `
 
 const StyledLink = styled.a`
-    color: ${theme.darkText};
+    color: ${theme.blue};
     &:hover{
         text-decoration: none;
     }
     &:focus{
-        outline: 3px solid ${theme.darkText};
-        background: ${theme.darkText};
-        color: ${theme.focus};
+        outline: 3px solid ${theme.focus};
+        background: ${theme.focus};
+        /* color: ${theme.focus}; */
     }
 `
+
 
 const PhaseBanner = () =>
     <Outer>

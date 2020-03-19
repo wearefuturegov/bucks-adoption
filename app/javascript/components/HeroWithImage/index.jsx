@@ -1,19 +1,19 @@
 import React from "react"
 import styled from "styled-components"
 import theme from "../_theme"
-import Breadcrumbs from "../Breadcrumbs"
 import Button from "../Button"
 
 const Outer = styled.section`
-    padding: 50px 20px;
+    background-image: url(${props => props.hero});
     background-size: cover;
     background-position: center;
-    background-image: url(${(props) => props.image});
-    @media screen and (min-width: ${theme.tablet}){
-        padding: 80px 20px;
+    padding: 200px 15px 10px 15px;
+    margin-bottom: 130px;
+    @media screen and (min-width: 600px){
+        padding-top: 250px;
     }
-    @media screen and (min-width: ${theme.desktop}){
-        padding: 120px 20px;
+    @media screen and (min-width: 1600px){
+        padding-top: 300px;
     }
 `
 
@@ -23,69 +23,89 @@ const Inner = styled.div`
     margin-right: auto;
 `
 
-const TextBox = styled.div`
-    background: rgba(255,255,255,0.9);
-    padding: 20px;
-    max-width: 100%;
-    @media screen and (min-width: ${theme.tablet}){
-        max-width: 55%;
-    }
-    @media screen and (min-width: ${theme.desktop}){
-        padding: 25px;
-    }
-`
-
-const Headline = styled.h1`
-    margin-bottom: 10px;
-    color: ${theme.darkText};
-    font-size: 1.6em;
-    @media screen and (min-width: ${theme.tablet}){
-        font-size: 1.9em;
-    }
-    @media screen and (min-width: ${theme.desktop}){
-        font-size: 2.4em;
-        margin-bottom: 15px;
+const Panel = styled.div`
+    background: ${theme.blue};
+    color: white;
+    padding: 25px;
+    max-width: calc(${theme.maxWidth} / 3 * 2);
+    margin-bottom: -130px;
+    @media screen and (min-width: 600px){
+        padding: 35px;
     }
 `
 
-const Deck = styled.p`
-    margin-bottom: 10px;
-    line-height: 1.6;
-    color: ${theme.lightText};
-    @media screen and (min-width: ${theme.tablet}){
-        font-size: 1.15em;
+const Breadcrumbs = styled.ul`
+    list-style: none;
+    margin-bottom: 15px;
+`
+
+const Breadcrumb = styled.li`
+    display: inline-block;
+    margin-right: 10px;
+    &:after{
+        content: "/";
+        margin-left: 10px;
+        opacity: 0.3;
     }
-    @media screen and (min-width: ${theme.desktop}){
-        font-size: 1.3em;
+    &:last-of-type{
+        &:after{
+            content: none;
+        }
+    }
+`
+
+const A = styled.a`
+    color: white;
+    &:hover{
+        text-decoration: none;
+    }
+    &:focus{
+        color: ${theme.blue};
+        background: ${theme.focus};
+        outline: 3px solid ${theme.focus};
+    }
+`
+
+const PageTitle = styled.h1`
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    @media screen and (min-width: 600px){
+        font-size: 2.5rem;
+    }
+`
+
+const Lede = styled.p`
+    font-size: 1.1em;
+    @media screen and (min-width: 600px){
+        font-size: 1.2rem;
     }
 `
 
 const HeroWithImage = ({
-    breadcrumbs,
     cta,
     headline,
     deck,
     image,
     handleRefClick
 }) =>
-    <Outer image={image}>
+    <Outer hero={image}>
         <Inner>
-            <TextBox>
-                { breadcrumbs ?
-                    <Breadcrumbs breadcrumbs={breadcrumbs}/>
-                :null
-                }
-                <Headline>{headline}</Headline>
-                <Deck>{deck}</Deck>
-                { cta ?
+            <Panel>
+                <Breadcrumbs>
+                    <Breadcrumb><A href="https://www.buckscc.gov.uk">Home</A></Breadcrumb>
+                    <Breadcrumb>Adoption</Breadcrumb>
+                </Breadcrumbs>
+                <PageTitle>{headline}</PageTitle>
+                <Lede>{deck}</Lede>
+                { cta &&
                     <>
                     <br/>
-                    <Button onClick={handleRefClick}>{cta}</Button>
+                    <Button background="white" onClick={handleRefClick}>{cta}</Button>
                     </>
-                :null
                 }
-            </TextBox>
+            </Panel>
         </Inner>
     </Outer>
+
 
 export default HeroWithImage

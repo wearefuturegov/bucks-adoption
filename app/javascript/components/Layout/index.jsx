@@ -7,7 +7,7 @@ import { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
     *{
-        font-family: "Open Sans", sans-serif;
+        font-family: Helvetica Neue, Arial, Helvetica, sans-serif, sans-serif;
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -56,8 +56,8 @@ const GlobalStyle = createGlobalStyle`
 const Layout = ({ children }) =>
     <>
         <GlobalStyle/>
-        <PhaseBanner/>
         <Header/>
+        <PhaseBanner/>
         {children}
         <Footer/>
     </>

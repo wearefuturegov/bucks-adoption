@@ -5,7 +5,7 @@
     width: 100%;
     text-align: center;
     background: $link;
-    border-radius: 30px;
+    border-radius: 0;
     font-size: 1.1em;
     color: $white;
     padding: 10px 20px;
@@ -39,6 +39,10 @@
         opacity: 0.75;
         transition: 0.1s ease-in-out;
     }
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px $focus;
+    }
     @media screen and (min-width: $desktop){
         padding: 12px 55px;
         display: inline-block;
@@ -46,7 +50,7 @@
         width: initial;
         max-width: 365px;
     }
-    &.button--white{
+    &.button--white {
         background: $white;
         color: $darkText;
         &:after{
