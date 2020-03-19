@@ -11,4 +11,11 @@
 .link-to-results {
   margin-top: 15px;
   font-size: 1.1em;
+  a {
+        color: $link;
+        font-weight: 600;
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }

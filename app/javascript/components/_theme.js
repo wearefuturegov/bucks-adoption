@@ -23,7 +23,7 @@ export default {
 
     darkText: "#1E2428",
     lightText: "#43484D",
-    shadow: "#D8DDE0",
+    shadow: "#CECECE",
     background: "#EEEEEE",
     white: "#ffffff",
     activeCard: "#fafafa",

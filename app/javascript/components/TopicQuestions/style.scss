@@ -28,6 +28,13 @@ html {
         padding-left: 25px;
         margin-bottom: 15px;
     }
+    a {
+        color: $link;
+        font-weight: 600;
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }
 .action_text {
     font-weight: 600;

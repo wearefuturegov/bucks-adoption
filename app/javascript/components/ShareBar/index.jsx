@@ -55,7 +55,7 @@ const Input = styled.input`
     padding: 5px;
     font-size: 1em;
     padding: 12px 20px;
-    border-radius: 100px 0 0 100px;
+    border-radius: 0px;
     border: none;
 `
 
@@ -63,7 +63,7 @@ const Button = styled.button`
     background: ${theme.darkText};
     border: none;
     color: white;
-    border-radius: 0 100px 100px 0;
+    border-radius: 0;
     padding: 12px 20px;
     font-size: 1em;
     font-weight: bold;
