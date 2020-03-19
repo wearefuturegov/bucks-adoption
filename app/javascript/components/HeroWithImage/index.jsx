@@ -7,13 +7,13 @@ const Outer = styled.section`
     background-image: url(${props => props.hero});
     background-size: cover;
     background-position: center;
-    padding: 200px 15px 10px 15px;
+    padding: 250px 15px 10px 15px;
     margin-bottom: 130px;
     @media screen and (min-width: 600px){
-        padding-top: 250px;
+        padding-top: 350px;
     }
     @media screen and (min-width: 1600px){
-        padding-top: 300px;
+        padding-top: 400px;
     }
 `
 
