@@ -7,10 +7,10 @@ const Outer = styled.section`
     background-color: ${theme.background};
     margin-top: -130px;
     padding: 40px 20px;
-    padding-top: 100px;
+    padding-top: 90px;
     @media screen and (min-width: ${theme.tablet}){
         padding: 50px 20px;
-        padding-top: 150px;
+        padding-top: 110px;
     }
 `
 
