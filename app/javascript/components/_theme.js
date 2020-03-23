@@ -1,7 +1,7 @@
 export default {
     darkText: "#1E2428",
     lightText: "#43484D",
-    link: "#20825F",
+    link: "#2c2d84",
     shadow: "#D8DDE0",
     background: "#F0F3F2",
     white: "#ffffff",
