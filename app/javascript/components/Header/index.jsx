@@ -26,9 +26,6 @@ const Inner = styled.div`
 `
 
 const MastheadLink = styled.a`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     color: white;
     text-decoration: none;
     &:focus{
@@ -40,14 +37,14 @@ const MastheadLink = styled.a`
 `
 
 const Logo = styled.img`
-    max-width: 80px;
+    max-height: 45px;
+    width: auto;
     margin-right: 15px;
-
 `
 
 const ServiceName = styled.h1`
-    font-size: 1.5em;
-
+    font-size: 1.25em;
+    display: block;
 `
 
 const Nav = styled.nav`
@@ -98,31 +95,6 @@ const SearchInput = styled.input`
         outline: none;
         box-shadow: 0px 0px 0px 3px ${theme.focus};
     }
-`
-
-const SearchForm = styled.form`
-    position: relative;
-`
-
-const SearchButton = styled.button`
-    position: absolute;
-    right: 0px;
-    height: 39px;
-    padding: 8px 12px;
-    background: none;
-    border: none;
-    border-radius: 0px 100px 100px 0px;
-    cursor: pointer;
-    &:focus{
-        outline: none !important;
-        box-shadow: 0px 0px 0px 3px ${theme.focus};
-    }
-`
-
-const SearchIcon = styled.img`
-    width: 20px;
-    height: 20px;
-    transform: translateY(2px);
 `
 
 const MenuItem = ({href, children}) =>
