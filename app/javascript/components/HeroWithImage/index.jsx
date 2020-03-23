@@ -13,7 +13,7 @@ const Outer = styled.section`
         padding: 80px 20px;
     }
     @media screen and (min-width: ${theme.desktop}){
-        padding: 120px 20px;
+        padding: 150px 20px;
     }
 `
 
