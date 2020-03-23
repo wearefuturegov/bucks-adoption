@@ -1,13 +1,12 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import logo from "./logo.svg"
-import eyeglass from "./eyeglass.svg"
 import theme from "../_theme"
 import { Container, Button } from "./MobileMenu"
 import ProgressBar from "../ProgressBar"
 
 const Outer = styled.header`
-    background: ${theme.darkText};
+    background: ${theme.blue};
     color: white;
     width: 100%;
     padding: 20px;
@@ -43,8 +42,9 @@ const Logo = styled.img`
 `
 
 const ServiceName = styled.h1`
-    font-size: 1.25em;
-    display: block;
+    font-size: 1.3em;
+    margin-top: 3px;
+    font-weight: 500;
 `
 
 const Nav = styled.nav`

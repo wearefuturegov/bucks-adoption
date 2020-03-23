@@ -24,7 +24,7 @@ export default {
     shadow: "#D8DDE0",
     background: "#F0F3F2",
     white: "#ffffff",
-    focus: "#ffb81C",
+    focus: "#FFB81C",
     activeCard: "#fafafa",
 
     // service colours
