@@ -7,7 +7,8 @@ class BookAdoptionEvePage < Fae::StaticPage
     {
       hero_image: { type: Fae::Image },
       headline: { type: Fae::TextField },
-      body: { type: Fae::TextArea }
+      body: { type: Fae::TextArea },
+      pre_text: { type: Fae::TextArea }
     }
   end
 
