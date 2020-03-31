@@ -14,6 +14,7 @@ function isMobileDevice() {
 export default ({
   title,
   strapline,
+  pre_text,
   cta_title,
   cta_text,
   cta_button,
@@ -34,6 +35,13 @@ export default ({
         }
       ]}
     />
+    {pre_text && 
+      <PageBodyContent>
+        <UserContent>
+          <Markdown>{pre_text}</Markdown>
+        </UserContent>
+      </PageBodyContent>
+    }
     <EveningList events={events.events} />
     <PageBodyContent
       headline="What should I expect?"
