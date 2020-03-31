@@ -8,22 +8,10 @@ const CookiesPage = () =>{
 
     return(
         <Layout withHeader withFooter>
-            <PageHeader
-                breadcrumbs={[
-                    {
-                        title: "Care for adults",
-                        href: "/"
-                    },
-                    {
-                        title: "Cookies"
-                    },
-                ]}
-                title="Cookies on this website"
-                reducedBottomPadding
-            />
-
             <div className="container">
                 <div className="two-thirds">
+                    <h1>Cookies on this website</h1>
+                    <br/>
                     <p>This website stores small files called cookies on your computer to:</p>
                     <ul>
                         <li>make it easier for you to use</li>
