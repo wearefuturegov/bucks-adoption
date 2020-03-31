@@ -56,8 +56,8 @@ const GlobalStyle = createGlobalStyle`
 const Layout = ({ children }) =>
     <>
         <GlobalStyle/>
-        <PhaseBanner/>
         <Header/>
+        <PhaseBanner/>
         {children}
         <Footer/>
     </>
