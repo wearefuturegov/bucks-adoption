@@ -87,12 +87,12 @@ const TopicQuestionnairePage = ({
           {
             <div className="topic-questionnaire_questions">
               {questions.map(question => {
-                const { id, title, answer_1, answer_2, answer_3, action_title } = question;
+                const { position, title, answer_1, answer_2, answer_3, action_title } = question;
                 return (
                   <TopicQuestions
-                    key={id}
+                    key={position}
                     content={question}
-                    id={id}
+                    id={position}
                     total={questions.length}
                     currentQuestion={currentQuestion}
                     setCurrentQuestion={setCurrentQuestion}
