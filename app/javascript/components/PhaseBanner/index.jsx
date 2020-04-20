@@ -44,8 +44,10 @@ const StyledLink = styled.a`
 const PhaseBanner = () =>
     <Outer>
         <Inner>
-            <Tag>Beta</Tag>
-            <p>This is a new website - <StyledLink href="https://forms.gle/ty9AEZa8iirxBLGD8">your feedback</StyledLink> will help us improve it.</p>
+            <Tag>Coronavirus</Tag>
+            <p>We are still open and taking on new adopters. Explore this checker and get in touch.</p>
+            {/* <Tag>Beta</Tag>
+            <p>This is a new website - <StyledLink href="https://forms.gle/ty9AEZa8iirxBLGD8">your feedback</StyledLink> will help us improve it.</p> */}
         </Inner>
     </Outer>
 

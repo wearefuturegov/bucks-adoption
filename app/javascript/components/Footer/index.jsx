@@ -45,6 +45,8 @@ const Footer = () =>
     <>
     <Outer>
         <Inner>
+            <p>This is a new website in Beta - <a href="https://forms.gle/ty9AEZa8iirxBLGD8" target="_blank" title="Give us feedback">your feedback</a> will help us improve it.</p>
+            <br/>
             <Menu>
                 <MenuItem><a href="https://www.buckscc.gov.uk/services/contact-and-complaints/contact-us/" title="Get in contact">Contact us</a></MenuItem>
                 <MenuItem><a href="/pages/cookies" title="Read our cookie policy">Cookies</a></MenuItem>
