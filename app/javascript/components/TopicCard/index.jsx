@@ -109,7 +109,7 @@ const TopicCard = ({
       {children}
       {question_content &&
         <details>
-          <Summary>See details</Summary>
+          <Summary>Why is this recommended?</Summary>
           <DetailsHolder>
             <DetailsHeadline>You chose '{answer}' for the question '{question_title}'</DetailsHeadline>
             <Markdown>{question_content}</Markdown>
