@@ -26,7 +26,8 @@ Rails.application.routes.draw do
   # mount Fae below your admin namespec
   mount Fae::Engine => '/admin'
 
-  get "/pages/bookadoptionevening" => "static_pages#bookadoptionevening"
+  get "/pages/bookadoptionevening" => "static_pages#informationevent"
+  get "/pages/informationevent" => "static_pages#informationevent"
 
   get "/pages/:page" => "static_pages#show"
 end

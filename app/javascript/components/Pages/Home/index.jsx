@@ -107,7 +107,7 @@ const Home = ({
         ]}
       />
       <NarrowCallToAction
-        href="/pages/bookadoptionevening"
+        href="/pages/informationevent"
         headline={cta_title}
         message={cta_text}
         label={cta_button}

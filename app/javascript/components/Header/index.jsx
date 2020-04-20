@@ -104,7 +104,7 @@ const MenuItems = () =>
     <>
         <MenuItem href="/">Explore topics</MenuItem>
         <MenuItem href="/results/index">Your readiness plan</MenuItem>
-        <MenuItem href="/pages/bookadoptionevening">Attend an event</MenuItem>
+        <MenuItem href="/pages/informationevent">Attend an event</MenuItem>
     </>
 
 const SiteHeader = () => {

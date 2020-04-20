@@ -100,7 +100,7 @@ const ResultsPage = ({
         backgroundColor={theme.background}
       >
       <TopicCard title="Come to an information event" intro="<p>If you want to learn more about adoption, come along to hear from adopters and meet our team.</p>">
-        <Button href="/pages/bookadoptionevening">See upcoming events</Button>
+        <Button href="/pages/informationevent">See upcoming events</Button>
       </TopicCard>
         <Block>
             <TopicResultsSummary
@@ -169,7 +169,7 @@ const ResultsPage = ({
       />
 
       <NarrowCallToAction
-        href="/pages/bookadoptionevening"
+        href="/pages/informationevent"
         headline={cta_title}
         message={cta_text}
         label={cta_button}

@@ -18,7 +18,7 @@ class StaticPagesController < ApplicationController
     render "static_pages/#{params[:page]}"
   end
 
-  def bookadoptionevening
+  def informationevent
     @sitehome = AdoptionHomePage.instance
     @adopteve = BookAdoptionEvePage.instance
 
