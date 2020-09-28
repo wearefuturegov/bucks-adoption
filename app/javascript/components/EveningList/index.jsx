@@ -32,16 +32,20 @@ const EveningList = ({
     <Outer>
         <Inner>
             <Grid>
-                {events.map(event => 
-                    <Card
-                      key
-                        headline={event.name.text}
-                        start={event.start}
-                        end={event.end}
-                        venue={event.venue}
-                        href={event.url}
-                    />
-                )}
+                {events ? 
+                    events.map(event => 
+                        <Card
+                            key={event.id}
+                            headline={event.name.text}
+                            start={event.start}
+                            end={event.end}
+                            venue={event.venue}
+                            href={event.url}
+                        />
+                    )
+                    :
+                    <p>Sorry, there are no events currently avaliable, please check again at a later date.</p>
+                }
             </Grid>
         </Inner>
     </Outer>

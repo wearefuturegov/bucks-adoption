@@ -75,15 +75,19 @@ const EveningCard = ({
             gtag('event', 'Event booking card clicked')
         }}>
             <Headline>
-              <Moment format="ddd, DD MMMM YYYY (HH:mm - ">
-                {start.local}
-              </Moment>
+            {start.local && 
+                <Moment format="ddd, DD MMMM YYYY (HH:mm - ">
+                    {start.local}
+                </Moment>
+            }
+            {end.local && 
               <Moment format="HH:mm)">
                 {end.local}
               </Moment>
+            }
             </Headline>
         </StyledLink>
-        <Deck>{venue.name}, {venue.address.city} {venue.address.postal_code}</Deck>
+        {venue && <Deck>{venue.name && venue.name}, {venue.address.city && venue.address.city} {venue.address.postal_code && venue.address.postal_code}</Deck> }
         <Kicker>Register on Eventbrite &#8594;</Kicker>
     </Outer>
 
