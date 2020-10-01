@@ -113,7 +113,7 @@ const Home = ({
         label={cta_button}
       />
       <CallToAction headline="Get in touch">
-        <p>If you have any questions about adoption, you can email us at <a href="mailto:adoption@buckscc.gov.uk" target="_blank">adoption@buckscc.gov.uk</a></p>
+        <p>If you have any questions about adoption, you can email us at <a href="mailto:adoption@buckinghamshire.gov.uk" target="_blank">adoption@buckinghamshire.gov.uk</a></p>
         <p>or call { isMobileDevice() ? <a href="tel:01494 586 349">01494 586 349</a> : <strong>01494 586 349</strong>}</p>
       </CallToAction>
     </Layout>
