@@ -54,8 +54,8 @@ const AccessibilityStatementPage = () =>{
                     <h2>What to do if you cannot access parts of this website</h2>
                     <p>If you need information on this website in a different format like accessible PDF, large print, easy read, audio recording or braille:</p>
                     <ul>
-                        <li><a href="mail-to:adoption@buckscc.gov.uk" title="Email us on adoption@buckscc.gov.uk">adoption@buckscc.gov.uk</a></li>
-                        <li><a href="tel:adoption@buckscc.gov.uk" title="Call us on 01494 586 349">01494 586 349</a></li>
+                        <li><a href="mail-to:adoption@buckinghamshire.gov.uk" title="Email us on adoption@buckinghamshire.gov.uk">adoption@buckinghamshire.gov.uk</a></li>
+                        <li><a href="tel:adoption@buckinghamshire.gov.uk" title="Call us on 01494 586 349">01494 586 349</a></li>
                     </ul>
                     <p>We’ll consider your request and get back to you in 48 working hours.</p>
 
