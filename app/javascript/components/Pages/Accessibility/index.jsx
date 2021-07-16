@@ -8,25 +8,13 @@ const AccessibilityPage = () =>{
 
     return(
         <Layout withHeader withFooter>
-            <PageHeader
-                breadcrumbs={[
-                    {
-                        title: "Adoption",
-                        href: "/"
-                    },
-                    {
-                        title: "Accessibility statement"
-                    },
-                ]}
-                title="Accessibility statement for Buckinghamshire Adoption"
-                reducedBottomPadding
-            />
-
             <div className="container">
                 <div className="two-thirds">
+                    <h1>Accessibility statement for Buckinghamshire Adoption</h1>
+                    <br/>
                     <p>Using our simple adoption readiness tool is a great way to learn more about adoption.</p>
                     <p>By answering a few simple questions you’ll get a personalised readiness plan to help you prepare to take the next step.</p>
-                    <p>TOur quick readiness checker gives you practical advice and creates a personalised plan to prepare you to take the next step.</p>
+                    <p>Our quick readiness checker gives you practical advice and creates a personalised plan to prepare you to take the next step.</p>
                     <p>This website is run by Buckinghamshire Council. We want as many people as possible to be able to use this website. For example, that means you should be able to:</p>
                     <ul>
                         <li>change colours, contrast levels and fonts</li>

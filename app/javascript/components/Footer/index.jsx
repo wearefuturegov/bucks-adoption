@@ -73,7 +73,7 @@ const Footer = () =>
                 <br/>
                 <Menu>
                     <MenuItem><a href="/pages/cookies" title="Read our cookie policy">Cookies</a></MenuItem>
-                    <MenuItem><a href="/pages/accessibility" title="Read our accessbility statement">Accessbility statement</a></MenuItem>
+                    <MenuItem><a href="/pages/accessibility" title="Read our Accessibility statement">Accessibility statement</a></MenuItem>
                     <MenuItem><a href="https://www.buckinghamshire.gov.uk/your-council/privacy/" title="Read our privacy statement">Privacy statement</a></MenuItem>
                     <MenuItem><a href="https://www.buckinghamshire.gov.uk/community-and-safety/modern-slavery-statement/" title="Read our modern slavery statement">Modern slavery statement</a></MenuItem>
                 </Menu>
