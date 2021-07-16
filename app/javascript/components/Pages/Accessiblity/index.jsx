@@ -4,7 +4,7 @@ import PageHeader from "../../PageHeader"
 import Button from "../../Button"
 import "./style.scss"
 
-const AccessibilityStatementPage = () =>{
+const AccessibilityPage = () =>{
 
     return(
         <Layout withHeader withFooter>
@@ -84,4 +84,4 @@ const AccessibilityStatementPage = () =>{
     )
 }
 
-export default AccessibilityStatementPage
+export default AccessibilityPage
