@@ -22,7 +22,7 @@ const AccessibilityPage = () =>{
                     </ul>
 
                     <p>We’ve also made the website text as simple as possible to understand.</p>
-                    <p>AbilityNet has advice on making your device easier to use if you have a disability.</p>
+                    <p><a href="https://mcmw.abilitynet.org.uk/">AbilityNet</a> has advice on making your device easier to use if you have a disability.</p>
 
 
                     <h2>How accessible this website is</h2>
