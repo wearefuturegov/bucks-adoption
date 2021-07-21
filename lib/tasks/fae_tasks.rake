@@ -11,7 +11,7 @@ namespace :fae do
         title: 'Bucks Adoption',
         singleton_guard: 0,
         time_zone: 'GMT',
-        live_url: 'https://www.buckscc.gov.uk/services/care-for-children-and-families/adoption/adopting-a-child/'
+        live_url: 'https://www.buckinghamshire.gov.uk/services/care-for-children-and-families/adoption/adopting-a-child/'
         })
       option.save!
     end

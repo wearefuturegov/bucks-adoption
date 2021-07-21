@@ -66,9 +66,10 @@ const HeroWithImage = ({
     headline,
     deck,
     image,
-    handleRefClick
+    handleRefClick,
+    alt = ""
 }) =>
-    <Outer image={image}>
+    <Outer image={image} role="img" aria-label={alt}>
         <Inner>
             <TextBox>
                 { breadcrumbs ?
