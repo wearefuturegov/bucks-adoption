@@ -52,6 +52,8 @@ const ResultsPage = ({
    health_title,
    family_questions,
    family_title,
+   children_questions,
+   children_title,
    home_questions,
    home_title,
    time_questions,
@@ -61,6 +63,7 @@ const ResultsPage = ({
  }) => {
 
   const [familyResultsStored, setFamilyResultsStored] = useStateWithLocalStorage("results_topic_family");
+  const [childrenResultsStored, setChildrenResultsStored] = useStateWithLocalStorage("results_topic_children");
   const [homeResultsStored, setHomeResultsStored] = useStateWithLocalStorage("results_topic_home");
   const [healthResultsStored, setHealthResultsStored] = useStateWithLocalStorage("results_topic_lifestyle");
   const [timeResultsStored, setTimeResultsStored] = useStateWithLocalStorage("results_topic_time");
@@ -86,11 +89,13 @@ const ResultsPage = ({
         health_questions={health_questions}
         time_questions={time_questions}
         family_questions={family_questions}
+        children_questions={children_questions}
         skills_questions={skills_questions}
         home_questions={home_questions}
         healthResultsStored={healthResultsStored}
         timeResultsStored={timeResultsStored}
         familyResultsStored={familyResultsStored}
+        childrenResultsStored={childrenResultsStored}
         skillsResultsStored={skillsResultsStored}
         homeResultsStored={homeResultsStored}
         token={token}
@@ -145,6 +150,16 @@ const ResultsPage = ({
         <Block>
             <TopicResultsSummary
               withTitle
+              topicSection={children_title}
+              resultsArray={childrenResultsStored ? childrenResultsStored.split('') : false}
+              questions={children_questions}
+              type="results_topic_children"
+              link="children"
+            />
+        </Block>
+        <Block>
+            <TopicResultsSummary
+              withTitle
               topicSection={time_title}
               resultsArray={timeResultsStored ? timeResultsStored.split('') : false}
               questions={time_questions}
@@ -158,11 +173,13 @@ const ResultsPage = ({
         health_questions={health_questions}
         time_questions={time_questions}
         family_questions={family_questions}
+        children_questions={children_questions}
         skills_questions={skills_questions}
         home_questions={home_questions}
         healthResultsStored={healthResultsStored}
         timeResultsStored={timeResultsStored}
         familyResultsStored={familyResultsStored}
+        childrenResultsStored={childrenResultsStored}
         skillsResultsStored={skillsResultsStored}
         homeResultsStored={homeResultsStored}
         token={token}

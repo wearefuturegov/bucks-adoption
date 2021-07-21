@@ -16,6 +16,7 @@ const useStateWithLocalStorage = localStorageKey => {
 
 const ProgressBar = () => {
   const [familyResultsStored, setFamilyResultsStored] = useStateWithLocalStorage("results_topic_family");
+  const [childrenResultsStored, setChildrenResultsStored] = useStateWithLocalStorage("results_topic_children");
   const [homeResultsStored, setHomeResultsStored] = useStateWithLocalStorage("results_topic_home");
   const [healthResultsStored, setHealthResultsStored] = useStateWithLocalStorage("results_topic_lifestyle");
   const [timeResultsStored, setTimeResultsStored] = useStateWithLocalStorage("results_topic_time");
@@ -43,6 +44,11 @@ const ProgressBar = () => {
     completedCount++;
   } else {
     nextSection = "family";
+  }
+  if (childrenResultsStored) {
+    completedCount++;
+  } else {
+    nextSection = "children";
   }
   if (homeResultsStored) {
     completedCount++;

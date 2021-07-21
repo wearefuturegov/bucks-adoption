@@ -17,5 +17,8 @@ class ResultsController < ApplicationController
 
     @familyTopicContent = FamilyTopicQuestion.all
     @familyContent = FamilyContentPage.instance
+
+    @childrenTopicContent = ChildrenTopicQuestion.all
+    @childrenContent = ChildrenContentPage.instance
   end
 end

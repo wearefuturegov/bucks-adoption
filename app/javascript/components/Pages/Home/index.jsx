@@ -33,11 +33,13 @@ const Home = ({
   healthContent,
   timeContent,
   familyContent,
+  childrenContent,
   skillsContent,
   homeContent,
   healthTitle,
   timeTitle,
   familyTitle,
+  childrenTitle,
   skillsTitle,
   homeTitle
 }) => {
@@ -49,6 +51,7 @@ const Home = ({
     });
 
   const [familyResultsStored, setFamilyResultsStored] = useStateWithLocalStorage("results_topic_family")
+  const [childrenResultsStored, setChildrenResultsStored] = useStateWithLocalStorage("results_topic_children")
   const [homeResultsStored, setHomeResultsStored] = useStateWithLocalStorage("results_topic_home")
   const [healthResultsStored, setHealthResultsStored] = useStateWithLocalStorage("results_topic_lifestyle")
   const [timeResultsStored, setTimeResultsStored] = useStateWithLocalStorage("results_topic_time")
@@ -96,6 +99,13 @@ const Home = ({
             href: "/health/index",
             borderColor: theme.active,
             completed: healthResultsStored
+          },
+          {
+            headline: childrenTitle,
+            deck: childrenContent.kicker || childrenContent.introduction,
+            href: "/children/index",
+            borderColor: theme.children,
+            completed: childrenResultsStored
           },
           {
             headline: timeTitle,

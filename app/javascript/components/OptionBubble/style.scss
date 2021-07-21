@@ -33,6 +33,9 @@
     &.option-bubble__label--family{
         background-color: darken($family, 30)
     }
+    &.option-bubble__label--children{
+        background-color: darken($children, 30)
+    }
     &.option-bubble__label--skills{
         background-color: darken($skills, 30)
     }
@@ -118,6 +121,9 @@ a.option-bubble {
 }
 .option-bubble__label--family{
     background-color: transparentize($family, 0.3);
+}
+.option-bubble__label--children{
+    background-color: transparentize($children, 0.3);
 }
 .option-bubble__label--skills{
     background-color: transparentize($skills, 0.3);

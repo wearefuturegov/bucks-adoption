@@ -14,7 +14,7 @@ main.content
         - @items.each do |item|
           tr id=fae_sort_id(item)
             td.sortable-handle: i.icon-sort
-            td = link_to item.fae_display_field, edit_admin_family_topic_question_path(item)
+            td = link_to item.fae_display_field, edit_admin_children_topic_question_path(item)
             td = fae_date_format item.updated_at
       - else
         tr: td colspan="4" No items found

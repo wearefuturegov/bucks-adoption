@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'health/index'
   get 'time/index'
   get 'family/index'
+  get 'children/index'
   get 'skills/index'
   get 'home/index'
 
@@ -20,6 +21,7 @@ Rails.application.routes.draw do
     resources :home_topic_questions
     resources :skills_topic_questions
     resources :family_topic_questions
+    resources :children_topic_questions
     resources :time_topic_questions
     resources :health_topic_questions
     get '/', to: redirect('/admin/pages')
