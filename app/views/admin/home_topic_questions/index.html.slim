@@ -7,7 +7,6 @@ main.content
         th.th-sortable-handle
         th Title
         th.-action-wide Modified
-        th.-action data-sorter="false"
 
     tbody
       - if @items.present?
@@ -16,6 +15,5 @@ main.content
             td.sortable-handle: i.icon-sort
             td = link_to item.fae_display_field, edit_admin_home_topic_question_path(item)
             td = fae_date_format item.updated_at
-            td = fae_delete_button item
       - else
         tr: td colspan="4" No items found

@@ -1,0 +1,16 @@
+= simple_form_for(@option) do |f|
+  header.content-header.js-content-header
+    h1 Root Settings
+    .main_content-header-save
+      a.button#js-header-cancel href=fae.root_path(cancelled: true) Cancel
+      = f.submit 'Save'
+
+  == render 'flash_messages'
+
+  section.content
+    = fae_input f, :title, label: 'Project Name'
+    = fae_input f, :time_zone, wrapper_class: 'select'
+    = fae_input f, :live_url, label: 'Live URL', helper_text: 'Include http:// for external links.'
+    = fae_input f, :stage_url, label: 'Stage URL', helper_text: 'Include http:// for external links.'
+    = fae_image_form f, :logo, helper_text: 'Used on login page, 300x300px .jpg'
+    = fae_image_form f, :favicon

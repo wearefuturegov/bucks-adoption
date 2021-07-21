@@ -1,0 +1,16 @@
+= simple_form_for(@option) do |f|
+  header.content-header.js-content-header
+    h1 Root Settings
+    .content-header-buttons
+      a.button#js-header-cancel href=fae.root_path(cancelled: true) = t('fae.form.cancel')
+      = f.submit t('fae.form.save')
+
+  == render 'flash_messages'
+
+  section.content
+    = fae_input f, :title, label: t('fae.options.project.name')
+    = fae_input f, :time_zone, wrapper_class: 'select'
+    = fae_input f, :live_url, label: t('fae.options.live_url'), helper_text: t('fae.options.url_helper')
+    = fae_input f, :stage_url, label: t('fae.options.stage_url'), helper_text: t('fae.options.url_helper')
+    = fae_image_form f, :logo, helper_text: t('fae.options.logo_helper')
+    = fae_image_form f, :favicon

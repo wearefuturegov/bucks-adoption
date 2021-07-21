@@ -12,7 +12,6 @@ Rails.application.routes.draw do
   root "static_pages#show", page: 'home'
 
   get 'static_pages/cookies'
-  get 'static_pages/accessibility'
 
   post 'share-plan' => 'share#index'
 

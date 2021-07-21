@@ -1,0 +1,29 @@
+.input {
+  .editor-toolbar {
+    @include transition(border-color .2s);
+    opacity: 1;
+    border-color: $c-mid-grey;
+    border-bottom: 0;
+
+    a {
+      opacity: .6;
+    }
+  }
+
+  .CodeMirror-wrap {
+    @include transition(border-color .2s);
+    border-color: $c-mid-grey;
+    border-top-color: $c-grey;
+  }
+
+  .CodeMirror-scroll {
+    z-index: 0;
+  }
+
+  &.mde-focus {
+    .CodeMirror-wrap,
+    .editor-toolbar {
+      border-color: $c-notice-content;
+    }
+  }
+}

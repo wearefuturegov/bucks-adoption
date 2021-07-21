@@ -1,0 +1,15 @@
+current directory: /Users/evanschris/Desktop/GitHub/nhsx-standards/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+/Users/evanschris/.rvm/rubies/ruby-2.7.2/bin/ruby -I /Users/evanschris/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0 -r ./siteconf20210712-44029-1owo8u9.rb extconf.rb
+creating Makefile
+
+current directory: /Users/evanschris/Desktop/GitHub/nhsx-standards/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /Users/evanschris/Desktop/GitHub/nhsx-standards/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+
+current directory: /Users/evanschris/Desktop/GitHub/nhsx-standards/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/opt/homebrew/opt/coreutils/bin/ginstall -c -m 0755 cruby.bundle ./.gem.20210712-44029-yq7p0m/skiptrace/internal

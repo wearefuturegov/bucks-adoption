@@ -73,11 +73,10 @@ const Footer = () =>
                 <br/>
                 <Menu>
                     <MenuItem><a href="/pages/cookies" title="Read our cookie policy">Cookies</a></MenuItem>
-                    <MenuItem><a href="/pages/accessibility" title="Read our Accessibility statement">Accessibility statement</a></MenuItem>
-                    <MenuItem><a href="https://www.buckinghamshire.gov.uk/your-council/privacy/" title="Read our privacy statement">Privacy statement</a></MenuItem>
+                    <MenuItem><a href="https://www.buckscc.gov.uk/services/council-and-democracy/privacy-policy/" title="Read our privacy statement">Privacy statement</a></MenuItem>
                     <MenuItem><a href="https://www.buckinghamshire.gov.uk/community-and-safety/modern-slavery-statement/" title="Read our modern slavery statement">Modern slavery statement</a></MenuItem>
                 </Menu>
-                <p>&copy; <a href="https://www.buckinghamshire.gov.uk/" target="_blank" title="View the Bucks website">Buckinghamshire County Council</a></p>
+                <p>&copy; <a href="http://buckscc.gov.uk" target="_blank" title="View the Bucks website">Buckinghamshire County Council</a></p>
             </InnerLeft>
             <InnerRight>
                 <h4>Get in touch</h4>
@@ -86,7 +85,7 @@ const Footer = () =>
                     <MenuItem><a href="mailto:adoption@buckinghamshire.gov.uk" target="_blank">Email our team</a>,
                     <br/> or call us on { isMobileDevice() ? <a href="tel:01494 586 349">01494 586 349</a> : "01494 586 349"}</MenuItem>
                     <br/>
-                    <MenuItem><a target="_blank" href="https://www.buckinghamshire.gov.uk/your-council/contact-us/" title="Get in contact with the council">Contact Buckinghamshire</a></MenuItem>
+                    <MenuItem><a target="_blank" href="https://www.buckscc.gov.uk/services/contact-and-complaints/contact-us/" title="Get in contact with the council">Contact Buckinghamshire</a></MenuItem>
                     <br/>
                     <MenuItem><a target="_blank" href="https://en-gb.facebook.com/adoptionbucks/" title="Find us on Facebook">Facebook</a></MenuItem>
                     <MenuItem><a target="_blank" href="https://twitter.com/bucksadoption" title="Find us on Twitter">Twitter</a></MenuItem>

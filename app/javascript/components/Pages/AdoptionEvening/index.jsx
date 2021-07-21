@@ -26,7 +26,6 @@ export default ({
       headline={title}
       deck={strapline}
       image={heroimage}
-      alt="Mother holding a baby showing information on a tablet to another young child"
       breadcrumbs={[
         {
           href: "/",

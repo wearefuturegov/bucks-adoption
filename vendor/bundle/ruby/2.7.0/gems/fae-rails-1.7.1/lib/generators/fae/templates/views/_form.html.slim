@@ -1,0 +1,20 @@
+= simple_form_for(['admin', @item]) do |f|
+  header.content-header.js-content-header
+    == render 'fae/shared/form_header', header: @klass_name
+  == render 'fae/shared/errors'
+
+  main.content
+<% @form_attrs.each do |attr| -%>
+    = fae_input f, :<%= attr %>
+<% end -%>
+
+<% @association_names.each do |attr| -%>
+    = fae_association f, :<%= attr %>
+<% end -%>
+<% @attachments.each do |attachment| %>
+<% if attachment.type == :image -%>
+    = fae_image_form f, :<%= attachment.name -%>
+<% elsif attachment.type == :file -%>
+    = fae_file_form f, :<%= attachment.name -%>
+<% end -%>
+<% end -%>

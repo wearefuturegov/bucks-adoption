@@ -62,7 +62,6 @@ const Home = ({
         image={heroimage}
         cta="Get started"
         handleRefClick={handleRefClick}
-        alt="Female doing a high five with a child"
       />
       <div id="home-body-content" ref={ref}>
         <div className="bold-body"><Markdown>{body}</Markdown></div>
