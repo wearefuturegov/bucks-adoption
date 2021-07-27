@@ -18,6 +18,7 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'dotenv-rails', groups: [:development, :test]
 
+gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
