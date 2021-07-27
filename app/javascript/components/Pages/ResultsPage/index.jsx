@@ -62,8 +62,8 @@ const ResultsPage = ({
    skills_title
  }) => {
 
-  const [childrenResultsStored, setchildrenResultsStored] = useStateWithLocalStorage("results_topic_children");
   const [familyResultsStored, setFamilyResultsStored] = useStateWithLocalStorage("results_topic_family");
+  const [childrenResultsStored, setchildrenResultsStored] = useStateWithLocalStorage("results_topic_children");
   const [homeResultsStored, setHomeResultsStored] = useStateWithLocalStorage("results_topic_home");
   const [healthResultsStored, setHealthResultsStored] = useStateWithLocalStorage("results_topic_lifestyle");
   const [timeResultsStored, setTimeResultsStored] = useStateWithLocalStorage("results_topic_time");
