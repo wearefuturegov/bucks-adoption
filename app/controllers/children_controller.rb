@@ -1,6 +1,6 @@
-class FamilyController < ApplicationController
+class ChildrenController < ApplicationController
   def index
-    @familyTopicContent = FamilyTopicQuestion.all
+    @childrenTopicContent = ChildrenTopicQuestion.all
     @healthContent = LifestyleContentPage.instance
     @timeContent = TimeContentPage.instance
     @childrenContent = ChildrenContentPage.instance

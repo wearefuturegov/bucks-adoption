@@ -28,6 +28,8 @@ const TopicQuestionnairePage = ({
   healthintro,
   familytitle,
   familyintro,
+  childrentitle,
+  childrenintro,
   hometitle,
   homeintro,
   timetitle,
@@ -141,6 +143,9 @@ const TopicQuestionnairePage = ({
 
               familytitle={familytitle}
               familyintro={familyintro}
+              
+              childrentitle={childrentitle}
+              childrenintro={childrenintro}
 
               skillstitle={skillstitle}
               skillsintro={skillsintro}

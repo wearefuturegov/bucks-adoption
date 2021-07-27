@@ -19,6 +19,7 @@ const ProgressBar = () => {
   const [homeResultsStored, setHomeResultsStored] = useStateWithLocalStorage("results_topic_home");
   const [healthResultsStored, setHealthResultsStored] = useStateWithLocalStorage("results_topic_lifestyle");
   const [timeResultsStored, setTimeResultsStored] = useStateWithLocalStorage("results_topic_time");
+  const [childrenResultsStored, setchildrenResultsStored] = useStateWithLocalStorage("results_topic_children");
   const [skillsResultsStored, setSkillsResultsStored] = useStateWithLocalStorage("results_topic_skills");
   var completedCount = 0;
   var nextSection = null;
@@ -43,6 +44,11 @@ const ProgressBar = () => {
     completedCount++;
   } else {
     nextSection = "family";
+  }
+  if (childrenResultsStored) {
+    completedCount++;
+  } else {
+    nextSection = "children";
   }
   if (homeResultsStored) {
     completedCount++;

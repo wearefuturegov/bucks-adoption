@@ -36,6 +36,7 @@ export default {
 
     health: "#98D9CA",
     family: "#F7ADB6",
+    children: "#f7e9a5",
     skills: "#BBEAFA",
     home: "#FAC9A3",
     time: "#A9BAE1",

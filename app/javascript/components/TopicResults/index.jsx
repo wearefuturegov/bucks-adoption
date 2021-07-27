@@ -10,6 +10,8 @@ const TopicResults = ({
     healthintro,
     familytitle,
     familyintro,
+    childrentitle,
+    childrenintro,
     hometitle,
     homeintro,
     timetitle,
@@ -44,6 +46,9 @@ const TopicResults = ({
 
                     familytitle={familytitle}
                     familyintro={familyintro}
+
+                    childrentitle={childrentitle}
+                    childrenintro={childrenintro}
 
                     skillstitle={skillstitle}
                     skillsintro={skillsintro}
