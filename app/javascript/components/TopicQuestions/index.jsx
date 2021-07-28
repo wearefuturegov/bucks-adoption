@@ -50,7 +50,10 @@ const TopicQuestions = ({
         } else {
             setResults(replaceAt(results, (id-1), [e.target.value].toString()))
         }
-        scrollToRef(questionRef)
+        
+        setTimeout(function() {
+            scrollToRef(questionRef)
+        }.bind(this), 100)
     }
 
     return(
