@@ -26,8 +26,11 @@ const Outer = styled.footer`
             background: ${theme.focus};
         }
     }
-    h4 {
+    p {
         margin-bottom: 5px;
+    }
+    .bold {
+        font-weight: bold;
     }
 `
 const Inner = styled.div`
@@ -80,7 +83,7 @@ const Footer = () =>
                 <p>&copy; <a href="https://www.buckinghamshire.gov.uk/" target="_blank" title="View the Bucks website">Buckinghamshire County Council</a></p>
             </InnerLeft>
             <InnerRight>
-                <h4>Get in touch</h4>
+                <p className="bold">Get in touch</p>
 
                 <Menu>
                     <MenuItem><a href="mailto:adoption@buckinghamshire.gov.uk" target="_blank">Email our team</a>,

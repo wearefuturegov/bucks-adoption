@@ -99,6 +99,8 @@ const ResultsPage = ({
       <PageBodyContent
         backgroundColor={theme.background}
       >
+      <h2 className="visually-hidden">Your actions:</h2>
+
       <TopicCard title="Come to an information event" intro="<p>If you want to learn more about adoption, come along to hear from adopters and meet our team.</p>">
         <Button href="/pages/informationevent">See upcoming events</Button>
       </TopicCard>

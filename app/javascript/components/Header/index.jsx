@@ -41,7 +41,7 @@ const Logo = styled.img`
     margin-right: 15px;
 `
 
-const ServiceName = styled.h1`
+const ServiceName = styled.p`
     font-size: 1.3em;
     margin-top: 3px;
     font-weight: 500;
