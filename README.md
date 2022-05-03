@@ -14,15 +14,14 @@ It:
 
 ## Prerequisites
 
-- `node` and `npm`
+- `node` and `yarn`
 - `ruby 2.4.1`
 - `rails 5.2`
 
 ## Running it locally
 
 1. Clone the repo and install ruby dependencies with `bundle install`
-2. a) Then, install front-end dependencies with `npm install`
-2. b) For some reason it may also ask that you run a install for yarn, not entirely sure why `yarn install` if it does then do it, if not then great
+2. Then, install front-end dependencies with `yarn install`
 3. Set the environment config as needed:
   - `EVENTBRITE_SECRET` to use the Eventbrite API to show events
   - `GOVUK_NOTIFY_API_KEY` to use the Notify API to send emails
