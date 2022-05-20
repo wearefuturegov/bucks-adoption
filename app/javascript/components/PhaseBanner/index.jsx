@@ -52,11 +52,11 @@ const StyledLink = styled.a`
 `
 
 
-const PhaseBanner = () =>
+const PhaseBanner = ({bannerTag, ledeText, bannerText}) =>
     <Outer className="covid">
         <Inner>
-            <Tag>Coronavirus</Tag>
-            <p><strong>We are still open (remotely) and taking on new adopters.</strong> Explore this checker and get in touch.</p>
+            <Tag>{bannerTag}</Tag>
+            <p><strong>{ledeText}</strong> {bannerText} </p>
             {/* <Tag>Beta</Tag>
             <p>This is a new website - <StyledLink href="https://forms.gle/ty9AEZa8iirxBLGD8">your feedback</StyledLink> will help us improve it.</p> */}
         </Inner>

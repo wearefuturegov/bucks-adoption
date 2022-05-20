@@ -39,7 +39,10 @@ const Home = ({
   timeTitle,
   familyTitle,
   skillsTitle,
-  homeTitle
+  homeTitle,
+  banner_tag,
+  lede_text,
+  banner_text
 }) => {
   const ref = createRef();
   const handleRefClick = () =>
@@ -55,7 +58,11 @@ const Home = ({
   const [skillsResultsStored, setSkillsResultsStored] = useStateWithLocalStorage("results_topic_skills")
 
   return(
-    <Layout>
+    <Layout 
+    bannerTag={banner_tag}
+    ledeText={lede_text}
+    bannerText={banner_text}
+    >
       <HeroWithImage
         headline={title}
         deck={strapline}
