@@ -23,19 +23,19 @@ It:
 1. Clone the repo and install ruby dependencies with `bundle install`
 2. Then, install front-end dependencies with `yarn install`
 3. Set the environment config as needed:
-  - `EVENTBRITE_SECRET` to use the Eventbrite API to show events
-  - `GOVUK_NOTIFY_API_KEY` to use the Notify API to send emails
-  - `GOVUK_NOTIFY_TEMPLATE_ID` to tell Notify which template to use
-  - `GA_TRACKING_ID` to send analytics
-  - `SENTRY_DSN` to send error reports to Sentry
+
+- `EVENTBRITE_SECRET` to use the Eventbrite API to show events
+- `GOVUK_NOTIFY_API_KEY` to use the Notify API to send emails
+- `GOVUK_NOTIFY_TEMPLATE_ID` to tell Notify which template to use
+- `GA_TRACKING_ID` to send analytics
+- `SENTRY_DSN` to send error reports to Sentry
+
 4. Set up the databases with `rake db:setup`
 5. Set up FaeCMS with `rake fae:seed_db`
 6. `rails s` to start
-7. The app will be available on port 3000 - You will probably see an error message when you first see it, this is because there is no content yet (we should probably fix this) if you already have a database with content then you are done and you can skip the next steps!
-8. Go to `/admin` which should now, as long as you completed step 5, take you to set up the first user - go create an admin account and then log in. 
-9. You will need to add some content for the various elements of the home page and results page, such as the headline, you will also need to add some content for each of the topics pages as well. These will get all the apps pages working without any errors.
-10. While the app should be working you will also need to add questions for each of the topics in order for the flow to work.
-
+7. The app will be available on port 3000
+8. Go to `/admin` which should now, as long as you completed step 5, take you to set up the first user - go create an admin account and then log in.
+9. While the app should be working you will also need to add questions for each of the topics in order for the flow to work.
 
 ## Fae CMS
 

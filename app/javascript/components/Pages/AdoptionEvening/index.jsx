@@ -50,7 +50,7 @@ export default ({
       headline="What should I expect?"
     >
       <UserContent>
-        <Markdown>{body}</Markdown>
+        <Markdown>{body || ''}</Markdown>
       </UserContent>
     </PageBodyContent>
   </Layout>
