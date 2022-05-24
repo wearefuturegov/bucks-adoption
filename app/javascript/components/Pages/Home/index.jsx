@@ -1,7 +1,6 @@
 import React, { useEffect, useState, createRef } from "react"
 import Markdown from 'markdown-to-jsx'
 import Layout from "../../Layout"
-import heroimage from "./hero.jpg"
 import HeroWithImage from "../../HeroWithImage"
 import NarrowCallToAction from "../../NarrowCallToAction"
 import CallToAction from "../../CallToAction"
@@ -39,7 +38,9 @@ const Home = ({
   timeTitle,
   familyTitle,
   skillsTitle,
-  homeTitle
+  homeTitle,
+  hero_image,
+  hero_alt
 }) => {
   const ref = createRef();
   const handleRefClick = () =>
@@ -59,10 +60,10 @@ const Home = ({
       <HeroWithImage
         headline={title}
         deck={strapline}
-        image={heroimage}
+        image={hero_image}
         cta="Get started"
         handleRefClick={handleRefClick}
-        alt="Female doing a high five with a child"
+        alt={hero_alt}
       />
       <div id="home-body-content" ref={ref}>
         <div className="bold-body"><Markdown>{body}</Markdown></div>
