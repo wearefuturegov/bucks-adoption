@@ -1,4 +1,4 @@
-<% content_for( :title, "Health") %>
+<% content_for( :title, @healthContent.title) %>
 <%= react_component("Pages/TopicQuestionnairePage", {
   title: @healthContent.title,
   intro: @healthContent.introduction.content,

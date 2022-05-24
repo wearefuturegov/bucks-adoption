@@ -1,4 +1,4 @@
-<% content_for( :title, "Family") %>
+<% content_for( :title, @familyContent.title) %>
 <%= react_component("Pages/TopicQuestionnairePage", {
   body: @familyContent.body.content,
   questions: @familyTopicContent,
