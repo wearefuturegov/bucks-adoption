@@ -7,6 +7,7 @@ class StaticPagesController < ApplicationController
     # static pages
     @sitehome = AdoptionHomePage.instance
     @adopteve = BookAdoptionEvePage.instance
+    @rootSettings = RootSettingsPage.instance
 
     # tool content sections
     @healthContent = LifestyleContentPage.instance

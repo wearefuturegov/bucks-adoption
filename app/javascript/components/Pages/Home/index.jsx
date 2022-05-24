@@ -41,7 +41,9 @@ const Home = ({
   homeTitle,
   banner,
   hero_image,
-  hero_alt
+  hero_alt,
+  logo,
+  altLogo
 }) => {
   const ref = createRef();
   const handleRefClick = () =>
@@ -57,7 +59,7 @@ const Home = ({
   const [skillsResultsStored, setSkillsResultsStored] = useStateWithLocalStorage("results_topic_skills")
 
   return(
-    <Layout 
+    <Layout logo={logo} altLogo={altLogo} 
     banner={banner}
     >
       <HeroWithImage
