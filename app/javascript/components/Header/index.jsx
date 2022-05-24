@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import logo from "./logo.svg"
 import theme from "../_theme"
 import { Container, Button } from "./MobileMenu"
 import ProgressBar from "../ProgressBar"
@@ -107,14 +106,16 @@ const MenuItems = () =>
         <MenuItem href="/pages/informationevent">Attend an event</MenuItem>
     </>
 
-const SiteHeader = () => {
+const SiteHeader = ({logo, altLogo}) => {
     const [menuOpen, toggleMenu] = useState(false)
 
     return(
         <Outer>
             <Inner>
                 <MastheadLink href="/">
-                    <Logo src={logo} alt="Buckinghamshire County Council"/>
+                    {
+                        logo && <Logo src={logo} alt={altLogo} />
+                    }
                     <ServiceName>Adoption</ServiceName>
                 </MastheadLink>
                 <Nav>

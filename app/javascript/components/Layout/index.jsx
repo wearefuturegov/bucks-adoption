@@ -53,10 +53,10 @@ const GlobalStyle = createGlobalStyle`
     }
 
 `
-const Layout = ({ children }) =>
+const Layout = ({ children, logo, altLogo }) =>
     <>
         <GlobalStyle/>
-        <Header/>
+        <Header logo={logo} altLogo={altLogo}/>
         <PhaseBanner/>
         {children}
         <Footer/>
