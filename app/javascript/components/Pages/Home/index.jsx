@@ -62,7 +62,6 @@ const Home = ({
       behavior: 'smooth',
       block: 'start',
     });
-
   const [familyResultsStored, setFamilyResultsStored] = useStateWithLocalStorage("results_topic_family")
   const [homeResultsStored, setHomeResultsStored] = useStateWithLocalStorage("results_topic_home")
   const [healthResultsStored, setHealthResultsStored] = useStateWithLocalStorage("results_topic_lifestyle")
@@ -93,14 +92,18 @@ const Home = ({
             deck: homeContent.kicker || homeContent.introduction,
             href: "/home/index",
             borderColor: theme.cultural,
-            completed: homeResultsStored
+            completed: homeResultsStored,
+            startTopic: homeStartTopic,
+            completedTopic: homeCompletedTopic
           },
           {
             headline: familyTitle,
             deck: familyContent.kicker || familyContent.introduction,
             href: "/family/index",
             borderColor: theme.support,
-            completed: familyResultsStored
+            completed: familyResultsStored,
+            startTopic: familyStartTopic,
+            completedTopic: familyCompletedTopic
           },
           {
             headline: skillsTitle,
@@ -116,14 +119,18 @@ const Home = ({
             deck: healthContent.kicker || healthContent.introduction,
             href: "/health/index",
             borderColor: theme.active,
-            completed: healthResultsStored
+            completed: healthResultsStored,
+            startTopic: healthStartTopic,
+            completedTopic: healthCompletedTopic
           },
           {
             headline: timeTitle,
             deck: timeContent.kicker || timeContent.introduction,
             href: "/time/index",
             borderColor: theme.social,
-            completed: timeResultsStored
+            completed: timeResultsStored,
+            startTopic: timeStartTopic,
+            completedTopic: timeCompletedTopic
           },
 
         ]}
