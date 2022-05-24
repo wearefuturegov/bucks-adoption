@@ -44,7 +44,17 @@ const Home = ({
   hero_image,
   hero_alt,
   logo,
-  altLogo
+  altLogo,
+  healthStartTopic,
+  healthCompletedTopic,
+  timeStartTopic,
+  timeCompletedTopic,
+  familyStartTopic,
+  familyCompletedTopic,
+  skillsStartTopic,
+  skillsCompletedTopic,
+  homeStartTopic,
+  homeCompletedTopic,
 }) => {
   const ref = createRef();
   const handleRefClick = () =>
@@ -52,13 +62,11 @@ const Home = ({
       behavior: 'smooth',
       block: 'start',
     });
-
   const [familyResultsStored, setFamilyResultsStored] = useStateWithLocalStorage("results_topic_family")
   const [homeResultsStored, setHomeResultsStored] = useStateWithLocalStorage("results_topic_home")
   const [healthResultsStored, setHealthResultsStored] = useStateWithLocalStorage("results_topic_lifestyle")
   const [timeResultsStored, setTimeResultsStored] = useStateWithLocalStorage("results_topic_time")
   const [skillsResultsStored, setSkillsResultsStored] = useStateWithLocalStorage("results_topic_skills")
-
   return(
     <Layout logo={logo} altLogo={altLogo} 
     banner={banner}
@@ -84,35 +92,45 @@ const Home = ({
             deck: homeContent.kicker || homeContent.introduction,
             href: "/home/index",
             borderColor: theme.cultural,
-            completed: homeResultsStored
+            completed: homeResultsStored,
+            startTopic: homeStartTopic,
+            completedTopic: homeCompletedTopic
           },
           {
             headline: familyTitle,
             deck: familyContent.kicker || familyContent.introduction,
             href: "/family/index",
             borderColor: theme.support,
-            completed: familyResultsStored
+            completed: familyResultsStored,
+            startTopic: familyStartTopic,
+            completedTopic: familyCompletedTopic
           },
           {
             headline: skillsTitle,
             deck: skillsContent.kicker || skillsContent.introduction,
             href: "/skills/index",
             borderColor: theme.learning,
-            completed: skillsResultsStored
+            completed: skillsResultsStored,
+            startTopic: skillsStartTopic,
+            completedTopic: skillsCompletedTopic
           },
           {
             headline: healthTitle,
             deck: healthContent.kicker || healthContent.introduction,
             href: "/health/index",
             borderColor: theme.active,
-            completed: healthResultsStored
+            completed: healthResultsStored,
+            startTopic: healthStartTopic,
+            completedTopic: healthCompletedTopic
           },
           {
             headline: timeTitle,
             deck: timeContent.kicker || timeContent.introduction,
             href: "/time/index",
             borderColor: theme.social,
-            completed: timeResultsStored
+            completed: timeResultsStored,
+            startTopic: timeStartTopic,
+            completedTopic: timeCompletedTopic
           },
 
         ]}
