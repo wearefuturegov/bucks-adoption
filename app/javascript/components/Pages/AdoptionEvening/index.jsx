@@ -1,7 +1,6 @@
 import React from "react"
 import Markdown from 'markdown-to-jsx'
 import Layout from "../../Layout"
-import heroimage from "./bookevening.jpg"
 import HeroWithImage from "../../HeroWithImage"
 import EveningList from "../../EveningList"
 import PageBodyContent, { UserContent } from "../../PageBodyContent"
@@ -20,14 +19,16 @@ export default ({
   cta_button,
   body,
   events,
-  banner
+  banner,
+  hero_image,
+  hero_alt
 }) =>
   <Layout withHeader withFooter banner={banner}>
     <HeroWithImage
       headline={title}
       deck={strapline}
-      image={heroimage}
-      alt="Mother holding a baby showing information on a tablet to another young child"
+      image={hero_image}
+      alt={hero_alt}
       breadcrumbs={[
         {
           href: "/",
