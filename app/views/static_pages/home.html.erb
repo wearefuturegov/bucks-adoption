@@ -1,6 +1,6 @@
-<% content_for( :title, "Get ready for adoption") %>
+<% content_for( :title, @sitehome.title) %>
 <%= react_component("Pages/Home", {
-
+  
   title: @sitehome.headline.content,
   strapline: @sitehome.strapline.content,
   banner_tag: @sitehome.banner_tag.content,
