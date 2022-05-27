@@ -36,6 +36,7 @@ It:
 7. The app will be available on port 3000
 8. Go to `/admin` which should now, as long as you completed step 5, take you to set up the first user - go create an admin account and then log in.
 9. While the app should be working you will also need to add questions for each of the topics in order for the flow to work.
+10. Try to upload an image in the Adoption Home. If you get an error do `brew install imagemagick`.
 
 ## Fae CMS
 
