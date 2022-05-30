@@ -57,7 +57,10 @@ const Layout = ({ children }) =>
     <>
         <GlobalStyle/>
         <Header/>
-        <PhaseBanner/>
+        {
+            bannerTag || ledeText || bannerTag &&
+        <PhaseBanner bannerTag={bannerTag} ledeText={ledeText} bannerText={bannerText} />
+    }
         {children}
         <Footer/>
     </>
