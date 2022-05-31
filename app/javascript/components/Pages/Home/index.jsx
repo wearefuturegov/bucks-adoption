@@ -42,7 +42,9 @@ const Home = ({
   homeTitle,
   banner_tag,
   lede_text,
-  banner_text
+  banner_text,
+  logo,
+  altLogo
 }) => {
   const ref = createRef();
   const handleRefClick = () =>
@@ -62,6 +64,8 @@ const Home = ({
     bannerTag={banner_tag}
     ledeText={lede_text}
     bannerText={banner_text}
+    logo={logo} 
+    altLogo={altLogo}
     >
       <HeroWithImage
         headline={title}
