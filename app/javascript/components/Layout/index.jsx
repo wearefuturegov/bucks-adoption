@@ -58,7 +58,7 @@ const Layout = ({ children }) =>
         <GlobalStyle/>
         <Header/>
         {
-            bannerTag || ledeText || bannerTag &&
+            (bannerTag || ledeText || bannerText) &&
         <PhaseBanner bannerTag={bannerTag} ledeText={ledeText} bannerText={bannerText} />
     }
         {children}
