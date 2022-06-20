@@ -40,9 +40,7 @@ const Home = ({
   familyTitle,
   skillsTitle,
   homeTitle,
-  banner_tag,
-  lede_text,
-  banner_text
+  banner
 }) => {
   const ref = createRef();
   const handleRefClick = () =>
@@ -59,9 +57,7 @@ const Home = ({
 
   return(
     <Layout 
-    bannerTag={banner_tag}
-    ledeText={lede_text}
-    bannerText={banner_text}
+    banner={banner}
     >
       <HeroWithImage
         headline={title}
