@@ -1,15 +1,14 @@
 import React from "react"
 import Layout from "../../Layout"
 import Markdown from 'markdown-to-jsx'
-import "./style.scss"
 
-const AccessibilityPage = ({logo, altLogo, accessibility}) =>{
+const AboutPage = ({about}) =>{
 
     return(
-        <Layout withHeader withFooter logo={logo} altLogo={altLogo}>
+        <Layout withHeader withFooter>
             <div className="container">
                 <div className="two-thirds">
-                    <Markdown>{accessibility}</Markdown>
+                    <Markdown>{about}</Markdown>
                 </div>
             </div>
 
@@ -19,4 +18,4 @@ const AccessibilityPage = ({logo, altLogo, accessibility}) =>{
     )
 }
 
-export default AccessibilityPage
+export default AboutPage
