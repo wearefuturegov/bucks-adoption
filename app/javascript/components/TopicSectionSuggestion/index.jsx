@@ -26,6 +26,8 @@ const TopicSectionSuggestion = ({
     timeintro,
     skillstitle,
     skillsintro,
+    childrentitle,
+    childrenintro,
     currentSection,
     allComplete }) => {
   const family = "results_topic_family";
@@ -33,16 +35,19 @@ const TopicSectionSuggestion = ({
   const health = "results_topic_lifestyle";
   const time = "results_topic_time";
   const skills = "results_topic_skills";
+  const children = "results_topic_children";
   const [familyResultsStored, setFamilyResultsStored] = useStateWithLocalStorage(family);
   const [homeResultsStored, setHomeResultsStored] = useStateWithLocalStorage(home);
   const [healthResultsStored, setHealthResultsStored] = useStateWithLocalStorage(health);
   const [timeResultsStored, setTimeResultsStored] = useStateWithLocalStorage(time);
   const [skillsResultsStored, setSkillsResultsStored] = useStateWithLocalStorage(skills);
+  const [childrenResultsStored, setChildrenResultsStored] = useStateWithLocalStorage(children);
   var amountComplete = 0;
   if(healthResultsStored.length) { amountComplete++; }
   if(timeResultsStored.length) { amountComplete++; }
   if(familyResultsStored.length) { amountComplete++; }
   if(skillsResultsStored.length) { amountComplete++; }
+  if(childrenResultsStored.length) { amountComplete++; }
   if(homeResultsStored.length) { amountComplete++; }
     return(
         <>
@@ -53,6 +58,8 @@ const TopicSectionSuggestion = ({
               <Button href="/family/index">Next topic</Button>
             ) : skills != currentSection && !skillsResultsStored.length ? (
               <Button href="/skills/index">Next topic</Button>
+            ) : children != currentSection && !childrenResultsStored.length ? (
+              <Button href="/children/index">Next topic</Button>
             ) : health != currentSection && !healthResultsStored.length ? (
               <Button href="/health/index">Next topic</Button>
             ) : time != currentSection && !timeResultsStored.length ? (

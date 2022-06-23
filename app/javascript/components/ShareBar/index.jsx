@@ -93,11 +93,13 @@ const ShareBar = ({
             time_questions,
             family_questions,
             skills_questions,
+            children_questions,
             home_questions,
             healthResultsStored,
             timeResultsStored,
             familyResultsStored,
             skillsResultsStored,
+            childrenResultsStored,
             homeResultsStored,
             token
         }) => {
@@ -121,12 +123,14 @@ const ShareBar = ({
             time_questions,
             family_questions,
             skills_questions,
+            children_questions,
             home_questions
           ], [
             healthResultsStored,
             timeResultsStored,
             familyResultsStored,
             skillsResultsStored,
+            childrenResultsStored,
             homeResultsStored
           ],
           token,

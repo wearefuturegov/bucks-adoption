@@ -34,6 +34,8 @@ const TopicQuestionnairePage = ({
   timeintro,
   skillstitle,
   skillsintro,
+  childrentitle,
+  childrenintro,
   title,
   intro,
   body,
@@ -157,6 +159,9 @@ const TopicQuestionnairePage = ({
 
               skillstitle={skillstitle}
               skillsintro={skillsintro}
+
+              childrentitle={childrentitle}
+              childrenintro={childrenintro}
 
               hometitle={hometitle}
               homeintro={homeintro} />
