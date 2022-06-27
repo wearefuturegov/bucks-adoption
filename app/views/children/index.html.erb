@@ -1,5 +1,8 @@
 <% content_for( :title, "Children") %>
 <%= react_component("Pages/TopicQuestionnairePage", {
+
+  title: @childrenContent.title,
+  intro: @childrenContent.introduction.content,
   body: @childrenContent.body.content,
   questions: @childrenTopicContent,
   topicID: "results_topic_children",
@@ -10,8 +13,6 @@
   timetitle: @timeContent.title,
   timeintro: @timeContent.introduction.content,
 
-  title: @familyContent.title,
-  intro: @familyContent.introduction.content,
   familytitle: @familyContent.title,
   familyintro: @familyContent.introduction.content,
 
@@ -27,4 +28,4 @@
   hometitle: @homeContent.title,
   homeintro: @homeContent.introduction.content,
 
-  backgroundcolor: "#f7adb630" }) %>
+  backgroundcolor: "#e3658830" }) %>

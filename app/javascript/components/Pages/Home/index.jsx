@@ -84,7 +84,6 @@ const Home = ({
       </div>
 
       <h2 className="visually-hidden">Choose a topic</h2>
-
       <CardGrid
         cards={[
           {
