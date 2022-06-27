@@ -39,6 +39,7 @@ export default {
     skills: "#BBEAFA",
     home: "#FAC9A3",
     time: "#A9BAE1",
+    children: "#E36588",
 
     maxWidth: "1000px",
 

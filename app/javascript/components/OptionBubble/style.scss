@@ -39,6 +39,9 @@
     &.option-bubble__label--home{
         background-color: darken($home, 30)
     }
+    &.option-bubble__label--children{
+        background-color: darken($children, 30)
+    }
     &.option-bubble__label--time{
         background-color: darken($time, 30)
     }
@@ -124,6 +127,9 @@ a.option-bubble {
 }
 .option-bubble__label--home{
     background-color: transparentize($home, 0.3);
+}
+.option-bubble__label--children{
+    background-color: transparentize($children, 0.3);
 }
 .option-bubble__label--time{
     background-color: transparentize($time, 0.3);
