@@ -20,7 +20,7 @@ const ProgressBar = () => {
   const [healthResultsStored, setHealthResultsStored] = useStateWithLocalStorage("results_topic_lifestyle");
   const [timeResultsStored, setTimeResultsStored] = useStateWithLocalStorage("results_topic_time");
   const [skillsResultsStored, setSkillsResultsStored] = useStateWithLocalStorage("results_topic_skills");
-  const [childrenResultsStored, setchildrenResultsStored] = useStateWithLocalStorage("results_topic_children");
+  const [childrenResultsStored, setChildrenResultsStored] = useStateWithLocalStorage("results_topic_children");
   var completedCount = 0;
   var nextSection = null;
 
