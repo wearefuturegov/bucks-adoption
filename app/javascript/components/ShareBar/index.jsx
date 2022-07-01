@@ -57,6 +57,10 @@ const Input = styled.input`
     padding: 12px 20px;
     border-radius: 100px 0 0 100px;
     border: none;
+    &:focus{
+        outline: none;
+        box-shadow: 0px 0px 0px 3px ${theme.focus};
+    }
 `
 
 const Button = styled.button`
@@ -68,6 +72,10 @@ const Button = styled.button`
     font-size: 1em;
     font-weight: bold;
     text-align: center;
+    &:focus{
+        outline: none;
+        box-shadow: 0px 0px 0px 3px ${theme.focus};
+    }
     @media screen and (min-width: ${theme.tablet}){
         padding: 12px 30px;
     }
