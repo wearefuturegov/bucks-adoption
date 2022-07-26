@@ -31,10 +31,10 @@ const TopicSectionSuggestion = ({ currentSection }) => {
 
   let amountComplete = 0;
 
-  const arr = [healthResultsStored, timeResultsStored, familyResultsStored, skillsResultsStored, childrenResultsStored, homeResultsStored]
+  const allTopicResults = [healthResultsStored, timeResultsStored, familyResultsStored, skillsResultsStored, childrenResultsStored, homeResultsStored]
 
-  for (let i = 0; i < arr.length; i++) {
-    if (i.length) {
+  for (let i = 0; i < allTopicResults.length; i++) {
+    if (allTopicResults[i].length) {
       amountComplete++
     }
   }
@@ -62,7 +62,7 @@ const TopicSectionSuggestion = ({ currentSection }) => {
             )
           ) :null
         }
-        { amountComplete == 6 ? (
+        { amountComplete == allTopicResults.length ? (
           <Button href="/results/index">View your plan</Button>
         ) :null}
 
