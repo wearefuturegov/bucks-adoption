@@ -19,9 +19,10 @@ export default ({
   cta_text,
   cta_button,
   body,
-  events
+  events,
+  banner
 }) =>
-  <Layout withHeader withFooter>
+  <Layout withHeader withFooter banner={banner}>
     <HeroWithImage
       headline={title}
       deck={strapline}

@@ -57,7 +57,8 @@ const ResultsPage = ({
    time_questions,
    time_title,
    skills_questions,
-   skills_title
+   skills_title,
+   banner
  }) => {
 
   const [familyResultsStored, setFamilyResultsStored] = useStateWithLocalStorage("results_topic_family");
@@ -69,7 +70,7 @@ const ResultsPage = ({
   // const [shareDialogOpen, toggleShareDialog] = useState(false)
 
   return(
-    <Layout>
+    <Layout banner={banner}>
       <HeroWithColor
         backgroundColor="white"
         headline={title} deck={strapline} breadcrumbs={[
