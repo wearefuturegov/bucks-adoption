@@ -55,8 +55,7 @@ const Home = ({
   homeStartTopic,
   homeCompletedTopic,
   banner,
-  childrenTitle,
-  homeTitle
+  childrenTitle
 }) => {
   const ref = createRef();
   const handleRefClick = () =>
