@@ -47,8 +47,6 @@ const CardGrid = ({
                         href={card.href}
                         borderColor={card.borderColor}
                         completed={card.completed}
-                        startTopic={card.startTopic}
-                        completedTopic={card.completedTopic}
                     />
                 )}
             </Grid>

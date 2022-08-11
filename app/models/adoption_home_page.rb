@@ -8,14 +8,13 @@ class AdoptionHomePage < Fae::StaticPage
       headline: { type: Fae::TextArea },
       strapline: { type: Fae::TextArea },
       hero_image: { type: Fae::Image },
-      banner: { type: Fae::TextArea },
+      banner_tag: { type: Fae::TextField },
+      lede_text: { type: Fae::TextField },
+      banner_text: { type: Fae::TextField },
       body: { type: Fae::TextArea },
       cta_title: { type: Fae::TextField },
       cta_text: { type: Fae::TextField },
-      cta_button: { type: Fae::TextField },
-      about: { type: Fae::TextArea },
-      cookies: { type: Fae::TextArea },
-      accessibility: { type: Fae::TextArea }
+      cta_button: { type: Fae::TextField }
     }
   end
 

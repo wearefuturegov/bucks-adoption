@@ -34,22 +34,14 @@ const TopicQuestionnairePage = ({
   timeintro,
   skillstitle,
   skillsintro,
-  childrentitle,
-  childrenintro,
   title,
   intro,
   body,
   questions,
   topicID,
-  backgroundcolor, 
-  successtext, 
-  savebutton,
-  finalresulttitle,
-  results,
-  resultslink
-}) => {
+  backgroundcolor}) => {
 
-  const [topicResults, setTopicResults] = useState([]);
+  const [results, setResults] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(1)
   const [resultsStored, setResultsStored] = useStateWithLocalStorage(topicID);
 
@@ -58,12 +50,12 @@ const TopicQuestionnairePage = ({
 
   const handleRestartClick = () => {
     setResultsStored('')
-    setTopicResults('')
+    setResults('')
     setCurrentQuestion(1)
     scrollToRef(topRef)
   }
   const handleSave = () => {
-    setResultsStored(topicResults)
+    setResultsStored(results)
   }
 
   return(
@@ -96,7 +88,6 @@ const TopicQuestionnairePage = ({
             <div className="topic-questionnaire_questions">
               {questions.map(question => {
                 const { position, title, answer_1, answer_2, answer_3, action_title } = question;
-
                 return (
                   <TopicQuestions
                     key={position}
@@ -107,21 +98,20 @@ const TopicQuestionnairePage = ({
                     setCurrentQuestion={setCurrentQuestion}
                     questionsLength={questions.length}
                     topicID={topicID}
-                    results={topicResults}
-                    setResults={setTopicResults}
+                    results={results}
+                    setResults={setResults}
                     resultsStored={resultsStored}
                     setResultsStored={setResultsStored}
                     scrollToRef={scrollToRef}
-                    type={topicID}
-                    />
+                    type={topicID} />
                 );
               })}
               {
                 ((questions.length+1) <= currentQuestion) ?
                   <div className="topic-questionnaire_end">
-                    <p>{successtext}</p>
+                    <p>Great, you have completed the {title} topic.</p>
                     <div className="centered-button">
-                      <Button onClick={handleSave}>{savebutton}</Button>
+                      <Button onClick={handleSave}>Save and continue</Button>
                     </div>
                   </div>
                 :null
@@ -142,9 +132,6 @@ const TopicQuestionnairePage = ({
               resultsArray={resultsStored.split('')}
               questions={questions}
               type={topicID}
-              results={results}
-              finalresulttitle={finalresulttitle}
-              resultslink={resultslink}
 
               healthtitle={healthtitle}
               healthintro={healthintro}
@@ -157,9 +144,6 @@ const TopicQuestionnairePage = ({
 
               skillstitle={skillstitle}
               skillsintro={skillsintro}
-
-              childrentitle={childrentitle}
-              childrenintro={childrenintro}
 
               hometitle={hometitle}
               homeintro={homeintro} />

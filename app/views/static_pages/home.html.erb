@@ -5,11 +5,13 @@
   hero_image: @sitehome.hero_image.asset.thumb.url,
   hero_alt: @sitehome.hero_image.alt,
   strapline: @sitehome.strapline.content,
-  banner: @sitehome.banner&.content,
+  banner_tag: @sitehome.banner_tag.content,
+  lede_text: @sitehome.lede_text.content,
+  banner_text: @sitehome.banner_text.content,
   body: @sitehome.body.content,
   
-  logo: @rootSettings.logo&.asset&.thumb&.url,
-  altLogo: @rootSettings.logo&.alt,
+  logo: @rootSettings.logo.asset.thumb.url,
+  altLogo: @rootSettings.logo.alt,
 
   cta_title: @sitehome.cta_title&.content,
   cta_text: @sitehome.cta_text&.content,
@@ -17,30 +19,17 @@
 
   healthContent: @healthContent,
   healthTitle: @healthContent.title,
-  healthStartTopic: @healthContent.start_topic_link_text&.content,
-  healthCompletedTopic: @healthContent.completed_topic_link_text&.content,
 
   timeContent: @timeContent,
   timeTitle: @timeContent.title,
-  timeStartTopic: @timeContent.start_topic_link_text&.content,
-  timeCompletedTopic: @timeContent.completed_topic_link_text&.content,
 
   familyContent: @familyContent,
   familyTitle: @familyContent.title,
-  familyStartTopic: @familyContent.start_topic_link_text&.content,
-  familyCompletedTopic: @familyContent.completed_topic_link_text&.content,
 
   skillsContent: @skillsContent,
   skillsTitle: @skillsContent.title,
-  skillsStartTopic: @skillsContent.start_topic_link_text&.content,
-  skillsCompletedTopic: @skillsContent.completed_topic_link_text&.content,
-
-  childrenContent: @childrenContent,
-  childrenTitle: @childrenContent&.title,
 
   homeContent: @homeContent,
-  homeTitle: @homeContent.title,
-  homeStartTopic: @homeContent.start_topic_link_text&.content,
-  homeCompletedTopic: @homeContent.completed_topic_link_text&.content, 
+  homeTitle: @homeContent.title
 
 }) %>

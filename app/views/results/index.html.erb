@@ -4,8 +4,7 @@
   token: form_authenticity_token,
 
   title: @resultspage.title,
-  strapline: @resultspage.headline.content,
-  banner: @sitehome.banner&.content,
+  strapline: @resultspage.headline&.content,
 
   cta_title: @sitehome.cta_title&.content,
   cta_text: @sitehome.cta_text&.content,
@@ -19,9 +18,6 @@
 
   skills_title: @skillsContent.title,
   skills_questions: @skillsTopicContent,
-
-  children_title: @childrenContent&.title,
-  children_questions: @childrenTopicContent,
 
   time_title: @timeContent.title,
   time_questions: @timeTopicContent,

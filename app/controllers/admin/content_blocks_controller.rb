@@ -4,7 +4,7 @@ module Admin
     private
 
     def fae_pages
-      [AdoptionHomePage, BookAdoptionEvePage, LifestyleContentPage, TimeContentPage, FamilyContentPage, SkillsContentPage, ChildrenContentPage,HomeContentPage, ResultContentPage]
+      [AdoptionHomePage, BookAdoptionEvePage, LifestyleContentPage, TimeContentPage, FamilyContentPage, SkillsContentPage, HomeContentPage, ResultContentPage]
     end
   end
 end
