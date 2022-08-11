@@ -63,9 +63,9 @@ const TopicQuestions = ({
             <h2 ref={questionRef} className="question__title"><legend>{content.title}</legend></h2>
             <p className="question__help-text">{id} of {total} questions</p>
             <div className="question__options">
-                <OptionBubble type="radio" name={id} label={content.answer_1} selectionState={selection} onChange={handleChange} value="1" />
-                <OptionBubble type="radio" name={id} label={content.answer_2} selectionState={selection} onChange={handleChange} value="2" />
-                {(content.answer_3)? <OptionBubble type="radio" name={id} label={content.answer_3} selectionState={selection} onChange={handleChange} value="3" /> : ""}
+                <OptionBubble type="radio" name={content.answer_1} label={content.answer_1} selectionState={selection} onChange={handleChange} value="1" />
+                <OptionBubble type="radio" name={content.answer_2} label={content.answer_2} selectionState={selection} onChange={handleChange} value="2" />
+                {(content.answer_3)? <OptionBubble type="radio" name={content.answer_3} label={content.answer_3} selectionState={selection} onChange={handleChange} value="3" /> : ""}
             </div>
             {
                 // TODO - this could probably be refactored better

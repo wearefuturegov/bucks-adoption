@@ -75,6 +75,7 @@ const Footer = () =>
                 <p>This is a new website in Beta - <a href="https://forms.gle/ty9AEZa8iirxBLGD8" target="_blank" title="Give us feedback">your feedback</a> will help us improve it.</p>
                 <br/>
                 <Menu>
+                    <MenuItem><a href="/pages/about" title="Read about us">About</a></MenuItem>
                     <MenuItem><a href="/pages/cookies" title="Read our cookie policy">Cookies</a></MenuItem>
                     <MenuItem><a href="/pages/accessibility" title="Read our Accessibility statement">Accessibility statement</a></MenuItem>
                     <MenuItem><a href="https://www.buckinghamshire.gov.uk/your-council/privacy/" title="Read our privacy statement">Privacy statement</a></MenuItem>

@@ -6,6 +6,9 @@ class ResultsController < ApplicationController
     @homeTopicContent = HomeTopicQuestion.all
     @homeContent = HomeContentPage.instance
 
+    @childrenTopicContent = ChildrenTopicQuestion.all
+    @childrenContent = ChildrenContentPage.instance
+
     @skillsTopicContent = SkillsTopicQuestion.all
     @skillsContent = SkillsContentPage.instance
 
