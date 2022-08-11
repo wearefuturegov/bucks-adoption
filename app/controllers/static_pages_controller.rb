@@ -14,7 +14,6 @@ class StaticPagesController < ApplicationController
     @timeContent = TimeContentPage.instance
     @familyContent = FamilyContentPage.instance
     @skillsContent = SkillsContentPage.instance
-    @childrenContent = ChildrenContentPage.instance
     @homeContent = HomeContentPage.instance
 
     render "static_pages/#{params[:page]}"

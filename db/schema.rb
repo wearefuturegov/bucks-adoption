@@ -10,29 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_23_133438) do
+ActiveRecord::Schema.define(version: 2019_08_21_124007) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "children_topic_questions", force: :cascade do |t|
-    t.string "title"
-    t.string "answer_1"
-    t.text "answer_1_explanation"
-    t.string "action_1_title"
-    t.text "action_1_text"
-    t.string "answer_2"
-    t.text "answer_2_explanation"
-    t.string "action_2_title"
-    t.text "action_2_text"
-    t.string "answer_3"
-    t.text "answer_3_explanation"
-    t.string "action_3_title"
-    t.text "action_3_text"
-    t.integer "position"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "fae_changes", force: :cascade do |t|
     t.integer "changeable_id"
@@ -237,8 +218,6 @@ ActiveRecord::Schema.define(version: 2022_06_23_133438) do
     t.integer "position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "topic_title"
-    t.bigint "fae_static_page_id"
   end
 
   create_table "lifestyle_topic_questions", force: :cascade do |t|

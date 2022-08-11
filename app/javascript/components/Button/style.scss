@@ -15,10 +15,6 @@
     cursor: pointer;
     transition: 0.1s ease-out;
 
-    &:focus{
-        outline: 3px solid #ffb81c;
-    }
-
     &[disabled]{
         background: $shadow;
         cursor: inherit;
@@ -59,7 +55,7 @@
     }
     &.button--with-bottom-margin{
         margin-bottom: 40px;
-        @media screen and (min-width: $desktop){
+        @media screen and(min-width: $desktop){
             margin-bottom: 45px;
         }
     }
@@ -74,7 +70,7 @@
         &:after{
             display: none;
         }
-        @media screen and (min-width: $desktop){
+        @media screen and(min-width: $desktop){
             margin-bottom: 0;
         }
     }

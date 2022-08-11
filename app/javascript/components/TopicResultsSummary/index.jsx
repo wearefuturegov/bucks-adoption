@@ -5,7 +5,7 @@ import styled from "styled-components"
 import theme from "../_theme"
 
 const Note = styled.p`
-    color: #000000;
+    color: #7D858C;
     a{
         color: ${theme.link};
         font-weight: bold;
