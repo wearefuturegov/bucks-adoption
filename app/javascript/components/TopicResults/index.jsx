@@ -16,6 +16,8 @@ const TopicResults = ({
     timeintro,
     skillstitle,
     skillsintro,
+    childrentitle,
+    childrenintro,
     topicSection,
     handleRestartClick,
     resultsArray,
@@ -50,6 +52,9 @@ const TopicResults = ({
 
                     skillstitle={skillstitle}
                     skillsintro={skillsintro}
+
+                    childrentitle={childrentitle}
+                    childrenintro={childrenintro}
 
                     hometitle={hometitle}
                     homeintro={homeintro} />
