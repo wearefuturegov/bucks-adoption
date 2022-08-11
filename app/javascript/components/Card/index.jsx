@@ -80,15 +80,16 @@ const Card = ({
     deck,
     href,
     borderColor,
-    completed
+    completed,
+    startTopic,
+    completedTopic
 }) =>
     <Outer borderColor={borderColor} completed={completed}>
         <Headline>{headline}</Headline>
         <Deck>{deck}</Deck>
         <br/>
         <StyledLink href={href}>
-            {completed ? "View " : "Start "}
-            this topic
+            {completed ? completedTopic : startTopic}
         </StyledLink>
         {completed && <Tick src={tick}/>}
     </Outer>

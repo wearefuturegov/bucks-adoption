@@ -39,13 +39,19 @@
     &.option-bubble__label--home{
         background-color: darken($home, 30)
     }
+    &.option-bubble__label--children{
+        background-color: darken($children, 30)
+    }
     &.option-bubble__label--time{
         background-color: darken($time, 30)
     }
 }
 
 .option-bubble__input.visually-hidden {
-    display: none;
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px $focus;
+    }
 }
 
 a.option-bubble {
@@ -58,6 +64,10 @@ a.option-bubble {
         .option-bubble__label {
             opacity: 0.7;
         }
+    }
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px $focus;
     }
 
     .checkmark_container {
@@ -104,6 +114,10 @@ a.option-bubble {
     &:hover{
         filter: brightness(0.95);
     }
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px $focus;
+    }
 }
 
 .option-bubble__helptext{
@@ -124,6 +138,9 @@ a.option-bubble {
 }
 .option-bubble__label--home{
     background-color: transparentize($home, 0.3);
+}
+.option-bubble__label--children{
+    background-color: transparentize($children, 0.3);
 }
 .option-bubble__label--time{
     background-color: transparentize($time, 0.3);
