@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import theme from "../_theme"
+import Markdown from 'markdown-to-jsx'
 
 const Outer = styled.section`
     background: ${theme.grey5};
@@ -52,11 +53,10 @@ const StyledLink = styled.a`
 `
 
 
-const PhaseBanner = ({bannerTag, ledeText, bannerText}) =>
+const PhaseBanner = ({banner}) =>
     <Outer className="covid">
         <Inner>
-            <Tag>{bannerTag}</Tag>
-            <p><strong>{ledeText}</strong> {bannerText} </p>
+        <Markdown>{banner || " "}</Markdown>
             {/* <Tag>Beta</Tag>
             <p>This is a new website - <StyledLink href="https://forms.gle/ty9AEZa8iirxBLGD8">your feedback</StyledLink> will help us improve it.</p> */}
         </Inner>
