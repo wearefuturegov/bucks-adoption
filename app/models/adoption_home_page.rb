@@ -14,10 +14,7 @@ class AdoptionHomePage < Fae::StaticPage
       body: { type: Fae::TextArea },
       cta_title: { type: Fae::TextField },
       cta_text: { type: Fae::TextField },
-      cta_button: { type: Fae::TextField },
-      about: { type: Fae::TextArea },
-      cookies: { type: Fae::TextArea },
-      accessibility: { type: Fae::TextArea }
+      cta_button: { type: Fae::TextField }
     }
   end
 
