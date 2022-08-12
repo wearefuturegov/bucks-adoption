@@ -8,7 +8,7 @@ const AboutPage = ({about}) =>{
         <Layout withHeader withFooter>
             <div className="container">
                 <div className="two-thirds">
-                    <Markdown>{about}</Markdown>
+                    <Markdown>{about || " "}</Markdown>
                 </div>
             </div>
 

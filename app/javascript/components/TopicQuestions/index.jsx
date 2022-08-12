@@ -72,7 +72,7 @@ const TopicQuestions = ({
                 selection == "1" ? (
                 <>
                 <div className="answer_explanation answer_explanation_1 fade-animate">
-                    <Markdown>{content.answer_1_explanation}</Markdown>
+                    <Markdown>{content.answer_1_explanation || " "}</Markdown>
                 </div>
                 { content.action_1_title ?
                     <>
@@ -89,7 +89,7 @@ const TopicQuestions = ({
                 ) : selection == "2" ? (
                 <>
                 <div className="answer_explanation answer_explanation_2 fade-animate">
-                    <Markdown>{content.answer_2_explanation}</Markdown>
+                    <Markdown>{content.answer_2_explanation || " "}</Markdown>
                 </div>
                 { content.action_2_title ?
                     <>
@@ -106,7 +106,7 @@ const TopicQuestions = ({
                 ) : selection == "3" ? (
                 <>
                 <div className="answer_explanation answer_explanation_3 fade-animate">
-                    <Markdown>{content.answer_3_explanation}</Markdown>
+                    <Markdown>{content.answer_3_explanation || " "}</Markdown>
                 </div>
                 { content.action_3_title ?
                     <>
