@@ -4,10 +4,10 @@ import PageHeader from "../../PageHeader"
 import Button from "../../Button"
 import "./style.scss"
 
-const CookiesPage = () =>{
+const CookiesPage = ({logo, altLogo}) =>{
 
     return(
-        <Layout withHeader withFooter>
+        <Layout withHeader withFooter logo={logo} altLogo={altLogo}>
             <div className="container">
                 <div className="two-thirds">
                     <h1>Cookies on this website</h1>

@@ -2,6 +2,9 @@
 <%= react_component("Pages/ResultsPage", {
 
   token: form_authenticity_token,
+  
+  logo: @rootSettings&.logo&.asset&.thumb&.url,
+  altLogo: @rootSettings&.logo&.alt,
 
   title: @resultspage.title,
   strapline: @resultspage.headline.content,

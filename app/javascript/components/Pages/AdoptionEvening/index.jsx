@@ -21,9 +21,11 @@ export default ({
   events,
   banner,
   hero_image,
-  hero_alt
+  hero_alt,
+  logo,
+  altLogo
 }) =>
-  <Layout withHeader withFooter banner={banner}>
+  <Layout withHeader withFooter banner={banner} logo={logo} altLogo={altLogo}>
     <HeroWithImage
       headline={title}
       deck={strapline}
