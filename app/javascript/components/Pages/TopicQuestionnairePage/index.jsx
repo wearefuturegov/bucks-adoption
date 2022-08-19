@@ -39,7 +39,10 @@ const TopicQuestionnairePage = ({
   body,
   questions,
   topicID,
-  backgroundcolor}) => {
+  backgroundcolor,
+  logo,
+  altLogo
+}) => {
 
   const [results, setResults] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(1)
@@ -59,7 +62,7 @@ const TopicQuestionnairePage = ({
   }
 
   return(
-    <Layout>
+    <Layout logo={logo} altLogo={altLogo}>
       <HeroWithColor
         backgroundColor={backgroundcolor}
         headline={title}

@@ -1,2 +1,5 @@
-<%= react_component("Pages/Cookies", {}) %>
+<%= react_component("Pages/Cookies", {
+    logo: @rootSettings&.logo&.asset&.thumb&.url,
+    altLogo: @rootSettings&.logo&.alt,
+}) %>
 

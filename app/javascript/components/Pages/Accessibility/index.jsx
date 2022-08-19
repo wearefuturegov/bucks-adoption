@@ -4,10 +4,10 @@ import PageHeader from "../../PageHeader"
 import Button from "../../Button"
 import "./style.scss"
 
-const AccessibilityPage = () =>{
+const AccessibilityPage = ({logo, altLogo}) =>{
 
     return(
-        <Layout withHeader withFooter>
+        <Layout withHeader withFooter logo={logo} altLogo={altLogo}>
             <div className="container">
                 <div className="two-thirds">
                     <h1>Accessibility statement for Buckinghamshire Adoption</h1>
