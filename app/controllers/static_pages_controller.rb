@@ -16,6 +16,7 @@ class StaticPagesController < ApplicationController
     @skillsContent = SkillsContentPage.instance
     @childrenContent = ChildrenContentPage.instance
     @homeContent = HomeContentPage.instance
+    @rootSettings = RootSettingsPage.instance
 
     render "static_pages/#{params[:page]}"
   end
@@ -25,7 +26,7 @@ class StaticPagesController < ApplicationController
     @adopteve = BookAdoptionEvePage.instance
     @rootSettings = RootSettingsPage.instance
 
-    response = HTTParty.get("https://www.eventbriteapi.com/v3/organizations/102784803177/events/?status=live&expand=venue&token=" + ENV['EVENTBRITE_SECRET'])
+    response = HTTParty.get("https://www.eventbriteapi.com/v3/organizations/" + ENV['EVENTBRITE_ORGANIZATION_ID'] + "/events/?status=live&expand=venue&token=" + ENV['EVENTBRITE_SECRET'])
     @events = JSON.parse response.body
   end
 

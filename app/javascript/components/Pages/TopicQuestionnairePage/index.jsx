@@ -48,7 +48,9 @@ const TopicQuestionnairePage = ({
   savebutton,
   finalresulttitle,
   results,
-  resultslink
+  resultslink,
+  logo,
+  altLogo
 }) => {
 
   const [topicResults, setTopicResults] = useState([]);
