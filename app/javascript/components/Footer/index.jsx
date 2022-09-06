@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import theme from "../_theme"
 import Cookies from "../Cookies"
+import buckinghamshire_logo from "../../../assets/images/buckinghamshire_logo.png"
 function isMobileDevice() {
     return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 };
@@ -79,7 +80,7 @@ const Footer = () =>
                     <MenuItem><a href="https://www.buckinghamshire.gov.uk/your-council/privacy/" title="Read our privacy statement">Privacy statement</a></MenuItem>
                     <MenuItem><a href="https://www.buckinghamshire.gov.uk/community-and-safety/modern-slavery-statement/" title="Read our modern slavery statement">Modern slavery statement</a></MenuItem>
                 </Menu>
-                <p>&copy; <a href="https://www.buckinghamshire.gov.uk/" target="_blank" title="View the Bucks website">Buckinghamshire County Council</a></p>
+                <p style={{display: "flex", alignItems: "center"}}>&copy; <a href="https://www.buckinghamshire.gov.uk/" target="_blank" title="View the Bucks website"><img src={buckinghamshire_logo} height="35px" style={{marginLeft: "5px"}}/></a></p>
             </InnerLeft>
             <InnerRight>
                 <p className="bold">Get in touch</p>

@@ -60,7 +60,7 @@ const Input = styled.input`
 `
 
 const Button = styled.button`
-    background: ${theme.darkText};
+    background: ${theme.blue};
     border: none;
     color: white;
     border-radius: 0 100px 100px 0;

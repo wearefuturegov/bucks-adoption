@@ -7,6 +7,7 @@ const Outer = styled.div`
     background: white;
     border-left: 7px solid ${props => theme[props.topic]}
     padding: 25px;
+    border-radius: 10px;
     display: block;
     margin-bottom: 25px;
     position: relative;
