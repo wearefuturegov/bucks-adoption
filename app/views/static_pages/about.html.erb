@@ -1,3 +1,5 @@
 <%= react_component("Pages/About", {
       about: @sitehome.about&.content,
+      logo: @rootSettings&.logo&.asset&.thumb&.url,
+      altLogo: @rootSettings&.logo&.alt,
 }) %>

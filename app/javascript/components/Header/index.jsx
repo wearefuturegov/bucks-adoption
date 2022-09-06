@@ -105,6 +105,7 @@ const MenuItems = () =>
         <MenuItem href="/">Explore topics</MenuItem>
         <MenuItem href="/results/index">Your readiness plan</MenuItem>
         <MenuItem href="/pages/informationevent">Attend an event</MenuItem>
+        <MenuItem href="https://www.buckinghamshire.gov.uk/care-children-and-families/adoption/">Adoption</MenuItem>
     </>
 
 const SiteHeader = ({logo, altLogo}) => {

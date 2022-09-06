@@ -72,8 +72,6 @@ const Footer = () =>
     <Outer>
         <Inner>
             <InnerLeft>
-                <p>This is a new website in Beta - <a href="https://forms.gle/ty9AEZa8iirxBLGD8" target="_blank" title="Give us feedback">your feedback</a> will help us improve it.</p>
-                <br/>
                 <Menu>
                     <MenuItem><a href="/pages/about" title="Read about us">About</a></MenuItem>
                     <MenuItem><a href="/pages/cookies" title="Read our cookie policy">Cookies</a></MenuItem>
