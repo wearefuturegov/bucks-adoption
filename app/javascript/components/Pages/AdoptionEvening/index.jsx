@@ -39,7 +39,7 @@ export default ({
     {pre_text && 
       <PageBodyContent>
         <UserContent>
-          <Markdown>{pre_text}</Markdown>
+          <Markdown>{pre_text || ""}</Markdown>
         </UserContent>
       </PageBodyContent>
     }
@@ -48,7 +48,7 @@ export default ({
       headline="What should I expect?"
     >
       <UserContent>
-        <Markdown>{body}</Markdown>
+        <Markdown>{body || ""}</Markdown>
       </UserContent>
     </PageBodyContent>
   </Layout>

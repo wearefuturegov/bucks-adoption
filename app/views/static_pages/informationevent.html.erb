@@ -1,11 +1,11 @@
 <% content_for( :title, "Book an information event") %>
 <%= react_component("Pages/AdoptionEvening", { 
     title: @adopteve.title, 
-    strapline: @adopteve.headline.content, 
-    pre_text: @adopteve.pre_text.content,
-    cta_title: @sitehome.cta_title.content, 
-    cta_text: @sitehome.cta_text.content, 
-    cta_button: @sitehome.cta_button.content, 
-    body: @adopteve.body.content,
+    strapline: @adopteve.headline&.content, 
+    pre_text: @adopteve.pre_text&.content,
+    cta_title: @sitehome.cta_title&.content, 
+    cta_text: @sitehome.cta_text&.content, 
+    cta_button: @sitehome.cta_button&.content, 
+    body: @adopteve.body&.content,
     events: @events
 } ) %>

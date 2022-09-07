@@ -76,7 +76,7 @@ const TopicQuestionnairePage = ({
 
       <PageBodyContent>
         <UserContent>
-          <Markdown>{body}</Markdown>
+          <Markdown>{body || ""}</Markdown>
         </UserContent>
       </PageBodyContent>
 

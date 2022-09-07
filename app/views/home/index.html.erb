@@ -2,8 +2,8 @@
 <% content_for( :title, "Your home") %>
 <%= react_component("Pages/TopicQuestionnairePage", {
   title: @homeContent.title,
-  intro: @homeContent.introduction.content,
-  body: @homeContent.body.content,
+  intro: @homeContent.introduction&.content,
+  body: @homeContent.body&.content,
 
   questions: @homeTopicContent,
 

@@ -103,7 +103,7 @@ const TopicCard = ({
       <Headline>{title}</Headline>
       {intro &&
         <Deck>
-          {<Markdown>{intro}</Markdown>}
+          {<Markdown>{intro || ""}</Markdown>}
         </Deck>
       }
       {children}
@@ -112,7 +112,7 @@ const TopicCard = ({
           <Summary>Why is this recommended?</Summary>
           <DetailsHolder>
             <DetailsHeadline>You chose '{answer}' for the question '{question_title}'</DetailsHeadline>
-            <Markdown>{question_content}</Markdown>
+            <Markdown>{question_content || ""}</Markdown>
           </DetailsHolder>
         </details>
       }
