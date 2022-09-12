@@ -39,6 +39,7 @@ const Home = ({
   familyTitle,
   skillsTitle,
   homeTitle,
+  banner,
   hero_image,
   hero_alt
 }) => {
