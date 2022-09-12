@@ -17,5 +17,7 @@ class ResultsController < ApplicationController
 
     @familyTopicContent = FamilyTopicQuestion.all
     @familyContent = FamilyContentPage.instance
+
+    @rootSettings = RootSettingsPage.instance
   end
 end

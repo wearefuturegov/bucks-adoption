@@ -6,5 +6,6 @@ class HealthController < ApplicationController
     @familyContent = FamilyContentPage.instance
     @skillsContent = SkillsContentPage.instance
     @homeContent = HomeContentPage.instance
+    @rootSettings = RootSettingsPage.instance
   end
 end

@@ -7,6 +7,7 @@ class StaticPagesController < ApplicationController
     # static pages
     @sitehome = AdoptionHomePage.instance
     @adopteve = BookAdoptionEvePage.instance
+    @rootSettings = RootSettingsPage.instance
 
     # tool content sections
     @healthContent = LifestyleContentPage.instance
@@ -21,6 +22,7 @@ class StaticPagesController < ApplicationController
   def informationevent
     @sitehome = AdoptionHomePage.instance
     @adopteve = BookAdoptionEvePage.instance
+    @rootSettings = RootSettingsPage.instance
 
     response = HTTParty.get("https://www.eventbriteapi.com/v3/organizations/102784803177/events/?status=live&expand=venue&token=" + ENV['EVENTBRITE_SECRET'])
     @events = JSON.parse response.body
