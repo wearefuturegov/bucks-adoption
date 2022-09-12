@@ -1,5 +1,5 @@
 
-<% content_for( :title, "Your home") %>
+<% content_for( :title, @homeContent.title) %>
 <%= react_component("Pages/TopicQuestionnairePage", {
   title: @homeContent.title,
   intro: @homeContent.introduction.content,
