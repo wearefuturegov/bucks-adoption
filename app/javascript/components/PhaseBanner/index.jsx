@@ -1,4 +1,5 @@
 import React from "react"
+import Markdown from 'markdown-to-jsx'
 import styled from "styled-components"
 import theme from "../_theme"
 
@@ -52,11 +53,10 @@ const StyledLink = styled.a`
 `
 
 
-const PhaseBanner = () =>
+const PhaseBanner = ({banner}) =>
     <Outer className="covid">
         <Inner>
-            <Tag>Coronavirus</Tag>
-            <p><strong>We are still open (remotely) and taking on new adopters.</strong> Explore this checker and get in touch.</p>
+        <Markdown>{banner}</Markdown>
             {/* <Tag>Beta</Tag>
             <p>This is a new website - <StyledLink href="https://forms.gle/ty9AEZa8iirxBLGD8">your feedback</StyledLink> will help us improve it.</p> */}
         </Inner>
