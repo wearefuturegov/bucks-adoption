@@ -5,7 +5,7 @@ import HeroWithImage from "../../HeroWithImage"
 import EveningList from "../../EveningList"
 import PageBodyContent, { UserContent } from "../../PageBodyContent"
 import CallToAction from "../../CallToAction"
-import bookingevening from "./bookingevening"
+import bookevening from "./bookevening"
 
 function isMobileDevice() {
   return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
@@ -30,7 +30,7 @@ export default ({
     <HeroWithImage
       headline={title}
       deck={strapline}
-      image={hero_image || bookingevening}
+      image={hero_image || bookevening}
       alt={hero_alt}
       breadcrumbs={[
         {
