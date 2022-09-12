@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components"
+import defaultLogo from "./defaultLogo"
 import theme from "../_theme"
 import { Container, Button } from "./MobileMenu"
 import ProgressBar from "../ProgressBar"
@@ -114,7 +115,7 @@ const SiteHeader = ({logo, altLogo}) => {
             <Inner>
                 <MastheadLink href="/">
                     {
-                        logo && <Logo src={logo} alt={altLogo} />
+                        (logo || defaultLogo) && <Logo src={logo || defaultLogo} alt={altLogo} />
                     }
                     <ServiceName>Adoption</ServiceName>
                 </MastheadLink>

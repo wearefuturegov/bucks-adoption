@@ -7,6 +7,7 @@ import CallToAction from "../../CallToAction"
 import PageBodyContent, { UserContent } from "../../PageBodyContent"
 import CardGrid from "../../CardGrid"
 import theme from "../../_theme"
+import hero from "./hero"
 
 function isMobileDevice() {
   return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
@@ -65,7 +66,7 @@ const Home = ({
       <HeroWithImage
         headline={title}
         deck={strapline}
-        image={hero_image}
+        image={hero_image || hero}
         cta="Get started"
         handleRefClick={handleRefClick}
         alt={hero_alt}
