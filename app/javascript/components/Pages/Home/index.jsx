@@ -69,7 +69,7 @@ const Home = ({
         alt={hero_alt}
       />
       <div id="home-body-content" ref={ref}>
-        <div className="bold-body"><Markdown>{body}</Markdown></div>
+        <div className="bold-body"><Markdown>{body || ''}</Markdown></div>
       </div>
 
       <h2 className="visually-hidden">Choose a topic</h2>
