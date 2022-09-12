@@ -1,24 +1,24 @@
 <% content_for( :title, @familyContent.title) %>
 <%= react_component("Pages/TopicQuestionnairePage", {
-  body: @familyContent.body&.content,
+  body: @familyContent.body.content,
   questions: @familyTopicContent,
   topicID: "results_topic_family",
 
   healthtitle: @healthContent.title,
-  healthintro: @healthContent.introduction&.content,
+  healthintro: @healthContent.introduction.content,
 
   timetitle: @timeContent.title,
-  timeintro: @timeContent.introduction&.content,
+  timeintro: @timeContent.introduction.content,
 
   title: @familyContent.title,
-  intro: @familyContent.introduction&.content,
+  intro: @familyContent.introduction.content,
   familytitle: @familyContent.title,
-  familyintro: @familyContent.introduction&.content,
+  familyintro: @familyContent.introduction.content,
 
   skillstitle: @skillsContent.title,
-  skillsintro: @skillsContent.introduction&.content,
+  skillsintro: @skillsContent.introduction.content,
 
   hometitle: @homeContent.title,
-  homeintro: @homeContent.introduction&.content,
+  homeintro: @homeContent.introduction.content,
 
   backgroundcolor: "#f7adb630" }) %>
