@@ -9,7 +9,7 @@ const AboutPage = ({about}) =>{
         <Layout withHeader withFooter>
             <div className="container">
                     <UserContent>
-                    <Markdown>{about}</Markdown>
+                    <Markdown>{about || ''}</Markdown>
                     </UserContent>
             </div>
 

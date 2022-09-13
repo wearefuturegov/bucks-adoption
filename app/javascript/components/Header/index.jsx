@@ -117,7 +117,6 @@ const SiteHeader = ({logo, altLogo}) => {
                     {
                         (logo || defaultLogo) && <Logo src={logo || defaultLogo} alt={altLogo} />
                     }
-                    <ServiceName>Adoption</ServiceName>
                 </MastheadLink>
                 <Nav>
                     <ProgressBar/>
