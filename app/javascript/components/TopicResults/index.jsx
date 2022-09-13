@@ -20,13 +20,16 @@ const TopicResults = ({
     handleRestartClick,
     resultsArray,
     questions,
-    type }) => {
+    type,
+    results,
+    resultslink,
+    finalresulttitle }) => {
 
     return(
         <section className="final-results">
             <div className="container">
-                <h2>Your readiness list for {topicSection}</h2>
-                <p className="link-to-results">All actions are saved in <a href="/results/index">your readiness plan</a>.</p>
+                <h2>{finalresulttitle}</h2>
+                <p className="link-to-results">{results} <a href="/results/index">{resultslink}</a></p>
 
                 <TopicResultsSummary topicSection={topicSection} resultsArray={resultsArray} questions={questions} type={type} />
 
@@ -54,6 +57,5 @@ const TopicResults = ({
             </div>
         </section>
     )}
-
 
 export default TopicResults
