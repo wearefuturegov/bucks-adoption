@@ -58,6 +58,10 @@ export const UserContent = styled.div`
             font-size: 1.1em
         }
     }
+    ul {
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
     h2, h3, h4, h5, h6{
         margin-top: 35px;
         color: ${theme.darkText};
