@@ -8,7 +8,7 @@ const CookiesPage = ({logo, altLogo, cookies}) =>{
         <Layout withHeader withFooter logo={logo} altLogo={altLogo}>
             <div className="container">
                 <div className="two-thirds">
-                    <Markdown>{cookies}</Markdown>
+                    <Markdown>{cookies || ''}</Markdown>
                 </div>
             </div>
 
