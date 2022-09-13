@@ -49,7 +49,7 @@ const TopicQuestionnairePage = ({
   resultslink
 }) => {
 
-  const [results, setResults] = useState([]);
+  const [topicResults, setTopicResults] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(1)
   const [resultsStored, setResultsStored] = useStateWithLocalStorage(topicID);
 
