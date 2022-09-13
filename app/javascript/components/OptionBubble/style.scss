@@ -45,7 +45,10 @@
 }
 
 .option-bubble__input.visually-hidden {
-    display: none;
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px $focus;
+    }
 }
 
 a.option-bubble {
@@ -58,6 +61,10 @@ a.option-bubble {
         .option-bubble__label {
             opacity: 0.7;
         }
+    }
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px $focus;
     }
 
     .checkmark_container {
@@ -103,6 +110,10 @@ a.option-bubble {
     transition: 0.1s ease-in-out;
     &:hover{
         filter: brightness(0.95);
+    }
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px $focus;
     }
 }
 
