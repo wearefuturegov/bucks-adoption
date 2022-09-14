@@ -57,6 +57,8 @@ const Home = ({
   skillsCompletedTopic,
   homeStartTopic,
   homeCompletedTopic,
+  childrenStartTopic,
+  childrenCompletedTopic
 }) => {
   const ref = createRef();
   const handleRefClick = () =>
@@ -122,7 +124,9 @@ const Home = ({
             deck: childrenContent.kicker || childrenContent.introduction,
             href: "/children/index",
             borderColor: theme.children,
-            completed: childrenResultsStored
+            completed: childrenResultsStored,
+            startTopic: childrenStartTopic,
+            completedTopic: childrenCompletedTopic
           },
           {
             headline: healthTitle,
