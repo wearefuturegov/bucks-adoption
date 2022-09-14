@@ -74,7 +74,7 @@ const TopicQuestions = ({
                 <div className="answer_explanation answer_explanation_1 fade-animate">
                     <Markdown>{content.answer_1_explanation || " "}</Markdown>
                 </div>
-                { content.action_1_title ?
+                { content?.action_1_title ?
                     <>
                         <div className="answer_explanation action_text">
                             <p>An action to consider to help you get more ready</p>
@@ -91,7 +91,7 @@ const TopicQuestions = ({
                 <div className="answer_explanation answer_explanation_2 fade-animate">
                     <Markdown>{content.answer_2_explanation || " "}</Markdown>
                 </div>
-                { content.action_2_title ?
+                { content?.action_2_title ?
                     <>
                         <div className="answer_explanation action_text">
                             <p>An action to consider to help you get more ready</p>
@@ -108,7 +108,7 @@ const TopicQuestions = ({
                 <div className="answer_explanation answer_explanation_3 fade-animate">
                     <Markdown>{content.answer_3_explanation || " "}</Markdown>
                 </div>
-                { content.action_3_title ?
+                { content?.action_3_title ?
                     <>
                         <div className="answer_explanation action_text">
                             <p>An action to consider to help you get more ready</p>

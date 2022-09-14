@@ -43,11 +43,11 @@ const TopicResultsSummary = ({
             ):null
             }
             {resultsArray ? (
-                resultsArray.map((result, index) => {
+                resultsArray?.map((result, index) => {
                 return(
                     <div key={index}>
                         {    withTitle ? (
-                                (result == "1" && questions[index].action_1_title) || (result == "2" && questions[index].action_2_title) || (result == "3" && questions[index].action_3_title) ? (
+                                (result == "1" && questions[index]?.action_1_title) || (result == "2" && questions[index]?.action_2_title) || (result == "3" && questions[index]?.action_3_title) ? (
                                     !displayedTitle ? (
                                         <>
                                         <Headline>{topicSection}</Headline>
