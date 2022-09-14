@@ -25,7 +25,7 @@ class StaticPagesController < ApplicationController
     @adopteve = BookAdoptionEvePage.instance
     @rootSettings = RootSettingsPage.instance
 
-    response = HTTParty.get("https://www.eventbriteapi.com/v3/organizations/" + ENV['EVENTBRITE_ORGANIZATION_ID'] + "/events/?status=live&expand=venue&token=" + ENV['EVENTBRITE_SECRET'])
+    response = HTTParty.get("https://www.eventbriteapi.com/v3/organizations/1103030640693/events/?status=live&expand=venue&token=" + ENV['EVENTBRITE_SECRET'])
     @events = JSON.parse response.body
   end
 
