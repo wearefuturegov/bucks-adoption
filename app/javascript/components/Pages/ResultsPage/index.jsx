@@ -14,6 +14,7 @@ import styled from "styled-components"
 import theme from "../../_theme"
 // import ShareDialog from "../../ShareDialog"
 import ShareBar from "../../ShareBar"
+import HeroWithImage from "../../HeroWithImage"
 
 const Headline = styled.h2`
     color: ${theme.darkText};
@@ -62,7 +63,9 @@ const ResultsPage = ({
    children_title,
    banner,
    logo,
-   altLogo
+   altLogo,
+   hero_image,
+   hero_alt
  }) => {
 
   const [familyResultsStored, setFamilyResultsStored] = useStateWithLocalStorage("results_topic_family");
@@ -75,16 +78,19 @@ const ResultsPage = ({
   // const [shareDialogOpen, toggleShareDialog] = useState(false)
   return(
     <Layout banner={banner} logo={logo} altLogo={altLogo}>
-      <HeroWithColor
-        backgroundColor="white"
-        headline={title} deck={strapline} breadcrumbs={[
-          {
-            href: "/",
-            label: "Get ready to adopt"
-          },{
-            label: "Your readiness plan"
-          }
-        ]}
+      <HeroWithImage
+      headline={title}
+      deck={strapline}
+      image={hero_image}
+      alt={hero_alt}
+      breadcrumbs={[
+        {
+              href: "/",
+              label: "Get ready to adopt"
+            },{
+              label: "Your readiness plan"
+            }
+      ]}
       />
 
       <ShareBar
@@ -144,16 +150,6 @@ const ResultsPage = ({
         <Block>
             <TopicResultsSummary
               withTitle
-              topicSection={children_title}
-              resultsArray={childrenResultsStored ? childrenResultsStored.split('') : false}
-              questions={children_questions}
-              type="results_topic_children"
-              link="children"
-            />
-        </Block>
-        <Block>
-            <TopicResultsSummary
-              withTitle
               topicSection={health_title}
               resultsArray={healthResultsStored ? healthResultsStored.split('') : false}
               questions={health_questions}
@@ -169,6 +165,16 @@ const ResultsPage = ({
               questions={time_questions}
               type="results_topic_time"
               link="time"
+            />
+        </Block>
+        <Block>
+            <TopicResultsSummary
+              withTitle
+              topicSection={children_title}
+              resultsArray={childrenResultsStored ? childrenResultsStored.split('') : false}
+              questions={children_questions}
+              type="results_topic_children"
+              link="children"
             />
         </Block>
       </PageBodyContent>

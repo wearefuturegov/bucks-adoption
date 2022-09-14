@@ -6,6 +6,7 @@ import Moment from 'react-moment'
 
 const Outer = styled.li`
     background: white;
+    border-radius: 10px;
     padding: 30px;
     display: block;
     margin-bottom: 25px;

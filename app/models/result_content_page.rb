@@ -5,7 +5,8 @@ class ResultContentPage < Fae::StaticPage
   # required to set the has_one associations, Fae::StaticPage will build these associations dynamically
   def self.fae_fields
     {
-      headline: { type: Fae::TextField }
+      strapline: { type: Fae::TextArea },
+      hero_image: { type: Fae::Image },
     }
   end
 
