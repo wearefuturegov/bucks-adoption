@@ -9,6 +9,7 @@ const Outer = styled.li`
     display: block;
     margin-bottom: 25px;
     border-top: ${props => props.borderColor ? `7px solid ${props.borderColor}` : ""};
+    border-radius: 10px;
     box-shadow: 0 4px 0 ${theme.shadow};
     position: relative;
     &:active{
