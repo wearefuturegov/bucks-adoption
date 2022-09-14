@@ -56,7 +56,6 @@ const ResultsPage = ({
    home_title,
    time_questions,
    time_title,
-   children_questions,
    skills_questions,
    skills_title,
    children_questions,
