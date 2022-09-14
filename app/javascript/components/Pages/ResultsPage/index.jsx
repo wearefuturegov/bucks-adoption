@@ -56,8 +56,11 @@ const ResultsPage = ({
    home_title,
    time_questions,
    time_title,
+   children_questions,
    skills_questions,
    skills_title,
+   children_questions,
+   children_title,
    banner,
    logo,
    altLogo
@@ -68,6 +71,7 @@ const ResultsPage = ({
   const [healthResultsStored, setHealthResultsStored] = useStateWithLocalStorage("results_topic_lifestyle");
   const [timeResultsStored, setTimeResultsStored] = useStateWithLocalStorage("results_topic_time");
   const [skillsResultsStored, setSkillsResultsStored] = useStateWithLocalStorage("results_topic_skills");
+  const [childrenResultsStored, setChildrenResultsStored] = useStateWithLocalStorage("results_topic_children");
 
   // const [shareDialogOpen, toggleShareDialog] = useState(false)
   return(
@@ -89,11 +93,13 @@ const ResultsPage = ({
         time_questions={time_questions}
         family_questions={family_questions}
         skills_questions={skills_questions}
+        children_questions={children_questions}
         home_questions={home_questions}
         healthResultsStored={healthResultsStored}
         timeResultsStored={timeResultsStored}
         familyResultsStored={familyResultsStored}
         skillsResultsStored={skillsResultsStored}
+        childrenResultsStored={childrenResultsStored}
         homeResultsStored={homeResultsStored}
         token={token}
       />
@@ -139,6 +145,16 @@ const ResultsPage = ({
         <Block>
             <TopicResultsSummary
               withTitle
+              topicSection={children_title}
+              resultsArray={childrenResultsStored ? childrenResultsStored.split('') : false}
+              questions={children_questions}
+              type="results_topic_children"
+              link="children"
+            />
+        </Block>
+        <Block>
+            <TopicResultsSummary
+              withTitle
               topicSection={health_title}
               resultsArray={healthResultsStored ? healthResultsStored.split('') : false}
               questions={health_questions}
@@ -163,11 +179,13 @@ const ResultsPage = ({
         time_questions={time_questions}
         family_questions={family_questions}
         skills_questions={skills_questions}
+        children_questions={children_questions}
         home_questions={home_questions}
         healthResultsStored={healthResultsStored}
         timeResultsStored={timeResultsStored}
         familyResultsStored={familyResultsStored}
         skillsResultsStored={skillsResultsStored}
+        childrenResultsStored={childrenResultsStored}
         homeResultsStored={homeResultsStored}
         token={token}
       />

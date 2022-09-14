@@ -34,11 +34,13 @@ const Home = ({
   timeContent,
   familyContent,
   skillsContent,
+  childrenContent,
   homeContent,
   healthTitle,
   timeTitle,
   familyTitle,
   skillsTitle,
+  childrenTitle,
   homeTitle,
   banner,
   hero_image,
@@ -67,6 +69,8 @@ const Home = ({
   const [healthResultsStored, setHealthResultsStored] = useStateWithLocalStorage("results_topic_lifestyle")
   const [timeResultsStored, setTimeResultsStored] = useStateWithLocalStorage("results_topic_time")
   const [skillsResultsStored, setSkillsResultsStored] = useStateWithLocalStorage("results_topic_skills")
+  const [childrenResultsStored, setChildrenResultsStored] = useStateWithLocalStorage("results_topic_children")
+
   return(
     <Layout logo={logo} altLogo={altLogo} 
     banner={banner}
@@ -84,7 +88,6 @@ const Home = ({
       </div>
 
       <h2 className="visually-hidden">Choose a topic</h2>
-
       <CardGrid
         cards={[
           {
@@ -113,6 +116,13 @@ const Home = ({
             completed: skillsResultsStored,
             startTopic: skillsStartTopic,
             completedTopic: skillsCompletedTopic
+          },
+          {
+            headline: childrenTitle,
+            deck: childrenContent.kicker || childrenContent.introduction,
+            href: "/children/index",
+            borderColor: theme.children,
+            completed: childrenResultsStored
           },
           {
             headline: healthTitle,

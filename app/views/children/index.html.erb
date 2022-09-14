@@ -1,0 +1,36 @@
+<% content_for( :title, "Children") %>
+<%= react_component("Pages/TopicQuestionnairePage", {
+
+  title: @childrenContent.title,
+  intro: @childrenContent.introduction&.content,
+  body: @childrenContent.body&.content,
+  questions: @childrenTopicContent,
+  topicID: "results_topic_children",
+
+  healthtitle: @healthContent.title,
+  healthintro: @healthContent.introduction&.content,
+
+  timetitle: @timeContent.title,
+  timeintro: @timeContent.introduction&.content,
+
+  familytitle: @familyContent.title,
+  familyintro: @familyContent.introduction&.content,
+
+  familytitle: @familyContent.title,
+  familyintro: @familyContent.introduction&.content,
+
+  skillstitle: @skillsContent.title,
+  skillsintro: @skillsContent.introduction&.content,
+
+  childrentitle: @childrenContent&.title,
+  childrenintro: @childrenContent&.introduction&.content,
+  successtext: @childrenContent&.success_text&.content,
+  savebutton: @childrenContent&.save_button&.content,
+  finalresulttitle: @childrenContent.final_result_title&.content,
+  results: @childrenContent.results&.content,
+  resultslink: @childrenContent.results_link_text&.content,
+
+  hometitle: @homeContent.title,
+  homeintro: @homeContent.introduction&.content,
+
+  backgroundcolor: "#e3658830" }) %>
