@@ -3,10 +3,10 @@ import Layout from "../../Layout"
 import Markdown from 'markdown-to-jsx'
 import { UserContent } from "../../PageBodyContent"
 
-const AboutPage = ({about}) =>{
+const AboutPage = ({about,logo, altLogo}) =>{
 
     return(
-        <Layout withHeader withFooter>
+        <Layout withHeader withFooter logo={logo} altLogo={altLogo}>
             <div className="container">
                     <UserContent>
                     <Markdown>{about || ''}</Markdown>
