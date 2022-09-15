@@ -60,6 +60,7 @@ export const UserContent = styled.div`
     }
     blockquote{
         margin-left: 10px;
+        font-style: italic;
     }
     ul {
         margin-left: 20px;

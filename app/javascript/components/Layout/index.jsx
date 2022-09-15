@@ -7,7 +7,7 @@ import { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
     *{
-        font-family: 'Work Sans', sans-serif;
+        font-family: "Open Sans", sans-serif;
         margin: 0;
         padding: 0;
         box-sizing: border-box;
