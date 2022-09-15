@@ -6,7 +6,7 @@ import Button from "../Button"
 
 const Outer = styled.section`
     padding: 50px 20px;
-    background-size: cover;
+    background-size: 400px 250px;
     background-position: center;
     background-image: url(${(props) => props.image});
     @media screen and (min-width: ${theme.tablet}){

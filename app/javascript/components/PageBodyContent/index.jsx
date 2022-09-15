@@ -67,7 +67,6 @@ export const UserContent = styled.div`
         margin-bottom: 20px;
     }
     h1, h2, h3, h4, h5, h6{
-        margin-top: 35px;
         color: ${theme.darkText};
         margin-bottom: 15px;
     }
