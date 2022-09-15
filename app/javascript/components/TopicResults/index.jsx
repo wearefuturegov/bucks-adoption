@@ -32,6 +32,9 @@ const TopicResults = ({
             <div className="container">
                 <h2>{finalresulttitle}</h2>
                 <p className="link-to-results">{results} <a href="/results/index">{resultslink}</a></p>
+                {
+                    (questions[0]?.action_1_text === "" && questions[0]?.action_2_text === "" && questions[0]?.action_3_text === "") ? <p>You have no actions recommended for this topic based on your answers</p> : null
+                }
 
                 <TopicResultsSummary topicSection={topicSection} resultsArray={resultsArray} questions={questions} type={type} />
 

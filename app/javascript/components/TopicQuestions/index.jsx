@@ -81,7 +81,7 @@ const TopicQuestions = ({
                         </div>
                         <TopicCard title={content.action_1_title} intro={content.action_1_text} type={type} />
                     </>
-                  :(<p>You have no actions recommended for this topic based on your answers</p>)
+                  :null
                 }
                 <hr/>
                 </>
@@ -98,7 +98,7 @@ const TopicQuestions = ({
                         </div>
                         <TopicCard title={content.action_2_title} intro={content.action_2_text} type={type} />
                     </>
-                  :(<p>You have no actions recommended for this topic based on your answers</p>)
+                  :null
                 }
                 <hr/>
                 </>
@@ -115,7 +115,7 @@ const TopicQuestions = ({
                         </div>
                         <TopicCard title={content.action_3_title} intro={content.action_3_text} type={type} />
                     </>
-                  :(<p>You have no actions recommended for this topic based on your answers</p>)
+                  :null
                 }
                 <hr/>
                 </>
