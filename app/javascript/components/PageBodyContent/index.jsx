@@ -49,7 +49,7 @@ const PageBodyContent = ({
     </Outer>
 
 export const UserContent = styled.div`
-    p, span{
+    p, span, blockquote, q{
         color: ${theme.darkText};
         margin-bottom: 20px;
         line-height: 1.6;
@@ -62,7 +62,7 @@ export const UserContent = styled.div`
         margin-left: 20px;
         margin-bottom: 20px;
     }
-    h2, h3, h4, h5, h6{
+    h1, h2, h3, h4, h5, h6{
         margin-top: 35px;
         color: ${theme.darkText};
         margin-bottom: 15px;
