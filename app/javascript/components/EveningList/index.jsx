@@ -26,10 +26,18 @@ const Grid = styled.ul`
     }
 `
 
+const H1 = styled.h1`
+    margin-bottom: 40px;
+    max-width: ${theme.maxWidth};
+    margin-left: auto;
+    margin-right: auto;
+`
+
 const EveningList = ({
     events
 }) =>
     <Outer>
+        <H1>Upcoming events</H1>
         <Inner>
             <Grid>
                 {events ? 

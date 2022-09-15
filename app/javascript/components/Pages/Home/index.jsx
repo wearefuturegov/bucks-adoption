@@ -120,15 +120,6 @@ const Home = ({
             completedTopic: skillsCompletedTopic
           },
           {
-            headline: childrenTitle,
-            deck: childrenContent.kicker || childrenContent.introduction,
-            href: "/children/index",
-            borderColor: theme.children,
-            completed: childrenResultsStored,
-            startTopic: childrenStartTopic,
-            completedTopic: childrenCompletedTopic
-          },
-          {
             headline: healthTitle,
             deck: healthContent.kicker || healthContent.introduction,
             href: "/health/index",
@@ -146,6 +137,15 @@ const Home = ({
             startTopic: timeStartTopic,
             completedTopic: timeCompletedTopic
           },
+          {
+            headline: childrenTitle,
+            deck: childrenContent.kicker || childrenContent.introduction,
+            href: "/children/index",
+            borderColor: theme.children,
+            completed: childrenResultsStored,
+            startTopic: childrenStartTopic,
+            completedTopic: childrenCompletedTopic
+          }
 
         ]}
       />
