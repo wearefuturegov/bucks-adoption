@@ -58,6 +58,9 @@ export const UserContent = styled.div`
             font-size: 1.1em
         }
     }
+    blockquote{
+        margin-left: 10px;
+    }
     ul {
         margin-left: 20px;
         margin-bottom: 20px;

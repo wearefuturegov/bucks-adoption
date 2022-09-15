@@ -10,7 +10,7 @@
     "dotenv": "^8.0.0",
     "isomorphic-unfetch": "^3.0.0",
     "markdown-to-jsx": "^6.10.3",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-cookie-consent": "^2.3.2",
