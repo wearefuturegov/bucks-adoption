@@ -2,7 +2,7 @@
   == render 'fae/shared/form_header', header: @item
 
   main.content
-    = fae_input f, :title
+    = fae_input f, :title, helper_text: 'website title'
 
     = fae_content_form f, :headline
     = fae_content_form f, :strapline
