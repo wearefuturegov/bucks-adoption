@@ -92,8 +92,6 @@ const Footer = () =>
                     <MenuItem><a href="mailto:adoption@buckinghamshire.gov.uk" target="_blank">Email our team</a>,
                     <br/> or call us on { isMobileDevice() ? <a href="tel:01494 586 349">01494 586 349</a> : "01494 586 349"}</MenuItem>
                     <br/>
-                    <MenuItem><a target="_blank" href="https://www.buckinghamshire.gov.uk/your-council/contact-us/" title="Get in contact with the council">Contact Buckinghamshire</a></MenuItem>
-                    <br/>
                     <MenuItem><a target="_blank" href="https://en-gb.facebook.com/adoptionbucks/" title="Find us on Facebook">Facebook</a></MenuItem>
                     <MenuItem><a target="_blank" href="https://twitter.com/bucksadoption" title="Find us on Twitter">Twitter</a></MenuItem>
                 </Menu>

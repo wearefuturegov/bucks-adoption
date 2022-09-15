@@ -3,7 +3,7 @@ import fetch from "isomorphic-unfetch"
 export default (questions, answers, token, recipient) => {
     const toDoList = []
 
-    // 1. run through all the different stored answers for all 5 topics
+    // 1. run through all the different stored answers for all 6 topics
     answers.map((questionString, i)=>{
         if (questionString.length) {
         // 2. if they exist split the stored string of numbers into an array
