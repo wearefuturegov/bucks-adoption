@@ -8,11 +8,7 @@ class ChildrenContentPage < Fae::StaticPage
         introduction: { type: Fae::TextArea },
         kicker: {type: Fae::TextArea},
         body: { type: Fae::TextArea },
-        start_topic_link_text: {type: Fae::TextField},
-        completed_topic_link_text: {type: Fae::TextField},
         final_result_title: {type: Fae::TextField},
-        results: {type: Fae::TextField},
-        results_link_text: {type: Fae::TextField}
       }
     end
   
