@@ -61,7 +61,7 @@ const TopicQuestions = ({
         { (id <= currentQuestion) ?
         <div className={"question fade-animate question_" + id}>
             <h2 ref={questionRef} className="question__title"><legend>{content.title}</legend></h2>
-            <p className="question__help-text">{id} of {total} questions</p>
+            <p className="question__help-text">Question {id} of {total}</p>
             <div className="question__options">
                 <OptionBubble type="radio" name={id} label={content.answer_1} selectionState={selection} onChange={handleChange} value="1" />
                 <OptionBubble type="radio" name={id} label={content.answer_2} selectionState={selection} onChange={handleChange} value="2" />

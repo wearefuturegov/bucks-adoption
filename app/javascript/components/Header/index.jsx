@@ -102,10 +102,10 @@ const MenuItem = ({href, children}) =>
 
 const MenuItems = () =>
     <>
-        <MenuItem href="/">Explore topics</MenuItem>
+        <MenuItem href="/">Explore adoption</MenuItem>
         <MenuItem href="/results/index">Your readiness plan</MenuItem>
         <MenuItem href="/pages/informationevent">Attend an event</MenuItem>
-        <MenuItem href="https://www.buckinghamshire.gov.uk/care-children-and-families/adoption/">Adoption</MenuItem>
+        <MenuItem href="https://www.buckinghamshire.gov.uk/care-children-and-families/adoption/">Adopt with Bucks</MenuItem>
     </>
 
 const SiteHeader = ({logo, altLogo}) => {
