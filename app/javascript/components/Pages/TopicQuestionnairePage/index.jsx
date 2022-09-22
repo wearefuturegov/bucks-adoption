@@ -48,7 +48,8 @@ const TopicQuestionnairePage = ({
   savebutton,
   finalresulttitle,
   results,
-  resultslink
+  resultslink,
+  banner
 }) => {
 
   const [topicResults, setTopicResults] = useState([]);
@@ -69,7 +70,7 @@ const TopicQuestionnairePage = ({
   }
 
   return(
-    <Layout logo={logo} altLogo={altLogo}>
+    <Layout logo={logo} altLogo={altLogo} banner={banner}>
       <HeroWithColor
         backgroundColor={backgroundcolor}
         headline={title}

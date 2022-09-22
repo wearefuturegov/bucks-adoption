@@ -1,20 +1,20 @@
 <% content_for( :title, "Children") %>
 <%= react_component("Pages/TopicQuestionnairePage", {
-
   title: @childrenContent.title,
   intro: @childrenContent.introduction&.content,
   body: @childrenContent.body&.content,
   questions: @childrenTopicContent,
   topicID: "results_topic_children",
 
+  logo: @rootSettings&.logo&.asset&.thumb&.url,
+  altLogo: @rootSettings&.logo&.alt,
+  banner: @sitehome&.banner&.content,
+
   healthtitle: @healthContent.title,
   healthintro: @healthContent.introduction&.content,
 
   timetitle: @timeContent.title,
   timeintro: @timeContent.introduction&.content,
-
-  familytitle: @familyContent.title,
-  familyintro: @familyContent.introduction&.content,
 
   familytitle: @familyContent.title,
   familyintro: @familyContent.introduction&.content,

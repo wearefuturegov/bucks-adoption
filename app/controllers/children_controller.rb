@@ -7,5 +7,6 @@ class ChildrenController < ApplicationController
       @skillsContent = SkillsContentPage.instance
       @childrenContent = ChildrenContentPage.instance
       @homeContent = HomeContentPage.instance
+      @sitehome = AdoptionHomePage.instance
     end
   end
