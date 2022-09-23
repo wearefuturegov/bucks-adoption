@@ -3,6 +3,7 @@ import styled from "styled-components"
 import theme from "../_theme"
 import Breadcrumbs from "../Breadcrumbs"
 import Button from "../Button"
+import Markdown from 'markdown-to-jsx'
 
 const Outer = styled.section`
     padding: 50px 20px;
@@ -78,7 +79,7 @@ const HeroWithImage = ({
                 :null
                 }
                 <Headline>{headline}</Headline>
-                <Deck>{deck}</Deck>
+                <Deck><Markdown>{deck}</Markdown></Deck>
                 { cta ?
                     <>
                     <br/>

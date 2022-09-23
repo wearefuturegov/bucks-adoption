@@ -5,7 +5,7 @@
     = fae_input f, :title, helper_text: 'website title'
 
     = fae_content_form f, :headline
-    = fae_content_form f, :strapline
+    = fae_content_form f, :strapline, markdown: true
     = fae_image_form f, :hero_image, helper_text: 'max size 4mb'
     = fae_content_form f, :banner, markdown: true, helper_text: 'banner text should be write in h3'
     = fae_content_form f, :body, markdown: true
