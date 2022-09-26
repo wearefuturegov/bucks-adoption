@@ -8,5 +8,6 @@ class SkillsController < ApplicationController
     @skillsContent = SkillsContentPage.instance
     @homeContent = HomeContentPage.instance
     @rootSettings = RootSettingsPage.instance
+    @sitehome = AdoptionHomePage.instance
   end
 end
