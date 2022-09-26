@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import theme from "../_theme"
 import Breadcrumbs from "../Breadcrumbs"
+import Markdown from 'markdown-to-jsx'
 
 const Outer = styled.section`
     background-color: ${(props) => props.backgroundColor};
@@ -71,7 +72,7 @@ const HeroWithColor = ({
             <TextBox>
                 {category && <Tag category={category}>{category}</Tag>}
                 <Headline>{headline}</Headline>
-                <Deck>{deck}</Deck>
+                <Deck><Markdown>{deck}</Markdown></Deck>
             </TextBox>
         </Inner>
     </Outer>

@@ -5,6 +5,6 @@
     = fae_input f, :title
 
     = fae_image_form f, :hero_image, helper_text: 'max size 4mb'
-    = fae_content_form f, :headline
+    = fae_content_form f, :headline, markdown: true
     = fae_content_form f, :pre_text, markdown: true
     = fae_content_form f, :body, markdown: true
