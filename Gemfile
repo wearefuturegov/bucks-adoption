@@ -76,4 +76,4 @@ gem 'kramdown'
 gem 'reverse_markdown'
 gem 'mail-notify'
 
-gem "sentry-raven"
+gem "sentry-ruby"
