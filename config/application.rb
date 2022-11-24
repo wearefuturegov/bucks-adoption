@@ -10,7 +10,7 @@ if ['development', 'test'].include? ENV['RAILS_ENV']
   Dotenv::Railtie.load
 end
 
-Raven.configure do |config|
+Sentry.init do |config|
   config.dsn = ENV['SENTRY_DSN']
 end
 
