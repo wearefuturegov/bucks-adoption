@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import defaultLogo from "./defaultLogo"
+import defaultLogo from "../../../assets/images/buckinghamshire_logo.png"
 import theme from "../_theme"
 import { Container, Button } from "./MobileMenu"
 import ProgressBar from "../ProgressBar"
