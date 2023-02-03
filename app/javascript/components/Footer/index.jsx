@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import theme from "../_theme"
 import Cookies from "../Cookies"
-import AdoptionReadyLogoBlack from "./AdoptionReadyLogoBlack.png"
+import buckinghamshire_logo from "./buckinghamshire_logo.png"
 import tpximpact_logo from "../../../assets/images/tpximpact_logo.png"
 function isMobileDevice() {
     return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
@@ -104,7 +104,7 @@ const Footer = () =>
                     <MenuItem><a href="https://www.buckinghamshire.gov.uk/community-and-safety/modern-slavery-statement/" title="Read our modern slavery statement">Modern slavery statement</a></MenuItem>
                 </Menu>
                 <p style={{display: "flex", alignItems: "center"}}>&copy; 
-                <a href="https://www.buckinghamshire.gov.uk/" target="_blank" title="View the Bucks website"><img src={AdoptionReadyLogoBlack} height="30px" style={{margin: "0 5px"}}/></a> in partnership with 
+                <a href="https://www.buckinghamshire.gov.uk/" target="_blank" title="View the Bucks website"><img src={buckinghamshire_logo} height="30px" style={{margin: "0 5px"}}/></a> in partnership with 
                 <a href="https://www.tpximpact.com/" target="_blank" title="View TPXImpact website"><img src={tpximpact_logo} height="20px" style={{marginLeft: "5px"}}/></a></p>
             </InnerLeft>
             <InnerRight>
