@@ -3,6 +3,7 @@
   <head>
 
     <title><%= yield(:title) %> | Buckinghamshire Adoption Service</title>
+    <script src="https://app.simplefileupload.com/buckets/<%= ENV["SIMPLE_FILE_UPLOAD_ID"] %>.js"></script>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= favicon_link_tag 'favicon.ico' %>
@@ -12,7 +13,6 @@
     <%= stylesheet_pack_tag 'application' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application' %>
-
     <style>
       .turbolinks-progress-bar {
         background-color: #2c2d84;
