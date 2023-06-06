@@ -1,7 +1,6 @@
 Fae.setup do |config|
 
   config.devise_secret_key = '76b2bf8613fcdcd48e9df124bb633023cf4b28db48584aa5cd33fd73ff6dd564922927329bbce77194cbaeaa82a8b16d9ade6939eb5a76f58f5d6db8bc09eaba'
-  config.devise_parameter_sanitizer.permit(:account_update, keys: [:name, :hero_image])
   config.max_image_upload_size = 4
 
 
