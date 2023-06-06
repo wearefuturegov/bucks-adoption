@@ -5,7 +5,7 @@ class BookAdoptionEvePage < Fae::StaticPage
   # required to set the has_one associations, Fae::StaticPage will build these associations dynamically
   def self.fae_fields
     {
-      hero_image: { type: Fae::Image },
+      hero_image: { type: Fae::Image, class:"simple-file-upload" },
       headline: { type: Fae::TextField },
       body: { type: Fae::TextArea },
       pre_text: { type: Fae::TextArea }
