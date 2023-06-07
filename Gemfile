@@ -6,6 +6,11 @@ ruby '2.6.10'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 
+gem 'gcloud'
+gem 'carrierwave'
+gem 'google-cloud-storage'
+gem 'fog'
+
 gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
@@ -77,3 +82,4 @@ gem 'reverse_markdown'
 gem 'mail-notify'
 
 gem 'sentry-ruby'
+
