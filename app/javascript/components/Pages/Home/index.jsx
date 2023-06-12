@@ -80,7 +80,7 @@ const Home = ({
       <HeroWithImage
         headline={title}
         deck={strapline}
-        image={hero}
+        image={hero_image || hero}
         cta="Get started"
         handleRefClick={handleRefClick}
         alt={hero_alt}
