@@ -2,7 +2,7 @@ CarrierWave.configure do |config|
     config.cache_dir = "#{Rails.root}/tmp/fae/uploads"
  
     # if Rails.env.production? || Rails.env.development?
-    if Rails.env.staging?
+    if Rails.env.production?
       config.fog_provider = 'fog/google'
       config.fog_credentials = {
         provider: 'Google',
