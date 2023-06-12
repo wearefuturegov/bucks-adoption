@@ -2,7 +2,7 @@
 <%= react_component("Pages/Home", {
   
   title: @sitehome.headline&.content,
-  hero_image: @sitehome.hero_image&.asset&.url,
+  hero_image: @sitehome.hero_image&.asset&.thumb&.url,
   hero_alt: @sitehome.hero_image&.alt,
   strapline: @sitehome.strapline&.content,
   banner: @sitehome.banner&.content,
