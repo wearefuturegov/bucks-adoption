@@ -1,8 +1,6 @@
 require "google/cloud/storage"
 
 
-#PROBABLY CAN REMOVE THIS FILE
-
 
 module Fae
   class ImageUploader < CarrierWave::Uploader::Base
