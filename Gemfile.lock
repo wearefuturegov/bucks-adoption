@@ -431,7 +431,7 @@ DEPENDENCIES
   dotenv-rails
   fae-rails
   fog-google
-  google-cloud-storage
+  google-cloud-storage (~> 1.11)
   httparty
   jbuilder (~> 2.5)
   jquery-rails
